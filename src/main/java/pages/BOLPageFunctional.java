@@ -229,19 +229,15 @@ public class BOLPageFunctional
 	 */
 	public boolean set_BOLStatus() throws InterruptedException
 	{
-//		webDB.navigateToUrl("https://qa.rms.reusability.com/bills-of-lading/630819");
-//		Thread.sleep(3000);
-
-//		commonfunction.clickOnBOLSPage();
 		BOL_Number= getBOLNumberFromOrderDetailsPage();
 		log.logging("info", "The BOL Number on BOL Details page is: "+BOL_Number);
 		Thread.sleep(3000);
-//		navigate_BOLPage();
+		
 		commonfunction.clickOnBOLSPage();
 		BOL_Number_Listingpage = getBOLNumberFromBOL_ListingPage();
 		log.logging("info", "The BOL Number on listing page is: "+BOL_Number_Listingpage);
 		Thread.sleep(750);
-//		
+	
 		if(BOL_Number_Listingpage.equals(BOL_Number))
 		{
 			log.logging("info", "The BOL number is matched");
@@ -307,16 +303,16 @@ public class BOLPageFunctional
 	/**
 	 * @author 
 	 * @return flag
-	 * This method is used to add an order to the BOL
+	 * This method is used to get BOL Number from Order details page
 	 * @throws InterruptedException
 	 */
 	public String getBOLNumberFromOrderDetailsPage()
 	{
 		String BOLNumbertext = webDB.getTextFromElement(BOLPageLocators.BOL_NUMBER_FROM_BOLDETAILSPAGE, ElementType.Xpath);
-		 Pattern pattern = Pattern.compile("\\d+"); // Matches one or more digits
+		 Pattern pattern = Pattern.compile("\\d+"); 
 	     Matcher matcher = pattern.matcher(BOLNumbertext);
 	     if (matcher.find()) {
-	            return matcher.group(); // Return the first match
+	            return matcher.group(); 
 	        } else {
 	            throw new IllegalArgumentException("No number found in the text: " + BOLNumbertext);
 	        }
@@ -326,16 +322,16 @@ public class BOLPageFunctional
 	/**
 	 * @author 
 	 * @return flag
-	 * This method is used to add an order to the BOL
+	 * This method is used to get BOL Number From BOL Listing Page
 	 * @throws InterruptedException
 	 */
 	public String getBOLNumberFromBOL_ListingPage()
 	{
 		String BOLNumbertext = webDB.getTextFromElement(BOLPageLocators.BOL_NUMBER_FROM_LISTINGPAGE, ElementType.Xpath);
-		 Pattern pattern = Pattern.compile("\\d+"); // Matches one or more digits
+		 Pattern pattern = Pattern.compile("\\d+"); 
 	     Matcher matcher = pattern.matcher(BOLNumbertext);
 	     if (matcher.find()) {
-	            return matcher.group(); // Return the first match
+	            return matcher.group(); 
 	        } else {
 	            throw new IllegalArgumentException("No number found in the text: " + BOLNumbertext);
 	        }

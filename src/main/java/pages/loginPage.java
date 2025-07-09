@@ -16,7 +16,7 @@ public class loginPage
 
 	
 	/**
-	 * This method is used to check the about us page header nav link redirections
+	 * This method is used to perform user valid login 
 	 * @return boolean flag
 	 * @throws InterruptedException
 	 */
@@ -43,8 +43,7 @@ public class loginPage
 						Thread.sleep(3000);
 						flag = webDB.waitForElement(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath);
 						log.logging("info", "Logged in as a User successfully");
-						Thread.sleep(2000);
-////							
+						Thread.sleep(2000);							
 					}
 				}
 			}

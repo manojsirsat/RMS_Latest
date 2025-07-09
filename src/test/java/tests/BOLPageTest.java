@@ -44,16 +44,6 @@ public class BOLPageTest
 
 		
 	}
-
-//	/**
-//	 * This method used to perform user login
-//	 */
-//	@BeforeMethod
-//	public void user_Login() throws InterruptedException
-//	{
-//		loginpage.validLogin();
-//	}
-
 	
 	@Test(description = "Verify create new BOL functionality from BOL listing page")
 	public void verifyCreate_BOL_Flow() throws InterruptedException 
@@ -80,11 +70,7 @@ public class BOLPageTest
 	@Test(description = "Verify update BOL status functionality")
 	public void verifySet_BOL_Status() throws InterruptedException 
 	{
-//		flag = loginpage.validLogin();
-//		if(flag)
-//		{
 		flag = bolpagefunctional.set_BOLStatus();
-//		}
 		Assert.assertTrue(flag);
 	}
 	
