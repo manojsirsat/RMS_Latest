@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import commonfunctions.CommonFunctions;
+import customizemailer.Mailer2;
 import pages.BOLPageFunctional;
 import pages.loginPage;
 import utils.Mailer;
@@ -80,6 +81,14 @@ public class BOLPageTest
 		webDB.tearDown();
 	}
 
+//	// For customized email addresses
+//	@AfterSuite
+//	public void SendMail() throws Exception {
+//		Mailer2 mailer = new Mailer2();
+//		mailer.execute("RMS Automation Report");
+//		
+//	}
+	
 	@AfterSuite
 	public void SendMail() throws Exception {
 		Mailer mailer = new Mailer();
