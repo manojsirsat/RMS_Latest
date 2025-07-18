@@ -6,22 +6,23 @@ public class BOLPageLocators
 	/**XPATH*/ public static final String BOLPAGE_HEADING = "//div[text()='Bills of Lading']";
 	/**ID*/ public static final String CREATE_NEWBOL_BUTTON = "create-bol-button";
 	/**XPATH*/ public static final String CREATE_NEWBOLPAGE_HEADING = "//h2[text()='Create Bill of Lading']";
-	/**ID*/ public static final String FROM_LOC_DROPDOWN = "from-location-dropdown";
-	/**ID*/ public static final String FROM_LOC_DRP_OPTION = "from-location-dropdown_list";
-	/**XPATH*/ public static final String FROM_LOC_DRP_OPTIONS_LIST = "(//ul[@id='from-location-dropdown_list']//li)";
+	/**XPATH*/ public static final String FROM_LOC_DROPDOWN = "//div[@class='p-autocomplete p-component p-inputwrapper p-autocomplete-dd w-full inputfield' and @id='from-location-dropdown']";
+	/**XPATH*/ public static final String FROM_LOC_DRP_OPTION = "//ul[@class='p-autocomplete-items p-virtualscroller-content' and @id='from-location-dropdown_list']";
+	/**XPATH*/ public static final String FROM_LOC_DRP_OPTIONS_LIST = "(//ul[@class='p-autocomplete-items p-virtualscroller-content' and @id='from-location-dropdown_list']//li)";
 
 	
-	/**ID*/ public static final String TO_LOC_DROPDOWN = "to-location-dropdown";
-	/**ID*/ public static final String TO_LOC_DRP_OPTION = "to-location-dropdown_list";
-	/**XPATH*/ public static final String TO_LOC_DRP_OPTIONS_LIST = "(//ul[@id='to-location-dropdown_list']//li)";
+	/**XPATH*/ public static final String TO_LOC_DROPDOWN = "//div[@class='p-autocomplete p-component p-inputwrapper p-autocomplete-dd w-full inputfield' and @id='to-location-dropdown']";
+	/**XPATH*/ public static final String TO_LOC_DRP_OPTION = "//ul[@class='p-autocomplete-items p-virtualscroller-content' and @id='to-location-dropdown_list']";
+	/**XPATH*/ public static final String TO_LOC_DRP_OPTIONS_LIST = "(//ul[@class='p-autocomplete-items p-virtualscroller-content' and @id='to-location-dropdown_list']//li)";
 
-	/**ID*/ public static final String SHIPMETHOD_DROPDOWN = "transit-types-dropdown";
-	/**ID*/ public static final String SHIPMETHOD_DRP_OPTION = "transit-types-dropdown_list";
-	/**XPATH*/ public static final String SHIPMETHOD_DRP_OPTIONS_LIST = "(//ul[@id='transit-types-dropdown_list']//li)[1]";
+	/**XPATH*/ public static final String SHIPMETHOD_DROPDOWN = "//div[@class='p-autocomplete p-component p-inputwrapper p-autocomplete-dd w-full inputfield' and @id='transit-types-dropdown']";
+	/**XPATH*/ public static final String SHIPMETHOD_DRP_OPTION = "//ul[@class='p-autocomplete-items' and @id='transit-types-dropdown_list']";
+	/**XPATH*/ public static final String SHIPMETHOD_DRP_OPTIONS_LIST = "(//ul[@class='p-autocomplete-items' and @id='transit-types-dropdown_list']//li)[1]";
 	
-	/**ID*/ public static final String SHIPPER_DROPDOWN = "shipper";
-	/**ID*/ public static final String SHIPPER_DRP_OPTION = "shipper_list";
-	/**XPATH*/ public static final String SHIPPER_DRP_OPTIONS_LIST = "(//ul[@id='shipper_list']//li)";
+	/**XPATH*/ public static final String SHIPPER_DROPDOWN = "//div[@class='p-autocomplete p-component p-inputwrapper p-autocomplete-dd w-full inputfield' and @id='shipper']";
+	 														//div[@class='p-autocomplete p-component p-inputwrapper p-autocomplete-dd p-overlay-open w-full inputfield' and @id='shipper']
+	/**XPATH*/ public static final String SHIPPER_DRP_OPTION = "//ul[@class='p-autocomplete-items' and @id='shipper_list']";
+	/**XPATH*/ public static final String SHIPPER_DRP_OPTIONS_LIST = "(//ul[@class='p-autocomplete-items' and @id='shipper_list']//li)";
 
 	/**ID*/ public static final String SUBMIT_BOL_BUTTON = "submit-bill-of-lading-button";
 	/**XPATH*/ public static final String BOL_SUCCESS_MSG = "//div[text()='Bill of Lading created successfully']";
@@ -43,7 +44,8 @@ public class BOLPageLocators
 	/**XPATH*/ public static final String SUBMIT_ORDER_BTN = "//button[@class='p-button p-component p-button-success']";
 
 	/**XPATH*/ public static final String REMOVE_ORDERFROMBOL_BTN = "//button[@class='p-button p-component p-button-danger']";
-	/**XPATH*/ public static final String BOL_NUMBER_FROM_BOLDETAILSPAGE = "//div[@class='max-w-full prose']//h2";
+//	/**XPATH*/ public static final String BOL_NUMBER_FROM_BOLDETAILSPAGE = "//div[@class='max-w-full prose']//h2";
+	/**XPATH*/ public static final String BOL_NUMBER_FROM_BOLDETAILSPAGE = "(//h2)[1]";
 	
 	//Set BOL status
 	/**XPATH*/ public static final String BOL_NUMBER_FROM_LISTINGPAGE = "((//tr[@class='p-selectable-row'])[1]//td)[2]/a";
@@ -54,5 +56,34 @@ public class BOLPageLocators
 	/**XPATH*/ public static final String BOL_STATUSCHANGE_CONFIRMATION_MSG = "(//span[@class='p-toast-summary' and text()='Success'])[1]";
 	
 
+	// Add order to BOL from Order details page
+	/**XPATH*/ public static final String ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE = "//button[@aria-label='Add Order to BOL']";
+	/**XPATH*/ public static final String CREATE_NEWBOLPAGE_HEADING_ORDERDETAILSPAGE = "//h2[text()='Create New Bill of Lading for Order']";
+	/**XPATH*/ public static final String BOL_NUMBER_FROM_ORDERDETAILSPAGE = "//div[@class='prose mb-2']/a";
+	
+	
+	
+//	/**XPATH*/ public static final String BOLPAGE_HEADING = "//div[text()='Bills of Lading']";
+//	/**ID*/ public static final String CREATE_NEWBOL_BUTTON = "create-bol-button";
+//	/**XPATH*/ public static final String CREATE_NEWBOLPAGE_HEADING = "//h2[text()='Create Bill of Lading']";
+//	/**ID*/ public static final String FROM_LOC_DROPDOWN = "from-location-dropdown";
+//	/**ID*/ public static final String FROM_LOC_DRP_OPTION = "from-location-dropdown_list";
+//	/**XPATH*/ public static final String FROM_LOC_DRP_OPTIONS_LIST = "(//ul[@id='from-location-dropdown_list']//li)";
+//
+//	
+//	/**ID*/ public static final String TO_LOC_DROPDOWN = "to-location-dropdown";
+//	/**ID*/ public static final String TO_LOC_DRP_OPTION = "to-location-dropdown_list";
+//	/**XPATH*/ public static final String TO_LOC_DRP_OPTIONS_LIST = "(//ul[@id='to-location-dropdown_list']//li)";
+//
+//	/**ID*/ public static final String SHIPMETHOD_DROPDOWN = "transit-types-dropdown";
+//	/**ID*/ public static final String SHIPMETHOD_DRP_OPTION = "transit-types-dropdown_list";
+//	/**XPATH*/ public static final String SHIPMETHOD_DRP_OPTIONS_LIST = "(//ul[@id='transit-types-dropdown_list']//li)[1]";
+//	
+//	/**ID*/ public static final String SHIPPER_DROPDOWN = "shipper";
+//	/**ID*/ public static final String SHIPPER_DRP_OPTION = "shipper_list";
+//	/**XPATH*/ public static final String SHIPPER_DRP_OPTIONS_LIST = "(//ul[@id='shipper_list']//li)";
+//
+//	/**ID*/ public static final String SUBMIT_BOL_BUTTON = "submit-bill-of-lading-button";
+//	/**XPATH*/ public static final String BOL_SUCCESS_MSG = "//div[text()='Bill of Lading created successfully']";
 	
 }

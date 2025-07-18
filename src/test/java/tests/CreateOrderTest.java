@@ -13,12 +13,13 @@ import org.testng.annotations.Test;
 import commonfunctions.CommonFunctions;
 import customizemailer.Mailer2;
 import pages.BOLPageFunctional;
+import pages.CreateOrderPageFunctional;
 import pages.loginPage;
 import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 
-public class BOLPageTest 
+public class CreateOrderTest 
 {
 
 	// This line used to create object for driver base class
@@ -29,7 +30,7 @@ public class BOLPageTest
 	static CommonFunctions commonFunction = new CommonFunctions();
 	static BOLPageFunctional bolpagefunctional = new BOLPageFunctional();
 	static loginPage loginpage = new loginPage();
-	
+	static CreateOrderPageFunctional createorderpage = new CreateOrderPageFunctional();
 	/**
 	 * This method used to open browser before test start
 	 */
@@ -43,55 +44,37 @@ public class BOLPageTest
 		webDB.enterURL(SiteUrl);
 		Thread.sleep(2000);
 
-		
 	}
 	
-	@Test(description = "Verify create new BOL functionality from BOL listing page")
-	public void verifyCreate_BOL_Flow() throws InterruptedException 
+	@Test(description = "Verify create new order functionality from create order page")
+	public void verifyCreate_Order_Flow() throws InterruptedException 
 	{
 		flag = loginpage.validLogin();
 		if(flag)
 		{
-		flag = bolpagefunctional.navigate_BOLPage();
-		if(flag)
-		{
-			flag = bolpagefunctional.click_CreateNewBOL_Button();
-			if(flag)
-			{
-				flag = bolpagefunctional.set_BOLPage_CarrierDetails();
-			}
-		}
+		flag = createorderpage.complete_CreateOrderFlow();
 		}
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify add order to BOL functionality")
-	public void verifyAdd_Order_To_BOL_Flow() throws InterruptedException 
+	@Test(description = "Verify BOL to Order functionality")
+	public void verifyAdd_Order_To_BOL_Complete_Flow() throws InterruptedException 
 	{
-		flag = bolpagefunctional.set_AddOrderToBOL();
+		flag = bolpagefunctional.set_BOL_Flow();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify update BOL status functionality")
-	public void verifySet_BOL_Status() throws InterruptedException 
-	{
-		flag = bolpagefunctional.set_BOLStatus();
-		Assert.assertTrue(flag);
-	}
-	
+//	@Test(description = "Verify update BOL status functionality")
+//	public void verifySet_BOL_Status() throws InterruptedException 
+//	{
+//		flag = bolpagefunctional.update_BOLStatus();
+//		Assert.assertTrue(flag);
+//	}
 
 	@AfterTest
 	public void browser_Close() {
 		webDB.tearDown();
 	}
-
-//	// For customized email addresses
-//	@AfterSuite
-//	public void SendMail() throws Exception {
-//		Mailer2 mailer = new Mailer2();
-//		mailer.execute("RMS Automation Report");
-//		
-//	}
 	
 	@AfterSuite
 	public void SendMail() throws Exception {

@@ -14,6 +14,12 @@
 					<include name="verifySet_BOL_Status"></include>
 				</methods>
 			</class>
+			<class name="tests.CreateOrderTest">
+				<methods>
+					<include name="verifyCreate_Order_Flow"></include>
+					<include name="verifyAdd_Order_To_BOL_Complete_Flow"></include>
+				</methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

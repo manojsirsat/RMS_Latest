@@ -44,7 +44,7 @@ public class Mailer2 extends Listener {
 	/**
 	 * Method to send the mail
 	 *
-	 * @author Gokul S
+	 * @author 
 	 * @throws Exception
 	 */
 	public static boolean sendMail(String userName, String passWord, String host, String port, String starttls,

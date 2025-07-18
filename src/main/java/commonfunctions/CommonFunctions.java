@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 
 import locators.BOLPageLocators;
 import locators.CommonFunctionsLocators;
+import locators.CreateOrderPageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 import utils.WebDriverBase.ElementType;
@@ -52,9 +53,29 @@ public class CommonFunctions
 		if(flag)
 		{
 			webDB.javaScriptClickAnElement(CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
-			Thread.sleep(6000);
+			Thread.sleep(9000);
 			flag = webDB.isElementDisplayed(BOLPageLocators.BOLPAGE_HEADING, ElementType.Xpath);
 			log.logging("info", "BOL listing page is displayed");
+		}
+		
+		return flag;
+	}
+	
+	/**
+	 * @author 
+	 * @return flag
+	 * This method is used to click on Create order link from left navigation
+	 * @throws InterruptedException
+	 */
+	public boolean clickOnCreateOrderPage () throws InterruptedException
+	{
+		flag = webDB.isElementDisplayed(CommonFunctionsLocators.CREATEORDER_PAGE, ElementType.Xpath);
+		if(flag)
+		{
+			webDB.javaScriptClickAnElement(CommonFunctionsLocators.CREATEORDER_PAGE, ElementType.Xpath);
+			Thread.sleep(6000);
+			flag = webDB.isElementDisplayed(CreateOrderPageLocators.CREATEORDER_PAGE_HEADING, ElementType.Xpath);
+			log.logging("info", "Create order page is displayed");
 		}
 		
 		return flag;

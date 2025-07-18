@@ -63,16 +63,16 @@ public class BOLPageFunctional
 	 */
 	public boolean set_BOLPage_CarrierDetails() throws InterruptedException
 	{
-		flag = click_CreateNewBOL_Button();
-		if(flag)
-		{
-		flag = webDB.isElementDisplayed(BOLPageLocators.CREATE_NEWBOLPAGE_HEADING, ElementType.Xpath);
+//		flag = click_CreateNewBOL_Button();
+//		if(flag)
+//		{
+		flag = webDB.isElementDisplayed(BOLPageLocators.FROM_LOC_DROPDOWN, ElementType.Xpath);
 		if(flag)
 		{
 			//Select from location
-			webDB.clickAnElement(BOLPageLocators.FROM_LOC_DROPDOWN, ElementType.Id);
+			webDB.clickAnElement(BOLPageLocators.FROM_LOC_DROPDOWN, ElementType.Xpath);
 			Thread.sleep(1000);
-			flag = webDB.isElementDisplayed(BOLPageLocators.FROM_LOC_DRP_OPTION, ElementType.Id);
+			flag = webDB.isElementDisplayed(BOLPageLocators.FROM_LOC_DRP_OPTION, ElementType.Xpath);
 			if(flag)
 			{
 				int totaloptions = webDB.getDriver().findElements(By.xpath(BOLPageLocators.FROM_LOC_DRP_OPTIONS_LIST)).size();
@@ -82,9 +82,9 @@ public class BOLPageFunctional
 				Thread.sleep(2000);
 				
 				//Select to location
-				webDB.clickAnElement(BOLPageLocators.TO_LOC_DROPDOWN, ElementType.Id);
+				webDB.clickAnElement(BOLPageLocators.TO_LOC_DROPDOWN, ElementType.Xpath);
 				Thread.sleep(1000);
-				flag = webDB.isElementDisplayed(BOLPageLocators.TO_LOC_DRP_OPTION, ElementType.Id);
+				flag = webDB.isElementDisplayed(BOLPageLocators.TO_LOC_DRP_OPTION, ElementType.Xpath);
 				if(flag)
 				{
 					int toloc_totaloptions = webDB.getDriver().findElements(By.xpath(BOLPageLocators.TO_LOC_DRP_OPTIONS_LIST)).size();
@@ -105,18 +105,18 @@ public class BOLPageFunctional
 						flag = true;
 					}
 					//Select Ship Method
-					webDB.clickAnElement(BOLPageLocators.SHIPMETHOD_DROPDOWN, ElementType.Id);
+					webDB.clickAnElement(BOLPageLocators.SHIPMETHOD_DROPDOWN, ElementType.Xpath);
 					Thread.sleep(1000);
-					flag = webDB.isElementDisplayed(BOLPageLocators.SHIPMETHOD_DRP_OPTION, ElementType.Id);
+					flag = webDB.isElementDisplayed(BOLPageLocators.SHIPMETHOD_DRP_OPTION, ElementType.Xpath);
 					if(flag)
 					{
 						webDB.clickAnElement(BOLPageLocators.SHIPMETHOD_DRP_OPTIONS_LIST, ElementType.Xpath);
 						log.logging("info", "Selected Ship method");
 						Thread.sleep(2000);
 						//Select Shipper
-						webDB.clickAnElement(BOLPageLocators.SHIPPER_DROPDOWN, ElementType.Id);
+						webDB.clickAnElement(BOLPageLocators.SHIPPER_DROPDOWN, ElementType.Xpath);
 						Thread.sleep(1000);
-						flag = webDB.isElementDisplayed(BOLPageLocators.SHIPPER_DRP_OPTION, ElementType.Id);
+						flag = webDB.isElementDisplayed(BOLPageLocators.SHIPPER_DRP_OPTION, ElementType.Xpath);
 						if(flag)
 						{
 							int shipper_totaloptions = webDB.getDriver().findElements(By.xpath(BOLPageLocators.SHIPPER_DRP_OPTIONS_LIST)).size();
@@ -131,8 +131,11 @@ public class BOLPageFunctional
 								Thread.sleep(1000);
 								
 								flag = webDB.isElementDisplayed(BOLPageLocators.BOL_SUCCESS_MSG, ElementType.Xpath);
-								Thread.sleep(3000);
+								Thread.sleep(4000);
 								log.logging("info", "BOL submitted and success message is displayed");
+								BOL_Number= getBOLNumberFromBOLDetailsPage();
+								log.logging("info", "The BOL Number on BOL Details page is: "+BOL_Number);
+								Thread.sleep(3000);
 							}
 
 						}
@@ -140,7 +143,7 @@ public class BOLPageFunctional
 				}
 			}
 		}
-	}
+//	}
 		
 		return flag;
 	}
@@ -229,18 +232,19 @@ public class BOLPageFunctional
 	 */
 	public boolean set_BOLStatus() throws InterruptedException
 	{
-		BOL_Number= getBOLNumberFromOrderDetailsPage();
-		log.logging("info", "The BOL Number on BOL Details page is: "+BOL_Number);
-		Thread.sleep(3000);
+//		BOL_Number= getBOLNumberFromBOLDetailsPage();
+//		log.logging("info", "The BOL Number on BOL Details page is: "+BOL_Number);
+//		Thread.sleep(3000);
 		
 		commonfunction.clickOnBOLSPage();
 		BOL_Number_Listingpage = getBOLNumberFromBOL_ListingPage();
 		log.logging("info", "The BOL Number on listing page is: "+BOL_Number_Listingpage);
-		Thread.sleep(750);
+		Thread.sleep(1000);
 	
 		if(BOL_Number_Listingpage.equals(BOL_Number))
 		{
 			log.logging("info", "The BOL number is matched");
+			Thread.sleep(750);
 			flag = update_BOLStatus();
 		}
 		else
@@ -303,12 +307,31 @@ public class BOLPageFunctional
 	/**
 	 * @author 
 	 * @return flag
-	 * This method is used to get BOL Number from Order details page
+	 * This method is used to get BOL Number from BOL details page
+	 * @throws InterruptedException
+	 */
+	public String getBOLNumberFromBOLDetailsPage()
+	{
+		String BOLNumbertext = webDB.getTextFromElement(BOLPageLocators.BOL_NUMBER_FROM_BOLDETAILSPAGE, ElementType.Xpath);
+		 Pattern pattern = Pattern.compile("\\d+"); 
+	     Matcher matcher = pattern.matcher(BOLNumbertext);
+	     if (matcher.find()) {
+	            return matcher.group(); 
+	        } else {
+	            throw new IllegalArgumentException("No number found in the text: " + BOLNumbertext);
+	        }
+		
+	}
+	
+	/**
+	 * @author 
+	 * @return flag
+	 * This method is used to get BOL Number from BOL details page
 	 * @throws InterruptedException
 	 */
 	public String getBOLNumberFromOrderDetailsPage()
 	{
-		String BOLNumbertext = webDB.getTextFromElement(BOLPageLocators.BOL_NUMBER_FROM_BOLDETAILSPAGE, ElementType.Xpath);
+		String BOLNumbertext = webDB.getTextFromElement(BOLPageLocators.BOL_NUMBER_FROM_ORDERDETAILSPAGE, ElementType.Xpath);
 		 Pattern pattern = Pattern.compile("\\d+"); 
 	     Matcher matcher = pattern.matcher(BOLNumbertext);
 	     if (matcher.find()) {
@@ -338,7 +361,105 @@ public class BOLPageFunctional
 		
 	}
 	
+	/**
+	 * @author 
+	 * @return flag
+	 * This method is used to click on Add Order to BOL and Create BOL button from Order details page
+	 * @throws InterruptedException
+	 */
+	public boolean click_Add_Order_To_BOL_And_CreateBOL_BTN() throws InterruptedException
+	{
+		flag = webDB.isElementDisplayed(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE, ElementType.Xpath);
+		if(flag)
+		{
+			webDB.clickAnElement(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE, ElementType.Xpath);
+			Thread.sleep(1500);
+			flag = webDB.isElementDisplayed(BOLPageLocators.CREATE_NEWBOL_BUTTON, ElementType.Id);
+			if(flag)
+			{
+				webDB.clickAnElement(BOLPageLocators.CREATE_NEWBOL_BUTTON, ElementType.Id);
+				Thread.sleep(4000);
+				flag = webDB.isElementDisplayed(BOLPageLocators.CREATE_NEWBOLPAGE_HEADING_ORDERDETAILSPAGE, ElementType.Xpath);
+				log.logging("info", "Redirected to the create new BOL page");
+			}
+		}
+		return flag;
+	}
+	
+	/**
+	 * @author 
+	 * @return flag
+	 * This method is used to create new BOL
+	 * @throws InterruptedException
+	 */
+	public boolean set_BOLPage_CarrierDetails_CreatingOrderFirst() throws InterruptedException
+	{
+		flag = webDB.isElementDisplayed(BOLPageLocators.SHIPMETHOD_DROPDOWN, ElementType.Xpath);
+		if(flag)
+		{
+			//Select Ship Method
+			webDB.clickAnElement(BOLPageLocators.SHIPMETHOD_DROPDOWN, ElementType.Xpath);
+			Thread.sleep(1000);
+			flag = webDB.isElementDisplayed(BOLPageLocators.SHIPMETHOD_DRP_OPTION, ElementType.Xpath);
+			if(flag)
+			{
+				webDB.clickAnElement(BOLPageLocators.SHIPMETHOD_DRP_OPTIONS_LIST, ElementType.Xpath);
+				log.logging("info", "Selected Ship method");
+				Thread.sleep(2000);
+				//Select Shipper
+				webDB.clickAnElement(BOLPageLocators.SHIPPER_DROPDOWN, ElementType.Xpath);
+				Thread.sleep(1000);
+				flag = webDB.isElementDisplayed(BOLPageLocators.SHIPPER_DRP_OPTION, ElementType.Xpath);
+				if(flag)
+				{
+					int shipper_totaloptions = webDB.getDriver().findElements(By.xpath(BOLPageLocators.SHIPPER_DRP_OPTIONS_LIST)).size();
+					int shipper_oneoption = faker.number().numberBetween(1, shipper_totaloptions-1);
+					webDB.getDriver().findElement(By.xpath(BOLPageLocators.SHIPPER_DRP_OPTIONS_LIST+"["+shipper_oneoption+"]")).click();
+					Thread.sleep(2000);
+					log.logging("info", "Selected Shipper");
+					flag = webDB.isElementDisplayed(BOLPageLocators.SUBMIT_BOL_BUTTON, ElementType.Id);
+					if(flag)
+					{
+						webDB.clickAnElement(BOLPageLocators.SUBMIT_BOL_BUTTON, ElementType.Id);
+						Thread.sleep(1000);
+						
+						flag = webDB.isElementDisplayed(BOLPageLocators.BOL_SUCCESS_MSG, ElementType.Xpath);
+						Thread.sleep(4000);
+						log.logging("info", "BOL submitted and success message is displayed");
+						BOL_Number = getBOLNumberFromOrderDetailsPage();
+						log.logging("info", "The BOL Number on Order Details page is: "+BOL_Number);
+						Thread.sleep(3000);
+					}
+
+				}
+			}
+		}
+			
+					
+
+		
+		return flag;
+	}
 	
 	
+	/**
+	 * @author 
+	 * @return flag
+	 * This method is used to click on Add Order to BOL and Create BOL button from Order details page and fill the carrier details
+	 * @throws InterruptedException
+	 */
+	public boolean set_BOL_Flow() throws InterruptedException
+	{
+		flag = click_Add_Order_To_BOL_And_CreateBOL_BTN();
+		if(flag)
+		{
+			flag = set_BOLPage_CarrierDetails_CreatingOrderFirst();
+			if(flag)
+			{
+				flag = set_BOLStatus();
+			}
+		}
+		return flag;
+	}
 	
 }
