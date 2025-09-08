@@ -20,7 +20,6 @@ public class CommonFunctions
 	public String expectedtext_link = new String();
 	Faker faker = new Faker();
 	
-	
 		
 	/**
 	 * @author 
@@ -36,6 +35,7 @@ public class CommonFunctions
 			webDB.clickAnElement(CommonFunctionsLocators.ORDERSANDBOLS_PAGE_LEFTNAV, ElementType.Xpath);
 			Thread.sleep(2000);
 			flag = webDB.isElementDisplayed(CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
+			
 		}
 		
 		return flag;

@@ -244,7 +244,7 @@ public class BOLPageFunctional
 		if(BOL_Number_Listingpage.equals(BOL_Number))
 		{
 			log.logging("info", "The BOL number is matched");
-			Thread.sleep(750);
+			Thread.sleep(1500);
 			flag = update_BOLStatus();
 		}
 		else
@@ -386,6 +386,8 @@ public class BOLPageFunctional
 		return flag;
 	}
 	
+	
+	
 	/**
 	 * @author 
 	 * @return flag
@@ -441,6 +443,40 @@ public class BOLPageFunctional
 		return flag;
 	}
 	
+	/**
+	 * @author 
+	 * @return flag
+	 * This method is used to click on Add Order to BOL button from Order details page
+	 * @throws InterruptedException
+	 */
+	public boolean click_Add_Order_To_BOL_BTN_OrderDetailsPage() throws InterruptedException
+	{
+		flag = webDB.isElementDisplayed(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE, ElementType.Xpath);
+		if(flag)
+		{
+			webDB.clickAnElement(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE, ElementType.Xpath);
+			Thread.sleep(2000);
+			flag = webDB.isElementDisplayed(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_BOLCREATEPAGE, ElementType.Xpath);
+			if(flag)
+			{
+				webDB.clickAnElement(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_BOLCREATEPAGE, ElementType.Xpath);
+				Thread.sleep(4000);
+				String BOL_Number_Existing = getBOLNumberFromOrderDetailsPage();
+				log.logging("info", "The BOL Number on Order Details page is: "+BOL_Number_Existing);
+				Thread.sleep(3000);
+				if(BOL_Number_Existing.equalsIgnoreCase(BOL_Number))
+				{
+					log.logging("info", "Order added to existing BOL i.e. "+BOL_Number_Existing);
+				}
+				else
+				{
+					log.logging("info", "The Order is not added to existing BOL");
+					flag=false;
+				}
+			}
+		}
+		return flag;
+	}
 	
 	/**
 	 * @author 

@@ -19,7 +19,7 @@ import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 
-public class CreateOrderTest 
+public class MultipleOrderTest 
 {
 
 	// This line used to create object for driver base class
@@ -58,9 +58,45 @@ public class CreateOrderTest
 	}
 	
 	@Test(description = "Verify BOL to Order functionality")
-	public void verifyAdd_Order_To_BOL_Complete_Flow() throws InterruptedException 
+	public void verifyAdd_Order_To_BOL_Flow() throws InterruptedException 
 	{
-		flag = bolpagefunctional.set_BOL_Flow();
+		flag = bolpagefunctional.click_Add_Order_To_BOL_And_CreateBOL_BTN();
+		if(flag)
+		{
+			flag = bolpagefunctional.set_BOLPage_CarrierDetails_CreatingOrderFirst();
+		}
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify create multiple order functionality from create order page", invocationCount = 2)
+	public void verifyMultiple_Create_Order_Flow_Final() throws InterruptedException 
+	{
+		flag = createorderpage.complete_MultipleOrderFlow();
+		if(flag)
+		{
+			flag = bolpagefunctional.click_Add_Order_To_BOL_BTN_OrderDetailsPage();
+		}
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify create multiple order functionality from create order page")
+	public void verifyMultiple_Create_Order_Flow() throws InterruptedException 
+	{
+		flag = createorderpage.complete_MultipleOrderFlow();	
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Add Existing BOL to Order functionality")
+	public void verifyAdd_Order_To_Existing_BOL_Flow() throws InterruptedException 
+	{
+		flag = bolpagefunctional.click_Add_Order_To_BOL_BTN_OrderDetailsPage();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify BOL status update functionality")
+	public void verifyBOL_Complete_Flow() throws InterruptedException 
+	{
+		flag = bolpagefunctional.set_BOLStatus();
 		Assert.assertTrue(flag);
 	}
 	
@@ -69,10 +105,10 @@ public class CreateOrderTest
 		webDB.tearDown();
 	}
 	
-//	@AfterSuite
-//	public void SendMail() throws Exception {
-//		Mailer mailer = new Mailer();
-//		mailer.execute("RMS Automation Report");
-//	}
+	@AfterSuite
+	public void SendMail() throws Exception {
+		Mailer mailer = new Mailer();
+		mailer.execute("RMS Automation Report");
+	}
 	
 }

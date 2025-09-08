@@ -31,7 +31,7 @@ public class CreateOrderPageLocators
 	/**XPATH*/ public static final String PICKUP_WINDOW_ENDDATE = "(//td[@class='p-datepicker-today']//following-sibling::td)[1]";
 	/**XPATH*/ public static final String NEXTHOUR_INCREMENT_BTN = "(//button[@class='p-link'])[1]";
 	/**ID*/ public static final String DELIVERY_WINDOW_STARTDATE_CALENDER = "delivery-window-start-date";
-	/**XPATH*/ public static final String DELIVERY_WINDOW_STARTDATE_TODAY = "(//td[@class='p-datepicker-today']//following-sibling::td)[2]";
+	/**XPATH*/ public static final String DELIVERY_WINDOW_STARTDATE_TODAY = "(//td[@class='p-datepicker-today']//following-sibling::td)[1]";
 	/**ID*/ public static final String DELIVERY_WINDOW_ENDDATE_CALENDER = "delivery-window-end-date";
 	/**XPATH*/ public static final String DELIVERY_WINDOW_ENDDATE = "(//td[@class='p-datepicker-today']//following-sibling::td)[3]";
 	

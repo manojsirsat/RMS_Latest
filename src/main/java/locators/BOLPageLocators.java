@@ -63,27 +63,7 @@ public class BOLPageLocators
 	
 	
 	
-//	/**XPATH*/ public static final String BOLPAGE_HEADING = "//div[text()='Bills of Lading']";
-//	/**ID*/ public static final String CREATE_NEWBOL_BUTTON = "create-bol-button";
-//	/**XPATH*/ public static final String CREATE_NEWBOLPAGE_HEADING = "//h2[text()='Create Bill of Lading']";
-//	/**ID*/ public static final String FROM_LOC_DROPDOWN = "from-location-dropdown";
-//	/**ID*/ public static final String FROM_LOC_DRP_OPTION = "from-location-dropdown_list";
-//	/**XPATH*/ public static final String FROM_LOC_DRP_OPTIONS_LIST = "(//ul[@id='from-location-dropdown_list']//li)";
-//
-//	
-//	/**ID*/ public static final String TO_LOC_DROPDOWN = "to-location-dropdown";
-//	/**ID*/ public static final String TO_LOC_DRP_OPTION = "to-location-dropdown_list";
-//	/**XPATH*/ public static final String TO_LOC_DRP_OPTIONS_LIST = "(//ul[@id='to-location-dropdown_list']//li)";
-//
-//	/**ID*/ public static final String SHIPMETHOD_DROPDOWN = "transit-types-dropdown";
-//	/**ID*/ public static final String SHIPMETHOD_DRP_OPTION = "transit-types-dropdown_list";
-//	/**XPATH*/ public static final String SHIPMETHOD_DRP_OPTIONS_LIST = "(//ul[@id='transit-types-dropdown_list']//li)[1]";
-//	
-//	/**ID*/ public static final String SHIPPER_DROPDOWN = "shipper";
-//	/**ID*/ public static final String SHIPPER_DRP_OPTION = "shipper_list";
-//	/**XPATH*/ public static final String SHIPPER_DRP_OPTIONS_LIST = "(//ul[@id='shipper_list']//li)";
-//
-//	/**ID*/ public static final String SUBMIT_BOL_BUTTON = "submit-bill-of-lading-button";
-//	/**XPATH*/ public static final String BOL_SUCCESS_MSG = "//div[text()='Bill of Lading created successfully']";
+	/**XPATH*/ public static final String ADD_ORDER_TO_BOL_BTN_BOLCREATEPAGE = "(//button[text()='Add Order To BOL'])[1]";
 	
+//	
 }
