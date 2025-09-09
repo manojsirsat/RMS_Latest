@@ -10,10 +10,12 @@ public class loginPage
 {
 
 	boolean flag;
-	static CommonFunctions commonfunction = new CommonFunctions();
-	WebDriverBase webDB = new WebDriverBase();
+	private WebDriverBase webDB;
 	ReportLoger log = new ReportLoger();
 
+	public loginPage(WebDriverBase webDB) {
+		this.webDB = webDB;
+	}
 	
 	/**
 	 * This method is used to perform user valid login 
@@ -22,28 +24,30 @@ public class loginPage
 	 */
 	public boolean validLogin() throws InterruptedException {
 
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.USERNAME_FIELD, ElementType.CssSelector);
+		// First, wait for the username field to be ready.
+		flag = webDB.waitForElement(CommonFunctionsLocators.USERNAME_FIELD, ElementType.Xpath);
+
 		if (flag) {
 			log.logging("info", "Login page is displayed");
-			flag = webDB.waitForElement(CommonFunctionsLocators.USERNAME_FIELD, ElementType.CssSelector);
+			String Username = webDB.getDataFromProperties("username");
+			webDB.sendTextToAnElement(CommonFunctionsLocators.USERNAME_FIELD, Username, ElementType.Xpath);
+
+			// Wait for password field
+			flag = webDB.waitForElement(CommonFunctionsLocators.PASSWORD_FIELD, ElementType.Xpath);
 			if (flag) {
-				String Username = webDB.getDataFromProperties("username");
-				webDB.sendTextToAnElement(CommonFunctionsLocators.USERNAME_FIELD, Username,
-						ElementType.CssSelector);
-				flag = webDB.waitForElement(CommonFunctionsLocators.PASSWORD_FIELD, ElementType.CssSelector);
+				String Password = webDB.getDataFromProperties("password");
+				webDB.sendTextToAnElement(CommonFunctionsLocators.PASSWORD_FIELD, Password, ElementType.Xpath);
+
+				// Wait for sign-in button
+				flag = webDB.waitForElement(CommonFunctionsLocators.SIGNIN_BUTTON, ElementType.Xpath);
 				if (flag) {
-					String Password = webDB.getDataFromProperties("password");
-					webDB.sendTextToAnElement(CommonFunctionsLocators.PASSWORD_FIELD, Password,
-							ElementType.CssSelector);
-					Thread.sleep(2000);
-					flag = webDB.waitForElement(CommonFunctionsLocators.SIGNIN_BUTTON, ElementType.CssSelector);
-					if (flag) {
-						webDB.clickAnElement(CommonFunctionsLocators.SIGNIN_BUTTON, ElementType.CssSelector);
-						log.logging("info", "Clicked on Sign in button");
-						Thread.sleep(3000);
-						flag = webDB.waitForElement(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath);
+					webDB.clickAnElement(CommonFunctionsLocators.SIGNIN_BUTTON, ElementType.Xpath);
+					log.logging("info", "Clicked on Sign in button");
+
+					// Wait for profile name to appear after login to confirm success
+					flag = webDB.waitForElement(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath);
+					if(flag){
 						log.logging("info", "Logged in as a User successfully");
-						Thread.sleep(2000);							
 					}
 				}
 			}
@@ -51,9 +55,4 @@ public class loginPage
 
 		return flag;
 	}
-	
-	
-
-	
-		
 }

@@ -3,8 +3,14 @@ package locators;
 public class BOLPageLocators 
 {
 	//Add BOL flow locators
-	/**XPATH*/ public static final String BOLPAGE_HEADING = "//div[text()='Bills of Lading']";
+	/**XPATH*/ public static final String BOLPAGE_HEADING = "//div[contains(text(),'Bills of Lading')]";
 	/**ID*/ public static final String CREATE_NEWBOL_BUTTON = "create-bol-button";
+	
+	//BOL Search and Table locators
+	/**XPATH*/ public static final String BOL_SEARCH_FILTER = "//input[@class='p-inputtext p-component' and contains(@placeholder,'BOL')]";
+	/**XPATH*/ public static final String BOL_SEARCH_FILTER_ALTERNATIVE = "//div[contains(@class,'p-column-filter')]//input[@class='p-inputtext p-component']";
+	/**XPATH*/ public static final String BOL_TABLE_FIRST_ROW = "//tbody[@class='p-datatable-tbody']//tr[1]//td[contains(@class,'bol-number-column')]//a";
+	/**XPATH*/ public static final String BOL_TABLE = "//table[@role='grid']";
 	/**XPATH*/ public static final String CREATE_NEWBOLPAGE_HEADING = "//h2[text()='Create Bill of Lading']";
 	/**XPATH*/ public static final String FROM_LOC_DROPDOWN = "//div[@class='p-autocomplete p-component p-inputwrapper p-autocomplete-dd w-full inputfield' and @id='from-location-dropdown']";
 	/**XPATH*/ public static final String FROM_LOC_DRP_OPTION = "//ul[@class='p-autocomplete-items p-virtualscroller-content' and @id='from-location-dropdown_list']";
@@ -45,8 +51,7 @@ public class BOLPageLocators
 
 	/**XPATH*/ public static final String REMOVE_ORDERFROMBOL_BTN = "//button[@class='p-button p-component p-button-danger']";
 //	/**XPATH*/ public static final String BOL_NUMBER_FROM_BOLDETAILSPAGE = "//div[@class='max-w-full prose']//h2";
-	/**XPATH*/ public static final String BOL_NUMBER_FROM_BOLDETAILSPAGE = "(//h2)[1]";
-	
+	/**XPATH*/ public static final String BOL_NUMBER_FROM_BOLDETAILSPAGE = "//h2[contains(text(), 'Bill of Lading')]";
 	//Set BOL status
 	/**XPATH*/ public static final String BOL_NUMBER_FROM_LISTINGPAGE = "((//tr[@class='p-selectable-row'])[1]//td)[2]/a";
 	/**XPATH*/ public static final String BOL_CHANGESTATUS = "((//tr[@class='p-selectable-row'])[1]//td)[6]";

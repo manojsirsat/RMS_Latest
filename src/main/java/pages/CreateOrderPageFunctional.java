@@ -18,8 +18,8 @@ public class CreateOrderPageFunctional
 {
 
 	boolean flag;
-	static CommonFunctions commonfunction = new CommonFunctions();
-	WebDriverBase webDB = new WebDriverBase();
+	private CommonFunctions commonfunction;
+	private WebDriverBase webDB;
 	static ReportLoger log = new ReportLoger();
 	Faker faker = new Faker();
 	String BOL_Number="";
@@ -27,6 +27,11 @@ public class CreateOrderPageFunctional
 	String option = "";
 	int onefromloc;
 	int onetoloc;
+
+	public CreateOrderPageFunctional(WebDriverBase webDB, CommonFunctions commonfunction) {
+		this.webDB = webDB;
+		this.commonfunction = commonfunction;
+	}
 	
 	/**
 	 * @author 

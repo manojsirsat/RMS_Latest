@@ -12,14 +12,17 @@ import utils.WebDriverBase.ElementType;
 public class CommonFunctions 
 {
 	
-	WebDriverBase webDB = new WebDriverBase();
+	private WebDriverBase webDB;
 	static ReportLoger log = new ReportLoger();
 	boolean flag;
 	public String actlink = new String();
 	public String acttext = new String();
 	public String expectedtext_link = new String();
 	Faker faker = new Faker();
-	
+
+	public CommonFunctions(WebDriverBase webDB) {
+		this.webDB = webDB;
+	}
 		
 	/**
 	 * @author 
@@ -29,13 +32,12 @@ public class CommonFunctions
 	 */
 	public boolean clickOnOrdersAndBolsPage () throws InterruptedException
 	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath);
+		flag = webDB.waitForElement(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath);
 		if(flag)
 		{
 			webDB.clickAnElement(CommonFunctionsLocators.ORDERSANDBOLS_PAGE_LEFTNAV, ElementType.Xpath);
-			Thread.sleep(2000);
-			flag = webDB.isElementDisplayed(CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
-			
+			// Wait for the BOLS_PAGE link to be visible after the click.
+			flag = webDB.waitForElement(CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
 		}
 		
 		return flag;
@@ -49,13 +51,16 @@ public class CommonFunctions
 	 */
 	public boolean clickOnBOLSPage () throws InterruptedException
 	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
+		// First, wait for the BOLs page link to be available.
+		flag = webDB.waitForElement(CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
 		if(flag)
 		{
 			webDB.javaScriptClickAnElement(CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
-			Thread.sleep(9000);
-			flag = webDB.isElementDisplayed(BOLPageLocators.BOLPAGE_HEADING, ElementType.Xpath);
-			log.logging("info", "BOL listing page is displayed");
+			// Wait for the heading of the new page to appear.
+			flag = webDB.waitForElement(BOLPageLocators.BOLPAGE_HEADING, ElementType.Xpath);
+			if (flag) {
+				log.logging("info", "BOL listing page is displayed");
+			}
 		}
 		
 		return flag;
@@ -69,13 +74,15 @@ public class CommonFunctions
 	 */
 	public boolean clickOnCreateOrderPage () throws InterruptedException
 	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.CREATEORDER_PAGE, ElementType.Xpath);
+		flag = webDB.waitForElement(CommonFunctionsLocators.CREATEORDER_PAGE, ElementType.Xpath);
 		if(flag)
 		{
 			webDB.javaScriptClickAnElement(CommonFunctionsLocators.CREATEORDER_PAGE, ElementType.Xpath);
-			Thread.sleep(6000);
-			flag = webDB.isElementDisplayed(CreateOrderPageLocators.CREATEORDER_PAGE_HEADING, ElementType.Xpath);
-			log.logging("info", "Create order page is displayed");
+			// Wait for the heading of the new page to appear.
+			flag = webDB.waitForElement(CreateOrderPageLocators.CREATEORDER_PAGE_HEADING, ElementType.Xpath);
+			if (flag) {
+				log.logging("info", "Create order page is displayed");
+			}
 		}
 		
 		return flag;
@@ -83,4 +90,3 @@ public class CommonFunctions
 	
 	
 }
-	

@@ -5,41 +5,11 @@
 		<listener class-name="utils.Listener"></listener>
 		<!-- <listener class-name="utils.RetryListener"></listener> -->
 	</listeners>
-<!-- 	<test  name="BlogPageTest"> -->
-<!-- 		<classes> -->
-<!-- 			<class name="tests.BOLPageTest"> -->
-<!-- 				<methods> -->
-<!-- 					<include name="verifyCreate_BOL_Flow"></include> -->
-<!-- 					<include name="verifyAdd_Order_To_BOL_Flow"></include> -->
-<!-- 					<include name="verifySet_BOL_Status"></include> -->
-<!-- 				</methods> -->
-<!-- 			</class> -->
-<!-- 			</classes> -->
-<!-- 	</test> Test -->
-<!-- 	<test  name="CreateOrderTest"> -->
-<!-- 		<classes> -->
-<!-- 			<class name="tests.CreateOrderTest"> -->
-<!-- 				<methods> -->
-<!-- 					<include name="verifyCreate_Order_Flow"></include> -->
-<!-- 					<include name="verifyAdd_Order_To_BOL_Complete_Flow"></include> -->
-<!-- 				</methods> -->
-<!-- 			</class> -->
-<!-- 		</classes> -->
-<!-- 	</test> Test -->
-	
-	<test  name="MultipleOrderTest">
+	<test name="RegressionTests">
 		<classes>
-			<class name="tests.MultipleOrderTest">
-				<methods>
-					<include name="verifyCreate_Order_Flow"></include>
-					<include name="verifyAdd_Order_To_BOL_Flow"></include>
-<!-- 					<include name="verifyMultiple_Create_Order_Flow"></include> -->
-<!-- 					<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include> -->
-					<include name="verifyMultiple_Create_Order_Flow_Final"></include>
-<!-- 					<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include> -->
-					<include name="verifyBOL_Complete_Flow"></include>
-				</methods>
-			</class>
-			</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+			<class name="tests.BOLPageTest"/>
+<!--			<class name="tests.CreateOrderTest"/>
+			<class name="tests.MultipleOrderTest"/>-->
+		</classes>
+	</test>
+</suite>
