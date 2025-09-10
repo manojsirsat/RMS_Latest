@@ -1,13 +1,15 @@
 package tests;
 
-import locators.BOLFilterLocators;
+import locators.BOLPageLocators;
+import utils.ReportLoger;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import java.util.List;
 
 public class BOLFilterTest extends BaseTest
 {
     boolean flag;
+	static ReportLoger log = new ReportLoger();
 
     @Test(description = "Regression: BOL listing filters core functionality", priority = 1)
     public void verify_BOL_Filter_Core_Functionality() throws InterruptedException {
@@ -31,40 +33,15 @@ public class BOLFilterTest extends BaseTest
             // Assert.assertTrue(bolpagefunctional.isNoResultsDisplayed(), "Expected no results with empty table");
         }
 
-        /*
-        // 1b. BOL Filter: Invalid (10 digits)
-        Assert.assertTrue(bolpagefunctional.searchBOLNumber("1234567890"), "BOL filter (invalid) failed");
-        Assert.assertTrue(bolpagefunctional.isNoResultsDisplayed(), "Expected no data for invalid BOL input.");
+        // Test From Location filter
+        Assert.assertTrue(bolpagefunctional.resetFilters(), "Failed to reset filters before testing From Location.");
+        String firstResult = bolpagefunctional.selectRandomOptionFromDropdown(true);
+        log.logging("info", "First Selection Result: " + firstResult);
+        Assert.assertNotNull(firstResult, "Failed to select a random From Location.");
 
-        // 2. Current Status filter – random select, check all rows
-        String status = bolpagefunctional.selectRandomOptionFromDropdown(BOLFilterLocators.FILTER_CURRENT_STATUS);
-        Assert.assertTrue(bolpagefunctional.applyCurrentStatusFilter(status), "Current Status filter failed");
-        bolpagefunctional.verifyEveryRowValue("Current Status", status);
-
-        // 3. Program filter – random select, check all rows
-        String program = bolpagefunctional.selectRandomOptionFromDropdown(BOLFilterLocators.FILTER_PROGRAM);
-        Assert.assertTrue(bolpagefunctional.applyProgramFilter(program), "Program filter failed");
-        bolpagefunctional.verifyEveryRowValue("Program", program);
-
-        // 4. Type filter – random select, check all rows
-        String type = bolpagefunctional.selectRandomOptionFromDropdown(BOLFilterLocators.FILTER_TYPE);
-        Assert.assertTrue(bolpagefunctional.applyTypeFilter(type), "Type filter failed");
-        bolpagefunctional.verifyEveryRowValue("Type", type);
-
-        // 5. From Loc filter – random select, check all rows
-        String fromLoc = bolpagefunctional.selectRandomOptionFromDropdown(BOLFilterLocators.FILTER_FROM_LOC);
-        Assert.assertTrue(bolpagefunctional.applyFromLocFilter(fromLoc), "From Loc filter failed");
-        bolpagefunctional.verifyEveryRowValue("From Loc", fromLoc);
-
-        // 6. To Loc filter – random select, check all rows
-        String toLoc = bolpagefunctional.selectRandomOptionFromDropdown(BOLFilterLocators.FILTER_TO_LOC);
-        Assert.assertTrue(bolpagefunctional.applyToLocFilter(toLoc), "To Loc filter failed");
-        bolpagefunctional.verifyEveryRowValue("To Loc", toLoc);
-
-        // 7. Completed Date filter – today's date for demonstration
-        String date = bolpagefunctional.getTodayDateString();
-        Assert.assertTrue(bolpagefunctional.applyCompletedDateFilter(date), "Completed Date filter failed");
-        bolpagefunctional.verifyEveryRowValue("Completed Date", date);
-        */
+        Assert.assertTrue(bolpagefunctional.resetFilters(), "Failed to reset filters before testing From Location.");
+        String randomResult = bolpagefunctional.selectRandomOptionFromDropdown(false);
+        log.logging("info", "Random Selection Result: " + randomResult);
+        Assert.assertNotNull(randomResult, "Failed to select a random From Location.");
     }
 }

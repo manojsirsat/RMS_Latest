@@ -10,16 +10,26 @@ public class BOLPageLocators
 	/**XPATH*/ public static final String BOL_SEARCH_FILTER = "//*[@id='lading-bill-filter-input']";
 	/**XPATH*/ public static final String BOL_SEARCH_FILTER_ALTERNATIVE = "//div[contains(@class,'p-column-filter')]//input[@class='p-inputtext p-component']";
 	/**XPATH*/ public static final String BOL_TABLE_FIRST_ROW = "//*[@id='ladingBillsDataTable']/div[2]/table/tbody/tr[1]/td[2]/a";
+	/**XPATH*/ public static final String BOL_TABLE_FIRST_ROW_FROM_LOCATION = "//*[@id='ladingBillsDataTable']/div[2]/table/tbody/tr/td[15]";
+	/**XPATH*/ public static final String BOL_TABLE_FIRST_ROW_TO_LOCATION_PART1 = "//*[@id='ladingBillsDataTable']/div[2]/table/tbody/tr/td[16]";
+	/**XPATH*/ public static final String BOL_TABLE_FIRST_ROW_TO_LOCATION_PART2 = "//*[@id='ladingBillsDataTable']/div[2]/table/tbody/tr/td[17]";
+	/**XPATH*/ public static final String NO_DATA_MESSAGE = "No Bills of Lading data found.";
 	/**XPATH*/ public static final String BOL_TABLE = "//*[@id='ladingBillsDataTable']";
 	/**XPATH*/ public static final String CREATE_NEWBOLPAGE_HEADING = "//h2[text()='Create Bill of Lading']";
-	/**XPATH*/ public static final String FROM_LOC_DROPDOWN = "//div[@class='p-autocomplete p-component p-inputwrapper p-autocomplete-dd w-full inputfield' and @id='from-location-dropdown']";
-	/**XPATH*/ public static final String FROM_LOC_DRP_OPTION = "//ul[@class='p-autocomplete-items p-virtualscroller-content' and @id='from-location-dropdown_list']";
-	/**XPATH*/ public static final String FROM_LOC_DRP_OPTIONS_LIST = "(//ul[@class='p-autocomplete-items p-virtualscroller-content' and @id='from-location-dropdown_list']//li)";
+    /**ID*/ public static final String FROM_LOC_DROPDOWN = "from-location-dropdown";
+	/**ID*/ public static final String FROM_LOC_DRP_OPTION = "from-location-dropdown_list";
+	/**XPATH*/ public static final String FROM_LOC_DRP_OPTIONS_LIST = "(//ul[@id='from-location-dropdown_list']//li)";
+    /**ID*/ public static final String BOL_FROM_LOC_DROPDOWN = "//*[@id='origin-location-state-autocomplete']";
+	/**ID*/ public static final String BOL_FROM_LOC_DRP_OPTION = "//ul[@id='origin-location-state-autocomplete_list']";
+	/**XPATH*/ public static final String BOL_FROM_LOC_DRP_OPTIONS_LIST = "(//ul[@id='origin-location-state-autocomplete_list']//li)";
 
-	
-	/**XPATH*/ public static final String TO_LOC_DROPDOWN = "//div[@class='p-autocomplete p-component p-inputwrapper p-autocomplete-dd w-full inputfield' and @id='to-location-dropdown']";
-	/**XPATH*/ public static final String TO_LOC_DRP_OPTION = "//ul[@class='p-autocomplete-items p-virtualscroller-content' and @id='to-location-dropdown_list']";
-	/**XPATH*/ public static final String TO_LOC_DRP_OPTIONS_LIST = "(//ul[@class='p-autocomplete-items p-virtualscroller-content' and @id='to-location-dropdown_list']//li)";
+    /**ID*/ public static final String BOL_TO_LOC_DROPDOWN = "//*[@id='destination-location-autocomplete']";
+	/**ID*/ public static final String BOL_TO_LOC_DRP_OPTION = "//ul[@id='destination-location-autocomplete_list']";
+	/**XPATH*/ public static final String BOL_TO_LOC_DRP_OPTIONS_LIST = "(//ul[@id='destination-location-autocomplete_list']//li)";
+
+	/**ID*/ public static final String TO_LOC_DROPDOWN = "to-location-dropdown";
+	/**ID*/ public static final String TO_LOC_DRP_OPTION = "to-location-dropdown_list";
+	/**XPATH*/ public static final String TO_LOC_DRP_OPTIONS_LIST = "(//ul[@id='to-location-dropdown_list']//li)";
 
 	/**XPATH*/ public static final String SHIPMETHOD_DROPDOWN = "//div[@class='p-autocomplete p-component p-inputwrapper p-autocomplete-dd w-full inputfield' and @id='transit-types-dropdown']";
 	/**XPATH*/ public static final String SHIPMETHOD_DRP_OPTION = "//ul[@class='p-autocomplete-items' and @id='transit-types-dropdown_list']";
@@ -71,5 +81,16 @@ public class BOLPageLocators
 	/**XPATH*/ public static final String ADD_ORDER_TO_BOL_BTN_BOLCREATEPAGE = "(//button[text()='Add Order To BOL'])[1]";
 	/**XPATH*/ public static final String VIEW_RESULT_BUTTON = "//*[@id='view_result_button']";
 	
-//	
+//BOL Filter locators
+	/**ID*/ public static final String STATUS_MULTI_SELECT = "status-multi-select";
+	/**XPATH*/ public static final String STATUS_MULTI_SELECT_PANEL = "//div[contains(@class, 'p-multiselect-panel')]";
+	/**XPATH*/ public static final String STATUS_MULTI_SELECT_ITEMS_LIST = "//ul[contains(@class, 'p-multiselect-items')]";
+	/**XPATH*/ public static final String STATUS_MULTI_SELECT_ITEM = STATUS_MULTI_SELECT_ITEMS_LIST + "/li";
+	/**XPATH*/ public static final String STATUS_TABLE_COLUMN_DATA = "//table[@class='p-datatable-table']/tbody/tr/td[7]";
+	/**XPATH*/ public static final String FROM_LOC_TABLE_COLUMN_DATA = "//table[@class='p-datatable-table']/tbody/tr/td[3]";
+	/**XPATH*/ public static final String TO_LOC_TABLE_COLUMN_DATA = "//table[@class='p-datatable-table']/tbody/tr/td[4]";
+	/**XPATH*/ public static final String BOL_SEARCH_INPUT = "//*[@id='lading-bill-filter-input']";
+	/**XPATH*/ public static final String CLEAR_BOL_SEARCH_BUTTON = "//button[contains(@class, 'p-column-filter-clear-button')]";
+	/**XPATH*/ public static final String RESET_FILTERS_BUTTON = "//*[@id='reset_filters_button']";
+	/**XPATH*/ public static final String STATUS_MULTI_SELECT_ALL_CHECKBOX = "//input[@type='checkbox' and contains(@class, 'p-checkbox-input')]";
 }
