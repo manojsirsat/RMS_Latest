@@ -37,6 +37,7 @@ public class BOLPageFunctional
 	public String getLatestBOLNumber() {
 		try {
 			// First verify table is present
+			webDB.scrollToAnElement(BOLPageLocators.BOL_TABLE, ElementType.Xpath);
 			if (!webDB.waitForClickElement(BOLPageLocators.BOL_TABLE, ElementType.Xpath)) {
 				log.logging("info", "BOL table is not displayed");
 				return null;
@@ -48,7 +49,7 @@ public class BOLPageFunctional
 				return null;
 			}
 			
-			String bolNumber = webDB.getText(ElementType.Xpath, BOLPageLocators.BOL_TABLE_FIRST_ROW);
+			String bolNumber = webDB.getTextFromElement(BOLPageLocators.BOL_TABLE_FIRST_ROW, ElementType.Xpath);
 			if (bolNumber != null && !bolNumber.trim().isEmpty()) {
 				log.logging("info", "Got BOL number from the first row: " + bolNumber);
 				return bolNumber.trim();
@@ -67,7 +68,7 @@ public class BOLPageFunctional
 	 * @return boolean indicating if the search was successful
 	 * This method searches for a specific BOL number using the filter
 	 */
-	public boolean searchBOLNumber(String bolNumber) {
+	public boolean searchBOLNumber(String bolNumber) throws InterruptedException {
 		if (bolNumber == null || bolNumber.trim().isEmpty()) {
 			log.logging("info", "Invalid BOL number provided for search");
 			return false;
@@ -75,11 +76,11 @@ public class BOLPageFunctional
 		
 		try {
 			// Try primary search filter locator
-			boolean filterFound = webDB.waitForElement(ElementType.Xpath, BOLPageLocators.BOL_SEARCH_FILTER);
+			boolean filterFound = webDB.waitForElement(BOLPageLocators.BOL_SEARCH_FILTER, ElementType.Xpath);
 			
 			// If primary fails, try alternative locator
 			if (!filterFound) {
-				filterFound = webDB.waitForElement(ElementType.Xpath, BOLPageLocators.BOL_SEARCH_FILTER_ALTERNATIVE);
+				filterFound = webDB.waitForElement(BOLPageLocators.BOL_SEARCH_FILTER_ALTERNATIVE, ElementType.Xpath);
 				if (!filterFound) {
 					log.logging("info", "Unable to locate BOL search filter");
 					return false;
@@ -88,31 +89,57 @@ public class BOLPageFunctional
 			
 			// Clear and enter the BOL number
 			String locatorToUse = filterFound ? BOLPageLocators.BOL_SEARCH_FILTER : BOLPageLocators.BOL_SEARCH_FILTER_ALTERNATIVE;
-			webDB.clear(ElementType.Xpath, locatorToUse);
-			webDB.sendKeys(ElementType.Xpath, locatorToUse, bolNumber);
+			// The user said they fixed the scroll up.
+			webDB.clearText(locatorToUse, ElementType.Xpath);
+			webDB.sendTextToAnElement(locatorToUse, bolNumber, ElementType.Xpath);
 			log.logging("info", "Entered BOL number in search filter: " + bolNumber);
+
+			webDB.clickAnElement(BOLPageLocators.VIEW_RESULT_BUTTON, ElementType.Xpath);
+            log.logging("info", "Clicked on View Result button");
 			
 			// Wait for table to update (using explicit wait instead of Thread.sleep)
-			boolean tableUpdated = webDB.waitForElement(ElementType.Xpath, BOLPageLocators.BOL_TABLE);
+			boolean tableUpdated = webDB.waitForElement(BOLPageLocators.BOL_TABLE, ElementType.Xpath);
 			if (!tableUpdated) {
 				log.logging("info", "Table did not update after search");
 				return false;
 			}
 			
 			// Get and verify the search result
-			String firstRowBOL = getLatestBOLNumber();
+			String firstRowBOL = getFirstBOLNumberFromResult();
 			if (firstRowBOL != null && firstRowBOL.equals(bolNumber)) {
 				log.logging("info", "Successfully found BOL number: " + bolNumber);
 				return true;
 			} else {
-				log.logging("BOL number not found in search results. Expected: " + bolNumber + ", Found: " + firstRowBOL);
+				log.logging("BOL number not found in search results. Expected: " + bolNumber + ", Found: " + firstRowBOL, firstRowBOL);
 				return false;
 			}
 		} catch (Exception e) {
-			log.logging("Unable to search BOL number with Exception: " + e.getMessage());
+			log.logging("Unable to search BOL number with Exception: " + e.getMessage(), bolNumber);
 			return false;
 		}
 	}
+
+	private String getFirstBOLNumberFromResult() {
+        // This method assumes the table is already visible and updated.
+        // It does not perform any scrolling.
+        try {
+            if (!webDB.waitForElement(BOLPageLocators.BOL_TABLE_FIRST_ROW, ElementType.Xpath)) {
+                log.logging("info", "No BOL entries found in the table after search");
+                return null;
+            }
+            String bolNumber = webDB.getTextFromElement(BOLPageLocators.BOL_TABLE_FIRST_ROW, ElementType.Xpath);
+            if (bolNumber != null && !bolNumber.trim().isEmpty()) {
+                log.logging("info", "Got BOL number from the first row after search: " + bolNumber);
+                return bolNumber.trim();
+            } else {
+                log.logging("info", "BOL number is empty or null after search");
+                return null;
+            }
+        } catch (Exception e) {
+            log.logging("info", "Unable to get BOL number from first row after search with Exception: " + e.getMessage());
+            return null;
+        }
+    }
 	/**
 	 * @author 
 	 * @return flag

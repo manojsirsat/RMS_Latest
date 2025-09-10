@@ -7,9 +7,10 @@
 	</listeners>
 	<test name="RegressionTests">
 		<classes>
-			<class name="tests.BOLPageTest"/>
-<!--			<class name="tests.CreateOrderTest"/>
+<!--			<class name="tests.BOLPageTest"/>
+--><!--			<class name="tests.CreateOrderTest"/>
 			<class name="tests.MultipleOrderTest"/>-->
+			<class name="tests.BOLFilterTest"/>
 		</classes>
 	</test>
 </suite>

@@ -7,10 +7,10 @@ public class BOLPageLocators
 	/**ID*/ public static final String CREATE_NEWBOL_BUTTON = "create-bol-button";
 	
 	//BOL Search and Table locators
-	/**XPATH*/ public static final String BOL_SEARCH_FILTER = "//input[@class='p-inputtext p-component' and contains(@placeholder,'BOL')]";
+	/**XPATH*/ public static final String BOL_SEARCH_FILTER = "//*[@id='lading-bill-filter-input']";
 	/**XPATH*/ public static final String BOL_SEARCH_FILTER_ALTERNATIVE = "//div[contains(@class,'p-column-filter')]//input[@class='p-inputtext p-component']";
-	/**XPATH*/ public static final String BOL_TABLE_FIRST_ROW = "//tbody[@class='p-datatable-tbody']//tr[1]//td[contains(@class,'bol-number-column')]//a";
-	/**XPATH*/ public static final String BOL_TABLE = "//table[@role='grid']";
+	/**XPATH*/ public static final String BOL_TABLE_FIRST_ROW = "//*[@id='ladingBillsDataTable']/div[2]/table/tbody/tr[1]/td[2]/a";
+	/**XPATH*/ public static final String BOL_TABLE = "//*[@id='ladingBillsDataTable']";
 	/**XPATH*/ public static final String CREATE_NEWBOLPAGE_HEADING = "//h2[text()='Create Bill of Lading']";
 	/**XPATH*/ public static final String FROM_LOC_DROPDOWN = "//div[@class='p-autocomplete p-component p-inputwrapper p-autocomplete-dd w-full inputfield' and @id='from-location-dropdown']";
 	/**XPATH*/ public static final String FROM_LOC_DRP_OPTION = "//ul[@class='p-autocomplete-items p-virtualscroller-content' and @id='from-location-dropdown_list']";
@@ -69,6 +69,7 @@ public class BOLPageLocators
 	
 	
 	/**XPATH*/ public static final String ADD_ORDER_TO_BOL_BTN_BOLCREATEPAGE = "(//button[text()='Add Order To BOL'])[1]";
+	/**XPATH*/ public static final String VIEW_RESULT_BUTTON = "//*[@id='view_result_button']";
 	
 //	
 }
