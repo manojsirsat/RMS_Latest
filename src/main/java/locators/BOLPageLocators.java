@@ -13,7 +13,7 @@ public class BOLPageLocators
 	/**XPATH*/ public static final String BOL_TABLE_FIRST_ROW_FROM_LOCATION = "//*[@id='ladingBillsDataTable']/div[2]/table/tbody/tr/td[15]";
 	/**XPATH*/ public static final String BOL_TABLE_FIRST_ROW_TO_LOCATION_PART1 = "//*[@id='ladingBillsDataTable']/div[2]/table/tbody/tr/td[16]";
 	/**XPATH*/ public static final String BOL_TABLE_FIRST_ROW_TO_LOCATION_PART2 = "//*[@id='ladingBillsDataTable']/div[2]/table/tbody/tr/td[17]";
-	/**XPATH*/ public static final String NO_DATA_MESSAGE = "No Bills of Lading data found.";
+	/**XPATH*/ public static final String NO_DATA_MESSAGE = "//*[@id='ladingBillsDataTable']/div[2]/table/tbody/tr/td";
 	/**XPATH*/ public static final String BOL_TABLE = "//*[@id='ladingBillsDataTable']";
 	/**XPATH*/ public static final String CREATE_NEWBOLPAGE_HEADING = "//h2[text()='Create Bill of Lading']";
     /**ID*/ public static final String FROM_LOC_DROPDOWN = "from-location-dropdown";
@@ -26,6 +26,17 @@ public class BOLPageLocators
     /**ID*/ public static final String BOL_TO_LOC_DROPDOWN = "//*[@id='destination-location-autocomplete']";
 	/**ID*/ public static final String BOL_TO_LOC_DRP_OPTION = "//ul[@id='destination-location-autocomplete_list']";
 	/**XPATH*/ public static final String BOL_TO_LOC_DRP_OPTIONS_LIST = "(//ul[@id='destination-location-autocomplete_list']//li)";
+	/**XPATH*/ public static final String BOL_CURRENTSTATUS_DRP = "//*[@id='status-multi-select']/div[3]";
+	/**XPATH*/ public static final String BOL_COMPLETEDSTATUS_DRP = "//*[@id='status-multi-select_3']";
+	/**XPATH*/ public static final String BOL_CALENDARSTARTDATE = "//*[@id='completed-date-calendar_panel']/div[2]/button[1]";
+	/**XPATH*/ public static final String BOL_CALENDARENDDATE = "//*[@id='completed-date-calendar_panel']/div[2]/button[1]";
+	
+
+	// BOLPageLocators.java
+
+	public static final String COMPLETE_DATE_PICKER = "//*[@id='completed-date-calendar']/input";
+	public static final String PAGINATION_TEXT = "//span[contains(text(),'Showing') and contains(text(),'of')]";
+
 
 	/**ID*/ public static final String TO_LOC_DROPDOWN = "to-location-dropdown";
 	/**ID*/ public static final String TO_LOC_DRP_OPTION = "to-location-dropdown_list";

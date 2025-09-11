@@ -1,6 +1,5 @@
 package tests;
 
-import locators.BOLPageLocators;
 import utils.ReportLoger;
 
 import org.testng.Assert;
@@ -20,17 +19,15 @@ public class BOLFilterTest extends BaseTest
 
         System.out.println("DEBUG: Right before calling getLatestBOLNumber");
         Thread.sleep(5000);
-        // 1. BOL Filter: Valid (top of table)
+        // // 1. BOL Filter: Valid (top of table)
         String topBOL = bolpagefunctional.getLatestBOLNumber();
         if (topBOL != null && !topBOL.isEmpty()) {
             Assert.assertTrue(bolpagefunctional.searchBOLNumber(topBOL), "BOL filter (valid) failed");
-            // List<String> bolResults = bolpagefunctional.getDisplayedBOLNumbers();
-            // Assert.assertTrue(bolResults.size() > 0 && bolResults.get(0).equals(topBOL),
-            //         "Table result for BOL filter not as expected.");
+       
         } else {
             // Table empty, search any should return nothing
             Assert.assertTrue(bolpagefunctional.searchBOLNumber("0"), "BOL filter action failed on empty");
-            // Assert.assertTrue(bolpagefunctional.isNoResultsDisplayed(), "Expected no results with empty table");
+           
         }
 
         // Test From Location filter
@@ -43,5 +40,15 @@ public class BOLFilterTest extends BaseTest
         String randomResult = bolpagefunctional.selectRandomOptionFromDropdown(false);
         log.logging("info", "Random Selection Result: " + randomResult);
         Assert.assertNotNull(randomResult, "Failed to select a random From Location.");
+        Assert.assertTrue(bolpagefunctional.resetFilters(), "Failed to reset filters before testing From Location.");
+
+        Assert.assertTrue(bolpagefunctional.filterByCompletedDateToday(), "Completed Date filter failed");
+
+        int count = bolpagefunctional.getFilteredResultsCount();
+        log.logging("info", "Record count for completed date " + count);
+
+        Assert.assertTrue(count >= 0, "Table did not show a valid count after filtering");
     }
+
 }
+

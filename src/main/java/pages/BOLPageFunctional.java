@@ -571,212 +571,6 @@ public class BOLPageFunctional
 		return flag;
 	}
 	
-// public String selectRandomOptionFromDropdown() throws InterruptedException {
-//     try {
-//         String selectedFromLocation = "";
-//         String selectedToLocation = "";
-
-//         // Select from location
-//         webDB.clickAnElement(BOLPageLocators.BOL_FROM_LOC_DROPDOWN, ElementType.Xpath);
-//         if (!webDB.waitForElement(BOLPageLocators.BOL_FROM_LOC_DRP_OPTION, ElementType.Xpath)) return null;
-        
-//         int totaloptions = webDB.getDriver().findElements(By.xpath(BOLPageLocators.BOL_FROM_LOC_DRP_OPTIONS_LIST)).size();
-//         int oneoption = faker.number().numberBetween(1, totaloptions);
-        
-//         WebElement fromLocationElement = webDB.getDriver().findElement(By.xpath(BOLPageLocators.BOL_FROM_LOC_DRP_OPTIONS_LIST+"["+oneoption+"]"));
-//         selectedFromLocation = fromLocationElement.getText();
-//         fromLocationElement.click();
-//         log.logging("info", "Selected From location: " + selectedFromLocation);
-
-//         // Select to location
-//         if (!webDB.waitForElement(BOLPageLocators.BOL_TO_LOC_DROPDOWN, ElementType.Xpath)) return null;
-//         webDB.clickAnElement(BOLPageLocators.BOL_TO_LOC_DROPDOWN, ElementType.Xpath);
-//         if (!webDB.waitForElement(BOLPageLocators.BOL_TO_LOC_DRP_OPTION, ElementType.Xpath)) return null;
-        
-//         int toloc_totaloptions = webDB.getDriver().findElements(By.xpath(BOLPageLocators.BOL_TO_LOC_DRP_OPTIONS_LIST)).size();
-//         int toloc_oneoption = faker.number().numberBetween(1, toloc_totaloptions);
-        
-//         // Ensure different from and to locations
-//         if (oneoption == toloc_oneoption) {
-//             toloc_oneoption = (toloc_oneoption % toloc_totaloptions) + 1;
-//         }
-        
-//         WebElement toLocationElement = webDB.getDriver().findElement(By.xpath(BOLPageLocators.BOL_TO_LOC_DRP_OPTIONS_LIST+"["+toloc_oneoption+"]"));
-//         selectedToLocation = toLocationElement.getText();
-//         toLocationElement.click();
-//         log.logging("info", "Selected To location: " + selectedToLocation);
-// 		webDB.clickAnElement(BOLPageLocators.VIEW_RESULT_BUTTON, ElementType.Xpath);
-//         log.logging("info", "Clicked on View Result button");
-//         // Return both locations in a formatted string
-//         return "From: " + selectedFromLocation + " | To: " + selectedToLocation;
-
-//     } catch (Exception e) {
-//         log.logging("error", "Unable to select random option from dropdown: " + e.getMessage());
-//         return null;
-//     }
-// }
-
-// 	public String selectRandomOptionFromDropdown(boolean selectFirstOptions) throws InterruptedException {
-// 		try {
-// 			String selectedFromLocation = "";
-// 			String selectedToLocation = "";
-
-// 			// Select from location
-// 			webDB.clickAnElement(BOLPageLocators.BOL_FROM_LOC_DROPDOWN, ElementType.Xpath);
-// 			if (!webDB.waitForElement(BOLPageLocators.BOL_FROM_LOC_DRP_OPTION, ElementType.Xpath)) return null;
-			
-// 			int totaloptions = webDB.getDriver().findElements(By.xpath(BOLPageLocators.BOL_FROM_LOC_DRP_OPTIONS_LIST)).size();
-// 			int oneoption;
-			
-// 			if (selectFirstOptions) {
-// 				oneoption = 1; // Select first option
-// 			} else {
-// 				oneoption = faker.number().numberBetween(1, totaloptions); // Random selection
-// 			}
-			
-// 			WebElement fromLocationElement = webDB.getDriver().findElement(By.xpath(BOLPageLocators.BOL_FROM_LOC_DRP_OPTIONS_LIST+"["+oneoption+"]"));
-// 			selectedFromLocation = fromLocationElement.getText();
-// 			fromLocationElement.click();
-// 			log.logging("info", "Selected From location: " + selectedFromLocation);
-
-// 			// Select to location
-// 			if (!webDB.waitForElement(BOLPageLocators.BOL_TO_LOC_DROPDOWN, ElementType.Xpath)) return null;
-// 			webDB.clickAnElement(BOLPageLocators.BOL_TO_LOC_DROPDOWN, ElementType.Xpath);
-// 			if (!webDB.waitForElement(BOLPageLocators.BOL_TO_LOC_DRP_OPTION, ElementType.Xpath)) return null;
-			
-// 			int toloc_totaloptions = webDB.getDriver().findElements(By.xpath(BOLPageLocators.BOL_TO_LOC_DRP_OPTIONS_LIST)).size();
-// 			int toloc_oneoption;
-			
-// 			if (selectFirstOptions) {
-// 				toloc_oneoption = 1; // Select first option
-// 			} else {
-// 				toloc_oneoption = faker.number().numberBetween(1, toloc_totaloptions);
-// 				// Ensure different from and to locations for random selection
-// 				if (oneoption == toloc_oneoption) {
-// 					toloc_oneoption = (toloc_oneoption % toloc_totaloptions) + 1;
-// 				}
-// 			}
-			
-// 			WebElement toLocationElement = webDB.getDriver().findElement(By.xpath(BOLPageLocators.BOL_TO_LOC_DRP_OPTIONS_LIST+"["+toloc_oneoption+"]"));
-// 			selectedToLocation = toLocationElement.getText();
-// 			toLocationElement.click();
-// 			log.logging("info", "Selected To location: " + selectedToLocation);
-
-// 			// Click View Result button
-// 			webDB.clickAnElement(BOLPageLocators.VIEW_RESULT_BUTTON, ElementType.Xpath);
-// 			log.logging("info", "Clicked on View Result button");
-
-// 			// If first options were selected, validate table results
-// 			if (selectFirstOptions) {
-// 				boolean isValidated = validateTableResults(selectedFromLocation, selectedToLocation);
-// 				if (isValidated) {
-// 					log.logging("info", "Table validation successful - filtered results match selected locations");
-// 					return "From: " + selectedFromLocation + " | To: " + selectedToLocation + " | Validation: PASSED";
-// 				} else {
-// 					log.logging("info", "Table validation failed - filtered results do not match selected locations");
-// 					return "From: " + selectedFromLocation + " | To: " + selectedToLocation + " | Validation: FAILED";
-// 				}
-// 			}
-
-// 			// Return both locations in a formatted string for random selection
-// 			return "From: " + selectedFromLocation + " | To: " + selectedToLocation;
-
-// 		} catch (Exception e) {
-// 			log.logging("error", "Unable to select option from dropdown: " + e.getMessage());
-// 			return null;
-// 		}
-// 	}
-
-// 	private boolean validateTableResults(String expectedFromLocation, String expectedToLocation) {
-//     try {
-//         // First verify table is present
-//         webDB.scrollToAnElement(BOLPageLocators.BOL_TABLE, ElementType.Xpath);
-//         if (!webDB.waitForClickElement(BOLPageLocators.BOL_TABLE, ElementType.Xpath)) {
-//             log.logging("info", "BOL table is not displayed");
-//             return false;
-//         }
-        
-//         // Wait for the first row to be present
-//         if (!webDB.waitForElement(BOLPageLocators.BOL_TABLE_FIRST_ROW_FROM_LOCATION, ElementType.Xpath)) {
-//             log.logging("info", "No BOL entries found in the table");
-//             return false;
-//         }
-        
-//         // Extract from location from table
-//         String tableFromLocation = webDB.getTextFromElement(BOLPageLocators.BOL_TABLE_FIRST_ROW_FROM_LOCATION, ElementType.Xpath);
-//         if (tableFromLocation == null || tableFromLocation.trim().isEmpty()) {
-//             log.logging("info", "From location in table is empty or null");
-//             return false;
-//         }
-        
-//         // Extract to location parts from table and merge them
-//         String tableToLocationPart1 = webDB.getTextFromElement(BOLPageLocators.BOL_TABLE_FIRST_ROW_TO_LOCATION_PART1, ElementType.Xpath);
-//         String tableToLocationPart2 = webDB.getTextFromElement(BOLPageLocators.BOL_TABLE_FIRST_ROW_TO_LOCATION_PART2, ElementType.Xpath);
-        
-//         if (tableToLocationPart1 == null) tableToLocationPart1 = "";
-//         if (tableToLocationPart2 == null) tableToLocationPart2 = "";
-        
-//         // Merge the two parts with a space (adjust separator as needed)
-//         String tableToLocation = (tableToLocationPart1.trim() + " " + tableToLocationPart2.trim()).trim();
-        
-//         if (tableToLocation.isEmpty()) {
-//             log.logging("info", "To location in table is empty after merging both parts");
-//             return false;
-//         }
-        
-//         // Clean and process the values for comparison
-//         String cleanTableFromLocation = tableFromLocation.trim();
-//         String cleanTableToLocation = tableToLocation.trim();
-//         String cleanExpectedFromLocation = expectedFromLocation.trim();
-//         String cleanExpectedToLocation = expectedToLocation.trim();
-        
-//         // Process FROM location - extract only state part (before comma)
-//         String stateFromDropdown = cleanExpectedFromLocation;
-//         if (cleanExpectedFromLocation.contains(",")) {
-//             stateFromDropdown = cleanExpectedFromLocation.split(",")[0].trim();
-//         }
-        
-//         // Process TO location - extract location name and code from dropdown format "Location Name (CODE)"
-//         String locationNameFromDropdown = "";
-//         String locationCodeFromDropdown = "";
-        
-//         if (cleanExpectedToLocation.contains("(") && cleanExpectedToLocation.contains(")")) {
-//             int openParen = cleanExpectedToLocation.lastIndexOf("(");
-//             int closeParen = cleanExpectedToLocation.lastIndexOf(")");
-            
-//             locationNameFromDropdown = cleanExpectedToLocation.substring(0, openParen).trim();
-//             locationCodeFromDropdown = cleanExpectedToLocation.substring(openParen + 1, closeParen).trim();
-//         } else {
-//             locationNameFromDropdown = cleanExpectedToLocation;
-//         }
-        
-//         log.logging("info", "Table To Location Part1 (Code): '" + tableToLocationPart1.trim() + "'");
-//         log.logging("info", "Table To Location Part2 (Name): '" + tableToLocationPart2.trim() + "'");
-//         log.logging("info", "Merged Table To Location: '" + cleanTableToLocation + "'");
-//         log.logging("info", "Extracted State from Dropdown: '" + stateFromDropdown + "'");
-//         log.logging("info", "Extracted Location Name from Dropdown: '" + locationNameFromDropdown + "'");
-//         log.logging("info", "Extracted Location Code from Dropdown: '" + locationCodeFromDropdown + "'");
-//         log.logging("info", "Comparing - Expected State: '" + stateFromDropdown + "' vs Table From: '" + cleanTableFromLocation + "'");
-//         log.logging("info", "Comparing - Expected Location Name: '" + locationNameFromDropdown + "' vs Table Location Name: '" + tableToLocationPart2.trim() + "'");
-//         log.logging("info", "Comparing - Expected Location Code: '" + locationCodeFromDropdown + "' vs Table Location Code: '" + tableToLocationPart1.trim() + "'");
-        
-//         // Check FROM location match (state only)
-//         boolean fromLocationMatches = stateFromDropdown.equalsIgnoreCase(cleanTableFromLocation);
-        
-//         // Check TO location match (both name and code should match)
-//         boolean toLocationNameMatches = locationNameFromDropdown.equalsIgnoreCase(tableToLocationPart2.trim());
-//         boolean toLocationCodeMatches = locationCodeFromDropdown.equalsIgnoreCase(tableToLocationPart1.trim());
-//         boolean toLocationMatches = toLocationNameMatches && toLocationCodeMatches;
-        
-//         return fromLocationMatches && toLocationMatches;
-        
-//     } catch (Exception e) {
-//         log.logging("error", "Unable to validate table results with Exception: " + e.getMessage());
-//         return false;
-//     }
-// }
-
-
 
 	public String selectRandomOptionFromDropdown(boolean selectFirstOptions) throws InterruptedException {
 		try {
@@ -827,6 +621,7 @@ public class BOLPageFunctional
 			// Click View Result button
 			webDB.clickAnElement(BOLPageLocators.VIEW_RESULT_BUTTON, ElementType.Xpath);
 			log.logging("info", "Clicked on View Result button");
+			Thread.sleep(5000);
 
 			// Always validate table results for both first and random selection
 			String validationResult = validateTableResultsNew(selectedFromLocation, selectedToLocation, selectFirstOptions);
@@ -854,11 +649,14 @@ public class BOLPageFunctional
 			// Check for "No Bills of Lading data found" message
 			if (webDB.waitForElement(BOLPageLocators.NO_DATA_MESSAGE, ElementType.Xpath)) {
 				String noDataMessage = webDB.getTextFromElement(BOLPageLocators.NO_DATA_MESSAGE, ElementType.Xpath);
-				log.logging("info", "No data message found: " + noDataMessage);
-				if (isFirstSelection) {
-					return "Validation: FAILED - No data found";
-				} else {
-					return "Result: No Table found for this random data - " + noDataMessage;
+				// Only fail if the "no data" message element actually contains text.
+				if (noDataMessage != null && !noDataMessage.trim().isEmpty()) {
+					log.logging("info", "No data message found: " + noDataMessage);
+					if (isFirstSelection) {
+						return "Validation: FAILED - No data found";
+					} else {
+						return "Result: No Table found for this random data - " + noDataMessage;
+					}
 				}
 			}
 			
@@ -1135,4 +933,63 @@ public class BOLPageFunctional
             return false;
         }
     }
+
+	//  Method to Filter by Completed Date (Today)
+
+	public boolean filterByCompletedDateToday() {
+		try {
+			// Open the Complete Date picker
+			webDB.clickAnElement(BOLPageLocators.BOL_CURRENTSTATUS_DRP, ElementType.Xpath);
+			webDB.clickAnElement(BOLPageLocators.BOL_COMPLETEDSTATUS_DRP, ElementType.Xpath);
+			webDB.clickAnElement(BOLPageLocators.COMPLETE_DATE_PICKER, ElementType.Xpath);
+
+			// Click 'Today' (assumes button or list item with this text)
+			webDB.clickAnElement(BOLPageLocators.BOL_CALENDARSTARTDATE, ElementType.Xpath);
+			Thread.sleep(3000);
+			webDB.clickAnElement(BOLPageLocators.BOL_CALENDARENDDATE, ElementType.Xpath);
+			Thread.sleep(3000);
+
+			// Click 'View Result' to trigger table filter
+			webDB.clickAnElement(BOLPageLocators.VIEW_RESULT_BUTTON, ElementType.Xpath);
+			Thread.sleep(5000);
+			webDB.scrollToAnElement(BOLPageLocators.BOL_TABLE, ElementType.Xpath);
+
+			// Wait for result table to refresh
+			webDB.waitForElement(BOLPageLocators.BOL_TABLE, ElementType.Xpath);
+
+			log.logging("info", "Filtered with Completed Date = Today.");
+			return true;
+		} catch (Exception e) {
+			log.logging("error", "Exception during Completed Date filtering: " + e.getMessage());
+			return false;
+		}
+	}
+
+	//Method to Get/Count Table Results after Filtering
+
+
+	public int getFilteredResultsCount() {
+		try {
+			// Find pagination text: e.g., "Showing 1 to 20 of 123"
+			String paginationText = webDB.getTextFromElement(BOLPageLocators.PAGINATION_TEXT, ElementType.Xpath);
+
+			// Extract count using regex
+			Pattern pattern = Pattern.compile("of\\s+(\\d+)");
+			Matcher matcher = pattern.matcher(paginationText);
+
+			if (matcher.find()) {
+				int count = Integer.parseInt(matcher.group(1));
+				log.logging("info", "Extracted result count: " + count);
+				return count;
+			} else {
+				log.logging("error", "Could not parse result count from: " + paginationText);
+				return -1;
+			}
+		} catch (Exception e) {
+			log.logging("error", "Exception in getting result count: " + e.getMessage());
+			return -1;
+		}
+	}
+
+
 }
