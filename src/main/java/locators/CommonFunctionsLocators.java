@@ -4,9 +4,14 @@ public class CommonFunctionsLocators
 {
 
 	//Login page locators
-	/**css*/ public static final String USERNAME_FIELD = "input#okta-signin-username";
-	/**css*/ public static final String PASSWORD_FIELD = "input#okta-signin-password";
-	/**css*/ public static final String SIGNIN_BUTTON = "input#okta-signin-submit";
+//	/**css*/ public static final String USERNAME_FIELD = "input#okta-signin-username";
+//	/**css*/ public static final String PASSWORD_FIELD = "input#okta-signin-password";
+//	/**css*/ public static final String SIGNIN_BUTTON = "input#okta-signin-submit";
+	
+	/**XPATH*/ public static final String USERNAME_FIELD = "//*[@id='preferred_username']";
+	/**XPATH*/ public static final String PASSWORD_FIELD = "//*[@id='password']/input";
+	/**XPATH*/ public static final String SIGNIN_BUTTON = "//button[text()='Sign In ']";
+	
 	
 	//Homepage
 	/**XPATH*/ public static final String PROFILENAME = "//span[@class='p-button-label']";

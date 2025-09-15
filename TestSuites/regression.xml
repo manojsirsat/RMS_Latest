@@ -15,7 +15,8 @@
 <!-- 				</methods> -->
 <!-- 			</class> -->
 <!-- 			</classes> -->
-<!-- 	</test> Test -->
+<!-- 	</test> -->
+	
 <!-- 	<test  name="CreateOrderTest"> -->
 <!-- 		<classes> -->
 <!-- 			<class name="tests.CreateOrderTest"> -->
@@ -25,7 +26,7 @@
 <!-- 				</methods> -->
 <!-- 			</class> -->
 <!-- 		</classes> -->
-<!-- 	</test> Test -->
+<!-- 	</test>  -->
 	
 	<test  name="MultipleOrderTest">
 		<classes>
@@ -33,13 +34,14 @@
 				<methods>
 					<include name="verifyCreate_Order_Flow"></include>
 					<include name="verifyAdd_Order_To_BOL_Flow"></include>
-<!-- 					<include name="verifyMultiple_Create_Order_Flow"></include> -->
-<!-- 					<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include> -->
+					<include name="verifyMultiple_Create_Order_Flow"></include>
+					<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include>
 					<include name="verifyMultiple_Create_Order_Flow_Final"></include>
-<!-- 					<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include> -->
+					<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include>
 					<include name="verifyBOL_Complete_Flow"></include>
 				</methods>
 			</class>
 			</classes>
-	</test> <!-- Test -->
+	</test> 
+	
 </suite> <!-- Suite -->

@@ -48,8 +48,8 @@ public class BOLPageLocators
 	/**XPATH*/ public static final String BOL_NUMBER_FROM_BOLDETAILSPAGE = "(//h2)[1]";
 	
 	//Set BOL status
-	/**XPATH*/ public static final String BOL_NUMBER_FROM_LISTINGPAGE = "((//tr[@class='p-selectable-row'])[1]//td)[2]/a";
-	/**XPATH*/ public static final String BOL_CHANGESTATUS = "((//tr[@class='p-selectable-row'])[1]//td)[6]";
+	/**XPATH*/ public static final String BOL_NUMBER_FROM_LISTINGPAGE = "(//tbody[@class='p-datatable-tbody']/tr/td)[2]/a";
+	/**XPATH*/ public static final String BOL_CHANGESTATUS = "(//tbody[@class='p-datatable-tbody']/tr/td)[6]";
 	/**XPATH*/ public static final String BOL_STATUSCHANGE_DRP = "(//span[@class='p-dropdown-label p-inputtext p-placeholder' and @aria-label='Set BOL Status'])[1]";
 	/**XPATH*/ public static final String BOL_STATUSCHANGE_DRP_OPTIONS = "(//ul[@class='p-dropdown-items']//li)";
 	/**XPATH*/ public static final String BOL_STATUSCHANGE_CONFIRMATIONPOPUP_YES_BTN = "//button[@class='p-button p-component p-button-text' and @aria-label='Yes']";

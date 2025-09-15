@@ -401,16 +401,16 @@ public class BOLPageFunctional
 		{
 			//Select Ship Method
 			webDB.clickAnElement(BOLPageLocators.SHIPMETHOD_DROPDOWN, ElementType.Xpath);
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			flag = webDB.isElementDisplayed(BOLPageLocators.SHIPMETHOD_DRP_OPTION, ElementType.Xpath);
 			if(flag)
 			{
 				webDB.clickAnElement(BOLPageLocators.SHIPMETHOD_DRP_OPTIONS_LIST, ElementType.Xpath);
 				log.logging("info", "Selected Ship method");
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 				//Select Shipper
 				webDB.clickAnElement(BOLPageLocators.SHIPPER_DROPDOWN, ElementType.Xpath);
-				Thread.sleep(1000);
+				Thread.sleep(3000);
 				flag = webDB.isElementDisplayed(BOLPageLocators.SHIPPER_DRP_OPTION, ElementType.Xpath);
 				if(flag)
 				{
