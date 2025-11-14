@@ -12,6 +12,8 @@
 <!-- 					<include name="verifyCreate_BOL_Flow"></include> -->
 <!-- 					<include name="verifyAdd_Order_To_BOL_Flow"></include> -->
 <!-- 					<include name="verifySet_BOL_Status"></include> -->
+<!-- 					<include name="verifyMarkBOL_Complete"></include> -->
+<!-- 					<include name="verifyPagination"></include> -->
 <!-- 				</methods> -->
 <!-- 			</class> -->
 <!-- 			</classes> -->
@@ -28,20 +30,70 @@
 <!-- 		</classes> -->
 <!-- 	</test>  -->
 	
-	<test  name="MultipleOrderTest">
-		<classes>
-			<class name="tests.MultipleOrderTest">
-				<methods>
-					<include name="verifyCreate_Order_Flow"></include>
-					<include name="verifyAdd_Order_To_BOL_Flow"></include>
-					<include name="verifyMultiple_Create_Order_Flow"></include>
-					<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include>
-					<include name="verifyMultiple_Create_Order_Flow_Final"></include>
-					<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include>
-					<include name="verifyBOL_Complete_Flow"></include>
-				</methods>
-			</class>
-			</classes>
-	</test> 
+<!-- 	<test  name="MultipleOrderTest"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="tests.MultipleOrderTest"> -->
+<!-- 				<methods> -->
+<!-- 					<include name="verifyCreate_Order_Flow"></include> -->
+<!-- 					<include name="verifyAdd_Order_To_BOL_Flow"></include> -->
+<!-- 					<include name="verifyMultiple_Create_Order_Flow"></include> -->
+<!-- 					<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include> -->
+<!-- 					<include name="verifyMultiple_Create_Order_Flow_Final"></include> -->
+<!-- 					<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include> -->
+<!-- 					<include name="verifyBOL_Complete_Flow"></include> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+<!-- 			</classes> -->
+<!-- 	</test>  -->
+
+<!-- 				<test name="RecoveriesByZonesTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.RecoveriesByZonesTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="RecoveriesByLocationTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.RecoveriesByLocationTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="RecoveriesByLocation_ProgramTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.RecoveriesByLocation_ProgramTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="RecoveriesByComponentTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.RecoveriesByComponentTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+
+<!-- 				<test name="ReplenishmentsByComponentTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.ReplenishmentsByComponentTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
 	
 </suite> <!-- Suite -->

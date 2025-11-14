@@ -77,6 +77,29 @@ public class BOLPageTest
 	{
 		flag = bolpagefunctional.set_BOLStatus();
 		Assert.assertTrue(flag);
+		
+	}
+	
+	@Test(description = "Verify mark BOL to complete functionality")
+	public void verifyMarkBOL_Complete() throws InterruptedException 
+	{
+		flag = bolpagefunctional.markBOLComplete();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify the pagination functionality")
+	public void verifyPagination() throws InterruptedException 
+	{
+		flag = loginpage.validLogin();
+		if(flag)
+		{
+		flag = bolpagefunctional.navigate_BOLPage();
+		if(flag)
+		{
+		flag = bolpagefunctional.verifypagination();
+		Assert.assertTrue(flag);
+		}
+		}
 	}
 	
 
@@ -98,5 +121,5 @@ public class BOLPageTest
 //		Mailer mailer = new Mailer();
 //		mailer.execute("RMS Automation Report");
 //	}
-//	
+
 }

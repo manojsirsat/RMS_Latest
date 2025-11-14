@@ -65,5 +65,13 @@ public class BOLPageLocators
 	
 	/**XPATH*/ public static final String ADD_ORDER_TO_BOL_BTN_BOLCREATEPAGE = "(//button[text()='Add Order To BOL'])[1]";
 	
-//	
+	/**XPATH*/ public static final String MARKBOLCOMPLETE_BTN_BOLCOMPLETEPAGE = "//button[@class='p-button p-component p-button-success']";
+	/**XPATH*/ public static final String MARKBOLCOMPLETE_POPUP_BOLCOMPLETEPAGE = "//div[@class='p-dialog-header']";
+	/**XPATH*/ public static final String MARKBOLCOMPLETE_PRIMARYREASONLABEL_BOLCOMPLETEPAGE = "//span[text()='Primary Reason']";
+	/**XPATH*/ public static final String MARKBOLCOMPLETE_YES_BOLCOMPLETEPAGE = "//span[text()='Yes']";
+	/**XPATH*/ public static final String WIP_INPUTFIELD_BOLCOMPLETEPAGE = "(//span[@class='p-inputnumber p-component p-inputwrapper p-inputwrapper-filled w-full'])[1]";
+	
+	
+	
+	
 }

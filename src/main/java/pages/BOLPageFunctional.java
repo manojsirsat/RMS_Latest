@@ -269,24 +269,24 @@ public class BOLPageFunctional
 		    flag = webDB.isElementDisplayed(BOLPageLocators.BOL_STATUSCHANGE_DRP, ElementType.Xpath);
 		    if (flag) {
 		        webDB.clickAnElement(BOLPageLocators.BOL_STATUSCHANGE_DRP, ElementType.Xpath);
-		        Thread.sleep(3000);
+		        Thread.sleep(4000);
 		        int totalOptions = webDB.getDriver().findElements(By.xpath(BOLPageLocators.BOL_STATUSCHANGE_DRP_OPTIONS)).size();
 		        for (int i = 1; i <= totalOptions; i++) {
 		            option = webDB.getTextFromElement(BOLPageLocators.BOL_STATUSCHANGE_DRP_OPTIONS + "[" + i + "]", ElementType.Xpath);
 		            if (option.equalsIgnoreCase(statusToSelect)) 
 		            {
 		                webDB.clickAnElement(BOLPageLocators.BOL_STATUSCHANGE_DRP_OPTIONS + "[" + i + "]", ElementType.Xpath);
-		                Thread.sleep(3000);
+		                Thread.sleep(4000);
 		                flag = webDB.isElementDisplayed(BOLPageLocators.BOL_STATUSCHANGE_CONFIRMATIONPOPUP_YES_BTN, ElementType.Xpath);
 		                if (flag) {
 		                    log.logging("info", "Selected " + statusToSelect + " option from dropdown");
 		                    webDB.clickAnElement(BOLPageLocators.BOL_STATUSCHANGE_CONFIRMATIONPOPUP_YES_BTN, ElementType.Xpath);
-		                    Thread.sleep(3000);
+		                    Thread.sleep(4000);
 
 		                    flag = webDB.isElementDisplayed(BOLPageLocators.BOL_STATUSCHANGE_CONFIRMATION_MSG, ElementType.Xpath);
 		                    if (flag) {
 		                        log.logging("info", "The status of BOL is changed to " + statusToSelect);
-		                        Thread.sleep(3000);
+		                        Thread.sleep(4000);
 		                    }
 		                }
 
@@ -302,6 +302,45 @@ public class BOLPageFunctional
 		    }
 		}
 			return flag;
+	}
+	
+	public boolean markBOLComplete() throws InterruptedException
+	{
+		flag = webDB.waitForElement(BOLPageLocators.MARKBOLCOMPLETE_BTN_BOLCOMPLETEPAGE, ElementType.Xpath);
+		if(flag)
+		{
+			webDB.scrollToAnElement(BOLPageLocators.MARKBOLCOMPLETE_BTN_BOLCOMPLETEPAGE, ElementType.Xpath);
+			Thread.sleep(1500);
+//			webDB.scrollBottom();
+//			Thread.sleep(750);
+			webDB.clickAnElement(BOLPageLocators.WIP_INPUTFIELD_BOLCOMPLETEPAGE, ElementType.Xpath);
+			Thread.sleep(1500);
+//			flag = webDB.javaScriptSendTextToAnElement(BOLPageLocators.WIP_INPUTFIELD_BOLCOMPLETEPAGE, "5", ElementType.Xpath);
+//			flag = webDB.sendTextToAnElement(BOLPageLocators.WIP_INPUTFIELD_BOLCOMPLETEPAGE, "5", ElementType.Xpath);
+			webDB.pressUpArrowKey();
+			Thread.sleep(750);
+			webDB.pressUpArrowKey();
+			Thread.sleep(1500);
+			if(flag)
+			{
+			log.logging("info", "Entered 5 quantity in WIP input field");	
+			webDB.clickAnElement(BOLPageLocators.MARKBOLCOMPLETE_BTN_BOLCOMPLETEPAGE, ElementType.Xpath);
+			Thread.sleep(1500);
+			int popupcount = webDB.getDriver().findElements(By.xpath(BOLPageLocators.MARKBOLCOMPLETE_PRIMARYREASONLABEL_BOLCOMPLETEPAGE)).size();
+			if(popupcount==1)
+			{
+				
+			}
+			else
+			{
+				webDB.clickAnElement(BOLPageLocators.MARKBOLCOMPLETE_YES_BOLCOMPLETEPAGE, ElementType.Xpath);
+				log.logging("info", "Clicked on the Yes button");
+				flag = true;
+			}
+				}
+		}
+		
+		return flag;
 	}
 
 	/**
@@ -495,6 +534,12 @@ public class BOLPageFunctional
 				flag = set_BOLStatus();
 			}
 		}
+		return flag;
+	}
+	
+	public boolean verifypagination() throws InterruptedException
+	{
+		commonfunction.verifyPagination();
 		return flag;
 	}
 	
