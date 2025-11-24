@@ -50,7 +50,7 @@ public class ReplenishmentsByComponentTest
 		flag = replenishmentsbycomponentsfunctional.navigate_ComponentsListingPage();
 		if(flag)
 		{
-			flag = replenishmentsbycomponentsfunctional.verifypagination();
+			flag = commonFunction.verifyPagination();
 		}
 		Assert.assertTrue(flag);
 		}

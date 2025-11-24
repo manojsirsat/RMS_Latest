@@ -96,7 +96,7 @@ public class BOLPageTest
 		flag = bolpagefunctional.navigate_BOLPage();
 		if(flag)
 		{
-		flag = bolpagefunctional.verifypagination();
+		flag = commonFunction.verifyPagination();
 		Assert.assertTrue(flag);
 		}
 		}

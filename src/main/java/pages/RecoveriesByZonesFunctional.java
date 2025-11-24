@@ -1,8 +1,12 @@
 package pages;
 
 import commonfunctions.CommonFunctions;
+import locators.CommonFunctionsLocators;
+import locators.RecoveriesByComponentPageLocators;
+import locators.RecoveriesByZonesPageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
+import utils.WebDriverBase.ElementType;
 
 public class RecoveriesByZonesFunctional 
 {
@@ -20,10 +24,10 @@ public class RecoveriesByZonesFunctional
 	 */
 	public boolean navigate_ZonesListingPage () throws InterruptedException
 	{
-		flag = commonfunction.clickOnRecoveriesPage();
+		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath, CommonFunctionsLocators.RECOVERIES_PAGE_LEFTNAV, ElementType.Xpath, CommonFunctionsLocators.RECOVERIESBYZONES_PAGE, ElementType.Xpath);
 		if(flag)
 		{
-			flag = commonfunction.clickOnRecoveriesByZonesPage();
+			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.RECOVERIESBYZONES_PAGE, ElementType.Xpath, RecoveriesByZonesPageLocators.RECOVERIESBYZONESPAGE_HEADING, ElementType.Xpath);
 		}
 		return flag;
 	}

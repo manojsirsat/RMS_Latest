@@ -1,8 +1,12 @@
 package pages;
 
 import commonfunctions.CommonFunctions;
+import locators.BOLPageLocators;
+import locators.CommonFunctionsLocators;
+import locators.RecoveriesByComponentPageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
+import utils.WebDriverBase.ElementType;
 
 public class RecoveriesByComponentFunctional 
 {
@@ -20,10 +24,10 @@ public class RecoveriesByComponentFunctional
 	 */
 	public boolean navigate_ComponentsListingPage () throws InterruptedException
 	{
-		flag = commonfunction.clickOnRecoveriesPage();
+		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath, CommonFunctionsLocators.RECOVERIES_PAGE_LEFTNAV, ElementType.Xpath, CommonFunctionsLocators.RECOVERIESBYZONES_PAGE, ElementType.Xpath);
 		if(flag)
 		{
-			flag = commonfunction.clickOnRecoveriesByComponentsPage();
+			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.RECOVERIESBYCOMPONENTS_PAGE, ElementType.Xpath, RecoveriesByComponentPageLocators.RECOVERIESBYCOMPONENTSPAGE_HEADING, ElementType.Xpath);
 		}
 		return flag;
 	}

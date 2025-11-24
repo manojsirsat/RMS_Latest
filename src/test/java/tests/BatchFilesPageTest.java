@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import commonfunctions.CommonFunctions;
+import pages.BatchFilesPageFunctional;
 import pages.RecoveriesByComponentFunctional;
 import pages.RecoveriesByZonesFunctional;
 import pages.loginPage;
@@ -26,7 +27,7 @@ public class BatchFilesPageTest
 	boolean flag;
 	// This line used to create object for commonFunction class
 	static CommonFunctions commonFunction = new CommonFunctions();
-	static RecoveriesByComponentFunctional recoveriesbycomponentsfunctional = new RecoveriesByComponentFunctional();
+	static BatchFilesPageFunctional batchfilespagefunctional = new BatchFilesPageFunctional();
 	static loginPage loginpage = new loginPage();
 	
 	/**
@@ -43,16 +44,16 @@ public class BatchFilesPageTest
 		Thread.sleep(2000);
 	}
 	
-	@Test(description = "Verify Pagination functionality of Recoveries By Components listing page")
+	@Test(description = "Verify Pagination functionality of Batch files listing page")
 	public void verifyPagination_Functionality() throws InterruptedException 
 	{
 		flag = loginpage.validLogin();
 		if(flag)
 		{
-		flag = recoveriesbycomponentsfunctional.navigate_ComponentsListingPage();
+		flag = batchfilespagefunctional.navigate_BatchFilesListingPage();
 		if(flag)
 		{
-			flag = recoveriesbycomponentsfunctional.verifypagination();
+			flag = commonFunction.verifyPagination();
 		}
 		Assert.assertTrue(flag);
 		}

@@ -1,8 +1,12 @@
 package pages;
 
 import commonfunctions.CommonFunctions;
+import locators.CommonFunctionsLocators;
+import locators.RecoveriesByComponentPageLocators;
+import locators.ReplenishmentsByComponentPageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
+import utils.WebDriverBase.ElementType;
 
 public class ReplenishmentsByComponentFunctional 
 {
@@ -20,10 +24,10 @@ public class ReplenishmentsByComponentFunctional
 	 */
 	public boolean navigate_ComponentsListingPage () throws InterruptedException
 	{
-		flag = commonfunction.clickOnReplenishmentsPage();
+		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath, CommonFunctionsLocators.REPLENISHMENTS_PAGE_LEFTNAV, ElementType.Xpath, CommonFunctionsLocators.REPLENISHMENTS_COMPONENTS_PAGE, ElementType.Xpath);
 		if(flag)
 		{
-			flag = commonfunction.clickOnReplenishmentsByComponentsPage();
+			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.REPLENISHMENTS_COMPONENTS_PAGE, ElementType.Xpath, ReplenishmentsByComponentPageLocators.REPLENISHMENTSBYCOMPONENTSPAGE_HEADING, ElementType.Xpath);
 		}
 		return flag;
 	}

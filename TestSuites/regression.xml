@@ -5,7 +5,7 @@
 		<listener class-name="utils.Listener"></listener>
 		<!-- <listener class-name="utils.RetryListener"></listener> -->
 	</listeners>
-<!-- 	<test  name="BlogPageTest"> -->
+<!-- 	<test  name="BOLPageTest"> -->
 <!-- 		<classes> -->
 <!-- 			<class name="tests.BOLPageTest"> -->
 <!-- 				<methods> -->
@@ -45,6 +45,27 @@
 <!-- 			</class> -->
 <!-- 			</classes> -->
 <!-- 	</test>  -->
+
+<!-- 					<test name="OrdersAndBOLS_OrdersPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.OrdersAndBOLS_OrdersPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 					</test> -->
+				
+<!-- 					<test name="BatchFilesPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.BatchFilesPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 					</test> -->
+					
 
 <!-- 				<test name="RecoveriesByZonesTest"> -->
 <!-- 					<classes> -->
@@ -95,5 +116,128 @@
 <!-- 						</class> -->
 <!-- 					</classes> -->
 <!-- 				</test> -->
+				
+<!-- 				<test name="Reports_OrderDetailsPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Reports_OrderDetailsPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Reports_LateNotificationPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Reports_LateNotificationPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Reports_PreBillingPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Reports_PreBillingPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Reports_InvoicingPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Reports_InvoicingPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Reports_LedgerPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Reports_LedgerPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Reports_CurrentInventoryByLocationPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Reports_CurrentInventoryByLocationPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Reports_CycleCountPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Reports_CycleCountPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Reports_HistoricalInventoryByLocationPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Reports_HistoricalInventoryByLocationPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Reports_InventoryMovementsPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Reports_InventoryMovementsPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="navigate_InventoryMovementsPage"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Reports_InventoryByStagePageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Reports_InventoryByStagePageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Reports_InventoryBy99sPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Reports_InventoryBy99sPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Reports_ArchivePageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Reports_ArchivePageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+
+					
 	
 </suite> <!-- Suite -->

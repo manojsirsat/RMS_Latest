@@ -9,6 +9,7 @@ import com.github.javafaker.Faker;
 
 import commonfunctions.CommonFunctions;
 import locators.BOLPageLocators;
+import locators.CommonFunctionsLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 import utils.WebDriverBase.ElementType;
@@ -32,10 +33,10 @@ public class BOLPageFunctional
 	 */
 	public boolean navigate_BOLPage () throws InterruptedException
 	{
-		flag = commonfunction.clickOnOrdersAndBolsPage();
+		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath, CommonFunctionsLocators.ORDERSANDBOLS_PAGE_LEFTNAV, ElementType.Xpath, CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
 		if(flag)
 		{
-			flag = commonfunction.clickOnBOLSPage();
+			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath, BOLPageLocators.BOLPAGE_HEADING, ElementType.Xpath);
 		}
 		return flag;
 	}

@@ -5,15 +5,7 @@ import org.openqa.selenium.By;
 import com.github.javafaker.Faker;
 
 import locators.BOLPageLocators;
-import locators.BatchFilesPageLocators;
 import locators.CommonFunctionsLocators;
-import locators.CreateOrderPageLocators;
-import locators.OrdersAndBOLS_OrdersPageLocators;
-import locators.RecoveriesByComponentPageLocators;
-import locators.RecoveriesByLocationPageLocators;
-import locators.RecoveriesByLocation_ProgramPageLocators;
-import locators.RecoveriesByZonesPageLocators;
-import locators.ReplenishmentsByComponentPageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 import utils.WebDriverBase.ElementType;
@@ -29,26 +21,46 @@ public class CommonFunctions
 	public String expectedtext_link = new String();
 	Faker faker = new Faker();
 	
-		
 	/**
 	 * @author 
 	 * @return flag
-	 * This method is used to click on Orders and BOLs link from left navigation
+	 * This method is used to click on main page link from left navigation
 	 * @throws InterruptedException
 	 */
-	public boolean clickOnOrdersAndBolsPage () throws InterruptedException
+	public boolean clickOnMainPage (String profilename, ElementType elementtype, String mainpage, ElementType elementtype1, String internalpage, ElementType elementtype2) throws InterruptedException
 	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath);
+		flag = webDB.isElementDisplayed(profilename, elementtype);
 		if(flag)
 		{
-			webDB.clickAnElement(CommonFunctionsLocators.ORDERSANDBOLS_PAGE_LEFTNAV, ElementType.Xpath);
-			Thread.sleep(2000);
-			flag = webDB.isElementDisplayed(CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
-			
+			webDB.javaScriptClickAnElement(mainpage, elementtype1);
+			Thread.sleep(9000);
+			flag = webDB.isElementDisplayed(internalpage, elementtype2);
+			log.logging("info", "Listing page is displayed");
 		}
 		
 		return flag;
 	}
+	
+	/**
+	 * @author 
+	 * @return flag
+	 * This method is used to click on internal page link from left navigation
+	 * @throws InterruptedException
+	 */
+	public boolean clickOnInternalPage (String internalpagename, ElementType elementtype, String internalpageheading, ElementType elementtype1) throws InterruptedException
+	{
+		flag = webDB.isElementDisplayed(internalpagename, elementtype);
+		if(flag)
+		{
+			webDB.javaScriptClickAnElement(internalpagename, elementtype);
+			Thread.sleep(9000);
+			flag = webDB.isElementDisplayed(internalpageheading, elementtype1);
+			log.logging("info", "Listing page is displayed");
+		}
+		
+		return flag;
+	}
+	
 	
 	/**
 	 * @author 
@@ -69,209 +81,6 @@ public class CommonFunctions
 		
 		return flag;
 	}
-	
-	/**
-	 * @author 
-	 * @return flag
-	 * This method is used to click on Create order link from left navigation
-	 * @throws InterruptedException
-	 */
-	public boolean clickOnCreateOrderPage () throws InterruptedException
-	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.CREATEORDER_PAGE, ElementType.Xpath);
-		if(flag)
-		{
-			webDB.javaScriptClickAnElement(CommonFunctionsLocators.CREATEORDER_PAGE, ElementType.Xpath);
-			Thread.sleep(6000);
-			flag = webDB.isElementDisplayed(CreateOrderPageLocators.CREATEORDER_PAGE_HEADING, ElementType.Xpath);
-			log.logging("info", "Create order page is displayed");
-		}
-		
-		return flag;
-	}
-	
-	/**
-	 * @author 
-	 * @return flag
-	 * This method is used to click on Orders and BOLs orders link from left navigation
-	 * @throws InterruptedException
-	 */
-	public boolean clickOnOrdersAndBOLs_OrdersPage () throws InterruptedException
-	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.ORDERSANDBOLS_ORDERS_PAGE, ElementType.Xpath);
-		if(flag)
-		{
-			webDB.javaScriptClickAnElement(CommonFunctionsLocators.ORDERSANDBOLS_ORDERS_PAGE, ElementType.Xpath);
-			Thread.sleep(6000);
-			flag = webDB.isElementDisplayed(OrdersAndBOLS_OrdersPageLocators.ORDERSPAGE_HEADING, ElementType.Xpath);
-			log.logging("info", "Create order page is displayed");
-		}
-		
-		return flag;
-	}
-	
-	/**
-	 * @author 
-	 * @return flag
-	 * This method is used to click on Batch files link from left navigation
-	 * @throws InterruptedException
-	 */
-	public boolean clickOnBatchFilesPage () throws InterruptedException
-	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.BATCHFILES_PAGE, ElementType.Xpath);
-		if(flag)
-		{
-			webDB.javaScriptClickAnElement(CommonFunctionsLocators.BATCHFILES_PAGE, ElementType.Xpath);
-			Thread.sleep(6000);
-			flag = webDB.isElementDisplayed(BatchFilesPageLocators.BATCHFILESPAGE_HEADING, ElementType.Xpath);
-			log.logging("info", "Create order page is displayed");
-		}
-		
-		return flag;
-	}
-	
-	/**
-	 * @author 
-	 * @return flag
-	 * This method is used to click on Recoveries link from left navigation
-	 * @throws InterruptedException
-	 */
-	public boolean clickOnRecoveriesPage () throws InterruptedException
-	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath);
-		if(flag)
-		{
-			webDB.clickAnElement(CommonFunctionsLocators.RECOVERIES_PAGE_LEFTNAV, ElementType.Xpath);
-			Thread.sleep(2000);
-			flag = webDB.isElementDisplayed(CommonFunctionsLocators.RECOVERIESBYZONES_PAGE, ElementType.Xpath);
-			
-		}
-		
-		return flag;
-	}
-	
-	/**
-	 * @author 
-	 * @return flag
-	 * This method is used to click on Zones link from left navigation under Recoveries
-	 * @throws InterruptedException
-	 */
-	public boolean clickOnRecoveriesByZonesPage () throws InterruptedException
-	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.RECOVERIESBYZONES_PAGE, ElementType.Xpath);
-		if(flag)
-		{
-			webDB.javaScriptClickAnElement(CommonFunctionsLocators.RECOVERIESBYZONES_PAGE, ElementType.Xpath);
-			Thread.sleep(9000);
-			flag = webDB.isElementDisplayed(RecoveriesByZonesPageLocators.RECOVERIESBYZONESPAGE_HEADING, ElementType.Xpath);
-			log.logging("info", "Zones listing page is displayed");
-		}
-		
-		return flag;
-	}
-	
-	/**
-	 * @author 
-	 * @return flag
-	 * This method is used to click on Recoveries By Locations link from left navigation
-	 * @throws InterruptedException
-	 */
-	public boolean clickOnRecoveriesByLocationsPage () throws InterruptedException
-	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.RECOVERIESBYLOCATIONS_PAGE, ElementType.Xpath);
-		if(flag)
-		{
-			webDB.javaScriptClickAnElement(CommonFunctionsLocators.RECOVERIESBYLOCATIONS_PAGE, ElementType.Xpath);
-			Thread.sleep(9000);
-			flag = webDB.isElementDisplayed(RecoveriesByLocationPageLocators.RECOVERIESBYLOCATIONSPAGE_HEADING, ElementType.Xpath);
-			log.logging("info", "Recoveries By Locations listing page is displayed");
-		}
-		
-		return flag;
-	}
-	
-	/**
-	 * @author 
-	 * @return flag
-	 * This method is used to click on Recoveries By Locations-Program link from left navigation
-	 * @throws InterruptedException
-	 */
-	public boolean clickOnRecoveriesByLocations_ProgramsPage () throws InterruptedException
-	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.RECOVERIESBYLOCATIONS_PROGRAMS_PAGE, ElementType.Xpath);
-		if(flag)
-		{
-			webDB.javaScriptClickAnElement(CommonFunctionsLocators.RECOVERIESBYLOCATIONS_PROGRAMS_PAGE, ElementType.Xpath);
-			Thread.sleep(9000);
-			flag = webDB.isElementDisplayed(RecoveriesByLocation_ProgramPageLocators.RECOVERIESBYLOCATIONS_PROGRAMPAGE_HEADING, ElementType.Xpath);
-			log.logging("info", "Recoveries By Locations-Programs listing page is displayed");
-		}
-		
-		return flag;
-	}
-	
-	/**
-	 * @author 
-	 * @return flag
-	 * This method is used to click on Recoveries By Components link from left navigation
-	 * @throws InterruptedException
-	 */
-	public boolean clickOnRecoveriesByComponentsPage () throws InterruptedException
-	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.RECOVERIESBYCOMPONENTS_PAGE, ElementType.Xpath);
-		if(flag)
-		{
-			webDB.javaScriptClickAnElement(CommonFunctionsLocators.RECOVERIESBYCOMPONENTS_PAGE, ElementType.Xpath);
-			Thread.sleep(9000);
-			flag = webDB.isElementDisplayed(RecoveriesByComponentPageLocators.RECOVERIESBYCOMPONENTSPAGE_HEADING, ElementType.Xpath);
-			log.logging("info", "Recoveries By Components listing page is displayed");
-		}
-		
-		return flag;
-	}
-	
-	/**
-	 * @author 
-	 * @return flag
-	 * This method is used to click on Replenishments link from left navigation
-	 * @throws InterruptedException
-	 */
-	public boolean clickOnReplenishmentsPage () throws InterruptedException
-	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath);
-		if(flag)
-		{
-			webDB.clickAnElement(CommonFunctionsLocators.REPLENISHMENTS_PAGE_LEFTNAV, ElementType.Xpath);
-			Thread.sleep(2000);
-			flag = webDB.isElementDisplayed(CommonFunctionsLocators.REPLENISHMENTS_COMPONENTS_PAGE, ElementType.Xpath);
-			
-		}
-		
-		return flag;
-	}
-	
-	/**
-	 * @author 
-	 * @return flag
-	 * This method is used to click on Replenishments By Components link from left navigation
-	 * @throws InterruptedException
-	 */
-	public boolean clickOnReplenishmentsByComponentsPage () throws InterruptedException
-	{
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.REPLENISHMENTS_COMPONENTS_PAGE, ElementType.Xpath);
-		if(flag)
-		{
-			webDB.javaScriptClickAnElement(CommonFunctionsLocators.REPLENISHMENTS_COMPONENTS_PAGE, ElementType.Xpath);
-			Thread.sleep(9000);
-			flag = webDB.isElementDisplayed(ReplenishmentsByComponentPageLocators.REPLENISHMENTSBYCOMPONENTSPAGE_HEADING, ElementType.Xpath);
-			log.logging("info", "Recoveries By Components listing page is displayed");
-		}
-		
-		return flag;
-	}
-	
-	
-	
 	
 	
 	public static String getLastNumber(String input) 

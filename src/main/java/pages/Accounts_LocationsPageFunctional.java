@@ -1,14 +1,14 @@
 package pages;
 
 import commonfunctions.CommonFunctions;
+import locators.Accounts_AccountsPageLocators;
+import locators.Accounts_LocationsPageLocators;
 import locators.CommonFunctionsLocators;
-import locators.RecoveriesByComponentPageLocators;
-import locators.RecoveriesByLocationPageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 import utils.WebDriverBase.ElementType;
 
-public class RecoveriesByLocationFunctional 
+public class Accounts_LocationsPageFunctional 
 {
 
 	boolean flag;
@@ -19,15 +19,15 @@ public class RecoveriesByLocationFunctional
 	/**
 	 * @author 
 	 * @return flag
-	 * This method is used to navigate to Recoveries By Locations page
+	 * This method is used to navigate to Locations page
 	 * @throws InterruptedException
 	 */
 	public boolean navigate_LocationsListingPage () throws InterruptedException
 	{
-		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath, CommonFunctionsLocators.RECOVERIES_PAGE_LEFTNAV, ElementType.Xpath, CommonFunctionsLocators.RECOVERIESBYZONES_PAGE, ElementType.Xpath);
+		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath, CommonFunctionsLocators.ACCOUNTS_PAGE_LEFTNAV, ElementType.Xpath, CommonFunctionsLocators.ACCOUNTS_ACCOUNTS_PAGE, ElementType.Xpath);
 		if(flag)
 		{
-			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.RECOVERIESBYLOCATIONS_PAGE, ElementType.Xpath, RecoveriesByLocationPageLocators.RECOVERIESBYLOCATIONSPAGE_HEADING, ElementType.Xpath);
+			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.ACCOUNTS_LOCATIONS_PAGE, ElementType.Xpath, Accounts_LocationsPageLocators.ACCOUNTS_LOCATIONSPAGE_HEADING, ElementType.Xpath);
 		}
 		return flag;
 	}

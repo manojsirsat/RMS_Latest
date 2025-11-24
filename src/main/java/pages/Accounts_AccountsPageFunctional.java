@@ -2,13 +2,13 @@ package pages;
 
 import commonfunctions.CommonFunctions;
 import locators.Accounts_AccountsPageLocators;
-import locators.BatchFilesPageLocators;
 import locators.CommonFunctionsLocators;
+import locators.Reports_ArchivePageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 import utils.WebDriverBase.ElementType;
 
-public class BatchFilesPageFunctional 
+public class Accounts_AccountsPageFunctional 
 {
 
 	boolean flag;
@@ -19,15 +19,15 @@ public class BatchFilesPageFunctional
 	/**
 	 * @author 
 	 * @return flag
-	 * This method is used to navigate to Batch Files page
+	 * This method is used to navigate to Accounts page
 	 * @throws InterruptedException
 	 */
-	public boolean navigate_BatchFilesListingPage () throws InterruptedException
+	public boolean navigate_AccountsListingPage () throws InterruptedException
 	{
-		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath, CommonFunctionsLocators.ORDERSANDBOLS_PAGE_LEFTNAV, ElementType.Xpath, CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
+		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath, CommonFunctionsLocators.ACCOUNTS_PAGE_LEFTNAV, ElementType.Xpath, CommonFunctionsLocators.ACCOUNTS_ACCOUNTS_PAGE, ElementType.Xpath);
 		if(flag)
 		{
-			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.BATCHFILES_PAGE, ElementType.Xpath, BatchFilesPageLocators.BATCHFILESPAGE_HEADING, ElementType.Xpath);
+			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.ACCOUNTS_ACCOUNTS_PAGE, ElementType.Xpath, Accounts_AccountsPageLocators.ACCOUNTS_ACCOUNTSPAGE_HEADING, ElementType.Xpath);
 		}
 		return flag;
 	}

@@ -51,7 +51,7 @@ public class RecoveriesByZonesTest
 		flag = recoveriesbyzonesfunctional.navigate_ZonesListingPage();
 		if(flag)
 		{
-			flag = recoveriesbyzonesfunctional.verifypagination();
+			flag = commonFunction.verifyPagination();
 		}
 		Assert.assertTrue(flag);
 		}

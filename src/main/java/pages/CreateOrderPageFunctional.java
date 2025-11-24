@@ -9,6 +9,7 @@ import com.github.javafaker.Faker;
 
 import commonfunctions.CommonFunctions;
 import locators.BOLPageLocators;
+import locators.CommonFunctionsLocators;
 import locators.CreateOrderPageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
@@ -36,10 +37,10 @@ public class CreateOrderPageFunctional
 	 */
 	public boolean navigate_CreateOrderPage () throws InterruptedException
 	{
-		flag = commonfunction.clickOnOrdersAndBolsPage();
+		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath, CommonFunctionsLocators.ORDERSANDBOLS_PAGE_LEFTNAV, ElementType.Xpath, CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
 		if(flag)
 		{
-			flag = commonfunction.clickOnCreateOrderPage();
+			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.CREATEORDER_PAGE, ElementType.Xpath, CreateOrderPageLocators.CREATEORDER_PAGE_HEADING, ElementType.Xpath);
 		}
 		return flag;
 	}

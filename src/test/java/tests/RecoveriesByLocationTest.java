@@ -52,7 +52,7 @@ public class RecoveriesByLocationTest
 		flag = recoveriesbylocationfunctional.navigate_LocationsListingPage();
 		if(flag)
 		{
-			flag = recoveriesbylocationfunctional.verifypagination();
+			flag = commonFunction.verifyPagination();
 		}
 		Assert.assertTrue(flag);
 		}

@@ -10,14 +10,14 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import commonfunctions.CommonFunctions;
-import pages.RecoveriesByLocation_ProgramFunctional;
-import pages.RecoveriesByZonesFunctional;
+import pages.Reports_CycleCountPageFunctional;
+import pages.Reports_InventoryMovementsPageFunctional;
 import pages.loginPage;
 import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 
-public class RecoveriesByLocation_ProgramTest 
+public class Reports_InventoryMovementsPageTest 
 {
 
 	// This line used to create object for driver base class
@@ -26,7 +26,7 @@ public class RecoveriesByLocation_ProgramTest
 	boolean flag;
 	// This line used to create object for commonFunction class
 	static CommonFunctions commonFunction = new CommonFunctions();
-	static RecoveriesByLocation_ProgramFunctional recoveriesbylocation_programfunctional = new RecoveriesByLocation_ProgramFunctional();
+	static Reports_InventoryMovementsPageFunctional inventorymovementpagefunctional = new Reports_InventoryMovementsPageFunctional();
 	static loginPage loginpage = new loginPage();
 	
 	/**
@@ -43,17 +43,14 @@ public class RecoveriesByLocation_ProgramTest
 		Thread.sleep(2000);
 	}
 	
-	@Test(description = "Verify Pagination functionality of Recoveries By Locations-Programs listing page")
-	public void verifyPagination_Functionality() throws InterruptedException 
+	@Test(description = "Verify Pagination functionality of Reports Inventory Movements listing page")
+	public void navigate_InventoryMovementsPage() throws InterruptedException 
 	{
 		flag = loginpage.validLogin();
 		if(flag)
 		{
-		flag = recoveriesbylocation_programfunctional.navigate_Locations_ProgramsListingPage();
-		if(flag)
-		{
-			flag = commonFunction.verifyPagination();
-		}
+		flag = inventorymovementpagefunctional.navigate_Reports_InventoryMovementsListingPage();
+		
 		Assert.assertTrue(flag);
 		}
 	}

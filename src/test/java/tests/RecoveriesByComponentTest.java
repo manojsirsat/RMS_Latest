@@ -52,7 +52,7 @@ public class RecoveriesByComponentTest
 		flag = recoveriesbycomponentsfunctional.navigate_ComponentsListingPage();
 		if(flag)
 		{
-			flag = recoveriesbycomponentsfunctional.verifypagination();
+			flag = commonFunction.verifyPagination();
 		}
 		Assert.assertTrue(flag);
 		}

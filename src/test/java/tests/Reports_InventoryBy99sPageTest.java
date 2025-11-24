@@ -10,14 +10,13 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import commonfunctions.CommonFunctions;
-import pages.RecoveriesByLocation_ProgramFunctional;
-import pages.RecoveriesByZonesFunctional;
+import pages.Reports_InventoryBy99sPageFunctional;
 import pages.loginPage;
 import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 
-public class RecoveriesByLocation_ProgramTest 
+public class Reports_InventoryBy99sPageTest 
 {
 
 	// This line used to create object for driver base class
@@ -26,7 +25,7 @@ public class RecoveriesByLocation_ProgramTest
 	boolean flag;
 	// This line used to create object for commonFunction class
 	static CommonFunctions commonFunction = new CommonFunctions();
-	static RecoveriesByLocation_ProgramFunctional recoveriesbylocation_programfunctional = new RecoveriesByLocation_ProgramFunctional();
+	static Reports_InventoryBy99sPageFunctional inventory99spagefunctional = new Reports_InventoryBy99sPageFunctional();
 	static loginPage loginpage = new loginPage();
 	
 	/**
@@ -43,13 +42,13 @@ public class RecoveriesByLocation_ProgramTest
 		Thread.sleep(2000);
 	}
 	
-	@Test(description = "Verify Pagination functionality of Recoveries By Locations-Programs listing page")
+	@Test(description = "Verify Pagination functionality of Reports Inventory 99s listing page")
 	public void verifyPagination_Functionality() throws InterruptedException 
 	{
 		flag = loginpage.validLogin();
 		if(flag)
 		{
-		flag = recoveriesbylocation_programfunctional.navigate_Locations_ProgramsListingPage();
+		flag = inventory99spagefunctional.navigate_Reports_Inventory99sListingPage();
 		if(flag)
 		{
 			flag = commonFunction.verifyPagination();

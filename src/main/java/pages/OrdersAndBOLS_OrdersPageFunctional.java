@@ -1,14 +1,13 @@
 package pages;
 
 import commonfunctions.CommonFunctions;
-import locators.Accounts_AccountsPageLocators;
-import locators.BatchFilesPageLocators;
 import locators.CommonFunctionsLocators;
+import locators.OrdersAndBOLS_OrdersPageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 import utils.WebDriverBase.ElementType;
 
-public class BatchFilesPageFunctional 
+public class OrdersAndBOLS_OrdersPageFunctional 
 {
 
 	boolean flag;
@@ -19,15 +18,15 @@ public class BatchFilesPageFunctional
 	/**
 	 * @author 
 	 * @return flag
-	 * This method is used to navigate to Batch Files page
+	 * This method is used to navigate to Orders Listing page
 	 * @throws InterruptedException
 	 */
-	public boolean navigate_BatchFilesListingPage () throws InterruptedException
+	public boolean navigate_OrdersListingPage () throws InterruptedException
 	{
 		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath, CommonFunctionsLocators.ORDERSANDBOLS_PAGE_LEFTNAV, ElementType.Xpath, CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
 		if(flag)
 		{
-			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.BATCHFILES_PAGE, ElementType.Xpath, BatchFilesPageLocators.BATCHFILESPAGE_HEADING, ElementType.Xpath);
+			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.ORDERSANDBOLS_ORDERS_PAGE, ElementType.Xpath, OrdersAndBOLS_OrdersPageLocators.ORDERSPAGE_HEADING, ElementType.Xpath);
 		}
 		return flag;
 	}
