@@ -42,20 +42,27 @@ public class Reports_OrderDetailsPageTest
 		Thread.sleep(2000);
 	}
 	
+	@Test(description = "Verify valid login")
+	public void verify_Valid_Login() throws InterruptedException 
+	{
+		flag = loginpage.validLogin();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Redirect to Order Details listing page")
+	public void redirection_To_OrderDetailsListing_Page() throws InterruptedException 
+	{
+		flag = orderdetailspagefunctional.navigate_Reports_OrderDetailsListingPage();
+		Assert.assertTrue(flag);
+	}
+	
 	@Test(description = "Verify Pagination functionality of Reports Order Details listing page")
 	public void verifyPagination_Functionality() throws InterruptedException 
 	{
-		flag = loginpage.validLogin();
-		if(flag)
-		{
-		flag = orderdetailspagefunctional.navigate_Reports_OrderDetailsListingPage();
-		if(flag)
-		{
-			flag = commonFunction.verifyPagination();
-		}
+		flag = commonFunction.verifyPagination();
 		Assert.assertTrue(flag);
-		}
 	}
+	
 	
 	@AfterTest
 	public void browser_Close() {

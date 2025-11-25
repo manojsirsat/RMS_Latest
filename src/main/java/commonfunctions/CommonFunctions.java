@@ -53,9 +53,8 @@ public class CommonFunctions
 		if(flag)
 		{
 			webDB.javaScriptClickAnElement(internalpagename, elementtype);
-			Thread.sleep(9000);
+			Thread.sleep(10000);
 			flag = webDB.isElementDisplayed(internalpageheading, elementtype1);
-			log.logging("info", "Listing page is displayed");
 		}
 		
 		return flag;
@@ -109,7 +108,7 @@ public class CommonFunctions
 			int totalrecordscount = Integer.parseInt(lastNumber);
 			if(totalrecordscount>20)
 			{
-				log.logging("info", "Pagination is available as total records count is greater than 20.");
+				log.logging("info", "Pagination is available as total records count is greater than 500.");
 				webDB.clickAnElement(CommonFunctionsLocators.SHOWFILTER, ElementType.Xpath);
 				Thread.sleep(1500);
 				webDB.clickAnElement(CommonFunctionsLocators.SHOWFILTERSELECTVALUE_500, ElementType.Xpath);
@@ -189,7 +188,7 @@ public class CommonFunctions
 				
 			else
 			{
-				log.logging("info", "No pagination is available as total records count is less than 10.");
+				log.logging("info", "No pagination is available as total records count is less than 500.");
 			}
 				}
 				else

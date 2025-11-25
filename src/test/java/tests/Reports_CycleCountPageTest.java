@@ -42,20 +42,27 @@ public class Reports_CycleCountPageTest
 		Thread.sleep(2000);
 	}
 	
+	@Test(description = "Verify valid login")
+	public void verify_Valid_Login() throws InterruptedException 
+	{
+		flag = loginpage.validLogin();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Redirect to CycleCount listing page")
+	public void redirection_To_CycleCountListing_Page() throws InterruptedException 
+	{
+		flag = cyclecountpagefunctional.navigate_Reports_CycleCountListingPage();
+		Assert.assertTrue(flag);
+	}
+	
 	@Test(description = "Verify Pagination functionality of Reports Cycle Count listing page")
 	public void verifyPagination_Functionality() throws InterruptedException 
 	{
-		flag = loginpage.validLogin();
-		if(flag)
-		{
-		flag = cyclecountpagefunctional.navigate_Reports_CycleCountListingPage();
-		if(flag)
-		{
-			flag = commonFunction.verifyPagination();
-		}
+		flag = commonFunction.verifyPagination();
 		Assert.assertTrue(flag);
-		}
 	}
+	
 	
 	@AfterTest
 	public void browser_Close() {

@@ -10,7 +10,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import commonfunctions.CommonFunctions;
-import pages.Reports_CycleCountPageFunctional;
 import pages.Reports_InventoryMovementsPageFunctional;
 import pages.loginPage;
 import utils.Mailer;
@@ -43,17 +42,20 @@ public class Reports_InventoryMovementsPageTest
 		Thread.sleep(2000);
 	}
 	
-	@Test(description = "Verify Pagination functionality of Reports Inventory Movements listing page")
-	public void navigate_InventoryMovementsPage() throws InterruptedException 
+	@Test(description = "Verify valid login")
+	public void verify_Valid_Login() throws InterruptedException 
 	{
 		flag = loginpage.validLogin();
-		if(flag)
-		{
-		flag = inventorymovementpagefunctional.navigate_Reports_InventoryMovementsListingPage();
-		
 		Assert.assertTrue(flag);
-		}
 	}
+	
+	@Test(description = "Redirect to Inventory Movements listing page")
+	public void redirection_To_InventoryMovementsListing_Page() throws InterruptedException 
+	{
+		flag = inventorymovementpagefunctional.navigate_Reports_InventoryMovementsListingPage();
+		Assert.assertTrue(flag);
+	}
+	
 	
 	@AfterTest
 	public void browser_Close() {

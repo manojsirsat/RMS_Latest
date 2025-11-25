@@ -11,8 +11,6 @@ import org.testng.annotations.Test;
 
 import commonfunctions.CommonFunctions;
 import pages.OrdersAndBOLS_OrdersPageFunctional;
-import pages.RecoveriesByComponentFunctional;
-import pages.RecoveriesByZonesFunctional;
 import pages.loginPage;
 import utils.Mailer;
 import utils.ReportLoger;
@@ -44,20 +42,27 @@ public class OrdersAndBOLS_OrdersPageTest
 		Thread.sleep(2000);
 	}
 	
+	@Test(description = "Verify valid login")
+	public void verify_Valid_Login() throws InterruptedException 
+	{
+		flag = loginpage.validLogin();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Redirect to Orders listing page")
+	public void redirection_To_OrdersListing_Page() throws InterruptedException 
+	{
+		flag = orderspagefunctional.navigate_OrdersListingPage();
+		Assert.assertTrue(flag);
+	}
+	
 	@Test(description = "Verify Pagination functionality of Orders listing page")
 	public void verifyPagination_Functionality() throws InterruptedException 
 	{
-		flag = loginpage.validLogin();
-		if(flag)
-		{
-		flag = orderspagefunctional.navigate_OrdersListingPage();
-		if(flag)
-		{
-			flag = commonFunction.verifyPagination();
-		}
+		flag = commonFunction.verifyPagination();
 		Assert.assertTrue(flag);
-		}
 	}
+	
 	
 	@AfterTest
 	public void browser_Close() {

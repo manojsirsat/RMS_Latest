@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 
 import commonfunctions.CommonFunctions;
 import pages.RecoveriesByLocation_ProgramFunctional;
-import pages.RecoveriesByZonesFunctional;
 import pages.loginPage;
 import utils.Mailer;
 import utils.ReportLoger;
@@ -43,19 +42,25 @@ public class RecoveriesByLocation_ProgramTest
 		Thread.sleep(2000);
 	}
 	
+	@Test(description = "Verify valid login")
+	public void verify_Valid_Login() throws InterruptedException 
+	{
+		flag = loginpage.validLogin();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Redirect to Locations_Programs listing page")
+	public void redirection_To_Locations_ProgramsListing_Page() throws InterruptedException 
+	{
+		flag = recoveriesbylocation_programfunctional.navigate_Locations_ProgramsListingPage();
+		Assert.assertTrue(flag);
+	}
+	
 	@Test(description = "Verify Pagination functionality of Recoveries By Locations-Programs listing page")
 	public void verifyPagination_Functionality() throws InterruptedException 
 	{
-		flag = loginpage.validLogin();
-		if(flag)
-		{
-		flag = recoveriesbylocation_programfunctional.navigate_Locations_ProgramsListingPage();
-		if(flag)
-		{
-			flag = commonFunction.verifyPagination();
-		}
+		flag = commonFunction.verifyPagination();
 		Assert.assertTrue(flag);
-		}
 	}
 	
 	@AfterTest

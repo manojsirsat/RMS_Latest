@@ -50,6 +50,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.OrdersAndBOLS_OrdersPageTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_OrdersListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -60,6 +62,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.BatchFilesPageTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_BatchFilesListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -71,6 +75,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.RecoveriesByZonesTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_ZonesListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -81,6 +87,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.RecoveriesByLocationTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_LocationsListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -91,6 +99,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.RecoveriesByLocation_ProgramTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_Locations_ProgramsListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -101,6 +111,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.RecoveriesByComponentTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_ComponentsListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -111,16 +123,44 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.ReplenishmentsByComponentTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_ComponentsListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
 <!-- 					</classes> -->
 <!-- 				</test> -->
 				
+<!-- 				<test name="Accounts_AccountsPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Accounts_AccountsPageTest"> -->
+<!-- 							<methods> -->
+<!-- 							<include name="verify_Valid_Login"></include> -->
+<!-- 							<include name="redirection_To_AccountListing_Page"></include> -->
+<!-- 							<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Accounts_LocationsPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Accounts_LocationsPageTest"> -->
+<!-- 							<methods> -->
+<!-- 							<include name="verify_Valid_Login"></include> -->
+<!-- 							<include name="redirection_To_LocationsListing_Page"></include> -->
+<!-- 							<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+
 <!-- 				<test name="Reports_OrderDetailsPageTest"> -->
 <!-- 					<classes> -->
 <!-- 						<class name="tests.Reports_OrderDetailsPageTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_OrderDetailsListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -131,6 +171,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.Reports_LateNotificationPageTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_LateNotificationListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -141,6 +183,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.Reports_PreBillingPageTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_PreBillingListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -151,6 +195,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.Reports_InvoicingPageTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_InvoicingListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -161,6 +207,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.Reports_LedgerPageTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_LedgerListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -171,6 +219,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.Reports_CurrentInventoryByLocationPageTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_Reports_CurrentInventoryByLocationListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -181,6 +231,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.Reports_CycleCountPageTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_CycleCountListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -191,6 +243,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.Reports_HistoricalInventoryByLocationPageTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_HistoricalInventoryByLocationListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -201,7 +255,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.Reports_InventoryMovementsPageTest"> -->
 <!-- 							<methods> -->
-<!-- 								<include name="navigate_InventoryMovementsPage"></include> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_InventoryMovementsListing_Page"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
 <!-- 					</classes> -->
@@ -211,6 +266,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.Reports_InventoryByStagePageTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_InventoryByStageListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -221,6 +278,8 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.Reports_InventoryBy99sPageTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_Inventory99sListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
@@ -231,7 +290,149 @@
 <!-- 					<classes> -->
 <!-- 						<class name="tests.Reports_ArchivePageTest"> -->
 <!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_Reports_ArchiveListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Admin_ProgramsPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Admin_ProgramsPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_ProgramsListing_Page"></include> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Admin_SKUManagementsPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Admin_SKUManagementsPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_SKUManagementsListing_Page"></include> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Admin_PlansPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Admin_PlansPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_PlansListing_Page"></include> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Admin_UsersPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Admin_UsersPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_UsersListing_Page"></include> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Admin_MasterAdjustmentPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Admin_MasterAdjustmentPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_MasterAdjustmentListing_Page"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Admin_CallPriorityTypesPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Admin_CallPriorityTypesPageTest"> -->
+<!-- 							<methods> -->
+<!-- 							<include name="verify_Valid_Login"></include> -->
+<!-- 							<include name="redirection_To_CallPriorityTypesListingPage"></include> -->
+<!-- 							<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Admin_WeekNumbersPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Admin_WeekNumbersPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_WeekNumbersListing_Page"></include> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Admin_ZonesPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Admin_ZonesPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_ZonesListing_Page"></include> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Admin_ImportsPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Admin_ImportsPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_Admin_ImportsListing_Page"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Admin_ImportedFilesPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Admin_ImportedFilesPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_ImportedFilesListingPage"></include> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Admin_ToolsPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Admin_ToolsPageTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_SKUManagementsListing_Page"></include> -->
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
+				
+<!-- 				<test name="Help_HelpFilesPageTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.Help_HelpFilesPageTest"> -->
+<!-- 							<methods> -->
+<!-- 							<include name="verify_Valid_Login"></include> -->
+<!-- 							<include name="redirection_To_HelpFiles_Page"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
 <!-- 					</classes> -->

@@ -11,11 +11,6 @@ import org.testng.annotations.Test;
 
 import commonfunctions.CommonFunctions;
 import pages.Reports_CurrentInventoryByLocationPageFunctional;
-import pages.Reports_InvoicingPageFunctional;
-import pages.Reports_LateNotificationPageFunctional;
-import pages.Reports_LedgerPageFunctional;
-import pages.Reports_OrderDetailsPageFunctional;
-import pages.Reports_PreBillingPageFunctional;
 import pages.loginPage;
 import utils.Mailer;
 import utils.ReportLoger;
@@ -47,20 +42,27 @@ public class Reports_CurrentInventoryByLocationPageTest
 		Thread.sleep(2000);
 	}
 	
+	@Test(description = "Verify valid login")
+	public void verify_Valid_Login() throws InterruptedException 
+	{
+		flag = loginpage.validLogin();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Redirect to Reports_CurrentInventoryByLocation listing page")
+	public void redirection_To_Reports_CurrentInventoryByLocationListing_Page() throws InterruptedException 
+	{
+		flag = currentinventorybylocationfunctional.navigate_Reports_CurrentInventoryByLocationListingPage();
+		Assert.assertTrue(flag);
+	}
+	
 	@Test(description = "Verify Pagination functionality of Reports Current inventory by locations listing page")
 	public void verifyPagination_Functionality() throws InterruptedException 
 	{
-		flag = loginpage.validLogin();
-		if(flag)
-		{
-		flag = currentinventorybylocationfunctional.navigate_Reports_CurrentInventoryByLocationListingPage();
-		if(flag)
-		{
-			flag = commonFunction.verifyPagination();
-		}
+		flag = commonFunction.verifyPagination();
 		Assert.assertTrue(flag);
-		}
 	}
+	
 	
 	@AfterTest
 	public void browser_Close() {

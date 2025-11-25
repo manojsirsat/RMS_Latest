@@ -10,10 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import commonfunctions.CommonFunctions;
-import pages.Accounts_AccountsPageFunctional;
 import pages.Accounts_LocationsPageFunctional;
-import pages.RecoveriesByComponentFunctional;
-import pages.RecoveriesByZonesFunctional;
 import pages.loginPage;
 import utils.Mailer;
 import utils.ReportLoger;
@@ -45,21 +42,27 @@ public class Accounts_LocationsPageTest
 		Thread.sleep(2000);
 	}
 	
-	@Test(description = "Verify Pagination functionality of Accounts listing page")
-	public void verifyPagination_Functionality() throws InterruptedException 
+	@Test(description = "Verify valid login")
+	public void verify_Valid_Login() throws InterruptedException 
 	{
 		flag = loginpage.validLogin();
-		if(flag)
-		{
-		flag = locationspagefunctional.navigate_LocationsListingPage();
-		if(flag)
-		{
-			flag = commonFunction.verifyPagination();
-		}
 		Assert.assertTrue(flag);
-		}
 	}
 	
+	@Test(description = "Redirect to Locations listing page")
+	public void redirection_To_LocationsListing_Page() throws InterruptedException 
+	{
+		flag = locationspagefunctional.navigate_LocationsListingPage();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Pagination functionality of Locations listing page")
+	public void verifyPagination_Functionality() throws InterruptedException 
+	{
+		flag = commonFunction.verifyPagination();
+		Assert.assertTrue(flag);
+	}
+
 	@AfterTest
 	public void browser_Close() {
 		webDB.tearDown();

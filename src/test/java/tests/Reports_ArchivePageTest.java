@@ -42,20 +42,27 @@ public class Reports_ArchivePageTest
 		Thread.sleep(2000);
 	}
 	
+	@Test(description = "Verify valid login")
+	public void verify_Valid_Login() throws InterruptedException 
+	{
+		flag = loginpage.validLogin();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Redirect to Reports_Archive listing page")
+	public void redirection_To_Reports_ArchiveListing_Page() throws InterruptedException 
+	{
+		flag = archivepagefunctional.navigate_Reports_ArchiveListingPage();
+		Assert.assertTrue(flag);
+	}
+	
 	@Test(description = "Verify Pagination functionality of Reports Archive listing page")
 	public void verifyPagination_Functionality() throws InterruptedException 
 	{
-		flag = loginpage.validLogin();
-		if(flag)
-		{
-		flag = archivepagefunctional.navigate_Reports_ArchiveListingPage();
-		if(flag)
-		{
-			flag = commonFunction.verifyPagination();
-		}
+		flag = commonFunction.verifyPagination();
 		Assert.assertTrue(flag);
-		}
 	}
+	
 	
 	@AfterTest
 	public void browser_Close() {

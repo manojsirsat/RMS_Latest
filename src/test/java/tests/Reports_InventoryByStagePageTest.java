@@ -42,20 +42,27 @@ public class Reports_InventoryByStagePageTest
 		Thread.sleep(2000);
 	}
 	
+	@Test(description = "Verify valid login")
+	public void verify_Valid_Login() throws InterruptedException 
+	{
+		flag = loginpage.validLogin();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Redirect to InventoryByStage listing page")
+	public void redirection_To_InventoryByStageListing_Page() throws InterruptedException 
+	{
+		flag = inventorybystagepagefunctional.navigate_Reports_InventoryByStageListingPage();
+		Assert.assertTrue(flag);
+	}
+	
 	@Test(description = "Verify Pagination functionality of Reports Inventory By Stage listing page")
 	public void verifyPagination_Functionality() throws InterruptedException 
 	{
-		flag = loginpage.validLogin();
-		if(flag)
-		{
-		flag = inventorybystagepagefunctional.navigate_Reports_InventoryByStageListingPage();
-		if(flag)
-		{
-			flag = commonFunction.verifyPagination();
-		}
+		flag = commonFunction.verifyPagination();
 		Assert.assertTrue(flag);
-		}
 	}
+	
 	
 	@AfterTest
 	public void browser_Close() {
