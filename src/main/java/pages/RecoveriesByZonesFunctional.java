@@ -2,7 +2,6 @@ package pages;
 
 import commonfunctions.CommonFunctions;
 import locators.CommonFunctionsLocators;
-import locators.RecoveriesByComponentPageLocators;
 import locators.RecoveriesByZonesPageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
@@ -35,6 +34,66 @@ public class RecoveriesByZonesFunctional
 	public boolean verifypagination() throws InterruptedException
 	{
 		commonfunction.verifyPagination();
+		return flag;
+	}
+	
+	public boolean ProviderLocCode_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(RecoveriesByZonesPageLocators.STRING_PROVIDERLOCCODE_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_PROVIDERLOCCODE_COLHEADER, RecoveriesByZonesPageLocators.STRING_PROVIDERLOCCODE_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_PROVIDERLOCCODE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ProviderLocCode_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(RecoveriesByZonesPageLocators.STRING_PROVIDERLOCCODE_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_PROVIDERLOCCODE_COLHEADER, RecoveriesByZonesPageLocators.STRING_PROVIDERLOCCODE_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_PROVIDERLOCCODE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ProviderLocName_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(RecoveriesByZonesPageLocators.STRING_PROVIDERLOCNAME_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_PROVIDERLOCNAME_COLHEADER, RecoveriesByZonesPageLocators.STRING_PROVIDERLOCNAME_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_PROVIDERLOCNAME_COLDATA);
+		return flag;
+	}
+	
+	public boolean ProviderLocName_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(RecoveriesByZonesPageLocators.STRING_PROVIDERLOCNAME_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_PROVIDERLOCNAME_COLHEADER, RecoveriesByZonesPageLocators.STRING_PROVIDERLOCNAME_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_PROVIDERLOCNAME_COLDATA);
+		return flag;
+	}
+	
+	public boolean Zone_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(RecoveriesByZonesPageLocators.STRING_ZONE_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_ZONE_COLHEADER, RecoveriesByZonesPageLocators.STRING_ZONE_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_ZONE_COLDATA);
+		return flag;
+	}
+	
+	public boolean Zone_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(RecoveriesByZonesPageLocators.STRING_ZONE_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_ZONE_COLHEADER, RecoveriesByZonesPageLocators.STRING_ZONE_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_ZONE_COLDATA);
+		return flag;
+	}
+	
+	public boolean A0_39_RECOVERY_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(RecoveriesByZonesPageLocators.STRING_0_39_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_0_39_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_0_39_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_0_39_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A0_39_RECOVERY_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(RecoveriesByZonesPageLocators.STRING_0_39_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_0_39_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_0_39_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_0_39_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A40_49_RECOVERY_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(RecoveriesByZonesPageLocators.STRING_40_49_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_40_49_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_40_49_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_40_49_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A40_49_RECOVERY_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(RecoveriesByZonesPageLocators.STRING_40_49_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_40_49_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_40_49_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_40_49_RECOVERY_COLDATA);
 		return flag;
 	}
 	

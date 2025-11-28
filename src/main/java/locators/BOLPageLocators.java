@@ -1,5 +1,7 @@
 package locators;
 
+import org.openqa.selenium.By;
+
 public class BOLPageLocators 
 {
 	//Add BOL flow locators
@@ -70,6 +72,34 @@ public class BOLPageLocators
 	/**XPATH*/ public static final String MARKBOLCOMPLETE_PRIMARYREASONLABEL_BOLCOMPLETEPAGE = "//span[text()='Primary Reason']";
 	/**XPATH*/ public static final String MARKBOLCOMPLETE_YES_BOLCOMPLETEPAGE = "//span[text()='Yes']";
 	/**XPATH*/ public static final String WIP_INPUTFIELD_BOLCOMPLETEPAGE = "(//span[@class='p-inputnumber p-component p-inputwrapper p-inputwrapper-filled w-full'])[1]";
+	
+	
+	// Sorting
+	public static final By BY_BOL_COLHEADER = By.xpath("//th[contains(.,'BOL #')]");
+	public static final By BY_BOL_COLDATA = By.xpath("//table/tbody/tr/td[2]");
+	/**XPATH*/ public static final String STRING_BOL_COLDATA = "//table/tbody/tr/td[2]";
+	/**XPATH*/ public static final String STRING_BOL_COLHEADER = "//th[contains(.,'BOL #')]";
+		
+	public static final By BY_TYPE_COLHEADER = By.xpath("//th[contains(.,'Type')]");
+	public static final By BY_TYPE_COLDATA = By.xpath("//table/tbody/tr/td[4]");
+	/**XPATH*/ public static final String STRING_TYPE_COLDATA = "//table/tbody/tr/td[4]";
+	/**XPATH*/ public static final String STRING_TYPE_COLHEADER = "//th[contains(.,'Type')]";
+	
+	
+	
+	
+	
+	// Filter
+	//BOL Search and Table locators
+	/**XPATH*/ public static final String BOL_SEARCH_FILTER = "//*[@id='lading-bill-filter-input']";
+	/**XPATH*/ public static final String BOL_SEARCH_FILTER_ALTERNATIVE = "//div[contains(@class,'p-column-filter')]//input[@class='p-inputtext p-component']";
+	/**XPATH*/ public static final String BOL_TABLE_FIRST_ROW = "//*[@id='ladingBillsDataTable']/div[2]/table/tbody/tr[1]/td[2]/a";
+	/**XPATH*/ public static final String BOL_TABLE = "//*[@id='ladingBillsDataTable']";
+	/**XPATH*/ public static final String VIEW_RESULT_BUTTON = "//*[@id='view_result_button']";
+	
+	
+	
+	
 	
 	
 	

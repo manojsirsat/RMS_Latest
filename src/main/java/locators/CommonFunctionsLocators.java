@@ -1,5 +1,7 @@
 package locators;
 
+import org.openqa.selenium.By;
+
 public class CommonFunctionsLocators 
 {
 
@@ -78,7 +80,15 @@ public class CommonFunctionsLocators
 	/**XPATH*/ public static final String TOTALRECORDSCOUNT = "(//tbody[@class='p-datatable-tbody']//tr)";
 	/**XPATH*/ public static final String SHOWFILTER = "//div[@class='p-dropdown p-component p-inputwrapper p-inputwrapper-filled p-paginator-rpp-options']//div[@class='p-dropdown-trigger']";
 	/**XPATH*/ public static final String SHOWFILTERSELECTVALUE_500 = "(//li[@class='p-dropdown-item'])[5]";
+	/**XPATH*/ public static final String SHOWFILTERSELECTVALUE_1000 = "(//li[@class='p-dropdown-item'])[6]";
 	
+	// Sorting
+	public static final By bolHeader = By.xpath("//th[contains(.,'Provider Loc Code')]");
+	public static final By bolColumn = By.xpath("//table/tbody/tr/td[1]");
+	public static final By nextBtn   = By.xpath("//button[@aria-label='Next Page']");
+	/**XPATH*/ public static final String BOLCOLUMN = "//table/tbody/tr/td[1]";
+	/**XPATH*/ public static final String BOLHEADER = "//th[contains(.,'Provider Loc Code')]";
+	/**XPATH*/ public static final String NEXTBUTTON_PAGINATION = "//button[@aria-label='Next Page']";
 	
 	
 }

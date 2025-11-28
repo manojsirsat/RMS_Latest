@@ -5,46 +5,50 @@
 		<listener class-name="utils.Listener"></listener>
 		<!-- <listener class-name="utils.RetryListener"></listener> -->
 	</listeners>
-<!-- 	<test  name="BOLPageTest"> -->
-<!-- 		<classes> -->
-<!-- 			<class name="tests.BOLPageTest"> -->
-<!-- 				<methods> -->
-<!-- 					<include name="verifyCreate_BOL_Flow"></include> -->
-<!-- 					<include name="verifyAdd_Order_To_BOL_Flow"></include> -->
-<!-- 					<include name="verifySet_BOL_Status"></include> -->
-<!-- 					<include name="verifyMarkBOL_Complete"></include> -->
-<!-- 					<include name="verifyPagination"></include> -->
-<!-- 				</methods> -->
-<!-- 			</class> -->
-<!-- 			</classes> -->
-<!-- 	</test> -->
+					<test  name="BOLPageTest">
+						<classes>
+							<class name="tests.BOLPageTest">
+								<methods>
+<!-- 									<include name="verifyCreate_BOL_Flow"></include> -->
+<!-- 									<include name="verifyAdd_Order_To_BOL_Flow"></include> -->
+<!-- 									<include name="verifySet_BOL_Status"></include> -->
+<!-- 									<include name="verifyMarkBOL_Complete"></include> -->
+<!-- 									<include name="verifyPagination"></include> -->
+<!-- 									<include name="verifySorting"></include> -->
+<!-- 									<include name="verifyBOL_DecendingSorting_Functionality"></include> -->
+<!-- 									<include name="verifyBOL_AscendingSorting_Functionality"></include> -->
+									<include name="verify_BOL_Filter_Core_Functionality"></include>
+								</methods>
+							</class>
+							</classes>
+					</test>
 	
-<!-- 	<test  name="CreateOrderTest"> -->
-<!-- 		<classes> -->
-<!-- 			<class name="tests.CreateOrderTest"> -->
-<!-- 				<methods> -->
-<!-- 					<include name="verifyCreate_Order_Flow"></include> -->
-<!-- 					<include name="verifyAdd_Order_To_BOL_Complete_Flow"></include> -->
-<!-- 				</methods> -->
-<!-- 			</class> -->
-<!-- 		</classes> -->
-<!-- 	</test>  -->
+<!-- 					<test  name="CreateOrderTest"> -->
+<!-- 						<classes> -->
+<!-- 							<class name="tests.CreateOrderTest"> -->
+<!-- 								<methods> -->
+<!-- 									<include name="verifyCreate_Order_Flow"></include> -->
+<!-- 									<include name="verifyAdd_Order_To_BOL_Complete_Flow"></include> -->
+<!-- 								</methods> -->
+<!-- 							</class> -->
+<!-- 						</classes> -->
+<!-- 					</test>  -->
 	
-<!-- 	<test  name="MultipleOrderTest"> -->
-<!-- 		<classes> -->
-<!-- 			<class name="tests.MultipleOrderTest"> -->
-<!-- 				<methods> -->
-<!-- 					<include name="verifyCreate_Order_Flow"></include> -->
-<!-- 					<include name="verifyAdd_Order_To_BOL_Flow"></include> -->
-<!-- 					<include name="verifyMultiple_Create_Order_Flow"></include> -->
-<!-- 					<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include> -->
-<!-- 					<include name="verifyMultiple_Create_Order_Flow_Final"></include> -->
-<!-- 					<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include> -->
-<!-- 					<include name="verifyBOL_Complete_Flow"></include> -->
-<!-- 				</methods> -->
-<!-- 			</class> -->
-<!-- 			</classes> -->
-<!-- 	</test>  -->
+<!-- 					<test  name="MultipleOrderTest"> -->
+<!-- 						<classes> -->
+<!-- 							<class name="tests.MultipleOrderTest"> -->
+<!-- 								<methods> -->
+<!-- 									<include name="verifyCreate_Order_Flow"></include> -->
+<!-- 									<include name="verifyAdd_Order_To_BOL_Flow"></include> -->
+<!-- 									<include name="verifyMultiple_Create_Order_Flow"></include> -->
+<!-- 									<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include> -->
+<!-- 									<include name="verifyMultiple_Create_Order_Flow_Final"></include> -->
+<!-- 									<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include> -->
+<!-- 									<include name="verifyBOL_Complete_Flow"></include> -->
+<!-- 								</methods> -->
+<!-- 							</class> -->
+<!-- 							</classes> -->
+<!-- 					</test>  -->
 
 <!-- 					<test name="OrdersAndBOLS_OrdersPageTest"> -->
 <!-- 					<classes> -->
@@ -78,6 +82,16 @@
 <!-- 								<include name="verify_Valid_Login"></include> -->
 <!-- 								<include name="redirection_To_ZonesListing_Page"></include> -->
 <!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 								<include name="verifyProviderLocCode_DecendingSorting_Functionality"></include> -->
+<!-- 								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include> -->
+<!-- 								<include name="verifyProvideLocName_DecendingSorting_Functionality"></include> -->
+<!-- 								<include name="verifyProvideLocName_AscendingSorting_Functionality"></include> -->
+<!-- 								<include name="verifyZone_DecendingSorting_Functionality"></include> -->
+<!-- 								<include name="verifyZone_AscendingSorting_Functionality"></include> -->
+<!-- 								<include name="verify0_39_RECOVERY_DecendingSorting_Functionality"></include> -->
+<!-- 								<include name="verify0_39_RECOVERY_AscendingSorting_Functionality"></include> -->
+<!-- 								<include name="verify40_49_RECOVERY_DecendingSorting_Functionality"></include> -->
+<!-- 								<include name="verify40_49_RECOVERY_AscendingSorting_Functionality"></include> -->
 <!-- 							</methods> -->
 <!-- 						</class> -->
 <!-- 					</classes> -->

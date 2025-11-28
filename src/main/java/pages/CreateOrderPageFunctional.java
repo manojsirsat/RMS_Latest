@@ -1,14 +1,10 @@
 package pages;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import org.openqa.selenium.By;
 
 import com.github.javafaker.Faker;
 
 import commonfunctions.CommonFunctions;
-import locators.BOLPageLocators;
 import locators.CommonFunctionsLocators;
 import locators.CreateOrderPageLocators;
 import utils.ReportLoger;
@@ -185,8 +181,9 @@ public class CreateOrderPageFunctional
 								flag = webDB.isElementDisplayed(CreateOrderPageLocators.DELIVERY_WINDOW_ENDDATE_CALENDER, ElementType.Id);
 								if(flag)
 								{
-									webDB.clickAnElement(CreateOrderPageLocators.DELIVERY_WINDOW_ENDDATE_CALENDER, ElementType.Id);
-									Thread.sleep(1000);
+//									webDB.clickAnElement(CreateOrderPageLocators.DELIVERY_WINDOW_ENDDATE_CALENDER, ElementType.Id);
+//									Thread.sleep(1000);
+									
 //									webDB.clickAnElement(CreateOrderPageLocators.DELIVERY_WINDOW_ENDDATE, ElementType.Xpath);
 //									Thread.sleep(1000);
 //									webDB.clickAnElement(CreateOrderPageLocators.NEXTHOUR_INCREMENT_BTN, ElementType.Xpath);
@@ -195,9 +192,10 @@ public class CreateOrderPageFunctional
 //									Thread.sleep(1000);
 //									webDB.clickAnElement(CreateOrderPageLocators.NEXTHOUR_INCREMENT_BTN, ElementType.Xpath);
 //									Thread.sleep(1000);
-									webDB.pressEscapeKey();
-									log.logging("info", "Selected Delivery window End date");
-									Thread.sleep(1000);
+									
+//									webDB.pressEscapeKey();
+//									log.logging("info", "Selected Delivery window End date");
+//									Thread.sleep(1000);
 								}
 							}
 						}
