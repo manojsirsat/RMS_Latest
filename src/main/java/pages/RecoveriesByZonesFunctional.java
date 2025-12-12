@@ -97,4 +97,77 @@ public class RecoveriesByZonesFunctional
 		return flag;
 	}
 	
+	public boolean A50_59_RECOVERY_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(RecoveriesByZonesPageLocators.STRING_50_59_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_50_59_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_50_59_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_50_59_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A50_59_RECOVERY_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(RecoveriesByZonesPageLocators.STRING_50_59_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_50_59_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_50_59_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_50_59_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A60_69_RECOVERY_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(RecoveriesByZonesPageLocators.STRING_60_69_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_60_69_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_60_69_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_60_69_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A60_69_RECOVERY_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(RecoveriesByZonesPageLocators.STRING_60_69_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_60_69_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_60_69_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_60_69_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A70_79_RECOVERY_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(RecoveriesByZonesPageLocators.STRING_70_79_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_70_79_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_70_79_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_70_79_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A70_79_RECOVERY_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(RecoveriesByZonesPageLocators.STRING_70_79_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_70_79_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_70_79_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_70_79_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A80_89_RECOVERY_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(RecoveriesByZonesPageLocators.STRING_80_89_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_80_89_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_80_89_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_80_89_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A80_89_RECOVERY_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(RecoveriesByZonesPageLocators.STRING_80_89_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_80_89_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_80_89_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_80_89_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A90_99_RECOVERY_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(RecoveriesByZonesPageLocators.STRING_90_99_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_90_99_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_90_99_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_90_99_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A90_99_RECOVERY_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(RecoveriesByZonesPageLocators.STRING_90_99_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_90_99_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_90_99_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_90_99_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A100_RECOVERY_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(RecoveriesByZonesPageLocators.STRING_100_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_100_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_100_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_100_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	public boolean A100_RECOVERY_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(RecoveriesByZonesPageLocators.STRING_100_RECOVERY_COLHEADER, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_100_RECOVERY_COLHEADER, RecoveriesByZonesPageLocators.STRING_100_RECOVERY_COLDATA, ElementType.Xpath, RecoveriesByZonesPageLocators.BY_100_RECOVERY_COLDATA);
+		return flag;
+	}
+	
+	
 }

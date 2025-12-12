@@ -75,18 +75,147 @@ public class BOLPageLocators
 	
 	
 	// Sorting
-	public static final By BY_BOL_COLHEADER = By.xpath("//th[contains(.,'BOL #')]");
-	public static final By BY_BOL_COLDATA = By.xpath("//table/tbody/tr/td[2]");
+	/**By*/ public static final By BY_BOL_COLHEADER = By.xpath("//th[contains(.,'BOL #')]");
+	/**By*/ public static final By BY_BOL_COLDATA = By.xpath("//table/tbody/tr/td[2]");
 	/**XPATH*/ public static final String STRING_BOL_COLDATA = "//table/tbody/tr/td[2]";
 	/**XPATH*/ public static final String STRING_BOL_COLHEADER = "//th[contains(.,'BOL #')]";
+	/**XPATH*/ public static final String STRING_BOL_RESULTDATA = "(//table/tbody/tr/td[2])[1]";
+	/**XPATH*/ public static final String STRING_BOL_INPUTFIELD_FILTER = "//*[@id='lading-bill-filter-input']";
 		
-	public static final By BY_TYPE_COLHEADER = By.xpath("//th[contains(.,'Type')]");
-	public static final By BY_TYPE_COLDATA = By.xpath("//table/tbody/tr/td[4]");
+	/**By*/ public static final By BY_URGENT_COLHEADER = By.xpath("//th[contains(.,'Urgent')]");
+	/**By*/ public static final By BY_URGENT_COLDATA = By.xpath("//table/tbody/tr/td[3]");
+	/**XPATH*/ public static final String STRING_URGENT_COLDATA = "//table/tbody/tr/td[3]";
+	/**XPATH*/ public static final String STRING_URGENT_COLHEADER = "//th[contains(.,'Urgent')]";
+	
+	/**By*/ public static final By BY_TYPE_COLHEADER = By.xpath("//th[contains(.,'Type')]");
+	/**By*/ public static final By BY_TYPE_COLDATA = By.xpath("//table/tbody/tr/td[4]");
 	/**XPATH*/ public static final String STRING_TYPE_COLDATA = "//table/tbody/tr/td[4]";
 	/**XPATH*/ public static final String STRING_TYPE_COLHEADER = "//th[contains(.,'Type')]";
 	
+	/**By*/ public static final By BY_CURRENTSTATUS_COLHEADER = By.xpath("//th[contains(.,'Current Status')]");
+	/**By*/ public static final By BY_CURRENTSTATUS_COLDATA = By.xpath("//table/tbody/tr/td[5]");
+	/**XPATH*/ public static final String STRING_CURRENTSTATUS_COLDATA = "//table/tbody/tr/td[5]";
+	/**XPATH*/ public static final String STRING_CURRENTSTATUS_COLHEADER = "//th[contains(.,'Current Status')]";
 	
+	/**By*/ public static final By BY_DUEDATE_COLHEADER = By.xpath("//th[contains(.,'Due Date')]");
+	/**By*/ public static final By BY_DUEDATE_COLDATA = By.xpath("//table/tbody/tr/td[7]");
+	/**XPATH*/ public static final String STRING_DUEDATE_COLDATA = "//table/tbody/tr/td[7]";
+	/**XPATH*/ public static final String STRING_DUEDATE_COLHEADER = "//th[contains(.,'Due Date')]";
 	
+	/**By*/ public static final By BY_SHIPMETHOD_COLHEADER = By.xpath("//th[contains(.,'Ship Method')]");
+	/**By*/ public static final By BY_SHIPMETHOD_COLDATA = By.xpath("//table/tbody/tr/td[8]");
+	/**XPATH*/ public static final String STRING_SHIPMETHOD_COLDATA = "//table/tbody/tr/td[8]";
+	/**XPATH*/ public static final String STRING_SHIPMETHOD_COLHEADER = "//th[contains(.,'Ship Method')]";
+	
+	/**By*/ public static final By BY_SHIPPEDBYLOCCODE_COLHEADER = By.xpath("//th[contains(.,'Shipped By Loc Code')]");
+	/**By*/ public static final By BY_SHIPPEDBYLOCCODE_COLDATA = By.xpath("//table/tbody/tr/td[9]");
+	/**XPATH*/ public static final String STRING_SHIPPEDBYLOCCODE_COLDATA = "//table/tbody/tr/td[9]";
+	/**XPATH*/ public static final String STRING_SHIPPEDBYLOCCODE_COLHEADER = "//th[contains(.,'Shipped By Loc Code')]";
+	
+	/**By*/ public static final By BY_SHIPPEDBYLOCNAME_COLHEADER = By.xpath("//th[contains(.,'Shipped By Loc Name')]");
+	/**By*/ public static final By BY_SHIPPEDBYLOCNAME_COLDATA = By.xpath("//table/tbody/tr/td[10]");
+	/**XPATH*/ public static final String STRING_SHIPPEDBYLOCNAME_COLDATA = "//table/tbody/tr/td[10]";
+	/**XPATH*/ public static final String STRING_SHIPPEDBYLOCNAME_COLHEADER = "//th[contains(.,'Shipped By Loc Name')]";
+	
+	/**By*/ public static final By BY_DEFAULTZONE_COLHEADER = By.xpath("//th[contains(.,'Default Zone')]");
+	/**By*/ public static final By BY_DEFAULTZONE_COLDATA = By.xpath("//table/tbody/tr/td[11]");
+	/**XPATH*/ public static final String STRING_DEFAULTZONE_COLDATA = "//table/tbody/tr/td[11]";
+	/**XPATH*/ public static final String STRING_DEFAULTZONE_COLHEADER = "//th[contains(.,'Default Zone')]";
+	
+	/**By*/ public static final By BY_FROMLOCCODE_COLHEADER = By.xpath("//th[contains(.,'From Loc Code')]");
+	/**By*/ public static final By BY_FROMLOCCODE_COLDATA = By.xpath("//table/tbody/tr/td[12]");
+	/**XPATH*/ public static final String STRING_FROMLOCCODE_COLDATA = "//table/tbody/tr/td[12]";
+	/**XPATH*/ public static final String STRING_FROMLOCCODE_COLHEADER = "//th[contains(.,'From Loc Code')]";
+	
+	/**By*/ public static final By BY_FROMLOCNAME_COLHEADER = By.xpath("//th[contains(.,'From Loc Name')]");
+	/**By*/ public static final By BY_FROMLOCNAME_COLDATA = By.xpath("//table/tbody/tr/td[13]");
+	/**XPATH*/ public static final String STRING_FROMLOCNAME_COLDATA = "//table/tbody/tr/td[13]";
+	/**XPATH*/ public static final String STRING_FROMLOCNAME_COLHEADER = "//th[contains(.,'From Loc Name')]";
+	
+	/**By*/ public static final By BY_FROMLOCCITY_COLHEADER = By.xpath("//th[contains(.,'From Loc City')]");
+	/**By*/ public static final By BY_FROMLOCCITY_COLDATA = By.xpath("//table/tbody/tr/td[14]");
+	/**XPATH*/ public static final String STRING_FROMLOCCITY_COLDATA = "//table/tbody/tr/td[14]";
+	/**XPATH*/ public static final String STRING_FROMLOCCITY_COLHEADER = "//th[contains(.,'From Loc City')]";
+	
+	/**By*/ public static final By BY_FROMLOCSTATE_COLHEADER = By.xpath("//th[contains(.,'From Loc State')]");
+	/**By*/ public static final By BY_FROMLOCSTATE_COLDATA = By.xpath("//table/tbody/tr/td[15]");
+	/**XPATH*/ public static final String STRING_FROMLOCSTATE_COLDATA = "//table/tbody/tr/td[15]";
+	/**XPATH*/ public static final String STRING_FROMLOCSTATE_COLHEADER = "//th[contains(.,'From Loc State')]";
+	
+	/**By*/ public static final By BY_TOLOCCODE_COLHEADER = By.xpath("//th[contains(.,'To Loc Code')]");
+	/**By*/ public static final By BY_TOLOCCODE_COLDATA = By.xpath("//table/tbody/tr/td[16]");
+	/**XPATH*/ public static final String STRING_TOLOCCODE_COLDATA = "//table/tbody/tr/td[16]";
+	/**XPATH*/ public static final String STRING_TOLOCCODE_COLHEADER = "//th[contains(.,'To Loc Code')]";
+	
+	/**By*/ public static final By BY_TOLOCNAME_COLHEADER = By.xpath("//th[contains(.,'To Loc Name')]");
+	/**By*/ public static final By BY_TOLOCNAME_COLDATA = By.xpath("//table/tbody/tr/td[17]");
+	/**XPATH*/ public static final String STRING_TOLOCNAME_COLDATA = "//table/tbody/tr/td[17]";
+	/**XPATH*/ public static final String STRING_TOLOCNAME_COLHEADER = "//th[contains(.,'To Loc Name')]";
+	
+	/**By*/ public static final By BY_ASSIGNDATE_COLHEADER = By.xpath("//th[contains(.,'Assign Date')]");
+	/**By*/ public static final By BY_ASSIGNDATE_COLDATA = By.xpath("//table/tbody/tr/td[18]");
+	/**XPATH*/ public static final String STRING_ASSIGNDATE_COLDATA = "//table/tbody/tr/td[18]";
+	/**XPATH*/ public static final String STRING_ASSIGNDATE_COLHEADER = "//th[contains(.,'Assign Date')]";
+	
+	/**By*/ public static final By BY_COMMITNDATE_COLHEADER = By.xpath("(//th[contains(.,'Commit Date')])[1]");
+	/**By*/ public static final By BY_COMMITNDATE_COLDATA = By.xpath("//table/tbody/tr/td[19]");
+	/**XPATH*/ public static final String STRING_COMMITNDATE_COLDATA = "//table/tbody/tr/td[19]";
+	/**XPATH*/ public static final String STRING_COMMITNDATE_COLHEADER = "(//th[contains(.,'Commit Date')])[1]";
+	
+	/**By*/ public static final By BY_MODCOMMITNDATE_COLHEADER = By.xpath("//th[contains(.,'Mod Commit Date')]");
+	/**By*/ public static final By BY_MODCOMMITNDATE_COLDATA = By.xpath("//table/tbody/tr/td[20]");
+	/**XPATH*/ public static final String STRING_MODCOMMITNDATE_COLDATA = "//table/tbody/tr/td[20]";
+	/**XPATH*/ public static final String STRING_MODCOMMITNDATE_COLHEADER = "//th[contains(.,'Mod Commit Date')]";
+	
+	/**By*/ public static final By BY_SCHEDULEDSHIPDATE_COLHEADER = By.xpath("//th[contains(.,'Scheduled Ship Date')]");
+	/**By*/ public static final By BY_SCHEDULEDSHIPDATE_COLDATA = By.xpath("//table/tbody/tr/td[21]");
+	/**XPATH*/ public static final String STRING_SCHEDULEDSHIPDATE_COLDATA = "//table/tbody/tr/td[21]";
+	/**XPATH*/ public static final String STRING_SCHEDULEDSHIPDATE_COLHEADER = "//th[contains(.,'Scheduled Ship Date')]";
+	
+	/**By*/ public static final By BY_PICKUPDATE_COLHEADER = By.xpath("//th[contains(.,'Pickup Date')]");
+	/**By*/ public static final By BY_PICKUPDATE_COLDATA = By.xpath("//table/tbody/tr/td[22]");
+	/**XPATH*/ public static final String STRING_PICKUPDATE_COLDATA = "//table/tbody/tr/td[22]";
+	/**XPATH*/ public static final String STRING_PICKUPDATE_COLHEADER = "//th[contains(.,'Pickup Date')]";
+	
+	/**By*/ public static final By BY_ESTIMATEDDELIVERYDATE_COLHEADER = By.xpath("//th[contains(.,'Estimated Delivery Date')]");
+	/**By*/ public static final By BY_ESTIMATEDDELIVERYDATE_COLDATA = By.xpath("//table/tbody/tr/td[23]");
+	/**XPATH*/ public static final String STRING_ESTIMATEDDELIVERYDATE_COLDATA = "//table/tbody/tr/td[23]";
+	/**XPATH*/ public static final String STRING_ESTIMATEDDELIVERYDATE_COLHEADER = "//th[contains(.,'Estimated Delivery Date')]";
+	
+	/**By*/ public static final By BY_DELIVEREDDATE_COLHEADER = By.xpath("//th[contains(.,'Delivered Date')]");
+	/**By*/ public static final By BY_DELIVEREDDATE_COLDATA = By.xpath("//table/tbody/tr/td[24]");
+	/**XPATH*/ public static final String STRING_DELIVEREDDATE_COLDATA = "//table/tbody/tr/td[24]";
+	/**XPATH*/ public static final String STRING_DELIVEREDDATE_COLHEADER = "//th[contains(.,'Delivered Date')]";
+	
+	/**By*/ public static final By BY_COMPLETEDDATE_COLHEADER = By.xpath("//th[contains(.,'Completed Date')]");
+	/**By*/ public static final By BY_COMPLETEDDATE_COLDATA = By.xpath("//table/tbody/tr/td[25]");
+	/**XPATH*/ public static final String STRING_COMPLETEDDATE_COLDATA = "//table/tbody/tr/td[25]";
+	/**XPATH*/ public static final String STRING_COMPLETEDDATE_COLHEADER = "//th[contains(.,'Completed Date')]";
+	
+	/**By*/ public static final By BY_QUOTE_COLHEADER = By.xpath("//th[contains(.,'Quote')]");
+	/**By*/ public static final By BY_QUOTE_COLDATA = By.xpath("//table/tbody/tr/td[26]");
+	/**XPATH*/ public static final String STRING_QUOTE_COLDATA = "//table/tbody/tr/td[26]";
+	/**XPATH*/ public static final String STRING_QUOTE_COLHEADER = "//th[contains(.,'Quote')]";
+	
+	/**By*/ public static final By BY_TENDER_COLHEADER = By.xpath("//th[contains(.,'Tender')]");
+	/**By*/ public static final By BY_TENDER_COLDATA = By.xpath("//table/tbody/tr/td[27]");
+	/**XPATH*/ public static final String STRING_TENDER_COLDATA = "//table/tbody/tr/td[27]";
+	/**XPATH*/ public static final String STRING_TENDER_COLHEADER = "//th[contains(.,'Tender')]";
+	
+	/**By*/ public static final By BY_SHIPMENT_COLHEADER = By.xpath("//th[contains(.,'Shipment')]");
+	/**By*/ public static final By BY_SHIPMENT_COLDATA = By.xpath("//table/tbody/tr/td[28]");
+	/**XPATH*/ public static final String STRING_SHIPMENT_COLDATA = "//table/tbody/tr/td[28]";
+	/**XPATH*/ public static final String STRING_SHIPMENT_COLHEADER = "//th[contains(.,'Shipment')]";
+	
+	/**By*/ public static final By BY_AUTOASSIGNELIGIBLE_COLHEADER = By.xpath("//th[contains(.,'Auto-Assign Eligible')]");
+	/**By*/ public static final By BY_AUTOASSIGNELIGIBLE_COLDATA = By.xpath("//table/tbody/tr/td[29]");
+	/**XPATH*/ public static final String STRING_AUTOASSIGNELIGIBLE_COLDATA = "//table/tbody/tr/td[29]";
+	/**XPATH*/ public static final String STRING_AUTOASSIGNELIGIBLE_COLHEADER = "//th[contains(.,'Auto-Assign Eligible')]";
+	
+	/**By*/ public static final By BY_SHIPPEDBYACCOUNT_COLHEADER = By.xpath("//th[contains(.,'Shipped By Account')]");
+	/**By*/ public static final By BY_SHIPPEDBYACCOUNT_COLDATA = By.xpath("//table/tbody/tr/td[30]");
+	/**XPATH*/ public static final String STRING_SHIPPEDBYACCOUNT_COLDATA = "//table/tbody/tr/td[30]";
+	/**XPATH*/ public static final String STRING_SHIPPEDBYACCOUNT_COLHEADER = "//th[contains(.,'Shipped By Account')]";
 	
 	
 	// Filter

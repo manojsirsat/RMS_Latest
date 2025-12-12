@@ -10,7 +10,6 @@ import com.github.javafaker.Faker;
 import commonfunctions.CommonFunctions;
 import locators.BOLPageLocators;
 import locators.CommonFunctionsLocators;
-import locators.RecoveriesByZonesPageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 import utils.WebDriverBase.ElementType;
@@ -570,120 +569,430 @@ public class BOLPageFunctional
 		return flag;
 	}
 	
-	
-	
-	
-	
-	/**
-	 * @return String BOL number from the first row of the table
-	 * This method gets the BOL number from the first row of the BOL listing table
-	 */
-	public String getLatestBOLNumber() {
-		try {
-			// First verify table is present
-			webDB.scrollToAnElement(BOLPageLocators.BOL_TABLE, ElementType.Xpath);
-			if (!webDB.waitForClickElement(BOLPageLocators.BOL_TABLE, ElementType.Xpath)) {
-				log.logging("info", "BOL table is not displayed");
-				return null;
-			}
-			
-			// Wait for the first row to be present
-			if (!webDB.waitForElement(BOLPageLocators.BOL_TABLE_FIRST_ROW, ElementType.Xpath)) {
-				log.logging("info", "No BOL entries found in the table");
-				return null;
-			}
-			
-			String bolNumber = webDB.getTextFromElement(BOLPageLocators.BOL_TABLE_FIRST_ROW, ElementType.Xpath);
-			if (bolNumber != null && !bolNumber.trim().isEmpty()) {
-				log.logging("info", "Got BOL number from the first row: " + bolNumber);
-				return bolNumber.trim();
-			} else {
-				log.logging("info", "BOL number is empty or null");
-				return null;
-			}
-		} catch (Exception e) {
-			log.logging("info", "Unable to get BOL number from first row with Exception: " + e.getMessage());
-			return null;
-		}
+	public boolean CurrentStatus_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_CURRENTSTATUS_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_CURRENTSTATUS_COLHEADER, BOLPageLocators.STRING_CURRENTSTATUS_COLDATA, ElementType.Xpath, BOLPageLocators.BY_CURRENTSTATUS_COLDATA);
+		return flag;
 	}
 	
-	/**
-	 * @param bolNumber The BOL number to search for
-	 * @return boolean indicating if the search was successful
-	 * This method searches for a specific BOL number using the filter
-	 */
-	public boolean searchBOLNumber(String bolNumber) throws InterruptedException {
-		if (bolNumber == null || bolNumber.trim().isEmpty()) {
-			log.logging("info", "Invalid BOL number provided for search");
-			return false;
-		}
-		
-		try {
-			// Try primary search filter locator
-			boolean filterFound = webDB.waitForElement(BOLPageLocators.BOL_SEARCH_FILTER, ElementType.Xpath);
-			
-			// If primary fails, try alternative locator
-			if (!filterFound) {
-				filterFound = webDB.waitForElement(BOLPageLocators.BOL_SEARCH_FILTER_ALTERNATIVE, ElementType.Xpath);
-				if (!filterFound) {
-					log.logging("info", "Unable to locate BOL search filter");
-					return false;
-				}
-			}
-			
-			// Clear and enter the BOL number
-			String locatorToUse = filterFound ? BOLPageLocators.BOL_SEARCH_FILTER : BOLPageLocators.BOL_SEARCH_FILTER_ALTERNATIVE;
-			// The user said they fixed the scroll up.
-			webDB.clearText(locatorToUse, ElementType.Xpath);
-			webDB.sendTextToAnElement(locatorToUse, bolNumber, ElementType.Xpath);
-			log.logging("info", "Entered BOL number in search filter: " + bolNumber);
-
-			webDB.clickAnElement(BOLPageLocators.VIEW_RESULT_BUTTON, ElementType.Xpath);
-            log.logging("info", "Clicked on View Result button");
-			
-			// Wait for table to update (using explicit wait instead of Thread.sleep)
-			boolean tableUpdated = webDB.waitForElement(BOLPageLocators.BOL_TABLE, ElementType.Xpath);
-			if (!tableUpdated) {
-				log.logging("info", "Table did not update after search");
-				return false;
-			}
-			
-			// Get and verify the search result
-			String firstRowBOL = getFirstBOLNumberFromResult();
-			if (firstRowBOL != null && firstRowBOL.equals(bolNumber)) {
-				log.logging("info", "Successfully found BOL number: " + bolNumber);
-				return true;
-			} else {
-				log.logging("BOL number not found in search results. Expected: " + bolNumber + ", Found: " + firstRowBOL, firstRowBOL);
-				return false;
-			}
-		} catch (Exception e) {
-			log.logging("Unable to search BOL number with Exception: " + e.getMessage(), bolNumber);
-			return false;
-		}
+	public boolean CurrentStatus_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_CURRENTSTATUS_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_CURRENTSTATUS_COLHEADER, BOLPageLocators.STRING_CURRENTSTATUS_COLDATA, ElementType.Xpath, BOLPageLocators.BY_CURRENTSTATUS_COLDATA);
+		return flag;
 	}
-
-	private String getFirstBOLNumberFromResult() {
-        // This method assumes the table is already visible and updated.
-        // It does not perform any scrolling.
-        try {
-            if (!webDB.waitForElement(BOLPageLocators.BOL_TABLE_FIRST_ROW, ElementType.Xpath)) {
-                log.logging("info", "No BOL entries found in the table after search");
-                return null;
-            }
-            String bolNumber = webDB.getTextFromElement(BOLPageLocators.BOL_TABLE_FIRST_ROW, ElementType.Xpath);
-            if (bolNumber != null && !bolNumber.trim().isEmpty()) {
-                log.logging("info", "Got BOL number from the first row after search: " + bolNumber);
-                return bolNumber.trim();
-            } else {
-                log.logging("info", "BOL number is empty or null after search");
-                return null;
-            }
-        } catch (Exception e) {
-            log.logging("info", "Unable to get BOL number from first row after search with Exception: " + e.getMessage());
-            return null;
-        }
-    }
+	
+	public boolean DueDate_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_DUEDATE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_DUEDATE_COLHEADER, BOLPageLocators.STRING_DUEDATE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_DUEDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean DueDate_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_DUEDATE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_DUEDATE_COLHEADER, BOLPageLocators.STRING_DUEDATE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_DUEDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ShipMethod_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPMETHOD_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_SHIPMETHOD_COLHEADER, BOLPageLocators.STRING_SHIPMETHOD_COLDATA, ElementType.Xpath, BOLPageLocators.BY_SHIPMETHOD_COLDATA);
+		return flag;
+	}
+	
+	public boolean ShipMethod_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPMETHOD_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_SHIPMETHOD_COLHEADER, BOLPageLocators.STRING_SHIPMETHOD_COLDATA, ElementType.Xpath, BOLPageLocators.BY_SHIPMETHOD_COLDATA);
+		return flag;
+	}
+	
+	public boolean ShippedByLocCode_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPPEDBYLOCCODE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYLOCCODE_COLHEADER, BOLPageLocators.STRING_SHIPPEDBYLOCCODE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYLOCCODE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ShippedByLocCode_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPPEDBYLOCCODE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYLOCCODE_COLHEADER, BOLPageLocators.STRING_SHIPPEDBYLOCCODE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYLOCCODE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ShippedByLocName_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPPEDBYLOCNAME_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYLOCNAME_COLHEADER, BOLPageLocators.STRING_SHIPPEDBYLOCNAME_COLDATA, ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYLOCNAME_COLDATA);
+		return flag;
+	}
+	
+	public boolean ShippedByLocName_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPPEDBYLOCNAME_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYLOCNAME_COLHEADER, BOLPageLocators.STRING_SHIPPEDBYLOCNAME_COLDATA, ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYLOCNAME_COLDATA);
+		return flag;
+	}
+	
+	public boolean DefaultZone_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_DEFAULTZONE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_DEFAULTZONE_COLHEADER, BOLPageLocators.STRING_DEFAULTZONE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_DEFAULTZONE_COLDATA);
+		return flag;
+	}
+	
+	public boolean DefaultZone_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_DEFAULTZONE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_DEFAULTZONE_COLHEADER, BOLPageLocators.STRING_DEFAULTZONE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_DEFAULTZONE_COLDATA);
+		return flag;
+	}
+	
+	public boolean FromLocCode_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_FROMLOCCODE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_FROMLOCCODE_COLHEADER, BOLPageLocators.STRING_FROMLOCCODE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_FROMLOCCODE_COLDATA);
+		return flag;
+	}
+	
+	public boolean FromLocCode_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_FROMLOCCODE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_FROMLOCCODE_COLHEADER, BOLPageLocators.STRING_FROMLOCCODE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_FROMLOCCODE_COLDATA);
+		return flag;
+	}
+	
+	public boolean FromLocName_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_FROMLOCNAME_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_FROMLOCNAME_COLHEADER, BOLPageLocators.STRING_FROMLOCNAME_COLDATA, ElementType.Xpath, BOLPageLocators.BY_FROMLOCNAME_COLDATA);
+		return flag;
+	}
+	
+	public boolean FromLocName_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_FROMLOCNAME_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_FROMLOCNAME_COLHEADER, BOLPageLocators.STRING_FROMLOCNAME_COLDATA, ElementType.Xpath, BOLPageLocators.BY_FROMLOCNAME_COLDATA);
+		return flag;
+	}
+	
+	
+	public boolean FromLocCity_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_FROMLOCCITY_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_FROMLOCCITY_COLHEADER, BOLPageLocators.STRING_FROMLOCCITY_COLDATA, ElementType.Xpath, BOLPageLocators.BY_FROMLOCCITY_COLDATA);
+		return flag;
+	}
+	
+	public boolean FromLocCity_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_FROMLOCCITY_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_FROMLOCCITY_COLHEADER, BOLPageLocators.STRING_FROMLOCCITY_COLDATA, ElementType.Xpath, BOLPageLocators.BY_FROMLOCCITY_COLDATA);
+		return flag;
+	}
+	
+	public boolean FromLocState_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_FROMLOCSTATE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_FROMLOCSTATE_COLHEADER, BOLPageLocators.STRING_FROMLOCSTATE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_FROMLOCSTATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean FromLocState_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_FROMLOCSTATE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_FROMLOCSTATE_COLHEADER, BOLPageLocators.STRING_FROMLOCSTATE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_FROMLOCSTATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ToLocCode_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_TOLOCCODE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_TOLOCCODE_COLHEADER, BOLPageLocators.STRING_TOLOCCODE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_TOLOCCODE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ToLocCode_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_TOLOCCODE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_TOLOCCODE_COLHEADER, BOLPageLocators.STRING_TOLOCCODE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_TOLOCCODE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ToLocName_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_TOLOCNAME_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_TOLOCNAME_COLHEADER, BOLPageLocators.STRING_TOLOCNAME_COLDATA, ElementType.Xpath, BOLPageLocators.BY_TOLOCNAME_COLDATA);
+		return flag;
+	}
+	
+	public boolean ToLocName_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_TOLOCNAME_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_TOLOCNAME_COLHEADER, BOLPageLocators.STRING_TOLOCNAME_COLDATA, ElementType.Xpath, BOLPageLocators.BY_TOLOCNAME_COLDATA);
+		return flag;
+	}
+	
+	public boolean AssignDate_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_ASSIGNDATE_COLHEADER, BOLPageLocators.BY_ASSIGNDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean AssignDate_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_ASSIGNDATE_COLHEADER, BOLPageLocators.BY_ASSIGNDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean CommitDate_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_COMMITNDATE_COLHEADER, BOLPageLocators.BY_COMMITNDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean CommitDate_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_COMMITNDATE_COLHEADER, BOLPageLocators.BY_COMMITNDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ModCommitDate_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_MODCOMMITNDATE_COLHEADER, BOLPageLocators.BY_MODCOMMITNDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ModCommitDate_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_MODCOMMITNDATE_COLHEADER, BOLPageLocators.BY_MODCOMMITNDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ScheduleShipDate_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_SCHEDULEDSHIPDATE_COLHEADER, BOLPageLocators.BY_SCHEDULEDSHIPDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ScheduleShipDate_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_SCHEDULEDSHIPDATE_COLHEADER, BOLPageLocators.BY_SCHEDULEDSHIPDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean PickupDate_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_PICKUPDATE_COLHEADER, BOLPageLocators.BY_PICKUPDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean PickupDate_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_PICKUPDATE_COLHEADER, BOLPageLocators.BY_PICKUPDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean EstimatedDeliveryDate_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_ESTIMATEDDELIVERYDATE_COLHEADER, BOLPageLocators.BY_ESTIMATEDDELIVERYDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean EstimatedDeliveryDate_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_ESTIMATEDDELIVERYDATE_COLHEADER, BOLPageLocators.BY_ESTIMATEDDELIVERYDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean DeliveredDate_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_DELIVEREDDATE_COLHEADER, BOLPageLocators.BY_DELIVEREDDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean DeliveredDate_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_DELIVEREDDATE_COLHEADER, BOLPageLocators.BY_DELIVEREDDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean CompleteDate_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_COMPLETEDDATE_COLHEADER, BOLPageLocators.BY_COMPLETEDDATE_COLDATA);
+		return flag;
+	}
+	
+	public boolean CompleteDate_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_COMPLETEDDATE_COLHEADER, BOLPageLocators.BY_COMPLETEDDATE_COLDATA);
+		return flag;
+	}
+	
+	
+	public boolean Quote_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_QUOTE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_QUOTE_COLHEADER, BOLPageLocators.STRING_QUOTE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_QUOTE_COLDATA);
+		return flag;
+	}
+	
+	public boolean Quote_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_QUOTE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_QUOTE_COLHEADER, BOLPageLocators.STRING_QUOTE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_QUOTE_COLDATA);
+		return flag;
+	}
+	
+	public boolean Tender_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_TENDER_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_TENDER_COLHEADER, BOLPageLocators.STRING_TENDER_COLDATA, ElementType.Xpath, BOLPageLocators.BY_TENDER_COLDATA);
+		return flag;
+	}
+	
+	public boolean Tender_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_TENDER_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_TENDER_COLHEADER, BOLPageLocators.STRING_TENDER_COLDATA, ElementType.Xpath, BOLPageLocators.BY_TENDER_COLDATA);
+		return flag;
+	}
+	
+	public boolean Shipment_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPMENT_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_SHIPMENT_COLHEADER, BOLPageLocators.STRING_SHIPMENT_COLDATA, ElementType.Xpath, BOLPageLocators.BY_SHIPMENT_COLDATA);
+		return flag;
+	}
+	
+	public boolean Shipment_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPMENT_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_SHIPMENT_COLHEADER, BOLPageLocators.STRING_SHIPMENT_COLDATA, ElementType.Xpath, BOLPageLocators.BY_SHIPMENT_COLDATA);
+		return flag;
+	}
+	
+	public boolean AutoAssignEligible_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_AUTOASSIGNELIGIBLE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_AUTOASSIGNELIGIBLE_COLHEADER, BOLPageLocators.STRING_AUTOASSIGNELIGIBLE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_AUTOASSIGNELIGIBLE_COLDATA);
+		return flag;
+	}
+	
+	public boolean AutoAssignEligible_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_AUTOASSIGNELIGIBLE_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_AUTOASSIGNELIGIBLE_COLHEADER, BOLPageLocators.STRING_AUTOASSIGNELIGIBLE_COLDATA, ElementType.Xpath, BOLPageLocators.BY_AUTOASSIGNELIGIBLE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ShippedByAccount_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPPEDBYACCOUNT_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYACCOUNT_COLHEADER, BOLPageLocators.STRING_SHIPPEDBYACCOUNT_COLDATA, ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYACCOUNT_COLDATA);
+		return flag;
+	}
+	
+	public boolean ShippedByAccount_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPPEDBYACCOUNT_COLHEADER, ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYACCOUNT_COLHEADER, BOLPageLocators.STRING_SHIPPEDBYACCOUNT_COLDATA, ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYACCOUNT_COLDATA);
+		return flag;
+	}
+	
+	//					Filters
+	public boolean verify_InputBOLFilter() throws InterruptedException
+	{
+		commonfunction.applyTextFilter(BOLPageLocators.STRING_BOL_COLDATA, BOLPageLocators.STRING_BOL_RESULTDATA, ElementType.Xpath, BOLPageLocators.STRING_BOL_INPUTFIELD_FILTER, ElementType.Xpath);
+		return flag;
+	}
+	
+	
+	
+	
+	
+	
+//	/**
+//	 * @return String BOL number from the first row of the table
+//	 * This method gets the BOL number from the first row of the BOL listing table
+//	 */
+//	public String getLatestBOLNumber() {
+//		try {
+//			// First verify table is present
+//			webDB.scrollToAnElement(BOLPageLocators.BOL_TABLE, ElementType.Xpath);
+//			if (!webDB.waitForClickElement(BOLPageLocators.BOL_TABLE, ElementType.Xpath)) {
+//				log.logging("info", "BOL table is not displayed");
+//				return null;
+//			}
+//			
+//			// Wait for the first row to be present
+//			if (!webDB.waitForElement(BOLPageLocators.BOL_TABLE_FIRST_ROW, ElementType.Xpath)) {
+//				log.logging("info", "No BOL entries found in the table");
+//				return null;
+//			}
+//			
+//			String bolNumber = webDB.getTextFromElement(BOLPageLocators.BOL_TABLE_FIRST_ROW, ElementType.Xpath);
+//			if (bolNumber != null && !bolNumber.trim().isEmpty()) {
+//				log.logging("info", "Got BOL number from the first row: " + bolNumber);
+//				return bolNumber.trim();
+//			} else {
+//				log.logging("info", "BOL number is empty or null");
+//				return null;
+//			}
+//		} catch (Exception e) {
+//			log.logging("info", "Unable to get BOL number from first row with Exception: " + e.getMessage());
+//			return null;
+//		}
+//	}
+//	
+//	/**
+//	 * @param bolNumber The BOL number to search for
+//	 * @return boolean indicating if the search was successful
+//	 * This method searches for a specific BOL number using the filter
+//	 */
+//	public boolean searchBOLNumber(String bolNumber) throws InterruptedException {
+//		if (bolNumber == null || bolNumber.trim().isEmpty()) {
+//			log.logging("info", "Invalid BOL number provided for search");
+//			return false;
+//		}
+//		
+//		try {
+//			// Try primary search filter locator
+//			boolean filterFound = webDB.waitForElement(BOLPageLocators.BOL_SEARCH_FILTER, ElementType.Xpath);
+//			
+//			// If primary fails, try alternative locator
+//			if (!filterFound) {
+//				filterFound = webDB.waitForElement(BOLPageLocators.BOL_SEARCH_FILTER_ALTERNATIVE, ElementType.Xpath);
+//				if (!filterFound) {
+//					log.logging("info", "Unable to locate BOL search filter");
+//					return false;
+//				}
+//			}
+//			
+//			// Clear and enter the BOL number
+//			String locatorToUse = filterFound ? BOLPageLocators.BOL_SEARCH_FILTER : BOLPageLocators.BOL_SEARCH_FILTER_ALTERNATIVE;
+//			// The user said they fixed the scroll up.
+//			webDB.clearText(locatorToUse, ElementType.Xpath);
+//			webDB.sendTextToAnElement(locatorToUse, bolNumber, ElementType.Xpath);
+//			log.logging("info", "Entered BOL number in search filter: " + bolNumber);
+//
+//			webDB.clickAnElement(BOLPageLocators.VIEW_RESULT_BUTTON, ElementType.Xpath);
+//            log.logging("info", "Clicked on View Result button");
+//			
+//			// Wait for table to update (using explicit wait instead of Thread.sleep)
+//			boolean tableUpdated = webDB.waitForElement(BOLPageLocators.BOL_TABLE, ElementType.Xpath);
+//			if (!tableUpdated) {
+//				log.logging("info", "Table did not update after search");
+//				return false;
+//			}
+//			
+//			// Get and verify the search result
+//			String firstRowBOL = getFirstBOLNumberFromResult();
+//			if (firstRowBOL != null && firstRowBOL.equals(bolNumber)) {
+//				log.logging("info", "Successfully found BOL number: " + bolNumber);
+//				return true;
+//			} else {
+//				log.logging("BOL number not found in search results. Expected: " + bolNumber + ", Found: " + firstRowBOL, firstRowBOL);
+//				return false;
+//			}
+//		} catch (Exception e) {
+//			log.logging("Unable to search BOL number with Exception: " + e.getMessage(), bolNumber);
+//			return false;
+//		}
+//	}
+//
+//	private String getFirstBOLNumberFromResult() {
+//        // This method assumes the table is already visible and updated.
+//        // It does not perform any scrolling.
+//        try {
+//            if (!webDB.waitForElement(BOLPageLocators.BOL_TABLE_FIRST_ROW, ElementType.Xpath)) {
+//                log.logging("info", "No BOL entries found in the table after search");
+//                return null;
+//            }
+//            String bolNumber = webDB.getTextFromElement(BOLPageLocators.BOL_TABLE_FIRST_ROW, ElementType.Xpath);
+//            if (bolNumber != null && !bolNumber.trim().isEmpty()) {
+//                log.logging("info", "Got BOL number from the first row after search: " + bolNumber);
+//                return bolNumber.trim();
+//            } else {
+//                log.logging("info", "BOL number is empty or null after search");
+//                return null;
+//            }
+//        } catch (Exception e) {
+//            log.logging("info", "Unable to get BOL number from first row after search with Exception: " + e.getMessage());
+//            return null;
+//        }
+//    }
 
 	
 	

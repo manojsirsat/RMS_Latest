@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -12,7 +11,6 @@ import org.testng.annotations.Test;
 import commonfunctions.CommonFunctions;
 import pages.RecoveriesByZonesFunctional;
 import pages.loginPage;
-import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 
@@ -130,6 +128,90 @@ public class RecoveriesByZonesTest
 	public void verify40_49_RECOVERY_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = recoveriesbyzonesfunctional.A40_49_RECOVERY_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify 50_59_RECOVERY Decending Sorting functionality from Zones listing page")
+	public void verify50_59_RECOVERY_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = recoveriesbyzonesfunctional.A50_59_RECOVERY_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify 50_59_RECOVERY ascending Sorting functionality from Zones listing page")
+	public void verify50_59_RECOVERY_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = recoveriesbyzonesfunctional.A50_59_RECOVERY_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify 60_69_RECOVERY Decending Sorting functionality from Zones listing page")
+	public void verify60_69_RECOVERY_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = recoveriesbyzonesfunctional.A60_69_RECOVERY_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify 60_69_RECOVERY ascending Sorting functionality from Zones listing page")
+	public void verify60_69_RECOVERY_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = recoveriesbyzonesfunctional.A60_69_RECOVERY_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify 70_79_RECOVERY Decending Sorting functionality from Zones listing page")
+	public void verify70_79_RECOVERY_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = recoveriesbyzonesfunctional.A70_79_RECOVERY_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify 70_79_RECOVERY ascending Sorting functionality from Zones listing page")
+	public void verify70_79_RECOVERY_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = recoveriesbyzonesfunctional.A70_79_RECOVERY_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify 80_89_RECOVERY Decending Sorting functionality from Zones listing page")
+	public void verify80_89_RECOVERY_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = recoveriesbyzonesfunctional.A80_89_RECOVERY_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify 80_89_RECOVERY ascending Sorting functionality from Zones listing page")
+	public void verify80_89_RECOVERY_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = recoveriesbyzonesfunctional.A80_89_RECOVERY_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify 90_99_RECOVERY Decending Sorting functionality from Zones listing page")
+	public void verify90_99_RECOVERY_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = recoveriesbyzonesfunctional.A90_99_RECOVERY_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify 90_99_RECOVERY ascending Sorting functionality from Zones listing page")
+	public void verify90_99_RECOVERY_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = recoveriesbyzonesfunctional.A90_99_RECOVERY_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify 100_RECOVERY Decending Sorting functionality from Zones listing page")
+	public void verify100_RECOVERY_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = recoveriesbyzonesfunctional.A100_RECOVERY_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify 100_RECOVERY ascending Sorting functionality from Zones listing page")
+	public void verify100_RECOVERY_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = recoveriesbyzonesfunctional.A100_RECOVERY_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	

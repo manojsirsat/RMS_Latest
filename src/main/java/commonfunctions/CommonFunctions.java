@@ -1,12 +1,15 @@
 package commonfunctions;
 
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
@@ -18,6 +21,7 @@ import locators.CommonFunctionsLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 import utils.WebDriverBase.ElementType;
+
 
 public class CommonFunctions 
 {
@@ -224,7 +228,7 @@ public class CommonFunctions
 	                webDB.getDriver().findElements(columnLocator);
 
 	        if (elements.isEmpty()) {
-	            throw new RuntimeException("❌ No records found in column!");
+	            throw new RuntimeException("No records found in column!");
 	        }
 
 	        for (WebElement el : elements) {
@@ -242,11 +246,6 @@ public class CommonFunctions
 	        } else {
 	            hasNext = false;
 	        }
-//	        for (String record : fullList) 
-//	        {
-//	            System.out.println(record);
-//	        }
-//	        System.out.println("Total Records = " + fullList.size());
 	    }
 	    return fullList;
 	}
@@ -418,6 +417,7 @@ public class CommonFunctions
 	{
 		webDB.navigateToRefresh();
 		Thread.sleep(4000);
+		
 		flag = webDB.waitForElement(CommonFunctionsLocators.SHOWINGRESULTBOTTOM, ElementType.Xpath);
 		if(flag)
 		{
@@ -430,13 +430,17 @@ public class CommonFunctions
 				log.logging("info", "Pagination is available as total records count is greater than 20.");
 				webDB.clickAnElement(CommonFunctionsLocators.SHOWFILTER, ElementType.Xpath);
 				Thread.sleep(1500);
-				webDB.clickAnElement(CommonFunctionsLocators.SHOWFILTERSELECTVALUE_1000, ElementType.Xpath);
-				Thread.sleep(8000);
+				webDB.clickAnElement(CommonFunctionsLocators.SHOWFILTERSELECTVALUE_500, ElementType.Xpath);
+				Thread.sleep(2000);
+				new WebDriverWait(webDB.getDriver(), Duration.ofSeconds(20)).until(ExpectedConditions.elementToBeClickable(By.xpath(ColumnHeader)));
 				
-				webDB.waitForClickElement(ColumnHeader, elementtypecolumnheader);
+//				webDB.waitForClickElement(ColumnHeader, elementtypecolumnheader);
 			    webDB.getDriver().findElement(ColumnHeader1).click();
-			    Thread.sleep(5000);   // allow table to reload
-			    webDB.waitForClickElement(columndata, elementtypecolumndata);
+			    
+			    Thread.sleep(8000);   // allow table to reload
+//			    new WebDriverWait(webDB.getDriver(), Duration.ofSeconds(20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ColumnHeader)));
+				
+//			    webDB.waitForClickElement(columndata, elementtypecolumndata);
 			    
 			    verifyPaginatedStringDescending(columndata1, CommonFunctionsLocators.nextBtn);
 			}
@@ -446,20 +450,185 @@ public class CommonFunctions
 	public void validatePaginatedStringAscendingSorting(String ColumnHeader, ElementType elementtypecolumnheader, By ColumnHeader1, String columndata, ElementType elementtypecolumndata, By columndata1) throws InterruptedException 
 	{
 		    // Get back to Page 1
-			    flag = webDB.isElementEnabled("//button[@aria-label='First Page']", ElementType.Xpath);
-			    if(flag)
-			    {
-			    	webDB.clickAnElement("//button[@aria-label='First Page']", ElementType.Xpath);
-				    Thread.sleep(4000);
-			    }
-	   
+//		WebDriverWait wait = new WebDriverWait(webDB.getDriver(), Duration.ofSeconds(20));
+		new WebDriverWait(webDB.getDriver(), Duration.ofSeconds(20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@aria-label='First Page']")));
+		webDB.clickAnElementWithoutException("//button[@aria-label='First Page']", ElementType.Xpath);
+		Thread.sleep(2000);
+//			    flag = webDB.isElementEnabled("//button[@aria-label='First Page']", ElementType.Xpath);
+//			    if(flag)
+//			    {
+//			    	webDB.clickAnElement("//button[@aria-label='First Page']", ElementType.Xpath);
+//				    Thread.sleep(8000);
+//			    }
+//			    else
+//			    {
+//			    	log.logging("info", "First page is not displayed");
+//			    }
+		new WebDriverWait(webDB.getDriver(), Duration.ofSeconds(20)).until(ExpectedConditions.elementToBeClickable(By.xpath(ColumnHeader)));
+		
 			    // Ascending order
 			    webDB.getDriver().findElement(ColumnHeader1).click();
-			    Thread.sleep(5000);   // allow table to reload
+			    Thread.sleep(8000);   // allow table to reload
+//			    new WebDriverWait(webDB.getDriver(), Duration.ofSeconds(20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(columndata)));
+				
 			    webDB.waitForClickElement(columndata, elementtypecolumndata);
 			    
 			    verifyPaginatedStringAscending(columndata1, CommonFunctionsLocators.nextBtn);
 	}
+	
+//	===================================================== Date Sorting ===================================================
+	
+	private int compareDatesAsc(String d1, String d2) {
+
+	    if (d1 == null || d1.isBlank()) return 1;
+	    if (d2 == null || d2.isBlank()) return -1;
+
+	    DateTimeFormatter formatter =
+	            DateTimeFormatter.ofPattern("MM/dd/yyyy");
+
+	    LocalDate date1 = LocalDate.parse(d1, formatter);
+	    LocalDate date2 = LocalDate.parse(d2, formatter);
+
+	    return date1.compareTo(date2);
+	}
+	
+	public boolean verifyPaginatedDateAscending(By dateColumn, By nextBtn)
+	        throws InterruptedException {
+
+	    softAssert = new SoftAssert();   // Reset for each 
+	    flag = false;
+
+	    List<String> actualList = getPaginatedStringColumn(dateColumn, nextBtn);
+
+	    List<String> expectedList = new ArrayList<>(actualList);
+
+	    // Ascending Date Sort
+	    expectedList.sort(this::compareDatesAsc);
+
+	    softAssert.assertEquals(actualList, expectedList);
+
+	    if (actualList.equals(expectedList)) {
+	        log.logging("info", "Date Ascending sorting is correct");
+	        flag = true;
+	    } else {
+	        log.logging("info", "Date Ascending sorting is incorrect");
+	        log.logging("info", "Actual Data  : " + actualList);
+	        log.logging("info", "Expected Data: " + expectedList);
+	    }
+
+	    softAssert.assertAll();
+	    return flag;
+	}
+
+	public boolean verifyPaginatedDateDescending(By dateColumn, By nextBtn)
+	        throws InterruptedException {
+
+	    softAssert = new SoftAssert();   // Reset
+	    flag = false;
+
+	    List<String> actualList =
+	    		getPaginatedStringColumn(dateColumn, nextBtn);
+
+	    List<String> expectedList =
+	            new ArrayList<>(actualList);
+
+	    // Descending Date Sort
+	    expectedList.sort((d1, d2) -> compareDatesAsc(d2, d1));
+
+	    softAssert.assertEquals(actualList, expectedList);
+
+	    if (actualList.equals(expectedList)) {
+	        log.logging("info", "Date Descending sorting is correct");
+	        flag = true;
+	    } else {
+	        log.logging("info", "Date Descending sorting is incorrect");
+	        log.logging("info", "Actual Data  : " + actualList);
+	        log.logging("info", "Expected Data: " + expectedList);
+	    }
+
+	    softAssert.assertAll();
+	    return flag;
+	}
+
+	public void verifyDateSortingDescending(By dateHeader, By dateColumn) throws InterruptedException 
+	{
+		webDB.navigateToRefresh();
+		Thread.sleep(4000);
+		flag = webDB.waitForElement(CommonFunctionsLocators.SHOWINGRESULTBOTTOM, ElementType.Xpath);
+		if(flag)
+		{
+			String totalTest = webDB.getTextFromElement(CommonFunctionsLocators.SHOWINGRESULTBOTTOM, ElementType.Xpath);
+			String lastNumber = getLastNumber(totalTest);
+			log.logging("info", "The total records count is "+lastNumber);
+			int totalrecordscount = Integer.parseInt(lastNumber);
+			if(totalrecordscount>20)
+			{
+				log.logging("info", "Pagination is available as total records count is greater than 20.");
+				webDB.clickAnElement(CommonFunctionsLocators.SHOWFILTER, ElementType.Xpath);
+				Thread.sleep(1500);
+				webDB.clickAnElement(CommonFunctionsLocators.SHOWFILTERSELECTVALUE_500, ElementType.Xpath);
+				Thread.sleep(8000);
+				
+				webDB.getDriver().findElement(dateHeader).click();
+				Thread.sleep(4000);   // Allow table to reload
+				
+				boolean result = verifyPaginatedDateDescending(dateColumn, CommonFunctionsLocators.nextBtn);
+				
+				Assert.assertTrue(result, "Date column is NOT sorted in DESCENDING order");
+			}
+		}
+    }
+
+    // Ascending Date Sort
+   
+    public void verifyDateSortingAscending(By dateHeader, By dateColumn) throws InterruptedException 
+    {
+
+    	webDB.clickAnElementWithoutException("//button[@aria-label='First Page']", ElementType.Xpath);
+    	Thread.sleep(8000);
+//    	 flag = webDB.isElementEnabled("//button[@aria-label='First Page']", ElementType.Xpath);
+//		    if(flag)
+//		    {
+//		    	webDB.clickAnElement("//button[@aria-label='First Page']", ElementType.Xpath);
+//			    Thread.sleep(8000);
+//		    }
+		    
+        webDB.getDriver().findElement(dateHeader).click();
+        Thread.sleep(4000);
+
+        boolean result = verifyPaginatedDateAscending(dateColumn, CommonFunctionsLocators.nextBtn);
+
+        Assert.assertTrue(result,
+                "Date column is NOT sorted in ASCENDING order");
+    }
+	
+    
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 //	=================================================================================================
@@ -603,8 +772,119 @@ public class CommonFunctions
 	}
 	
 	
+//============================================================================================= 
+//	Filter Functionality
+	public boolean applyTextFilter(String columndata, String getactualtext, ElementType getactualtextelementtype, String inputfield, ElementType inputfieldelementtype) throws InterruptedException 
+	{
 
+		int datacount = webDB.getDriver().findElements(By.xpath(columndata)).size(); // Pass column data xpath which need to search
+		if(datacount>=1)
+		{
+			String value = webDB.getTextFromElement(getactualtext, getactualtextelementtype); // Take the input data which needs to be searched from data displayed
+			webDB.clearTextField(inputfield, inputfieldelementtype); // clear input field xpath
+			webDB.sendTextToAnElement(inputfield, value, inputfieldelementtype); // Pass input field xpath data
+			log.logging("info", "Entered value in input field is: "+value);
+			clickViewResult();
+			int resultdatacount = webDB.getDriver().findElements(By.xpath(getactualtext)).size(); // Check for the result data is present or not
+			if(resultdatacount>=1)
+			{
+				String actualValue = webDB.getTextFromElement(getactualtext, getactualtextelementtype); // Get the data from results
+				if(value.equalsIgnoreCase(actualValue))
+				{
+					log.logging("info", "The search result is as expected i.e. "+actualValue);
+					flag = true;
+				}
+				else
+				{
+					log.logging("info", "The search result is as not expected i.e. the actual value displayed is "+actualValue+ " and the expected is "+value);
+					flag = false;
+				}
+			}
+			else
+			{
+				log.logging("info", "No results found message displayed");
+				flag = false;
+			}
+			}
+		return flag;
+	   
+	}
+	
+//	public boolean applyTextFilter(String columndata, String getactualtext, ElementType getactualtextelementtype, String inputfield, ElementType inputfieldelementtype,  ) throws InterruptedException 
+//	{
+//
+//		int datacount = webDB.getDriver().findElements(By.xpath("//table/tbody/tr/td[2]")).size(); // Pass column data which need to search
+//		if(datacount>=1)
+//		{
+//			String value = webDB.getTextFromElement("(//table/tbody/tr/td[2])[1]", ElementType.Xpath); // Take the input data which needs to be searched from data displayed
+////			WebElement element = webDB.getDriver().findElement(By.xpath("//*[@id='lading-bill-filter-input']")); // Pass input field xpath
+//			webDB.clearTextField(inputfield, inputfieldelementtype); // clear input field xpath
+//			webDB.sendTextToAnElement(inputfield, value, inputfieldelementtype); // Pass input field xpath data
+////		    element.clear();
+////		    element.sendKeys(value);
+//			log.logging("info", "Entered value in input field is: "+value);
+//			clickViewResult();
+//			
+//			int resultdatacount = webDB.getDriver().findElements(By.xpath("(//table/tbody/tr/td[2])[1]")).size(); // Check for the result data is present or not
+//			if(resultdatacount>=1)
+//			{
+//				String actualValue = webDB.getTextFromElement("(//table/tbody/tr/td[2])[1]", ElementType.Xpath); // Get the data from results
+//				if(value.equalsIgnoreCase(actualValue))
+//				{
+//					log.logging("info", "The search result is as expected i.e. "+actualValue);
+//					flag = true;
+//				}
+//				else
+//				{
+//					log.logging("info", "The search result is as not expected i.e. the actual value displayed is "+actualValue+ " and the expected is "+value);
+//					flag = false;
+//				}
+//			}
+//			else
+//			{
+//				log.logging("info", "No results found message displayed");
+//				flag = false;
+//			}
+//			}
+//		return flag;
+//	   
+//	}
 
+	
+	
+
+	public void clickViewResult() throws InterruptedException {
+		webDB.getDriver().findElement(By.xpath("//*[@id='view_result_button']")).click();
+		Thread.sleep(4000);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
