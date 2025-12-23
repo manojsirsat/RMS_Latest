@@ -63,6 +63,146 @@ public class Accounts_AccountsPageTest
 		Assert.assertTrue(flag);
 	}
 	
+	@Test(description = "Verify Acct Code Descending Sorting functionality from Account listing page")
+	public void verifyAcctCode_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.AcctCode_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Acct Code Asending Sorting functionality from Account listing page")
+	public void verifyAcctCode_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.AcctCode_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Name Descending Sorting functionality from Account listing page")
+	public void verifyName_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Name_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Name Asending Sorting functionality from Account listing page")
+	public void verifyName_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Name_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Short Descending Sorting functionality from Account listing page")
+	public void verifyShort_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Short_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Short Asending Sorting functionality from Account listing page")
+	public void verifySort_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Short_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify City Descending Sorting functionality from Account listing page")
+	public void verifyCity_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.City_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify City Asending Sorting functionality from Account listing page")
+	public void verifyCity_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.City_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Admin Descending Sorting functionality from Account listing page")
+	public void verifyAdmin_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Admin_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Admin Asending Sorting functionality from Account listing page")
+	public void verifyAdmin_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Admin_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Customer Descending Sorting functionality from Account listing page")
+	public void verifyCustomer_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Customer_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Customer Asending Sorting functionality from Account listing page")
+	public void verifyCustomer_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Customer_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Provider Descending Sorting functionality from Account listing page")
+	public void verifyProvider_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Provider_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Provider Asending Sorting functionality from Account listing page")
+	public void verifyProvider_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Provider_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Carrier Descending Sorting functionality from Account listing page")
+	public void verifyCarrier_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Carrier_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Carrier Asending Sorting functionality from Account listing page")
+	public void verifyCarrier_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Carrier_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Network Descending Sorting functionality from Account listing page")
+	public void verifyNetwork_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Network_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Network Asending Sorting functionality from Account listing page")
+	public void verifyNetwork_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Network_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Active Descending Sorting functionality from Account listing page")
+	public void verifyActive_DecendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Active_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Active Asending Sorting functionality from Account listing page")
+	public void verifyActive_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = accountspagefunctional.Active_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
 	@AfterTest
 	public void browser_Close() {
 		webDB.tearDown();
