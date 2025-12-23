@@ -37,4 +37,68 @@ public class Admin_ZonesPageFunctional
 		return flag;
 	}
 	
+	public boolean Zone_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_ZONE_COLHEADER, ElementType.Xpath, Admin_ZonesPageLocators.BY_ZONE_COLHEADER, Admin_ZonesPageLocators.STRING_ZONE_COLDATA, ElementType.Xpath, Admin_ZonesPageLocators.BY_ZONE_COLDATA);
+		return flag;
+	}
+	
+	public boolean Zone_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_ZONE_COLHEADER, ElementType.Xpath, Admin_ZonesPageLocators.BY_ZONE_COLHEADER, Admin_ZonesPageLocators.STRING_ZONE_COLDATA, ElementType.Xpath, Admin_ZonesPageLocators.BY_ZONE_COLDATA);
+		return flag;
+	}
+	
+	public boolean Description_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_DESCRIPTION_COLHEADER, ElementType.Xpath, Admin_ZonesPageLocators.BY_DESCRIPTION_COLHEADER, Admin_ZonesPageLocators.STRING_DESCRIPTION_COLDATA, ElementType.Xpath, Admin_ZonesPageLocators.BY_DESCRIPTION_COLDATA);
+		return flag;
+	}
+	
+	public boolean Description_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_DESCRIPTION_COLHEADER, ElementType.Xpath, Admin_ZonesPageLocators.BY_DESCRIPTION_COLHEADER, Admin_ZonesPageLocators.STRING_DESCRIPTION_COLDATA, ElementType.Xpath, Admin_ZonesPageLocators.BY_DESCRIPTION_COLDATA);
+		return flag;
+	}
+	
+	public boolean ProviderLocCode_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_PROVIDERLOCCODE_COLHEADER, ElementType.Xpath, Admin_ZonesPageLocators.BY_PROVIDERLOCCODE_COLHEADER, Admin_ZonesPageLocators.STRING_PROVIDERLOCCODE_COLDATA, ElementType.Xpath, Admin_ZonesPageLocators.BY_PROVIDERLOCCODE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ProviderLocCode_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_PROVIDERLOCCODE_COLHEADER, ElementType.Xpath, Admin_ZonesPageLocators.BY_PROVIDERLOCCODE_COLHEADER, Admin_ZonesPageLocators.STRING_PROVIDERLOCCODE_COLDATA, ElementType.Xpath, Admin_ZonesPageLocators.BY_PROVIDERLOCCODE_COLDATA);
+		return flag;
+	}
+	
+	public boolean ProviderLocName_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_PROVIDERLOCNAME_COLHEADER, ElementType.Xpath, Admin_ZonesPageLocators.BY_PROVIDERLOCNAME_COLHEADER, Admin_ZonesPageLocators.STRING_PROVIDERLOCNAME_COLDATA, ElementType.Xpath, Admin_ZonesPageLocators.BY_PROVIDERLOCNAME_COLDATA);
+		return flag;
+	}
+	
+	public boolean ProviderLocName_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_PROVIDERLOCNAME_COLHEADER, ElementType.Xpath, Admin_ZonesPageLocators.BY_PROVIDERLOCNAME_COLHEADER, Admin_ZonesPageLocators.STRING_PROVIDERLOCNAME_COLDATA, ElementType.Xpath, Admin_ZonesPageLocators.BY_PROVIDERLOCNAME_COLDATA);
+		return flag;
+	}
+	
+	public boolean LocationsCount_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_LOCATIONSCOUNT_COLHEADER, ElementType.Xpath, Admin_ZonesPageLocators.BY_LOCATIONSCOUNT_COLHEADER, Admin_ZonesPageLocators.STRING_LOCATIONSCOUNT_COLDATA, ElementType.Xpath, Admin_ZonesPageLocators.BY_LOCATIONSCOUNT_COLDATA);
+		return flag;
+	}
+	
+	public boolean LocationsCount_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_LOCATIONSCOUNT_COLHEADER, ElementType.Xpath, Admin_ZonesPageLocators.BY_LOCATIONSCOUNT_COLHEADER, Admin_ZonesPageLocators.STRING_LOCATIONSCOUNT_COLDATA, ElementType.Xpath, Admin_ZonesPageLocators.BY_LOCATIONSCOUNT_COLDATA);
+		return flag;
+	}
+	
+	
+	
+	
+	
 }

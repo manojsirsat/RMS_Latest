@@ -11,10 +11,6 @@ import org.testng.annotations.Test;
 
 import commonfunctions.CommonFunctions;
 import pages.Admin_ProgramsPageFunctional;
-import pages.Reports_InvoicingPageFunctional;
-import pages.Reports_LateNotificationPageFunctional;
-import pages.Reports_OrderDetailsPageFunctional;
-import pages.Reports_PreBillingPageFunctional;
 import pages.loginPage;
 import utils.Mailer;
 import utils.ReportLoger;
@@ -66,6 +62,77 @@ public class Admin_ProgramsPageTest
 		flag = commonFunction.verifyPagination();
 		Assert.assertTrue(flag);
 	}
+	
+	@Test(description = "Verify Name Descending Sorting functionality from Orders listing page")
+	public void verifyName_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = programpagefunctional.Name_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Name ascending Sorting functionality from Orders listing page")
+	public void verifyName_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = programpagefunctional.Name_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Code Descending Sorting functionality from Orders listing page")
+	public void verifyCode_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = programpagefunctional.Code_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Code ascending Sorting functionality from Orders listing page")
+	public void verifyCode_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = programpagefunctional.Code_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Account Descending Sorting functionality from Orders listing page")
+	public void verifyAccount_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = programpagefunctional.Account_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Account ascending Sorting functionality from Orders listing page")
+	public void verifyAccount_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = programpagefunctional.Account_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Locations Descending Sorting functionality from Orders listing page")
+	public void verifyLocations_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = programpagefunctional.Locations_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Locations ascending Sorting functionality from Orders listing page")
+	public void verifyLocations_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = programpagefunctional.Locations_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify SKUS Descending Sorting functionality from Orders listing page")
+	public void verifySKUS_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = programpagefunctional.SKUS_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify SKUS ascending Sorting functionality from Orders listing page")
+	public void verifySKUS_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = programpagefunctional.SKUS_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
 	
 	@AfterTest
 	public void browser_Close() {

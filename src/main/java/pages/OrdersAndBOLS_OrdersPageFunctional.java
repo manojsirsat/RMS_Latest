@@ -1,6 +1,7 @@
 package pages;
 
 import commonfunctions.CommonFunctions;
+import locators.OrdersAndBOLS_OrdersPageLocators;
 import locators.CommonFunctionsLocators;
 import locators.OrdersAndBOLS_OrdersPageLocators;
 import utils.ReportLoger;
@@ -257,13 +258,13 @@ public class OrdersAndBOLS_OrdersPageFunctional
 	
 	public boolean CompletedDate_DecendingSorting() throws InterruptedException
 	{
-		commonfunction.validatePaginatedStringDecendingSorting(OrdersAndBOLS_OrdersPageLocators.STRING_COMPLETEDDATE_COLHEADER, ElementType.Xpath, OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLHEADER, OrdersAndBOLS_OrdersPageLocators.STRING_COMPLETEDDATE_COLDATA, ElementType.Xpath, OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLDATA);
+		commonfunction.verifyDateSortingDescending(OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLHEADER, OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLDATA);
 		return flag;
 	}
 	
 	public boolean CompletedDate_AscendingSorting() throws InterruptedException
 	{
-		commonfunction.validatePaginatedStringAscendingSorting(OrdersAndBOLS_OrdersPageLocators.STRING_COMPLETEDDATE_COLHEADER, ElementType.Xpath, OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLHEADER, OrdersAndBOLS_OrdersPageLocators.STRING_COMPLETEDDATE_COLDATA, ElementType.Xpath, OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLDATA);
+		commonfunction.verifyDateSortingAscending(OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLHEADER, OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLDATA);
 		return flag;
 	}
 	

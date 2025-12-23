@@ -63,6 +63,106 @@ public class Admin_ImportedFilesPageTest
 		Assert.assertTrue(flag);
 	}
 	
+	@Test(description = "Verify ID Descending Sorting functionality from ID listing page")
+	public void verifyID_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.ID_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify ID ascending Sorting functionality from ID listing page")
+	public void verifyID_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.ID_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify ImportType Descending Sorting functionality from Zone listing page")
+	public void verifyImportType_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.ImportType_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify ImportType ascending Sorting functionality from Zone listing page")
+	public void verifyImportType_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.ImportType_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify TotalLines Descending Sorting functionality from Zone listing page")
+	public void verifyTotalLines_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.TotalLines_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify TotalLines ascending Sorting functionality from Zone listing page")
+	public void verifyTotalLines_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.TotalLines_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Successful Descending Sorting functionality from Zone listing page")
+	public void verifySuccessful_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.Successful_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Successful ascending Sorting functionality from Zone listing page")
+	public void verifySuccessful_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.Successful_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Errors Descending Sorting functionality from Zone listing page")
+	public void verifyErrors_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.Errors_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Errors ascending Sorting functionality from Zone listing page")
+	public void verifyErrors_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.Errors_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify UnProcessed Descending Sorting functionality from Zone listing page")
+	public void verifyUnProcessed_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.UnProcessed_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify UnProcessed ascending Sorting functionality from Zone listing page")
+	public void verifyUnProcessed_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.UnProcessed_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify User Descending Sorting functionality from Zone listing page")
+	public void verifyUser_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.User_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify User ascending Sorting functionality from Zone listing page")
+	public void verifyUser_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = importedfilespagefunctional.User_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	
+	
 	@AfterTest
 	public void browser_Close() {
 		webDB.tearDown();

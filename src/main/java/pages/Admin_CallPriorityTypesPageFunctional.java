@@ -2,6 +2,7 @@ package pages;
 
 import commonfunctions.CommonFunctions;
 import locators.Admin_CallPriorityTypesPageLocators;
+import locators.Admin_CallPriorityTypesPageLocators;
 import locators.CommonFunctionsLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
@@ -34,6 +35,30 @@ public class Admin_CallPriorityTypesPageFunctional
 	public boolean verifypagination() throws InterruptedException
 	{
 		commonfunction.verifyPagination();
+		return flag;
+	}
+	
+	public boolean Type_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(Admin_CallPriorityTypesPageLocators.STRING_TYPE_COLHEADER, ElementType.Xpath, Admin_CallPriorityTypesPageLocators.BY_TYPE_COLHEADER, Admin_CallPriorityTypesPageLocators.STRING_TYPE_COLDATA, ElementType.Xpath, Admin_CallPriorityTypesPageLocators.BY_TYPE_COLDATA);
+		return flag;
+	}
+	
+	public boolean Type_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(Admin_CallPriorityTypesPageLocators.STRING_TYPE_COLHEADER, ElementType.Xpath, Admin_CallPriorityTypesPageLocators.BY_TYPE_COLHEADER, Admin_CallPriorityTypesPageLocators.STRING_TYPE_COLDATA, ElementType.Xpath, Admin_CallPriorityTypesPageLocators.BY_TYPE_COLDATA);
+		return flag;
+	}
+	
+	public boolean Active_DecendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringDecendingSorting(Admin_CallPriorityTypesPageLocators.STRING_ACTIVE_COLHEADER, ElementType.Xpath, Admin_CallPriorityTypesPageLocators.BY_ACTIVE_COLHEADER, Admin_CallPriorityTypesPageLocators.STRING_ACTIVE_COLDATA, ElementType.Xpath, Admin_CallPriorityTypesPageLocators.BY_ACTIVE_COLDATA);
+		return flag;
+	}
+	
+	public boolean Active_AscendingSorting() throws InterruptedException
+	{
+		commonfunction.validatePaginatedStringAscendingSorting(Admin_CallPriorityTypesPageLocators.STRING_ACTIVE_COLHEADER, ElementType.Xpath, Admin_CallPriorityTypesPageLocators.BY_ACTIVE_COLHEADER, Admin_CallPriorityTypesPageLocators.STRING_ACTIVE_COLDATA, ElementType.Xpath, Admin_CallPriorityTypesPageLocators.BY_ACTIVE_COLDATA);
 		return flag;
 	}
 	

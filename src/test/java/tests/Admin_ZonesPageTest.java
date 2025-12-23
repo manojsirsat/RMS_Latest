@@ -63,6 +63,75 @@ public class Admin_ZonesPageTest
 		Assert.assertTrue(flag);
 	}
 	
+	@Test(description = "Verify Zone Descending Sorting functionality from Zone listing page")
+	public void verifyZone_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = zonepagefunctional.Zone_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Zone ascending Sorting functionality from Zone listing page")
+	public void verifyZone_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = zonepagefunctional.Zone_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Description Descending Sorting functionality from Zone listing page")
+	public void verifyDescription_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = zonepagefunctional.Description_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Description ascending Sorting functionality from Zone listing page")
+	public void verifyDescription_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = zonepagefunctional.Description_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify ProviderLocCode Descending Sorting functionality from Zone listing page")
+	public void verifyProviderLocCode_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = zonepagefunctional.ProviderLocCode_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify ProviderLocCode ascending Sorting functionality from Zone listing page")
+	public void verifyProviderLocCode_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = zonepagefunctional.ProviderLocCode_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify ProviderLocName Descending Sorting functionality from Zone listing page")
+	public void verifyProviderLocName_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = zonepagefunctional.ProviderLocName_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify ProviderLocName ascending Sorting functionality from Zone listing page")
+	public void verifyProviderLocName_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = zonepagefunctional.ProviderLocName_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify LocationsCount Descending Sorting functionality from Zone listing page")
+	public void verifyLocationsCount_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = zonepagefunctional.LocationsCount_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify LocationsCount ascending Sorting functionality from Zone listing page")
+	public void verifyLocationsCount_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = zonepagefunctional.LocationsCount_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
 	
 	
 	@AfterTest
