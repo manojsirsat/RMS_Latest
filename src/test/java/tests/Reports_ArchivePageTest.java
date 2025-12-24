@@ -63,6 +63,62 @@ public class Reports_ArchivePageTest
 		Assert.assertTrue(flag);
 	}
 	
+	@Test(description = "Verify Report Descending Sorting functionality from Reports Archive listing page")
+	public void verifyReport_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = archivepagefunctional.Report_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Report ascending Sorting functionality from Reports Archive listing page")
+	public void verifyReport_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = archivepagefunctional.Report_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Name Descending Sorting functionality from Reports Archive listing page")
+	public void verifyName_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = archivepagefunctional.Name_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Name ascending Sorting functionality from Reports Archive listing page")
+	public void verifyName_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = archivepagefunctional.Name_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Owner Descending Sorting functionality from Reports Archive listing page")
+	public void verifyOwner_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = archivepagefunctional.Owner_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify Owner ascending Sorting functionality from Reports Archive listing page")
+	public void verifyOwner_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = archivepagefunctional.Owner_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify RequestedBy Descending Sorting functionality from Reports Archive listing page")
+	public void verifyRequestedBy_DescendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = archivepagefunctional.RequestedBy_DecendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify RequestedBy ascending Sorting functionality from Reports Archive listing page")
+	public void verifyRequestedBy_AscendingSorting_Functionality() throws InterruptedException 
+	{
+		flag = archivepagefunctional.RequestedBy_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
 	
 	@AfterTest
 	public void browser_Close() {

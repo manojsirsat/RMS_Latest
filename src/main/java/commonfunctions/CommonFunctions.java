@@ -418,6 +418,9 @@ public class CommonFunctions
 		webDB.navigateToRefresh();
 		Thread.sleep(4000);
 		
+		webDB.clickAnElement(CommonFunctionsLocators.VIEWRESULT_BUTTON, ElementType.Xpath);
+		Thread.sleep(4000);
+		
 		flag = webDB.waitForElement(CommonFunctionsLocators.SHOWINGRESULTBOTTOM, ElementType.Xpath);
 		if(flag)
 		{

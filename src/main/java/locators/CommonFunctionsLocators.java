@@ -90,5 +90,7 @@ public class CommonFunctionsLocators
 	/**XPATH*/ public static final String BOLHEADER = "//th[contains(.,'Provider Loc Code')]";
 	/**XPATH*/ public static final String NEXTBUTTON_PAGINATION = "//button[@aria-label='Next Page']";
 	
+	/**XPATH*/ public static final String VIEWRESULT_BUTTON = "//button[@id='view_result_button']";
+	
 	
 }
