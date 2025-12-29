@@ -67,28 +67,28 @@ public class Admin_CallPriorityTypesPageTest
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Type Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Type Descending Sorting functionality of Admin Call Priority Types listing page")
 	public void verifyType_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = calltypespagefunctional.Type_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Type ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Type ascending Sorting functionality of Admin Call Priority Types listing page")
 	public void verifyType_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = calltypespagefunctional.Type_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Active Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Active Descending Sorting functionality of Admin Call Priority Types listing page")
 	public void verifyActive_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = calltypespagefunctional.Active_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Active ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Active ascending Sorting functionality of Admin Call Priority Types listing page")
 	public void verifyActive_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = calltypespagefunctional.Active_AscendingSorting();

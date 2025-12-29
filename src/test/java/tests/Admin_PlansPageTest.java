@@ -64,112 +64,112 @@ public class Admin_PlansPageTest
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify ID Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify ID Descending Sorting functionality of Admin Plans listing page")
 	public void verifyID_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.ID_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify ID ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify ID ascending Sorting functionality of Admin Plans listing page")
 	public void verifyID_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.ID_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Name Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Name Descending Sorting functionality of Admin Plans listing page")
 	public void verifyName_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.Name_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Name ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Name ascending Sorting functionality of Admin Plans listing page")
 	public void verifyName_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.Name_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Program Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Program Descending Sorting functionality of Admin Plans listing page")
 	public void verifyProgram_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.Program_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Program ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Program ascending Sorting functionality of Admin Plans listing page")
 	public void verifyProgram_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.Program_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify ManagedBy Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify ManagedBy Descending Sorting functionality of Admin Plans listing page")
 	public void verifyManagedBy_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.ManagedBy_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify ManagedBy ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify ManagedBy ascending Sorting functionality of Admin Plans listing page")
 	public void verifyManagedBy_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.ManagedBy_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Type Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Type Descending Sorting functionality of Admin Plans listing page")
 	public void verifyType_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.Type_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Type ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Type ascending Sorting functionality of Admin Plans listing page")
 	public void verifyType_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.Type_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify BasePlan Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify BasePlan Descending Sorting functionality of Admin Plans listing page")
 	public void verifyBasePlan_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.BasePlan_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify BasePlan ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify BasePlan ascending Sorting functionality of Admin Plans listing page")
 	public void verifyBasePlan_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.BasePlan_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify ActiveEnd Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify ActiveEnd Descending Sorting functionality of Admin Plans listing page")
 	public void verifyActiveEnd_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.ActiveEnd_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify ActiveEnd ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify ActiveEnd ascending Sorting functionality of Admin Plans listing page")
 	public void verifyActiveEnd_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.ActiveEnd_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Disabled Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Disabled Descending Sorting functionality of Admin Plans listing page")
 	public void verifyDisabled_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.Disabled_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Disabled ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Disabled ascending Sorting functionality of Admin Plans listing page")
 	public void verifyDisabled_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = planpagefunctional.Disabled_AscendingSorting();

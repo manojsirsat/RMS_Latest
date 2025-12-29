@@ -63,14 +63,14 @@ public class Admin_ImportedFilesPageTest
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify ID Descending Sorting functionality from ID listing page")
+	@Test(description = "Verify ID Descending Sorting functionality of Admin Imported Files listing page")
 	public void verifyID_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = importedfilespagefunctional.ID_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify ID ascending Sorting functionality from ID listing page")
+	@Test(description = "Verify ID ascending Sorting functionality of Admin Imported Files listing page")
 	public void verifyID_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = importedfilespagefunctional.ID_AscendingSorting();

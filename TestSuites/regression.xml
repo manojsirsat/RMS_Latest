@@ -153,15 +153,15 @@
 <!-- 					</classes> -->
 <!-- 					</test> -->
 				
-<!-- 					<test name="BatchFilesPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.BatchFilesPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_BatchFilesListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyBatchFileID_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBatchFileID_AscendingSorting_Functionality"></include> -->
+					<test name="BatchFilesPageTest">
+					<classes>
+						<class name="tests.BatchFilesPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_BatchFilesListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyBatchFileID_DescendingSorting_Functionality"></include>
+								<include name="verifyBatchFileID_AscendingSorting_Functionality"></include>
 <!-- 								<include name="verifyFileName_DescendingSorting_Functionality"></include> -->
 <!-- 								<include name="verifyFileName_AscendingSorting_Functionality"></include> -->
 <!-- 								<include name="verifyFileStatus_DescendingSorting_Functionality"></include> -->
@@ -184,10 +184,10 @@
 <!-- 								<include name="verifyUpdated_AscendingSorting_Functionality"></include> -->
 <!-- 								<include name="verifyUser_DescendingSorting_Functionality"></include> -->
 <!-- 								<include name="verifyUser_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 					</test> -->
+							</methods>
+						</class>
+					</classes>
+					</test>
 
 
 <!--				<test name="RecoveriesByZonesTest">-->
@@ -271,17 +271,17 @@
 <!-- 					</classes> -->
 <!-- 				</test> -->
 				
-				<test name="RecoveriesByLocation_ProgramTest">
-					<classes>
-						<class name="tests.RecoveriesByLocation_ProgramTest">
-							<methods>
-								<include name="verify_Valid_Login"></include>
-								<include name="redirection_To_Locations_ProgramsListing_Page"></include>
-								<include name="verifyPagination_Functionality"></include>
-								<include name="verifyProviderLocCode_DecendingSorting_Functionality"></include>
-								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include>
-								<include name="verifyProvideLocName_DecendingSorting_Functionality"></include>
-								<include name="verifyProvideLocName_AscendingSorting_Functionality"></include>
+<!-- 				<test name="RecoveriesByLocation_ProgramTest"> -->
+<!-- 					<classes> -->
+<!-- 						<class name="tests.RecoveriesByLocation_ProgramTest"> -->
+<!-- 							<methods> -->
+<!-- 								<include name="verify_Valid_Login"></include> -->
+<!-- 								<include name="redirection_To_Locations_ProgramsListing_Page"></include> -->
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
+<!-- 								<include name="verifyProviderLocCode_DecendingSorting_Functionality"></include> -->
+<!-- 								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include> -->
+<!-- 								<include name="verifyProvideLocName_DecendingSorting_Functionality"></include> -->
+<!-- 								<include name="verifyProvideLocName_AscendingSorting_Functionality"></include> -->
 <!-- 								<include name="verifyZone_DecendingSorting_Functionality"></include> -->
 <!-- 								<include name="verifyZone_AscendingSorting_Functionality"></include> -->
 <!-- 								<include name="verifyLocCode_DecendingSorting_Functionality"></include> -->
@@ -312,10 +312,10 @@
 <!-- 								<include name="verifyBOLStatus_AscendingSorting_Functionality"></include> -->
 <!-- 								<include name="verifyLastBOLCompleteDate_DecendingSorting_Functionality"></include> -->
 <!-- 								<include name="verifyLastBOLCompleteDate_AscendingSorting_Functionality"></include> -->
-							</methods>
-						</class>
-					</classes>
-				</test>
+<!-- 							</methods> -->
+<!-- 						</class> -->
+<!-- 					</classes> -->
+<!-- 				</test> -->
 				
 <!-- 				<test name="RecoveriesByComponentTest"> -->
 <!-- 					<classes> -->
@@ -611,7 +611,7 @@
 <!-- 							<methods> -->
 <!-- 								<include name="verify_Valid_Login"></include> -->
 <!-- 								<include name="redirection_To_LateNotificationListing_Page"></include> -->
-								<include name="verifyPagination_Functionality"></include>
+<!-- 								<include name="verifyPagination_Functionality"></include> -->
 <!-- 								<include name="verifyBOLID_DescendingSorting_Functionality"></include> -->
 <!--  							<include name="verifyBOLID_AscendingSorting_Functionality"></include> -->
 <!--  							<include name="verifyOrderID_DescendingSorting_Functionality"></include> -->

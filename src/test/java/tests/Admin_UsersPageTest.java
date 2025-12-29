@@ -64,70 +64,70 @@ public class Admin_UsersPageTest
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify UserID Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify UserID Descending Sorting functionality of Admin Users listing page")
 	public void verifyUserID_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = userpagefunctional.UserID_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify UserID ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify UserID ascending Sorting functionality of Admin Users listing page")
 	public void verifyUserID_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = userpagefunctional.UserID_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Name Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Name Descending Sorting functionality of Admin Users listing page")
 	public void verifyName_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = userpagefunctional.Name_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Name ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Name ascending Sorting functionality of Admin Users listing page")
 	public void verifyName_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = userpagefunctional.Name_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Email Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Email Descending Sorting functionality of Admin Users listing page")
 	public void verifyEmail_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = userpagefunctional.Email_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Email ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Email ascending Sorting functionality of Admin Users listing page")
 	public void verifyEmail_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = userpagefunctional.Email_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify AccountName Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify AccountName Descending Sorting functionality of Admin Users listing page")
 	public void verifyAccountName_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = userpagefunctional.AccountName_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify AccountName ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify AccountName ascending Sorting functionality of Admin Users listing page")
 	public void verifyAccountName_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = userpagefunctional.AccountName_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Active Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Active Descending Sorting functionality of Admin Users listing page")
 	public void verifyActive_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = userpagefunctional.Active_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Active ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Active ascending Sorting functionality of Admin Users listing page")
 	public void verifyActive_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = userpagefunctional.Active_AscendingSorting();

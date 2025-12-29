@@ -63,42 +63,42 @@ public class Admin_WeekNumbersPageTest
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Name Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Name Descending Sorting functionality of Admin Week Numbers listing page")
 	public void verifyName_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = weeknumberspagefunctional.Name_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Name ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify Name ascending Sorting functionality of Admin Week Numbers listing page")
 	public void verifyName_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = weeknumberspagefunctional.Name_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify StartDate Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify StartDate Descending Sorting functionality of Admin Week Numbers listing page")
 	public void verifyStartDate_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = weeknumberspagefunctional.StartDate_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify StartDate ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify StartDate ascending Sorting functionality of Admin Week Numbers listing page")
 	public void verifyStartDate_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = weeknumberspagefunctional.StartDate_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify LastUpdatedBy Descending Sorting functionality from Orders listing page")
+	@Test(description = "Verify LastUpdatedBy Descending Sorting functionality of Admin Week Numbers listing page")
 	public void verifyLastUpdatedBy_DescendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = weeknumberspagefunctional.LastUpdatedBy_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify LastUpdatedBy ascending Sorting functionality from Orders listing page")
+	@Test(description = "Verify LastUpdatedBy ascending Sorting functionality of Admin Week Numbers listing page")
 	public void verifyLastUpdatedBy_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = weeknumberspagefunctional.LastUpdatedBy_AscendingSorting();

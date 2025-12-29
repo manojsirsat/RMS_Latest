@@ -63,168 +63,168 @@ public class Reports_CurrentInventoryByLocationPageTest
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify AccountName Descending Sorting functionality from Zones listing page")
+	@Test(description = "Verify AccountName Descending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyAccountName_DecendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.AccountName_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify AccountName Ascending Sorting functionality from Zones listing page")
+	@Test(description = "Verify AccountName Ascending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyAccountName_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.AccountName_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify AccountCode Decending Sorting functionality from Zones listing page")
+	@Test(description = "Verify AccountCode Decending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyAccountCode_DecendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.AccountCode_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify AccountCode ascending Sorting functionality from Zones listing page")
+	@Test(description = "Verify AccountCode ascending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyAccountCode_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.AccountCode_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify LocationCode Decending Sorting functionality from Zones listing page")
+	@Test(description = "Verify LocationCode Decending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyLocationCode_DecendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.LocationCode_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify LocationCode ascending Sorting functionality from Zones listing page")
+	@Test(description = "Verify LocationCode ascending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyLocationCode_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.LocationCode_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify LocationName Decending Sorting functionality from Zones listing page")
+	@Test(description = "Verify LocationName Decending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyLocationName_DecendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.LocationName_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify LocationName ascending Sorting functionality from Zones listing page")
+	@Test(description = "Verify LocationName ascending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyLocationName_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.LocationName_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify LocationType Decending Sorting functionality from Zones listing page")
+	@Test(description = "Verify LocationType Decending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyLocationType_DecendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.LocationType_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify LocationType ascending Sorting functionality from Zones listing page")
+	@Test(description = "Verify LocationType ascending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyLocationType_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.LocationType_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify City Decending Sorting functionality from Zones listing page")
+	@Test(description = "Verify City Decending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyCity_DecendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.City_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify City ascending Sorting functionality from Zones listing page")
+	@Test(description = "Verify City ascending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyCity_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.City_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify State Decending Sorting functionality from Zones listing page")
+	@Test(description = "Verify State Decending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyState_DecendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.State_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify State ascending Sorting functionality from Zones listing page")
+	@Test(description = "Verify State ascending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyState_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.State_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Active Decending Sorting functionality from Zones listing page")
+	@Test(description = "Verify Active Decending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyActive_DecendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.Active_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Active ascending Sorting functionality from Zones listing page")
+	@Test(description = "Verify Active ascending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyActive_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.Active_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify SKUName Decending Sorting functionality from Zones listing page")
+	@Test(description = "Verify SKUName Decending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifySKUName_DecendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.SKUName_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify SKUName ascending Sorting functionality from Zones listing page")
+	@Test(description = "Verify SKUName ascending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifySKUName_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.SKUName_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify SKUNumber Decending Sorting functionality from Zones listing page")
+	@Test(description = "Verify SKUNumber Decending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifySKUNumber_DecendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.SKUNumber_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify SKUNumber ascending Sorting functionality from Zones listing page")
+	@Test(description = "Verify SKUNumber ascending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifySKUNumber_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.SKUNumber_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Stage Decending Sorting functionality from Zones listing page")
+	@Test(description = "Verify Stage Decending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyStage_DecendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.Stage_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Stage ascending Sorting functionality from Zones listing page")
+	@Test(description = "Verify Stage ascending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyStage_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.Stage_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Quantity Decending Sorting functionality from Zones listing page")
+	@Test(description = "Verify Quantity Decending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyQuantity_DecendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.Quantity_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test(description = "Verify Quantity ascending Sorting functionality from Zones listing page")
+	@Test(description = "Verify Quantity ascending Sorting functionality of Reports Current inventory by locations listing page")
 	public void verifyQuantity_AscendingSorting_Functionality() throws InterruptedException 
 	{
 		flag = currentinventorybylocationfunctional.Quantity_AscendingSorting();
