@@ -16,8 +16,7 @@ import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 
-public class Admin_CallPriorityTypesPageTest 
-{
+public class Admin_CallPriorityTypesPageTest {
 
 	// This line used to create object for driver base class
 	WebDriverBase webDB = new WebDriverBase();
@@ -27,13 +26,12 @@ public class Admin_CallPriorityTypesPageTest
 	static CommonFunctions commonFunction = new CommonFunctions();
 	static Admin_CallPriorityTypesPageFunctional calltypespagefunctional = new Admin_CallPriorityTypesPageFunctional();
 	static loginPage loginpage = new loginPage();
-	
+
 	/**
 	 * This method used to open browser before test start
 	 */
 	@BeforeTest
-	public void browser_Setup() throws FileNotFoundException, IOException, Exception
-	{
+	public void browser_Setup() throws FileNotFoundException, IOException, Exception {
 		webDB.Setup(System.getProperty("Platform"));
 		// This line used to get data from config properties
 		String SiteUrl = webDB.getDataFromProperties("url");
@@ -41,69 +39,61 @@ public class Admin_CallPriorityTypesPageTest
 		webDB.enterURL(SiteUrl);
 		Thread.sleep(2000);
 	}
-	
+
 	@Test(description = "Verify valid login")
-	public void verify_Valid_Login() throws InterruptedException 
-	{
+	public void verify_Valid_Login() throws InterruptedException {
 		flag = loginpage.validLogin();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Redirect to Call Priority Types listing page")
-	public void redirection_To_CallPriorityTypesListingPage() throws InterruptedException 
-	{
+	public void redirection_To_CallPriorityTypesListingPage() throws InterruptedException {
 		flag = calltypespagefunctional.navigate_Admin_CallPriorityTypesListingPage();
-		if(flag)
-		{
+		if (flag) {
 			flag = commonFunction.verifyPagination();
 		}
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Pagination functionality of Admin Call Priority Types listing page")
-	public void verifyPagination_Functionality() throws InterruptedException 
-	{
+	public void verifyPagination_Functionality() throws InterruptedException {
 		flag = commonFunction.verifyPagination();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Type Descending Sorting functionality of Admin Call Priority Types listing page")
-	public void verifyType_DescendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyType_DescendingSorting_Functionality() throws InterruptedException {
 		flag = calltypespagefunctional.Type_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Type ascending Sorting functionality of Admin Call Priority Types listing page")
-	public void verifyType_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyType_AscendingSorting_Functionality() throws InterruptedException {
 		flag = calltypespagefunctional.Type_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Active Descending Sorting functionality of Admin Call Priority Types listing page")
-	public void verifyActive_DescendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyActive_DescendingSorting_Functionality() throws InterruptedException {
 		flag = calltypespagefunctional.Active_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Active ascending Sorting functionality of Admin Call Priority Types listing page")
-	public void verifyActive_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyActive_AscendingSorting_Functionality() throws InterruptedException {
 		flag = calltypespagefunctional.Active_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@AfterTest
 	public void browser_Close() {
 		webDB.tearDown();
 	}
-	
-	@AfterSuite
-	public void SendMail() throws Exception {
-		Mailer mailer = new Mailer();
-		mailer.execute("RMS Automation Report");
-	}
+
+//	@AfterSuite
+//	public void SendMail() throws Exception {
+//		Mailer mailer = new Mailer();
+//		mailer.execute("RMS Automation Report");
+//	}
 
 }

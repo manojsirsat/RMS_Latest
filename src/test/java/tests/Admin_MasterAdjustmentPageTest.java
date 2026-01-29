@@ -16,8 +16,7 @@ import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 
-public class Admin_MasterAdjustmentPageTest 
-{
+public class Admin_MasterAdjustmentPageTest {
 
 	// This line used to create object for driver base class
 	WebDriverBase webDB = new WebDriverBase();
@@ -27,13 +26,12 @@ public class Admin_MasterAdjustmentPageTest
 	static CommonFunctions commonFunction = new CommonFunctions();
 	static Admin_MasterAdjustmentPageFunctional masteradjustmentpagefunctional = new Admin_MasterAdjustmentPageFunctional();
 	static loginPage loginpage = new loginPage();
-	
+
 	/**
 	 * This method used to open browser before test start
 	 */
 	@BeforeTest
-	public void browser_Setup() throws FileNotFoundException, IOException, Exception
-	{
+	public void browser_Setup() throws FileNotFoundException, IOException, Exception {
 		webDB.Setup(System.getProperty("Platform"));
 		// This line used to get data from config properties
 		String SiteUrl = webDB.getDataFromProperties("url");
@@ -41,30 +39,28 @@ public class Admin_MasterAdjustmentPageTest
 		webDB.enterURL(SiteUrl);
 		Thread.sleep(2000);
 	}
-	
+
 	@Test(description = "Verify valid login")
-	public void verify_Valid_Login() throws InterruptedException 
-	{
+	public void verify_Valid_Login() throws InterruptedException {
 		flag = loginpage.validLogin();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Redirect to Master Adjustment listing page")
-	public void redirection_To_MasterAdjustmentListing_Page() throws InterruptedException 
-	{
+	public void redirection_To_MasterAdjustmentListing_Page() throws InterruptedException {
 		flag = masteradjustmentpagefunctional.navigate_Admin_MasterAdjustmentListingPage();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@AfterTest
 	public void browser_Close() {
 		webDB.tearDown();
 	}
-	
-	@AfterSuite
-	public void SendMail() throws Exception {
-		Mailer mailer = new Mailer();
-		mailer.execute("RMS Automation Report");
-	}
+
+//	@AfterSuite
+//	public void SendMail() throws Exception {
+//		Mailer mailer = new Mailer();
+//		mailer.execute("RMS Automation Report");
+//	}
 
 }

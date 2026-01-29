@@ -1,0 +1,5 @@
+Transaction Type,Reason Code,Account Code,Program Code,To Location Code,Stage,SKU Number,Quantity,Transaction Date,Note
+Adjustment,Adjustment,THKGHASTNE,TP,TKLAR2122100003,Finished Goods,TKPF1C10010501,10,05/22/2025,Testing upload batch file task
+Adjustment,Adjustment,THKGHASTNE,TP,TKLAR2122100003,Finished Goods,TKPF1C10010501,2,05/22/2025,Testing upload batch file task
+Adjustment,Adjustment,THKGHASTNE,TP,TKLAR2122100003,Finished Goods,TKPF1C10010501,3,05/22/2025,Testing upload batch file task
+Adjustment,Adjustment,THKGHASTNE,TP,TKLAR2122100003,Finished Goods,TKPF1C10010501,5,05/22/2025,Testing upload batch file task

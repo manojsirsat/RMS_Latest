@@ -16,8 +16,7 @@ import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 
-public class Reports_HistoricalInventoryByLocationPageTest 
-{
+public class Reports_HistoricalInventoryByLocationPageTest {
 
 	// This line used to create object for driver base class
 	WebDriverBase webDB = new WebDriverBase();
@@ -27,13 +26,12 @@ public class Reports_HistoricalInventoryByLocationPageTest
 	static CommonFunctions commonFunction = new CommonFunctions();
 	static Reports_HistoricalInventoryByLocationPageFunctional historyinventorybylocationfunctional = new Reports_HistoricalInventoryByLocationPageFunctional();
 	static loginPage loginpage = new loginPage();
-	
+
 	/**
 	 * This method used to open browser before test start
 	 */
 	@BeforeTest
-	public void browser_Setup() throws FileNotFoundException, IOException, Exception
-	{
+	public void browser_Setup() throws FileNotFoundException, IOException, Exception {
 		webDB.Setup(System.getProperty("Platform"));
 		// This line used to get data from config properties
 		String SiteUrl = webDB.getDataFromProperties("url");
@@ -41,191 +39,166 @@ public class Reports_HistoricalInventoryByLocationPageTest
 		webDB.enterURL(SiteUrl);
 		Thread.sleep(2000);
 	}
-	
+
 	@Test(description = "Verify valid login")
-	public void verify_Valid_Login() throws InterruptedException 
-	{
+	public void verify_Valid_Login() throws InterruptedException {
 		flag = loginpage.validLogin();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Redirect to Historical Inventory By Location listing page")
-	public void redirection_To_HistoricalInventoryByLocationListing_Page() throws InterruptedException 
-	{
+	public void redirection_To_HistoricalInventoryByLocationListing_Page() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.navigate_Reports_HistoricalInventoryByLocationListingPage();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Pagination functionality of Reports Historical inventory by locations listing page")
-	public void verifyPagination_Functionality() throws InterruptedException 
-	{
+	public void verifyPagination_Functionality() throws InterruptedException {
 		flag = commonFunction.verifyPagination();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify AccountName Descending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyAccountName_DecendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyAccountName_DecendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.AccountName_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify AccountName Ascending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyAccountName_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyAccountName_AscendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.AccountName_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify AccountCode Decending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyAccountCode_DecendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyAccountCode_DecendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.AccountCode_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify AccountCode ascending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyAccountCode_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyAccountCode_AscendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.AccountCode_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify LocationCode Decending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyLocationCode_DecendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyLocationCode_DecendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.LocationCode_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify LocationCode ascending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyLocationCode_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyLocationCode_AscendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.LocationCode_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify LocationName Decending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyLocationName_DecendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyLocationName_DecendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.LocationName_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify LocationName ascending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyLocationName_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyLocationName_AscendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.LocationName_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify LocationType Decending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyLocationType_DecendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyLocationType_DecendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.LocationType_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify LocationType ascending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyLocationType_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyLocationType_AscendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.LocationType_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify City Decending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyCity_DecendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyCity_DecendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.City_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify City ascending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyCity_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyCity_AscendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.City_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify State Decending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyState_DecendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyState_DecendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.State_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify State ascending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyState_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyState_AscendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.State_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify SKUName Decending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifySKUName_DecendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifySKUName_DecendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.SKUName_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify SKUName ascending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifySKUName_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifySKUName_AscendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.SKUName_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify SKUNumber Decending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifySKUNumber_DecendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifySKUNumber_DecendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.SKUNumber_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify SKUNumber ascending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifySKUNumber_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifySKUNumber_AscendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.SKUNumber_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Stage Decending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyStage_DecendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyStage_DecendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.Stage_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Stage ascending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyStage_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyStage_AscendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.Stage_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Quantity Decending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyQuantity_DecendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyQuantity_DecendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.Quantity_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Quantity ascending Sorting functionality of Reports Historical inventory by locations listing page")
-	public void verifyQuantity_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyQuantity_AscendingSorting_Functionality() throws InterruptedException {
 		flag = historyinventorybylocationfunctional.Quantity_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@AfterTest
 	public void browser_Close() {
 		webDB.tearDown();
 	}
-	
-	@AfterSuite
-	public void SendMail() throws Exception {
-		Mailer mailer = new Mailer();
-		mailer.execute("RMS Automation Report");
-	}
+
+//	@AfterSuite
+//	public void SendMail() throws Exception {
+//		Mailer mailer = new Mailer();
+//		mailer.execute("RMS Automation Report");
+//	}
 
 }

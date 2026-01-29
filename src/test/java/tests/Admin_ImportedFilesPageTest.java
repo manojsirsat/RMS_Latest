@@ -16,8 +16,7 @@ import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 
-public class Admin_ImportedFilesPageTest 
-{
+public class Admin_ImportedFilesPageTest {
 
 	// This line used to create object for driver base class
 	WebDriverBase webDB = new WebDriverBase();
@@ -27,13 +26,12 @@ public class Admin_ImportedFilesPageTest
 	static CommonFunctions commonFunction = new CommonFunctions();
 	static Admin_ImportedFilesPageFunctional importedfilespagefunctional = new Admin_ImportedFilesPageFunctional();
 	static loginPage loginpage = new loginPage();
-	
+
 	/**
 	 * This method used to open browser before test start
 	 */
 	@BeforeTest
-	public void browser_Setup() throws FileNotFoundException, IOException, Exception
-	{
+	public void browser_Setup() throws FileNotFoundException, IOException, Exception {
 		webDB.Setup(System.getProperty("Platform"));
 		// This line used to get data from config properties
 		String SiteUrl = webDB.getDataFromProperties("url");
@@ -41,137 +39,118 @@ public class Admin_ImportedFilesPageTest
 		webDB.enterURL(SiteUrl);
 		Thread.sleep(2000);
 	}
-	
+
 	@Test(description = "Verify valid login")
-	public void verify_Valid_Login() throws InterruptedException 
-	{
+	public void verify_Valid_Login() throws InterruptedException {
 		flag = loginpage.validLogin();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Redirect to Imported Files listing page")
-	public void redirection_To_ImportedFilesListingPage() throws InterruptedException 
-	{
+	public void redirection_To_ImportedFilesListingPage() throws InterruptedException {
 		flag = importedfilespagefunctional.navigate_Admin_ImportedFilesListingPage();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Pagination functionality of Admin Imported Files listing page")
-	public void verifyPagination_Functionality() throws InterruptedException 
-	{
+	public void verifyPagination_Functionality() throws InterruptedException {
 		flag = commonFunction.verifyPagination();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify ID Descending Sorting functionality of Admin Imported Files listing page")
-	public void verifyID_DescendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyID_DescendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.ID_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify ID ascending Sorting functionality of Admin Imported Files listing page")
-	public void verifyID_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyID_AscendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.ID_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify ImportType Descending Sorting functionality from Zone listing page")
-	public void verifyImportType_DescendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyImportType_DescendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.ImportType_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify ImportType ascending Sorting functionality from Zone listing page")
-	public void verifyImportType_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyImportType_AscendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.ImportType_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify TotalLines Descending Sorting functionality from Zone listing page")
-	public void verifyTotalLines_DescendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyTotalLines_DescendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.TotalLines_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify TotalLines ascending Sorting functionality from Zone listing page")
-	public void verifyTotalLines_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyTotalLines_AscendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.TotalLines_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Successful Descending Sorting functionality from Zone listing page")
-	public void verifySuccessful_DescendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifySuccessful_DescendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.Successful_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Successful ascending Sorting functionality from Zone listing page")
-	public void verifySuccessful_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifySuccessful_AscendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.Successful_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Errors Descending Sorting functionality from Zone listing page")
-	public void verifyErrors_DescendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyErrors_DescendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.Errors_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify Errors ascending Sorting functionality from Zone listing page")
-	public void verifyErrors_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyErrors_AscendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.Errors_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify UnProcessed Descending Sorting functionality from Zone listing page")
-	public void verifyUnProcessed_DescendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyUnProcessed_DescendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.UnProcessed_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify UnProcessed ascending Sorting functionality from Zone listing page")
-	public void verifyUnProcessed_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyUnProcessed_AscendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.UnProcessed_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify User Descending Sorting functionality from Zone listing page")
-	public void verifyUser_DescendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyUser_DescendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.User_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Verify User ascending Sorting functionality from Zone listing page")
-	public void verifyUser_AscendingSorting_Functionality() throws InterruptedException 
-	{
+	public void verifyUser_AscendingSorting_Functionality() throws InterruptedException {
 		flag = importedfilespagefunctional.User_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
-	
-	
-	
+
 	@AfterTest
 	public void browser_Close() {
 		webDB.tearDown();
 	}
-	
-	@AfterSuite
-	public void SendMail() throws Exception {
-		Mailer mailer = new Mailer();
-		mailer.execute("RMS Automation Report");
-	}
+
+//	@AfterSuite
+//	public void SendMail() throws Exception {
+//		Mailer mailer = new Mailer();
+//		mailer.execute("RMS Automation Report");
+//	}
 
 }

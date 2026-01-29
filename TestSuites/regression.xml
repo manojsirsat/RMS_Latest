@@ -5,153 +5,153 @@
 		<listener class-name="utils.Listener"></listener>
 		<!-- <listener class-name="utils.RetryListener"></listener> -->
 	</listeners>
-<!-- 					<test  name="BOLPageTest"> -->
-<!-- 						<classes> -->
-<!-- 							<class name="tests.BOLPageTest"> -->
-<!-- 								<methods> -->
-<!-- 									<include name="verifyCreate_BOL_Flow"></include> -->
-<!-- 									<include name="verifyAdd_Order_To_BOL_Flow"></include> -->
-<!-- 									<include name="verifySet_BOL_Status"></include> -->
-<!-- 									<include name="verifyMarkBOL_Complete"></include> -->
-<!-- 									<include name="verifyPagination"></include> -->
-<!-- 									<include name="verifyBOL_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyBOL_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyType_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyType_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyCurrentStatus_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyCurrentStatus_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyDueDate_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyDueDate_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyShipMethod_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyShipMethod_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyShippedByLocCode_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyShippedByLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyShippedByLocName_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyShippedByLocName_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyDefaultZone_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyDefaultZone_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyFromLocCode_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyFromLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyFromLocName_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyFromLocName_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyFromLocCity_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyFromLocCity_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyFromLocState_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyFromLocState_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyToLocCode_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyToLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyToLocName_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyToLocName_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyAssignDate_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyAssignDate_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyCommitDate_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyCommitDate_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyModCommitDate_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyModCommitDate_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyScheduleShipDate_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyScheduleShipDate_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyPickupDate_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyPickupDate_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyEstimatedDeliveryDate_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyEstimatedDeliveryDate_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyDeliveredDate_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyDeliveredDate_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyCompleteDate_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyCompleteDate_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyQuote_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyQuote_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyTender_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyTender_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyShipment_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyShipment_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyAutoAssignEligible_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyAutoAssignEligible_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyShippedByAccount_DecendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyShippedByAccount_AscendingSorting_Functionality"></include> -->
-<!-- 									<include name="verifyBOLFilter"></include> -->
-<!-- 								</methods> -->
-<!-- 							</class> -->
-<!-- 							</classes> -->
-<!-- 					</test> -->
+					
+					<test  name="BOLPageTest">
+						<classes>
+							<class name="tests.BOLPageTest">
+								<methods>
+									<include name="verifyCreate_BOL_Flow"></include>
+									<include name="verifyAdd_Order_To_BOL_Flow"></include>
+									<include name="verifySet_BOL_Status"></include>
+									<include name="verifyMarkBOL_Complete"></include>
+									<include name="verifyPagination"></include>
+									<include name="verifyBOL_DecendingSorting_Functionality"></include>
+									<include name="verifyBOL_AscendingSorting_Functionality"></include>
+									<include name="verifyType_DecendingSorting_Functionality"></include>
+									<include name="verifyType_AscendingSorting_Functionality"></include>
+									<include name="verifyCurrentStatus_DecendingSorting_Functionality"></include>
+									<include name="verifyCurrentStatus_AscendingSorting_Functionality"></include>
+									<include name="verifyDueDate_DecendingSorting_Functionality"></include>
+									<include name="verifyDueDate_AscendingSorting_Functionality"></include>
+									<include name="verifyShipMethod_DecendingSorting_Functionality"></include>
+									<include name="verifyShipMethod_AscendingSorting_Functionality"></include>
+									<include name="verifyShippedByLocCode_DecendingSorting_Functionality"></include>
+									<include name="verifyShippedByLocCode_AscendingSorting_Functionality"></include>
+									<include name="verifyShippedByLocName_DecendingSorting_Functionality"></include>
+									<include name="verifyShippedByLocName_AscendingSorting_Functionality"></include>
+									<include name="verifyDefaultZone_DecendingSorting_Functionality"></include>
+									<include name="verifyDefaultZone_AscendingSorting_Functionality"></include>
+									<include name="verifyFromLocCode_DecendingSorting_Functionality"></include>
+									<include name="verifyFromLocCode_AscendingSorting_Functionality"></include>
+									<include name="verifyFromLocName_DecendingSorting_Functionality"></include>
+									<include name="verifyFromLocName_AscendingSorting_Functionality"></include>
+									<include name="verifyFromLocCity_DecendingSorting_Functionality"></include>
+									<include name="verifyFromLocCity_AscendingSorting_Functionality"></include>
+									<include name="verifyFromLocState_DecendingSorting_Functionality"></include>
+									<include name="verifyFromLocState_AscendingSorting_Functionality"></include>
+									<include name="verifyToLocCode_DecendingSorting_Functionality"></include>
+									<include name="verifyToLocCode_AscendingSorting_Functionality"></include>
+									<include name="verifyToLocName_DecendingSorting_Functionality"></include>
+									<include name="verifyToLocName_AscendingSorting_Functionality"></include>
+									<include name="verifyAssignDate_DecendingSorting_Functionality"></include>
+									<include name="verifyAssignDate_AscendingSorting_Functionality"></include>
+									<include name="verifyCommitDate_DecendingSorting_Functionality"></include>
+									<include name="verifyCommitDate_AscendingSorting_Functionality"></include>
+									<include name="verifyModCommitDate_DecendingSorting_Functionality"></include>
+									<include name="verifyModCommitDate_AscendingSorting_Functionality"></include>
+									<include name="verifyScheduleShipDate_DecendingSorting_Functionality"></include>
+									<include name="verifyScheduleShipDate_AscendingSorting_Functionality"></include>
+									<include name="verifyPickupDate_DecendingSorting_Functionality"></include>
+									<include name="verifyPickupDate_AscendingSorting_Functionality"></include>
+									<include name="verifyEstimatedDeliveryDate_DecendingSorting_Functionality"></include>
+									<include name="verifyEstimatedDeliveryDate_AscendingSorting_Functionality"></include>
+									<include name="verifyDeliveredDate_DecendingSorting_Functionality"></include>
+									<include name="verifyDeliveredDate_AscendingSorting_Functionality"></include>
+									<include name="verifyCompleteDate_DecendingSorting_Functionality"></include>
+									<include name="verifyCompleteDate_AscendingSorting_Functionality"></include>
+									<include name="verifyQuote_DecendingSorting_Functionality"></include>
+									<include name="verifyQuote_AscendingSorting_Functionality"></include>
+									<include name="verifyTender_DecendingSorting_Functionality"></include>
+									<include name="verifyTender_AscendingSorting_Functionality"></include>
+									<include name="verifyShipment_DecendingSorting_Functionality"></include>
+									<include name="verifyShipment_AscendingSorting_Functionality"></include>
+									<include name="verifyAutoAssignEligible_DecendingSorting_Functionality"></include>
+									<include name="verifyAutoAssignEligible_AscendingSorting_Functionality"></include>
+									<include name="verifyShippedByAccount_DecendingSorting_Functionality"></include>
+									<include name="verifyShippedByAccount_AscendingSorting_Functionality"></include>
+								</methods>
+							</class>
+							</classes>
+					</test>
 	
-<!-- 					<test  name="CreateOrderTest"> -->
-<!-- 						<classes> -->
-<!-- 							<class name="tests.CreateOrderTest"> -->
-<!-- 								<methods> -->
-<!-- 									<include name="verifyCreate_Order_Flow"></include> -->
-<!-- 									<include name="verifyAdd_Order_To_BOL_Complete_Flow"></include> -->
-<!-- 								</methods> -->
-<!-- 							</class> -->
-<!-- 						</classes> -->
-<!-- 					</test>  -->
+					<test  name="CreateOrderTest">
+						<classes>
+							<class name="tests.CreateOrderTest">
+								<methods>
+									<include name="verifyCreate_Order_Flow"></include>
+									<include name="verifyAdd_Order_To_BOL_Complete_Flow"></include>
+								</methods>
+							</class>
+						</classes>
+					</test> 
 	
-<!-- 					<test  name="MultipleOrderTest"> -->
-<!-- 						<classes> -->
-<!-- 							<class name="tests.MultipleOrderTest"> -->
-<!-- 								<methods> -->
-<!-- 									<include name="verifyCreate_Order_Flow"></include> -->
-<!-- 									<include name="verifyAdd_Order_To_BOL_Flow"></include> -->
-<!-- 									<include name="verifyMultiple_Create_Order_Flow"></include> -->
-<!-- 									<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include> -->
-<!-- 									<include name="verifyMultiple_Create_Order_Flow_Final"></include> -->
-<!-- 									<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include> -->
-<!-- 									<include name="verifyBOL_Complete_Flow"></include> -->
-<!-- 								</methods> -->
-<!-- 							</class> -->
-<!-- 							</classes> -->
-<!-- 					</test>  -->
+					<test  name="MultipleOrderTest">
+						<classes>
+							<class name="tests.MultipleOrderTest">
+								<methods>
+									<include name="verifyCreate_Order_Flow"></include>
+									<include name="verifyAdd_Order_To_BOL_Flow"></include>
+									<include name="verifyMultiple_Create_Order_Flow"></include>
+									<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include>
+									<include name="verifyMultiple_Create_Order_Flow_Final"></include>
+									<include name="verifyAdd_Order_To_Existing_BOL_Flow"></include>
+									<include name="verifyBOL_Complete_Flow"></include>
+								</methods>
+							</class>
+							</classes>
+					</test> 
 
-<!-- 					<test name="OrdersAndBOLS_OrdersPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.OrdersAndBOLS_OrdersPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_OrdersListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyOrder_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyOrder_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyOrderDate_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyOrderDate_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyNeedByDate_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyNeedByDate_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLDueDate_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLDueDate_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyOrderType_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyOrderType_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCustomerPO_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCustomerPO_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountCode_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFromLocCode_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFromLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFromLocName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFromLocName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyToLocCode_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyToLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyToLocName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyToLocName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyShipMethod_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyShipMethod_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyShipperCode_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyShipperCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyShipperName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyShipperName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOL_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOL_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyOrderStatus_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyOrderStatus_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLStatus_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLStatus_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCompletedDate_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCompletedDate_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBatchFileID_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBatchFileID_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 					</test> -->
+					<test name="OrdersAndBOLS_OrdersPageTest">
+					<classes>
+						<class name="tests.OrdersAndBOLS_OrdersPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_OrdersListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyOrder_DescendingSorting_Functionality"></include>
+								<include name="verifyOrder_AscendingSorting_Functionality"></include>
+								<include name="verifyOrderDate_DescendingSorting_Functionality"></include>
+								<include name="verifyOrderDate_AscendingSorting_Functionality"></include>
+								<include name="verifyNeedByDate_DescendingSorting_Functionality"></include>
+								<include name="verifyNeedByDate_AscendingSorting_Functionality"></include>
+								<include name="verifyBOLDueDate_DescendingSorting_Functionality"></include>
+								<include name="verifyBOLDueDate_AscendingSorting_Functionality"></include>
+								<include name="verifyOrderType_DescendingSorting_Functionality"></include>
+								<include name="verifyOrderType_AscendingSorting_Functionality"></include>
+								<include name="verifyCustomerPO_DescendingSorting_Functionality"></include>
+								<include name="verifyCustomerPO_AscendingSorting_Functionality"></include>
+								<include name="verifyAccountCode_DescendingSorting_Functionality"></include>
+								<include name="verifyAccountCode_AscendingSorting_Functionality"></include>
+								<include name="verifyAccountName_DescendingSorting_Functionality"></include>
+								<include name="verifyAccountName_AscendingSorting_Functionality"></include>
+								<include name="verifyFromLocCode_DescendingSorting_Functionality"></include>
+								<include name="verifyFromLocCode_AscendingSorting_Functionality"></include>
+								<include name="verifyFromLocName_DescendingSorting_Functionality"></include>
+								<include name="verifyFromLocName_AscendingSorting_Functionality"></include>
+								<include name="verifyToLocCode_DescendingSorting_Functionality"></include>
+								<include name="verifyToLocCode_AscendingSorting_Functionality"></include>
+								<include name="verifyToLocName_DescendingSorting_Functionality"></include>
+								<include name="verifyToLocName_AscendingSorting_Functionality"></include>
+								<include name="verifyShipMethod_DescendingSorting_Functionality"></include>
+								<include name="verifyShipMethod_AscendingSorting_Functionality"></include>
+								<include name="verifyShipperCode_DescendingSorting_Functionality"></include>
+								<include name="verifyShipperCode_AscendingSorting_Functionality"></include>
+								<include name="verifyShipperName_DescendingSorting_Functionality"></include>
+								<include name="verifyShipperName_AscendingSorting_Functionality"></include>
+								<include name="verifyBOL_DescendingSorting_Functionality"></include>
+								<include name="verifyBOL_AscendingSorting_Functionality"></include>
+								<include name="verifyOrderStatus_DescendingSorting_Functionality"></include>
+								<include name="verifyOrderStatus_AscendingSorting_Functionality"></include>
+								<include name="verifyBOLStatus_DescendingSorting_Functionality"></include>
+								<include name="verifyBOLStatus_AscendingSorting_Functionality"></include>
+								<include name="verifyCompletedDate_DescendingSorting_Functionality"></include>
+								<include name="verifyCompletedDate_AscendingSorting_Functionality"></include>
+								<include name="verifyBatchFileID_DescendingSorting_Functionality"></include>
+								<include name="verifyBatchFileID_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+					</test>
 				
 					<test name="BatchFilesPageTest">
 					<classes>
@@ -162,448 +162,446 @@
 								<include name="verifyPagination_Functionality"></include>
 								<include name="verifyBatchFileID_DescendingSorting_Functionality"></include>
 								<include name="verifyBatchFileID_AscendingSorting_Functionality"></include>
-<!-- 								<include name="verifyFileName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFileName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFileStatus_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFileStatus_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyActionType_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyActionType_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBatchFileLines_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBatchFileLines_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyRecordsLoaded_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyRecordsLoaded_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyRecordsProcessed_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyRecordsProcessed_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyTotalQuantity_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyTotalQuantity_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocCount_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocCount_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyUploaded_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyUploaded_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyUpdated_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyUpdated_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyUser_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyUser_AscendingSorting_Functionality"></include> -->
+								<include name="verifyFileName_DescendingSorting_Functionality"></include>
+								<include name="verifyFileName_AscendingSorting_Functionality"></include>
+								<include name="verifyFileStatus_DescendingSorting_Functionality"></include>
+								<include name="verifyFileStatus_AscendingSorting_Functionality"></include>
+								<include name="verifyActionType_DescendingSorting_Functionality"></include>
+								<include name="verifyActionType_AscendingSorting_Functionality"></include>
+								<include name="verifyBatchFileLines_DescendingSorting_Functionality"></include>
+								<include name="verifyBatchFileLines_AscendingSorting_Functionality"></include>
+								<include name="verifyRecordsLoaded_DescendingSorting_Functionality"></include>
+								<include name="verifyRecordsLoaded_AscendingSorting_Functionality"></include>
+								<include name="verifyRecordsProcessed_DescendingSorting_Functionality"></include>
+								<include name="verifyRecordsProcessed_AscendingSorting_Functionality"></include>
+								<include name="verifyTotalQuantity_DescendingSorting_Functionality"></include>
+								<include name="verifyTotalQuantity_AscendingSorting_Functionality"></include>
+								<include name="verifyLocCount_DescendingSorting_Functionality"></include>
+								<include name="verifyLocCount_AscendingSorting_Functionality"></include>
+								<include name="verifyUser_DescendingSorting_Functionality"></include>
+								<include name="verifyUser_AscendingSorting_Functionality"></include>
+								<include name="verifyValidBacthFileUpload_Functionality"></include>
+								<include name="verifyInvalidBacthFileUpload_Functionality"></include>
 							</methods>
 						</class>
 					</classes>
 					</test>
 
 
-<!--				<test name="RecoveriesByZonesTest">-->
-<!--					<classes>-->
-<!--						<class name="tests.RecoveriesByZonesTest">-->
-<!--							<methods>-->
-<!--								<include name="verify_Valid_Login"></include>-->
-<!--								<include name="redirection_To_ZonesListing_Page"></include>-->
-<!--								<include name="verifyPagination_Functionality"></include>-->
-<!--								<include name="verifyProviderLocCode_DecendingSorting_Functionality"></include>-->
-<!--								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include>-->
-<!--								<include name="verifyProvideLocName_DecendingSorting_Functionality"></include>-->
-<!--								<include name="verifyProvideLocName_AscendingSorting_Functionality"></include>-->
-<!-- 								<include name="verifyZone_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZone_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify0_39_RECOVERY_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify0_39_RECOVERY_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify40_49_RECOVERY_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify40_49_RECOVERY_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify50_59_RECOVERY_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify50_59_RECOVERY_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify60_69_RECOVERY_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify60_69_RECOVERY_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify70_79_RECOVERY_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify70_79_RECOVERY_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify80_89_RECOVERY_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify80_89_RECOVERY_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify90_99_RECOVERY_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify90_99_RECOVERY_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify100_RECOVERY_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verify100_RECOVERY_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="RecoveriesByZonesTest">
+					<classes>
+						<class name="tests.RecoveriesByZonesTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_ZonesListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyProviderLocCode_DecendingSorting_Functionality"></include>
+								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include>
+								<include name="verifyProvideLocName_DecendingSorting_Functionality"></include>
+								<include name="verifyProvideLocName_AscendingSorting_Functionality"></include>
+								<include name="verifyZone_DecendingSorting_Functionality"></include>
+								<include name="verifyZone_AscendingSorting_Functionality"></include>
+								<include name="verify0_39_RECOVERY_DecendingSorting_Functionality"></include>
+								<include name="verify0_39_RECOVERY_AscendingSorting_Functionality"></include>
+								<include name="verify40_49_RECOVERY_DecendingSorting_Functionality"></include>
+								<include name="verify40_49_RECOVERY_AscendingSorting_Functionality"></include>
+								<include name="verify50_59_RECOVERY_DecendingSorting_Functionality"></include>
+								<include name="verify50_59_RECOVERY_AscendingSorting_Functionality"></include>
+								<include name="verify60_69_RECOVERY_DecendingSorting_Functionality"></include>
+								<include name="verify60_69_RECOVERY_AscendingSorting_Functionality"></include>
+								<include name="verify70_79_RECOVERY_DecendingSorting_Functionality"></include>
+								<include name="verify70_79_RECOVERY_AscendingSorting_Functionality"></include>
+								<include name="verify80_89_RECOVERY_DecendingSorting_Functionality"></include>
+								<include name="verify80_89_RECOVERY_AscendingSorting_Functionality"></include>
+								<include name="verify90_99_RECOVERY_DecendingSorting_Functionality"></include>
+								<include name="verify90_99_RECOVERY_AscendingSorting_Functionality"></include>
+								<include name="verify100_RECOVERY_DecendingSorting_Functionality"></include>
+								<include name="verify100_RECOVERY_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 
 				
-<!-- 				<test name="RecoveriesByLocationTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.RecoveriesByLocationTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_LocationsListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyProviderLocCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProvideLocName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProvideLocName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZone_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZone_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCity_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCity_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyState_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyState_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZipCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZipCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyTTLFG_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyTTLFG_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFGRECOVVAL_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFGRECOVVAL_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyTTLCONFAVAIL_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyTTLCONFAVAIL_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastCall_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastCall_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastCount_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastCount_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyNextCall_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyNextCall_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLDue_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLDue_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLStatus_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLStatus_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastBOLCompleteDate_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastBOLCompleteDate_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="RecoveriesByLocationTest">
+					<classes>
+						<class name="tests.RecoveriesByLocationTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_LocationsListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyProviderLocCode_DecendingSorting_Functionality"></include>
+								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include>
+								<include name="verifyProvideLocName_DecendingSorting_Functionality"></include>
+								<include name="verifyProvideLocName_AscendingSorting_Functionality"></include>
+								<include name="verifyZone_DecendingSorting_Functionality"></include>
+								<include name="verifyZone_AscendingSorting_Functionality"></include>
+								<include name="verifyLocCode_DecendingSorting_Functionality"></include>
+								<include name="verifyLocCode_AscendingSorting_Functionality"></include>
+								<include name="verifyLocName_DecendingSorting_Functionality"></include>
+								<include name="verifyLocName_AscendingSorting_Functionality"></include>
+								<include name="verifyCity_DecendingSorting_Functionality"></include>
+								<include name="verifyCity_AscendingSorting_Functionality"></include>
+								<include name="verifyState_DecendingSorting_Functionality"></include>
+								<include name="verifyState_AscendingSorting_Functionality"></include>
+								<include name="verifyZipCode_DecendingSorting_Functionality"></include>
+								<include name="verifyZipCode_AscendingSorting_Functionality"></include>
+								<include name="verifyTTLFG_DecendingSorting_Functionality"></include>
+								<include name="verifyTTLFG_AscendingSorting_Functionality"></include>
+								<include name="verifyFGRECOVVAL_DecendingSorting_Functionality"></include>
+								<include name="verifyFGRECOVVAL_AscendingSorting_Functionality"></include>
+								<include name="verifyTTLCONFAVAIL_DecendingSorting_Functionality"></include>
+								<include name="verifyTTLCONFAVAIL_AscendingSorting_Functionality"></include>
+								<include name="verifyLastCall_DecendingSorting_Functionality"></include>
+								<include name="verifyLastCall_AscendingSorting_Functionality"></include>
+								<include name="verifyLastCount_DecendingSorting_Functionality"></include>
+								<include name="verifyLastCount_AscendingSorting_Functionality"></include>
+								<include name="verifyNextCall_DecendingSorting_Functionality"></include>
+								<include name="verifyNextCall_AscendingSorting_Functionality"></include>
+								<include name="verifyBOLDue_DecendingSorting_Functionality"></include>
+								<include name="verifyBOLDue_AscendingSorting_Functionality"></include>
+								<include name="verifyBOLStatus_DecendingSorting_Functionality"></include>
+								<include name="verifyBOLStatus_AscendingSorting_Functionality"></include>
+								<include name="verifyLastBOLCompleteDate_DecendingSorting_Functionality"></include>
+								<include name="verifyLastBOLCompleteDate_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="RecoveriesByLocation_ProgramTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.RecoveriesByLocation_ProgramTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_Locations_ProgramsListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyProviderLocCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProvideLocName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProvideLocName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZone_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZone_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCity_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCity_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyState_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyState_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZipCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZipCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyTTLFG_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyTTLFG_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFGRECOVVAL_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFGRECOVVAL_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyTTLCONFAVAIL_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyTTLCONFAVAIL_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastCall_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastCall_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastCount_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastCount_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyNextCall_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyNextCall_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLDue_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLDue_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLStatus_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLStatus_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastBOLCompleteDate_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastBOLCompleteDate_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="RecoveriesByLocation_ProgramTest">
+					<classes>
+						<class name="tests.RecoveriesByLocation_ProgramTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_Locations_ProgramsListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyProviderLocCode_DecendingSorting_Functionality"></include>
+								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include>
+								<include name="verifyProvideLocName_DecendingSorting_Functionality"></include>
+								<include name="verifyProvideLocName_AscendingSorting_Functionality"></include>
+								<include name="verifyZone_DecendingSorting_Functionality"></include>
+								<include name="verifyZone_AscendingSorting_Functionality"></include>
+								<include name="verifyLocCode_DecendingSorting_Functionality"></include>
+								<include name="verifyLocCode_AscendingSorting_Functionality"></include>
+								<include name="verifyLocName_DecendingSorting_Functionality"></include>
+								<include name="verifyLocName_AscendingSorting_Functionality"></include>
+								<include name="verifyCity_DecendingSorting_Functionality"></include>
+								<include name="verifyCity_AscendingSorting_Functionality"></include>
+								<include name="verifyState_DecendingSorting_Functionality"></include>
+								<include name="verifyState_AscendingSorting_Functionality"></include>
+								<include name="verifyZipCode_DecendingSorting_Functionality"></include>
+								<include name="verifyZipCode_AscendingSorting_Functionality"></include>
+								<include name="verifyTTLFG_DecendingSorting_Functionality"></include>
+								<include name="verifyTTLFG_AscendingSorting_Functionality"></include>
+								<include name="verifyFGRECOVVAL_DecendingSorting_Functionality"></include>
+								<include name="verifyFGRECOVVAL_AscendingSorting_Functionality"></include>
+								<include name="verifyTTLCONFAVAIL_DecendingSorting_Functionality"></include>
+								<include name="verifyTTLCONFAVAIL_AscendingSorting_Functionality"></include>
+								<include name="verifyLastCall_DecendingSorting_Functionality"></include>
+								<include name="verifyLastCall_AscendingSorting_Functionality"></include>
+								<include name="verifyLastCount_DecendingSorting_Functionality"></include>
+								<include name="verifyLastCount_AscendingSorting_Functionality"></include>
+								<include name="verifyNextCall_DecendingSorting_Functionality"></include>
+								<include name="verifyNextCall_AscendingSorting_Functionality"></include>
+								<include name="verifyBOLDue_DecendingSorting_Functionality"></include>
+								<include name="verifyBOLDue_AscendingSorting_Functionality"></include>
+								<include name="verifyBOLStatus_DecendingSorting_Functionality"></include>
+								<include name="verifyBOLStatus_AscendingSorting_Functionality"></include>
+								<include name="verifyLastBOLCompleteDate_DecendingSorting_Functionality"></include>
+								<include name="verifyLastBOLCompleteDate_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="RecoveriesByComponentTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.RecoveriesByComponentTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_ComponentsListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyLocCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKU_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKU_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFG_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFG_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyConfAvail_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyConfAvail_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocConfAvailRecovVal_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocConfAvailRecovVal_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastCall_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastCall_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastCount_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastCount_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyNextCall_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyNextCall_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLStatus_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBOLStatus_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCommitDate_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCommitDate_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastBOLCompleteDate_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastBOLCompleteDate_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCity_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCity_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyState_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyState_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZipCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZipCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProviderLocCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProvideLocName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProvideLocName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZone_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZone_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyRegion_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyRegion_AscendingSorting_Functionality"></include> -->
-<!-- 															</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="RecoveriesByComponentTest">
+					<classes>
+						<class name="tests.RecoveriesByComponentTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_ComponentsListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyLocCode_DecendingSorting_Functionality"></include>
+								<include name="verifyLocCode_AscendingSorting_Functionality"></include>
+								<include name="verifyLocName_DecendingSorting_Functionality"></include>
+								<include name="verifyLocName_AscendingSorting_Functionality"></include>
+								<include name="verifySKU_DecendingSorting_Functionality"></include>
+								<include name="verifySKU_AscendingSorting_Functionality"></include>
+								<include name="verifySKUName_DecendingSorting_Functionality"></include>
+								<include name="verifySKUName_AscendingSorting_Functionality"></include>
+								<include name="verifyFG_DecendingSorting_Functionality"></include>
+								<include name="verifyFG_AscendingSorting_Functionality"></include>
+								<include name="verifyConfAvail_DecendingSorting_Functionality"></include>
+								<include name="verifyConfAvail_AscendingSorting_Functionality"></include>
+								<include name="verifyLocConfAvailRecovVal_DecendingSorting_Functionality"></include>
+								<include name="verifyLocConfAvailRecovVal_AscendingSorting_Functionality"></include>
+								<include name="verifyLastCall_DecendingSorting_Functionality"></include>
+								<include name="verifyLastCall_AscendingSorting_Functionality"></include>
+								<include name="verifyLastCount_DecendingSorting_Functionality"></include>
+								<include name="verifyLastCount_AscendingSorting_Functionality"></include>
+								<include name="verifyNextCall_DecendingSorting_Functionality"></include>
+								<include name="verifyNextCall_AscendingSorting_Functionality"></include>
+								<include name="verifyBOLStatus_DecendingSorting_Functionality"></include>
+								<include name="verifyBOLStatus_AscendingSorting_Functionality"></include>
+								<include name="verifyCommitDate_DecendingSorting_Functionality"></include>
+								<include name="verifyCommitDate_AscendingSorting_Functionality"></include>
+								<include name="verifyLastBOLCompleteDate_DecendingSorting_Functionality"></include>
+								<include name="verifyLastBOLCompleteDate_AscendingSorting_Functionality"></include>
+								<include name="verifyCity_DecendingSorting_Functionality"></include>
+								<include name="verifyCity_AscendingSorting_Functionality"></include>
+								<include name="verifyState_DecendingSorting_Functionality"></include>
+								<include name="verifyState_AscendingSorting_Functionality"></include>
+								<include name="verifyZipCode_DecendingSorting_Functionality"></include>
+								<include name="verifyZipCode_AscendingSorting_Functionality"></include>
+								<include name="verifyProviderLocCode_DecendingSorting_Functionality"></include>
+								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include>
+								<include name="verifyProvideLocName_DecendingSorting_Functionality"></include>
+								<include name="verifyProvideLocName_AscendingSorting_Functionality"></include>
+								<include name="verifyZone_DecendingSorting_Functionality"></include>
+								<include name="verifyZone_AscendingSorting_Functionality"></include>
+								<include name="verifyRegion_DecendingSorting_Functionality"></include>
+								<include name="verifyRegion_AscendingSorting_Functionality"></include>
+															</methods>
+						</class>
+					</classes>
+				</test>
 
-<!-- 				<test name="ReplenishmentsByComponentTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.ReplenishmentsByComponentTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_ComponentsListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyAccount_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccount_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProviderLocCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProvideLocName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProvideLocName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZone_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZone_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyRegion_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyRegion_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCity_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCity_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyState_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyState_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZipCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZipCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKU_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKU_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFG_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyFG_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyShipMin_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyShipMin_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyShipMax_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyShipMax_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyInTransit_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyInTransit_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyConfAvail_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyConfAvail_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBelowMinQty_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBelowMinQty_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="ReplenishmentsByComponentTest">
+					<classes>
+						<class name="tests.ReplenishmentsByComponentTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_ComponentsListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyAccount_DecendingSorting_Functionality"></include>
+								<include name="verifyAccount_AscendingSorting_Functionality"></include>
+								<include name="verifyProviderLocCode_DecendingSorting_Functionality"></include>
+								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include>
+								<include name="verifyProvideLocName_DecendingSorting_Functionality"></include>
+								<include name="verifyProvideLocName_AscendingSorting_Functionality"></include>
+								<include name="verifyLocCode_DecendingSorting_Functionality"></include>
+								<include name="verifyLocCode_AscendingSorting_Functionality"></include>
+								<include name="verifyLocName_DecendingSorting_Functionality"></include>
+								<include name="verifyLocName_AscendingSorting_Functionality"></include>
+								<include name="verifyZone_DecendingSorting_Functionality"></include>
+								<include name="verifyZone_AscendingSorting_Functionality"></include>
+								<include name="verifyRegion_DecendingSorting_Functionality"></include>
+								<include name="verifyRegion_AscendingSorting_Functionality"></include>
+								<include name="verifyCity_DecendingSorting_Functionality"></include>
+								<include name="verifyCity_AscendingSorting_Functionality"></include>
+								<include name="verifyState_DecendingSorting_Functionality"></include>
+								<include name="verifyState_AscendingSorting_Functionality"></include>
+								<include name="verifyZipCode_DecendingSorting_Functionality"></include>
+								<include name="verifyZipCode_AscendingSorting_Functionality"></include>
+								<include name="verifySKU_DecendingSorting_Functionality"></include>
+								<include name="verifySKU_AscendingSorting_Functionality"></include>
+								<include name="verifySKUName_DecendingSorting_Functionality"></include>
+								<include name="verifySKUName_AscendingSorting_Functionality"></include>
+								<include name="verifyFG_DecendingSorting_Functionality"></include>
+								<include name="verifyFG_AscendingSorting_Functionality"></include>
+								<include name="verifyShipMin_DecendingSorting_Functionality"></include>
+								<include name="verifyShipMin_AscendingSorting_Functionality"></include>
+								<include name="verifyShipMax_DecendingSorting_Functionality"></include>
+								<include name="verifyShipMax_AscendingSorting_Functionality"></include>
+								<include name="verifyInTransit_DecendingSorting_Functionality"></include>
+								<include name="verifyInTransit_AscendingSorting_Functionality"></include>
+								<include name="verifyConfAvail_DecendingSorting_Functionality"></include>
+								<include name="verifyConfAvail_AscendingSorting_Functionality"></include>
+								<include name="verifyBelowMinQty_DecendingSorting_Functionality"></include>
+								<include name="verifyBelowMinQty_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!--  				<test name="Accounts_AccountsPageTest">  -->
-<!--  					<classes>  -->
-<!--  						<class name="tests.Accounts_AccountsPageTest">  -->
-<!--  							<methods>  -->
-<!--  							<include name="verify_Valid_Login"></include>  -->
-<!--  							<include name="redirection_To_AccountListing_Page"></include>  -->
-<!--  							<include name="verifyPagination_Functionality"></include> -->
-<!--  							<include name="verifyAcctCode_DecendingSorting_Functionality"></include>  -->
-<!--  							<include name="verifyAcctCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyName_DecendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyShort_DecendingSorting_Functionality"></include> -->
-<!--  							<include name="verifySort_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCity_DecendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCity_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyAdmin_DecendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyAdmin_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCustomer_DecendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCustomer_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyProvider_DecendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyProvider_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCarrier_DecendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCarrier_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyNetwork_DecendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyNetwork_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyActive_DecendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyActive_AscendingSorting_Functionality"></include> -->							
-<!--  							</methods>  -->
-<!--  						</class>  -->
-<!--  					</classes>  -->
-<!--  				</test>  -->
+ 				<test name="Accounts_AccountsPageTest"> 
+ 					<classes> 
+ 						<class name="tests.Accounts_AccountsPageTest"> 
+ 							<methods> 
+ 							<include name="verify_Valid_Login"></include> 
+ 							<include name="redirection_To_AccountListing_Page"></include> 
+ 							<include name="verifyPagination_Functionality"></include>
+ 							<include name="verifyAcctCode_DecendingSorting_Functionality"></include> 
+ 							<include name="verifyAcctCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifyName_DecendingSorting_Functionality"></include>
+ 							<include name="verifyName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyShort_DecendingSorting_Functionality"></include>
+ 							<include name="verifySort_AscendingSorting_Functionality"></include>
+ 							<include name="verifyCity_DecendingSorting_Functionality"></include>
+ 							<include name="verifyCity_AscendingSorting_Functionality"></include>
+ 							<include name="verifyAdmin_DecendingSorting_Functionality"></include>
+ 							<include name="verifyAdmin_AscendingSorting_Functionality"></include>
+ 							<include name="verifyCustomer_DecendingSorting_Functionality"></include>
+ 							<include name="verifyCustomer_AscendingSorting_Functionality"></include>
+ 							<include name="verifyProvider_DecendingSorting_Functionality"></include>
+ 							<include name="verifyProvider_AscendingSorting_Functionality"></include>
+ 							<include name="verifyCarrier_DecendingSorting_Functionality"></include>
+ 							<include name="verifyCarrier_AscendingSorting_Functionality"></include>
+ 							<include name="verifyNetwork_DecendingSorting_Functionality"></include>
+ 							<include name="verifyNetwork_AscendingSorting_Functionality"></include>
+ 							<include name="verifyActive_DecendingSorting_Functionality"></include>
+ 							<include name="verifyActive_AscendingSorting_Functionality"></include>		
+ 							<include name="verifyCreateNewAccount_Functionality"></include>
+ 							</methods> 
+ 						</class> 
+ 					</classes> 
+ 				</test> 
 				
-<!--  				<test name="Accounts_LocationsPageTest">  -->
-<!--  					<classes>  -->
-<!--  						<class name="tests.Accounts_LocationsPageTest">  -->
-<!--  							<methods>  -->
-<!--  							<include name="verify_Valid_Login"></include>  -->
-<!--  							<include name="redirection_To_LocationsListing_Page"></include>  -->
-<!--  							<include name="verifyPagination_Functionality"></include>  -->
-<!--  							<include name="LocCode_DecendingSorting"></include> -->
-<!--  							<include name="LocCode_AscendingSorting"></include> -->
-<!--  							<include name="LocName_DecendingSorting"></include> -->
-<!--  							<include name="LocName_AscendingSorting"></include> -->
-<!--  							<include name="LocType_DecendingSorting"></include> -->
-<!--  							<include name="LocType_AscendingSorting"></include> -->
-<!--  							<include name="AcctCode_DecendingSorting"></include> -->
-<!--  							<include name="AcctCode_AscendingSorting"></include> -->
-<!--  							<include name="Monitor_Recoveries_DecendingSorting"></include> -->
-<!--  							<include name="Monitor_Recoveries_AscendingSorting"></include> -->
-<!--  							<include name="Monitor_Replenishments_DecendingSorting"></include> -->
-<!--  							<include name="Monitor_Replenishments_AscendingSorting"></include> -->
-<!--  							<include name="Notifiable_DecendingSorting"></include> -->
-<!--  							<include name="Notifiable_AscendingSorting"></include> -->
-<!--  							<include name="Zone_DecendingSorting"></include> -->
-<!--  							<include name="Zone_AscendingSorting"></include> -->
-<!--  							<include name="Region_DecendingSorting"></include> -->
-<!--  							<include name="Region_AscendingSorting"></include> -->
-<!--  							<include name="Address_DecendingSorting"></include> -->
-<!--  							<include name="Address_AscendingSorting"></include> -->
-<!--  							<include name="City_DecendingSorting"></include> -->
-<!--  							<include name="City_AscendingSorting"></include> -->
-<!--  							<include name="State_DecendingSorting"></include> -->
-<!--  							<include name="State_AscendingSorting"></include> -->
-<!--  							<include name="Zip_DecendingSorting"></include> -->
-<!--  							<include name="Zip_AscendingSorting"></include> -->
-<!--  							<include name="Def_Prov_Loc_Code_DecendingSorting"></include> -->
-<!--  							<include name="Def_Prov_Loc_Code_AscendingSorting"></include> -->
-<!--  							<include name="Def_Prov_Loc_DecendingSorting"></include> -->
-<!--  							<include name="Def_Prov_Loc_AscendingSorting"></include> -->
-<!--  							<include name="Call_Priority_DecendingSorting"></include> -->
-<!--  							<include name="Call_Priority_AscendingSorting"></include> -->
-<!--  							<include name="Short_Name_DecendingSorting"></include> -->
-<!--  							<include name="Short_Name_AscendingSorting"></include> -->
-<!--  							<include name="Contact_Name_DecendingSorting"></include> -->
-<!--  							<include name="Contact_Name_AscendingSorting"></include> -->
-<!--  							<include name="Contact_Phone_Country_Code_DecendingSorting"></include> -->
-<!--  							<include name="Contact_Phone_Country_Code_AscendingSorting"></include> -->
-<!--  							<include name="Contact_Phone_DecendingSorting"></include> -->
-<!--  							<include name="Contact_Phone_AscendingSorting"></include> -->
-<!--  							<include name="Contact_Email_DecendingSorting"></include> -->
-<!--  							<include name="Contact_Email_AscendingSorting"></include> -->
-<!--  							<include name="Contact_Business_Phone_Country_Code_DecendingSorting"></include> -->
-<!--  							<include name="Contact_Business_Phone_Country_Code_AscendingSorting"></include> -->
-<!--  							<include name="Contact_Business_Phone_DecendingSorting"></include> -->
-<!--  							<include name="Contact_Business_Phone_AscendingSorting"></include> -->
-<!--  							<include name="Contact_Business_Phone_EXT_DecendingSorting"></include> -->
-<!--  							<include name="Contact_Business_Phone_EXT_AscendingSorting"></include> -->
-<!--  							<include name="Active_DecendingSorting"></include> -->
-<!--  							<include name="Active_AscendingSorting"></include>							 -->
-<!--  							</methods>  -->
-<!--  						</class>  -->
-<!--  					</classes>  -->
-<!--  				</test>  -->
+ 				<test name="Accounts_LocationsPageTest"> 
+ 					<classes> 
+ 						<class name="tests.Accounts_LocationsPageTest"> 
+ 							<methods> 
+ 							<include name="verify_Valid_Login"></include> 
+ 							<include name="redirection_To_LocationsListing_Page"></include> 
+ 							<include name="verifyPagination_Functionality"></include> 
+ 							<include name="LocCode_DecendingSorting"></include>
+ 							<include name="LocCode_AscendingSorting"></include>
+ 							<include name="LocName_DecendingSorting"></include>
+ 							<include name="LocName_AscendingSorting"></include>
+ 							<include name="LocType_DecendingSorting"></include>
+ 							<include name="LocType_AscendingSorting"></include>
+ 							<include name="AcctCode_DecendingSorting"></include>
+ 							<include name="AcctCode_AscendingSorting"></include>
+ 							<include name="Monitor_Recoveries_DecendingSorting"></include>
+ 							<include name="Monitor_Recoveries_AscendingSorting"></include>
+ 							<include name="Monitor_Replenishments_DecendingSorting"></include>
+ 							<include name="Monitor_Replenishments_AscendingSorting"></include>
+ 							<include name="Notifiable_DecendingSorting"></include>
+ 							<include name="Notifiable_AscendingSorting"></include>
+ 							<include name="Zone_DecendingSorting"></include>
+ 							<include name="Zone_AscendingSorting"></include>
+ 							<include name="Region_DecendingSorting"></include>
+ 							<include name="Region_AscendingSorting"></include>
+ 							<include name="Address_DecendingSorting"></include>
+ 							<include name="Address_AscendingSorting"></include>
+ 							<include name="City_DecendingSorting"></include>
+ 							<include name="City_AscendingSorting"></include>
+ 							<include name="State_DecendingSorting"></include>
+ 							<include name="State_AscendingSorting"></include>
+ 							<include name="Zip_DecendingSorting"></include>
+ 							<include name="Zip_AscendingSorting"></include>
+ 							<include name="Def_Prov_Loc_Code_DecendingSorting"></include>
+ 							<include name="Def_Prov_Loc_Code_AscendingSorting"></include>
+ 							<include name="Def_Prov_Loc_DecendingSorting"></include>
+ 							<include name="Def_Prov_Loc_AscendingSorting"></include>
+ 							<include name="Call_Priority_DecendingSorting"></include>
+ 							<include name="Call_Priority_AscendingSorting"></include>
+ 							<include name="Short_Name_DecendingSorting"></include>
+ 							<include name="Short_Name_AscendingSorting"></include>
+ 							<include name="Contact_Name_DecendingSorting"></include>
+ 							<include name="Contact_Name_AscendingSorting"></include>
+ 							<include name="Contact_Phone_Country_Code_DecendingSorting"></include>
+ 							<include name="Contact_Phone_Country_Code_AscendingSorting"></include>
+ 							<include name="Contact_Phone_DecendingSorting"></include>
+ 							<include name="Contact_Phone_AscendingSorting"></include>
+ 							<include name="Contact_Email_DecendingSorting"></include>
+ 							<include name="Contact_Email_AscendingSorting"></include>
+ 							<include name="Contact_Business_Phone_Country_Code_DecendingSorting"></include>
+ 							<include name="Contact_Business_Phone_Country_Code_AscendingSorting"></include>
+ 							<include name="Contact_Business_Phone_DecendingSorting"></include>
+ 							<include name="Contact_Business_Phone_AscendingSorting"></include>
+ 							<include name="Contact_Business_Phone_EXT_DecendingSorting"></include>
+ 							<include name="Contact_Business_Phone_EXT_AscendingSorting"></include>
+ 							<include name="Active_DecendingSorting"></include>
+ 							<include name="Active_AscendingSorting"></include>
+ 							<include name="verifyCreateNewLocation_Functionality"></include>							
+ 							</methods> 
+ 						</class> 
+ 					</classes> 
+ 				</test> 
 
-<!-- 				<test name="Reports_OrderDetailsPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Reports_OrderDetailsPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_OrderDetailsListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!--  							<include name="verifyBOLID_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLID_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderID_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderID_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderStatus_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderStatus_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLStatus_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLStatus_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderType_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderType_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyProgram_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyProgram_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCompletedWeek_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCompletedWeek_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderNeedByDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderNeedByDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderUpdatedDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderUpdatedDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLAssignDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLAssignDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLDueDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLDueDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLCommitDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLCommitDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLModifiedCommitDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLModifiedCommitDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLPickUpDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLPickUpDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLCompletedDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLCompletedDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCustomer_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCustomer_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemSKU_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemSKU_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyProgramOwner_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyProgramOwner_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyShipMethod_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyShipMethod_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyShipperLocRefCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyShipperLocRefCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyShipperLocName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyShipperLocName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocAddress_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocAddress_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocCity_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocCity_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocState_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocState_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocZip_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocZip_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyZone_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyZone_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocAddress_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocAddress_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocCity_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocCity_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocState_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocState_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocZip_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocZip_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCustomerPO_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCustomerPO_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderCreatedBy_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderCreatedBy_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyAutoAssignEligible_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyAutoAssignEligible_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBatchFileID_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBatchFileID_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBatchFileNote_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBatchFileNote_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Reports_OrderDetailsPageTest">
+					<classes>
+						<class name="tests.Reports_OrderDetailsPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_OrderDetailsListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+ 							<include name="verifyBOLID_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLID_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderID_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderID_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderStatus_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderStatus_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLStatus_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLStatus_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderType_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderType_AscendingSorting_Functionality"></include>
+ 							<include name="verifyProgram_DescendingSorting_Functionality"></include>
+ 							<include name="verifyProgram_AscendingSorting_Functionality"></include>
+ 							<include name="verifyCompletedWeek_DescendingSorting_Functionality"></include>
+ 							<include name="verifyCompletedWeek_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderNeedByDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderNeedByDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLAssignDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLAssignDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLDueDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLDueDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLCommitDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLCommitDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLModifiedCommitDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLModifiedCommitDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLPickUpDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLPickUpDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLCompletedDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLCompletedDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyCustomer_DescendingSorting_Functionality"></include>
+ 							<include name="verifyCustomer_AscendingSorting_Functionality"></include>
+ 							<include name="verifyItemSKU_DescendingSorting_Functionality"></include>
+ 							<include name="verifyItemSKU_AscendingSorting_Functionality"></include>
+ 							<include name="verifyItemName_DescendingSorting_Functionality"></include>
+ 							<include name="verifyItemName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyProgramOwner_DescendingSorting_Functionality"></include>
+ 							<include name="verifyProgramOwner_AscendingSorting_Functionality"></include>
+ 							<include name="verifyShipMethod_DescendingSorting_Functionality"></include>
+ 							<include name="verifyShipMethod_AscendingSorting_Functionality"></include>
+ 							<include name="verifyShipperLocRefCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyShipperLocRefCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifyShipperLocName_DescendingSorting_Functionality"></include>
+ 							<include name="verifyShipperLocName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocName_DescendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocAddress_DescendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocAddress_AscendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocCity_DescendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocCity_AscendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocState_DescendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocState_AscendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocZip_DescendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocZip_AscendingSorting_Functionality"></include>
+ 							<include name="verifyZone_DescendingSorting_Functionality"></include>
+ 							<include name="verifyZone_AscendingSorting_Functionality"></include>
+ 							<include name="verifyToLocCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyToLocCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifyToLocName_DescendingSorting_Functionality"></include>
+ 							<include name="verifyToLocName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyToLocAddress_DescendingSorting_Functionality"></include>
+ 							<include name="verifyToLocAddress_AscendingSorting_Functionality"></include>
+ 							<include name="verifyToLocCity_DescendingSorting_Functionality"></include>
+ 							<include name="verifyToLocCity_AscendingSorting_Functionality"></include>
+ 							<include name="verifyToLocState_DescendingSorting_Functionality"></include>
+ 							<include name="verifyToLocState_AscendingSorting_Functionality"></include>
+ 							<include name="verifyToLocZip_DescendingSorting_Functionality"></include>
+ 							<include name="verifyToLocZip_AscendingSorting_Functionality"></include>
+ 							<include name="verifyCustomerPO_DescendingSorting_Functionality"></include>
+ 							<include name="verifyCustomerPO_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderCreatedBy_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderCreatedBy_AscendingSorting_Functionality"></include>
+ 							<include name="verifyAutoAssignEligible_DescendingSorting_Functionality"></include>
+ 							<include name="verifyAutoAssignEligible_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBatchFileID_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBatchFileID_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBatchFileNote_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBatchFileNote_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
 <!-- 				<test name="Reports_LateNotificationPageTest"> -->
 <!-- 					<classes> -->
@@ -789,480 +787,477 @@
 <!-- 					</classes> -->
 <!-- 				</test> -->
 				
-<!-- 				<test name="Reports_InvoicingPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Reports_InvoicingPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_InvoicingListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyBOLID_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLID_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderID_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderID_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderType_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderType_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyProgramOwner_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyProgramOwner_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyProgram_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyProgram_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLAssignDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLAssignDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLDueDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLDueDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLCommitDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLCommitDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLModifiedCommitDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLModifiedCommitDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLPickupWeek_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLPickupWeek_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLPickUpDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLPickUpDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLCompletedDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOLCompletedDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCustomer_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCustomer_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCustomerCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCustomerCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemSKU_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemSKU_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemOwner_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemOwner_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemOwnerCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemOwnerCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemQuantity_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemQuantity_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderMinApplied_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderMinApplied_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPlanMinQty_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPlanMinQty_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemPriceEach_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemPriceEach_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemPriceTotal_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyItemPriceTotal_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderSubtotal_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderSubtotal_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderFuelCost_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderFuelCost_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderOtherCost_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderOtherCost_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderOtherNotes_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderOtherNotes_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderTotal_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOrderTotal_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyShipperLocCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyShipperLocCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyShipperLocName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyShipperLocName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocAddress_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocAddress_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocCity_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocCity_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocState_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocState_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocZip_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFromLocZip_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocAddress_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocAddress_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocCity_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocCity_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocState_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocState_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocZip_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyToLocZip_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Reports_InvoicingPageTest">
+					<classes>
+						<class name="tests.Reports_InvoicingPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_InvoicingListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyBOLID_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLID_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderID_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderID_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderType_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderType_AscendingSorting_Functionality"></include>
+ 							<include name="verifyProgramOwner_DescendingSorting_Functionality"></include>
+ 							<include name="verifyProgramOwner_AscendingSorting_Functionality"></include>
+ 							<include name="verifyProgram_DescendingSorting_Functionality"></include>
+ 							<include name="verifyProgram_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLAssignDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLAssignDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLDueDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLDueDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLCommitDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLCommitDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLModifiedCommitDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLModifiedCommitDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLPickupWeek_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLPickupWeek_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLPickUpDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLPickUpDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOLCompletedDate_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOLCompletedDate_AscendingSorting_Functionality"></include>
+ 							<include name="verifyCustomer_DescendingSorting_Functionality"></include>
+ 							<include name="verifyCustomer_AscendingSorting_Functionality"></include>
+ 							<include name="verifyCustomerCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyCustomerCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifyItemSKU_DescendingSorting_Functionality"></include>
+ 							<include name="verifyItemSKU_AscendingSorting_Functionality"></include>
+ 							<include name="verifyItemName_DescendingSorting_Functionality"></include>
+ 							<include name="verifyItemName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyItemOwner_DescendingSorting_Functionality"></include>
+ 							<include name="verifyItemOwner_AscendingSorting_Functionality"></include>
+ 							<include name="verifyItemOwnerCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyItemOwnerCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifyItemQuantity_DescendingSorting_Functionality"></include>
+ 							<include name="verifyItemQuantity_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderMinApplied_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderMinApplied_AscendingSorting_Functionality"></include>
+ 							<include name="verifyPlanMinQty_DescendingSorting_Functionality"></include>
+ 							<include name="verifyPlanMinQty_AscendingSorting_Functionality"></include>
+ 							<include name="verifyItemPriceEach_DescendingSorting_Functionality"></include>
+ 							<include name="verifyItemPriceEach_AscendingSorting_Functionality"></include>
+ 							<include name="verifyItemPriceTotal_DescendingSorting_Functionality"></include>
+ 							<include name="verifyItemPriceTotal_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderSubtotal_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderSubtotal_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderFuelCost_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderFuelCost_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderOtherCost_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderOtherCost_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderOtherNotes_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderOtherNotes_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOrderTotal_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOrderTotal_AscendingSorting_Functionality"></include>
+ 							<include name="verifyShipperLocCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyShipperLocCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifyShipperLocName_DescendingSorting_Functionality"></include>
+ 							<include name="verifyShipperLocName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocName_DescendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocAddress_DescendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocAddress_AscendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocCity_DescendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocCity_AscendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocState_DescendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocState_AscendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocZip_DescendingSorting_Functionality"></include>
+ 							<include name="verifyFromLocZip_AscendingSorting_Functionality"></include>
+ 							<include name="verifyToLocCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyToLocCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifyToLocName_DescendingSorting_Functionality"></include>
+ 							<include name="verifyToLocName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyToLocAddress_DescendingSorting_Functionality"></include>
+ 							<include name="verifyToLocAddress_AscendingSorting_Functionality"></include>
+ 							<include name="verifyToLocCity_DescendingSorting_Functionality"></include>
+ 							<include name="verifyToLocCity_AscendingSorting_Functionality"></include>
+ 							<include name="verifyToLocState_DescendingSorting_Functionality"></include>
+ 							<include name="verifyToLocState_AscendingSorting_Functionality"></include>
+ 							<include name="verifyToLocZip_DescendingSorting_Functionality"></include>
+ 							<include name="verifyToLocZip_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Reports_LedgerPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Reports_LedgerPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_LedgerListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyRecID_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyRecID_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyTxID_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyTxID_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPairID_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPairID_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyWOID_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyWOID_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOL_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyBOL_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyTxDate_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyTxDate_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyLocName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyLocName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyLocCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyLocCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifySKU_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifySKU_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifySKU1_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifySKU1_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyStage_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyStage_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyQTY_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyQTY_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyInvBefore_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyInvBefore_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyInvAfter_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyInvAfter_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyTxType_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyTxType_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyWOType_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyWOType_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyAction_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyAction_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyLocType_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyLocType_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyAccount_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyAccount_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyUser_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyUser_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Reports_LedgerPageTest">
+					<classes>
+						<class name="tests.Reports_LedgerPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_LedgerListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyRecID_DescendingSorting_Functionality"></include>
+ 							<include name="verifyRecID_AscendingSorting_Functionality"></include>
+ 							<include name="verifyTxID_DescendingSorting_Functionality"></include>
+ 							<include name="verifyTxID_AscendingSorting_Functionality"></include>
+ 							<include name="verifyPairID_DescendingSorting_Functionality"></include>
+ 							<include name="verifyPairID_AscendingSorting_Functionality"></include>
+ 							<include name="verifyWOID_DescendingSorting_Functionality"></include>
+ 							<include name="verifyWOID_AscendingSorting_Functionality"></include>
+ 							<include name="verifyBOL_DescendingSorting_Functionality"></include>
+ 							<include name="verifyBOL_AscendingSorting_Functionality"></include>
+ 							<include name="verifyLocName_DescendingSorting_Functionality"></include>
+ 							<include name="verifyLocName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyLocCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyLocCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifySKU_DescendingSorting_Functionality"></include>
+ 							<include name="verifySKU_AscendingSorting_Functionality"></include>
+ 							<include name="verifySKU1_DescendingSorting_Functionality"></include>
+ 							<include name="verifySKU1_AscendingSorting_Functionality"></include>
+ 							<include name="verifyStage_DescendingSorting_Functionality"></include>
+ 							<include name="verifyStage_AscendingSorting_Functionality"></include>
+ 							<include name="verifyQTY_DescendingSorting_Functionality"></include>
+ 							<include name="verifyQTY_AscendingSorting_Functionality"></include>
+ 							<include name="verifyInvBefore_DescendingSorting_Functionality"></include>
+ 							<include name="verifyInvBefore_AscendingSorting_Functionality"></include>
+ 							<include name="verifyInvAfter_DescendingSorting_Functionality"></include>
+ 							<include name="verifyInvAfter_AscendingSorting_Functionality"></include>
+ 							<include name="verifyTxType_DescendingSorting_Functionality"></include>
+ 							<include name="verifyTxType_AscendingSorting_Functionality"></include>
+ 							<include name="verifyWOType_DescendingSorting_Functionality"></include>
+ 							<include name="verifyWOType_AscendingSorting_Functionality"></include>
+ 							<include name="verifyAction_DescendingSorting_Functionality"></include>
+ 							<include name="verifyAction_AscendingSorting_Functionality"></include>
+ 							<include name="verifyLocType_DescendingSorting_Functionality"></include>
+ 							<include name="verifyLocType_AscendingSorting_Functionality"></include>
+ 							<include name="verifyAccount_DescendingSorting_Functionality"></include>
+ 							<include name="verifyAccount_AscendingSorting_Functionality"></include>
+ 							<include name="verifyUser_DescendingSorting_Functionality"></include>
+ 							<include name="verifyUser_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Reports_CurrentInventoryByLocationPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Reports_CurrentInventoryByLocationPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_Reports_CurrentInventoryByLocationListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyAccountName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationType_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationType_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCity_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCity_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyState_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyState_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyActive_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyActive_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUNumber_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUNumber_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyStage_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyStage_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyQuantity_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyQuantity_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Reports_CurrentInventoryByLocationPageTest">
+					<classes>
+						<class name="tests.Reports_CurrentInventoryByLocationPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_Reports_CurrentInventoryByLocationListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyAccountName_DecendingSorting_Functionality"></include>
+								<include name="verifyAccountName_AscendingSorting_Functionality"></include>
+								<include name="verifyAccountCode_DecendingSorting_Functionality"></include>
+								<include name="verifyAccountCode_AscendingSorting_Functionality"></include>
+								<include name="verifyLocationCode_DecendingSorting_Functionality"></include>
+								<include name="verifyLocationCode_AscendingSorting_Functionality"></include>
+								<include name="verifyLocationName_DecendingSorting_Functionality"></include>
+								<include name="verifyLocationName_AscendingSorting_Functionality"></include>
+								<include name="verifyLocationType_DecendingSorting_Functionality"></include>
+								<include name="verifyLocationType_AscendingSorting_Functionality"></include>
+								<include name="verifyCity_DecendingSorting_Functionality"></include>
+								<include name="verifyCity_AscendingSorting_Functionality"></include>
+								<include name="verifyState_DecendingSorting_Functionality"></include>
+								<include name="verifyState_AscendingSorting_Functionality"></include>
+								<include name="verifyActive_DecendingSorting_Functionality"></include>
+								<include name="verifyActive_AscendingSorting_Functionality"></include>
+								<include name="verifySKUName_DecendingSorting_Functionality"></include>
+								<include name="verifySKUName_AscendingSorting_Functionality"></include>
+								<include name="verifySKUNumber_DecendingSorting_Functionality"></include>
+								<include name="verifySKUNumber_AscendingSorting_Functionality"></include>
+								<include name="verifyStage_DecendingSorting_Functionality"></include>
+								<include name="verifyStage_AscendingSorting_Functionality"></include>
+								<include name="verifyQuantity_DecendingSorting_Functionality"></include>
+								<include name="verifyQuantity_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Reports_CycleCountPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Reports_CycleCountPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_CycleCountListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyAccountName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyAccountCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyAccountCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyLocationCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyLocationCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifySKUName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifySKUName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifySKU_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifySKU_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCurrentWIP_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCurrentWIP_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPhysicalWIP_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPhysicalWIP_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyVarianceWIP_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyVarianceWIP_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCurrentFG_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCurrentFG_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPhysicalFG_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPhysicalFG_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyVarianceFG_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyVarianceFG_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCurrentDamaged_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCurrentDamaged_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPhysicalDamaged_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPhysicalDamaged_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyVarianceDamaged_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyVarianceDamaged_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCurrentScrap_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyCurrentScrap_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPhysicalScrap_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPhysicalScrap_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyVarianceScrap_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyVarianceScrap_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Reports_CycleCountPageTest">
+					<classes>
+						<class name="tests.Reports_CycleCountPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_CycleCountListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyAccountName_DescendingSorting_Functionality"></include>
+								<include name="verifyAccountName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyAccountCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyAccountCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifyLocationCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyLocationCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifySKUName_DescendingSorting_Functionality"></include>
+ 							<include name="verifySKUName_AscendingSorting_Functionality"></include>
+ 							<include name="verifySKU_DescendingSorting_Functionality"></include>
+ 							<include name="verifySKU_AscendingSorting_Functionality"></include>
+ 							<include name="verifyCurrentWIP_DescendingSorting_Functionality"></include>
+ 							<include name="verifyCurrentWIP_AscendingSorting_Functionality"></include>
+ 							<include name="verifyPhysicalWIP_DescendingSorting_Functionality"></include>
+ 							<include name="verifyPhysicalWIP_AscendingSorting_Functionality"></include>
+ 							<include name="verifyVarianceWIP_DescendingSorting_Functionality"></include>
+ 							<include name="verifyVarianceWIP_AscendingSorting_Functionality"></include>
+ 							<include name="verifyCurrentFG_DescendingSorting_Functionality"></include>
+ 							<include name="verifyCurrentFG_AscendingSorting_Functionality"></include>
+ 							<include name="verifyPhysicalFG_DescendingSorting_Functionality"></include>
+ 							<include name="verifyPhysicalFG_AscendingSorting_Functionality"></include>
+ 							<include name="verifyVarianceFG_DescendingSorting_Functionality"></include>
+ 							<include name="verifyVarianceFG_AscendingSorting_Functionality"></include>
+ 							<include name="verifyCurrentDamaged_DescendingSorting_Functionality"></include>
+ 							<include name="verifyCurrentDamaged_AscendingSorting_Functionality"></include>
+ 							<include name="verifyPhysicalDamaged_DescendingSorting_Functionality"></include>
+ 							<include name="verifyPhysicalDamaged_AscendingSorting_Functionality"></include>
+ 							<include name="verifyVarianceDamaged_DescendingSorting_Functionality"></include>
+ 							<include name="verifyVarianceDamaged_AscendingSorting_Functionality"></include>
+ 							<include name="verifyCurrentScrap_DescendingSorting_Functionality"></include>
+ 							<include name="verifyCurrentScrap_AscendingSorting_Functionality"></include>
+ 							<include name="verifyPhysicalScrap_DescendingSorting_Functionality"></include>
+ 							<include name="verifyPhysicalScrap_AscendingSorting_Functionality"></include>
+ 							<include name="verifyVarianceScrap_DescendingSorting_Functionality"></include>
+ 							<include name="verifyVarianceScrap_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Reports_HistoricalInventoryByLocationPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Reports_HistoricalInventoryByLocationPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_HistoricalInventoryByLocationListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyAccountName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationCode_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationType_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationType_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCity_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCity_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyState_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyState_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUName_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUNumber_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUNumber_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyStage_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyStage_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyQuantity_DecendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyQuantity_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Reports_HistoricalInventoryByLocationPageTest">
+					<classes>
+						<class name="tests.Reports_HistoricalInventoryByLocationPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_HistoricalInventoryByLocationListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyAccountName_DecendingSorting_Functionality"></include>
+								<include name="verifyAccountName_AscendingSorting_Functionality"></include>
+								<include name="verifyAccountCode_DecendingSorting_Functionality"></include>
+								<include name="verifyAccountCode_AscendingSorting_Functionality"></include>
+								<include name="verifyLocationCode_DecendingSorting_Functionality"></include>
+								<include name="verifyLocationCode_AscendingSorting_Functionality"></include>
+								<include name="verifyLocationName_DecendingSorting_Functionality"></include>
+								<include name="verifyLocationName_AscendingSorting_Functionality"></include>
+								<include name="verifyLocationType_DecendingSorting_Functionality"></include>
+								<include name="verifyLocationType_AscendingSorting_Functionality"></include>
+								<include name="verifyCity_DecendingSorting_Functionality"></include>
+								<include name="verifyCity_AscendingSorting_Functionality"></include>
+								<include name="verifyState_DecendingSorting_Functionality"></include>
+								<include name="verifyState_AscendingSorting_Functionality"></include>
+								<include name="verifySKUName_DecendingSorting_Functionality"></include>
+								<include name="verifySKUName_AscendingSorting_Functionality"></include>
+								<include name="verifySKUNumber_DecendingSorting_Functionality"></include>
+								<include name="verifySKUNumber_AscendingSorting_Functionality"></include>
+								<include name="verifyStage_DecendingSorting_Functionality"></include>
+								<include name="verifyStage_AscendingSorting_Functionality"></include>
+								<include name="verifyQuantity_DecendingSorting_Functionality"></include>
+								<include name="verifyQuantity_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Reports_InventoryMovementsPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Reports_InventoryMovementsPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_InventoryMovementsListing_Page"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Reports_InventoryMovementsPageTest">
+					<classes>
+						<class name="tests.Reports_InventoryMovementsPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_InventoryMovementsListing_Page"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Reports_InventoryByStagePageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Reports_InventoryByStagePageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_InventoryByStageListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyZone_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZone_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyRegion_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyRegion_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyLocationCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyLocationCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyLocationName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyLocationName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyDamagedAccountCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyDamagedAccountCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifySKU_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifySKU_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifySKUName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifySKUName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyMonitorRecovery_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyMonitorRecovery_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyMonitorReplenish_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyMonitorReplenish_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationType_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyLocationType_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyInTransit_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyInTransit_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPendingReceipt_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyPendingReceipt_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyWIP_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyWIP_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyDamaged_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyDamaged_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyScrap_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyScrap_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyA99_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyA99_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyWriteOff_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyWriteOff_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFG_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyFG_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyDefaultZoneProviderCode_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyDefaultZoneProviderCode_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyDefaultZoneProviderName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyDefaultZoneProviderName_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Reports_InventoryByStagePageTest">
+					<classes>
+						<class name="tests.Reports_InventoryByStagePageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_InventoryByStageListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyZone_DescendingSorting_Functionality"></include>
+								<include name="verifyZone_AscendingSorting_Functionality"></include>
+								<include name="verifyRegion_DescendingSorting_Functionality"></include>
+ 							<include name="verifyRegion_AscendingSorting_Functionality"></include>
+ 							<include name="verifyLocationCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyLocationCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifyLocationName_DescendingSorting_Functionality"></include>
+ 							<include name="verifyLocationName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyDamagedAccountCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyDamagedAccountCode_AscendingSorting_Functionality"></include>
+								<include name="verifyAccountName_DescendingSorting_Functionality"></include>
+								<include name="verifyAccountName_AscendingSorting_Functionality"></include>
+ 							<include name="verifySKU_DescendingSorting_Functionality"></include>
+ 							<include name="verifySKU_AscendingSorting_Functionality"></include>
+ 							<include name="verifySKUName_DescendingSorting_Functionality"></include>
+ 							<include name="verifySKUName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyMonitorRecovery_DescendingSorting_Functionality"></include>
+ 							<include name="verifyMonitorRecovery_AscendingSorting_Functionality"></include>
+ 							<include name="verifyMonitorReplenish_DescendingSorting_Functionality"></include>
+								<include name="verifyMonitorReplenish_AscendingSorting_Functionality"></include>
+								<include name="verifyLocationType_DescendingSorting_Functionality"></include>
+ 							<include name="verifyLocationType_AscendingSorting_Functionality"></include>
+ 							<include name="verifyInTransit_DescendingSorting_Functionality"></include>
+ 							<include name="verifyInTransit_AscendingSorting_Functionality"></include>
+ 							<include name="verifyPendingReceipt_DescendingSorting_Functionality"></include>
+ 							<include name="verifyPendingReceipt_AscendingSorting_Functionality"></include>
+ 							<include name="verifyWIP_DescendingSorting_Functionality"></include>
+ 							<include name="verifyWIP_AscendingSorting_Functionality"></include>
+ 							<include name="verifyDamaged_DescendingSorting_Functionality"></include>
+ 							<include name="verifyDamaged_AscendingSorting_Functionality"></include>
+ 							<include name="verifyScrap_DescendingSorting_Functionality"></include>
+ 							<include name="verifyScrap_AscendingSorting_Functionality"></include>
+ 							<include name="verifyA99_DescendingSorting_Functionality"></include>
+ 							<include name="verifyA99_AscendingSorting_Functionality"></include>
+								<include name="verifyWriteOff_DescendingSorting_Functionality"></include>
+								<include name="verifyWriteOff_AscendingSorting_Functionality"></include>
+ 							<include name="verifyFG_DescendingSorting_Functionality"></include>
+ 							<include name="verifyFG_AscendingSorting_Functionality"></include>
+ 							<include name="verifyDefaultZoneProviderCode_DescendingSorting_Functionality"></include>
+ 							<include name="verifyDefaultZoneProviderCode_AscendingSorting_Functionality"></include>
+ 							<include name="verifyDefaultZoneProviderName_DescendingSorting_Functionality"></include>
+ 							<include name="verifyDefaultZoneProviderName_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Reports_InventoryBy99sPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Reports_InventoryBy99sPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_Inventory99sListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Reports_InventoryBy99sPageTest">
+					<classes>
+						<class name="tests.Reports_InventoryBy99sPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_Inventory99sListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Reports_ArchivePageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Reports_ArchivePageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_Reports_ArchiveListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyReport_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyReport_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyName_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyName_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOwner_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyOwner_AscendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyRequestedBy_DescendingSorting_Functionality"></include> -->
-<!--  							<include name="verifyRequestedBy_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Reports_ArchivePageTest">
+					<classes>
+						<class name="tests.Reports_ArchivePageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_Reports_ArchiveListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyReport_DescendingSorting_Functionality"></include>
+								<include name="verifyReport_AscendingSorting_Functionality"></include>
+ 							<include name="verifyName_DescendingSorting_Functionality"></include>
+ 							<include name="verifyName_AscendingSorting_Functionality"></include>
+ 							<include name="verifyOwner_DescendingSorting_Functionality"></include>
+ 							<include name="verifyOwner_AscendingSorting_Functionality"></include>
+ 							<include name="verifyRequestedBy_DescendingSorting_Functionality"></include>
+ 							<include name="verifyRequestedBy_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Admin_ProgramsPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Admin_ProgramsPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_ProgramsListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCode_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccount_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccount_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocations_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocations_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUS_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUS_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Admin_ProgramsPageTest">
+					<classes>
+						<class name="tests.Admin_ProgramsPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_ProgramsListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyName_DescendingSorting_Functionality"></include>
+								<include name="verifyName_AscendingSorting_Functionality"></include>
+								<include name="verifyCode_DescendingSorting_Functionality"></include>
+								<include name="verifyCode_AscendingSorting_Functionality"></include>
+								<include name="verifyAccount_DescendingSorting_Functionality"></include>
+								<include name="verifyAccount_AscendingSorting_Functionality"></include>
+								<include name="verifyLocations_DescendingSorting_Functionality"></include>
+								<include name="verifyLocations_AscendingSorting_Functionality"></include>
+								<include name="verifySKUS_DescendingSorting_Functionality"></include>
+								<include name="verifySKUS_AscendingSorting_Functionality"></include>
+								<include name="verifyCreateNewProgram_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Admin_SKUManagementsPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Admin_SKUManagementsPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_SKUManagementsListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifySKU_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKU_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySKUName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyType_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyType_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccount_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccount_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyRecoveryValue_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyRecoveryValue_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyRecoveryValueOverride_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyRecoveryValueOverride_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLength_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLength_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyWidth_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyWidth_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyHeight_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyHeight_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyWeight_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyWeight_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyNotifiable_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyNotifiable_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyOrderable_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyOrderable_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyConfirmable_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyConfirmable_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastUpdatedBy_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastUpdatedBy_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Admin_SKUManagementsPageTest">
+					<classes>
+						<class name="tests.Admin_SKUManagementsPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_SKUManagementsListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifySKU_DescendingSorting_Functionality"></include>
+								<include name="verifySKU_AscendingSorting_Functionality"></include>
+								<include name="verifySKUName_DescendingSorting_Functionality"></include>
+								<include name="verifySKUName_AscendingSorting_Functionality"></include>
+								<include name="verifyType_DescendingSorting_Functionality"></include>
+								<include name="verifyType_AscendingSorting_Functionality"></include>
+								<include name="verifyAccount_DescendingSorting_Functionality"></include>
+								<include name="verifyAccount_AscendingSorting_Functionality"></include>
+								<include name="verifyRecoveryValue_DescendingSorting_Functionality"></include>
+								<include name="verifyRecoveryValue_AscendingSorting_Functionality"></include>
+								<include name="verifyRecoveryValueOverride_DescendingSorting_Functionality"></include>
+								<include name="verifyRecoveryValueOverride_AscendingSorting_Functionality"></include>
+								<include name="verifyLength_DescendingSorting_Functionality"></include>
+								<include name="verifyLength_AscendingSorting_Functionality"></include>
+								<include name="verifyWidth_DescendingSorting_Functionality"></include>
+								<include name="verifyWidth_AscendingSorting_Functionality"></include>
+								<include name="verifyHeight_DescendingSorting_Functionality"></include>
+								<include name="verifyHeight_AscendingSorting_Functionality"></include>
+								<include name="verifyWeight_DescendingSorting_Functionality"></include>
+								<include name="verifyWeight_AscendingSorting_Functionality"></include>
+								<include name="verifyNotifiable_DescendingSorting_Functionality"></include>
+								<include name="verifyNotifiable_AscendingSorting_Functionality"></include>
+								<include name="verifyOrderable_DescendingSorting_Functionality"></include>
+								<include name="verifyOrderable_AscendingSorting_Functionality"></include>
+								<include name="verifyConfirmable_DescendingSorting_Functionality"></include>
+								<include name="verifyConfirmable_AscendingSorting_Functionality"></include>
+								<include name="verifyLastUpdatedBy_DescendingSorting_Functionality"></include>
+								<include name="verifyLastUpdatedBy_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Admin_PlansPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Admin_PlansPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_PlansListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyID_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyID_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProgram_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProgram_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyManagedBy_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyManagedBy_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyType_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyType_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBasePlan_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyBasePlan_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyActiveEnd_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyActiveEnd_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyDisabled_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyDisabled_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Admin_PlansPageTest">
+					<classes>
+						<class name="tests.Admin_PlansPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_PlansListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyID_DescendingSorting_Functionality"></include>
+								<include name="verifyID_AscendingSorting_Functionality"></include>
+								<include name="verifyName_DescendingSorting_Functionality"></include>
+								<include name="verifyName_AscendingSorting_Functionality"></include>
+								<include name="verifyProgram_DescendingSorting_Functionality"></include>
+								<include name="verifyProgram_AscendingSorting_Functionality"></include>
+								<include name="verifyManagedBy_DescendingSorting_Functionality"></include>
+								<include name="verifyManagedBy_AscendingSorting_Functionality"></include>
+								<include name="verifyType_DescendingSorting_Functionality"></include>
+								<include name="verifyType_AscendingSorting_Functionality"></include>
+								<include name="verifyBasePlan_DescendingSorting_Functionality"></include>
+								<include name="verifyBasePlan_AscendingSorting_Functionality"></include>
+								<include name="verifyDisabled_DescendingSorting_Functionality"></include>
+								<include name="verifyDisabled_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Admin_UsersPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Admin_UsersPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_UsersListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyUserID_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyUserID_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyEmail_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyEmail_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyAccountName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyActive_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyActive_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Admin_UsersPageTest">
+					<classes>
+						<class name="tests.Admin_UsersPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_UsersListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyUserID_DescendingSorting_Functionality"></include>
+								<include name="verifyUserID_AscendingSorting_Functionality"></include>
+								<include name="verifyName_DescendingSorting_Functionality"></include>
+								<include name="verifyName_AscendingSorting_Functionality"></include>
+								<include name="verifyEmail_DescendingSorting_Functionality"></include>
+								<include name="verifyEmail_AscendingSorting_Functionality"></include>
+								<include name="verifyAccountName_DescendingSorting_Functionality"></include>
+								<include name="verifyAccountName_AscendingSorting_Functionality"></include>
+								<include name="verifyActive_DescendingSorting_Functionality"></include>
+								<include name="verifyActive_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
 <!-- 				<test name="Admin_MasterAdjustmentPageTest"> -->
 <!-- 					<classes> -->
@@ -1275,61 +1270,59 @@
 <!-- 					</classes> -->
 <!-- 				</test> -->
 				
-<!-- 				<test name="Admin_CallPriorityTypesPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Admin_CallPriorityTypesPageTest"> -->
-<!-- 							<methods> -->
-<!-- 							<include name="verify_Valid_Login"></include> -->
-<!-- 							<include name="redirection_To_CallPriorityTypesListingPage"></include> -->
-<!-- 							<include name="verifyPagination_Functionality"></include> -->
-<!-- 							<include name="verifyType_DescendingSorting_Functionality"></include> -->
-<!-- 							<include name="verifyType_AscendingSorting_Functionality"></include> -->
-<!-- 							<include name="verifyActive_DescendingSorting_Functionality"></include> -->
-<!-- 							<include name="verifyActive_AscendingSorting_Functionality"></include>	 -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Admin_CallPriorityTypesPageTest">
+					<classes>
+						<class name="tests.Admin_CallPriorityTypesPageTest">
+							<methods>
+							<include name="verify_Valid_Login"></include>
+							<include name="redirection_To_CallPriorityTypesListingPage"></include>
+							<include name="verifyPagination_Functionality"></include>
+							<include name="verifyType_DescendingSorting_Functionality"></include>
+							<include name="verifyType_AscendingSorting_Functionality"></include>
+							<include name="verifyActive_DescendingSorting_Functionality"></include>
+							<include name="verifyActive_AscendingSorting_Functionality"></include>	
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Admin_WeekNumbersPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Admin_WeekNumbersPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_WeekNumbersListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyStartDate_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyStartDate_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastUpdatedBy_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLastUpdatedBy_AscendingSorting_Functionality"></include>	 -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Admin_WeekNumbersPageTest">
+					<classes>
+						<class name="tests.Admin_WeekNumbersPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_WeekNumbersListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyName_DescendingSorting_Functionality"></include>
+								<include name="verifyName_AscendingSorting_Functionality"></include>
+								<include name="verifyStartDate_DescendingSorting_Functionality"></include>
+								<include name="verifyStartDate_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
-<!-- 				<test name="Admin_ZonesPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Admin_ZonesPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_ZonesListing_Page"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyZone_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyZone_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyDescription_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyDescription_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProviderLocCode_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProviderLocName_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyProviderLocName_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationsCount_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyLocationsCount_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Admin_ZonesPageTest">
+					<classes>
+						<class name="tests.Admin_ZonesPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_ZonesListing_Page"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyZone_DescendingSorting_Functionality"></include>
+								<include name="verifyZone_AscendingSorting_Functionality"></include>
+								<include name="verifyDescription_DescendingSorting_Functionality"></include>
+								<include name="verifyDescription_AscendingSorting_Functionality"></include>
+								<include name="verifyProviderLocCode_DescendingSorting_Functionality"></include>
+								<include name="verifyProviderLocCode_AscendingSorting_Functionality"></include>
+								<include name="verifyProviderLocName_DescendingSorting_Functionality"></include>
+								<include name="verifyProviderLocName_AscendingSorting_Functionality"></include>
+								<include name="verifyLocationsCount_DescendingSorting_Functionality"></include>
+								<include name="verifyLocationsCount_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
 <!-- 				<test name="Admin_ImportsPageTest"> -->
 <!-- 					<classes> -->
@@ -1342,31 +1335,31 @@
 <!-- 					</classes> -->
 <!-- 				</test> -->
 				
-<!-- 				<test name="Admin_ImportedFilesPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Admin_ImportedFilesPageTest"> -->
-<!-- 							<methods> -->
-<!-- 								<include name="verify_Valid_Login"></include> -->
-<!-- 								<include name="redirection_To_ImportedFilesListingPage"></include> -->
-<!-- 								<include name="verifyPagination_Functionality"></include> -->
-<!-- 								<include name="verifyID_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyID_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyImportType_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyImportType_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyTotalLines_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyTotalLines_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySuccessful_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifySuccessful_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyErrors_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyErrors_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyUnProcessed_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyUnProcessed_AscendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyUser_DescendingSorting_Functionality"></include> -->
-<!-- 								<include name="verifyUser_AscendingSorting_Functionality"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Admin_ImportedFilesPageTest">
+					<classes>
+						<class name="tests.Admin_ImportedFilesPageTest">
+							<methods>
+								<include name="verify_Valid_Login"></include>
+								<include name="redirection_To_ImportedFilesListingPage"></include>
+								<include name="verifyPagination_Functionality"></include>
+								<include name="verifyID_DescendingSorting_Functionality"></include>
+								<include name="verifyID_AscendingSorting_Functionality"></include>
+								<include name="verifyImportType_DescendingSorting_Functionality"></include>
+								<include name="verifyImportType_AscendingSorting_Functionality"></include>
+								<include name="verifyTotalLines_DescendingSorting_Functionality"></include>
+								<include name="verifyTotalLines_AscendingSorting_Functionality"></include>
+								<include name="verifySuccessful_DescendingSorting_Functionality"></include>
+								<include name="verifySuccessful_AscendingSorting_Functionality"></include>
+								<include name="verifyErrors_DescendingSorting_Functionality"></include>
+								<include name="verifyErrors_AscendingSorting_Functionality"></include>
+								<include name="verifyUnProcessed_DescendingSorting_Functionality"></include>
+								<include name="verifyUnProcessed_AscendingSorting_Functionality"></include>
+								<include name="verifyUser_DescendingSorting_Functionality"></include>
+								<include name="verifyUser_AscendingSorting_Functionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 				
 <!-- 				<test name="Admin_ToolsPageTest"> -->
 <!-- 					<classes> -->
@@ -1389,9 +1382,6 @@
 <!-- 						</class> -->
 <!-- 					</classes> -->
 <!-- 				</test> -->
-				
-
-					
-	
+			
+			
 </suite> <!-- Suite -->
-

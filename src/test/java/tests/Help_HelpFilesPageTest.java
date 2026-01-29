@@ -16,8 +16,7 @@ import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 
-public class Help_HelpFilesPageTest 
-{
+public class Help_HelpFilesPageTest {
 
 	// This line used to create object for driver base class
 	WebDriverBase webDB = new WebDriverBase();
@@ -27,13 +26,12 @@ public class Help_HelpFilesPageTest
 	static CommonFunctions commonFunction = new CommonFunctions();
 	static Help_HelpFilesPageFunctional helppagefunctional = new Help_HelpFilesPageFunctional();
 	static loginPage loginpage = new loginPage();
-	
+
 	/**
 	 * This method used to open browser before test start
 	 */
 	@BeforeTest
-	public void browser_Setup() throws FileNotFoundException, IOException, Exception
-	{
+	public void browser_Setup() throws FileNotFoundException, IOException, Exception {
 		webDB.Setup(System.getProperty("Platform"));
 		// This line used to get data from config properties
 		String SiteUrl = webDB.getDataFromProperties("url");
@@ -41,30 +39,28 @@ public class Help_HelpFilesPageTest
 		webDB.enterURL(SiteUrl);
 		Thread.sleep(2000);
 	}
-	
+
 	@Test(description = "Verify valid login")
-	public void verify_Valid_Login() throws InterruptedException 
-	{
+	public void verify_Valid_Login() throws InterruptedException {
 		flag = loginpage.validLogin();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(description = "Redirect to Helps Help files listing page")
-	public void redirection_To_HelpFilesListing_Page() throws InterruptedException 
-	{
+	public void redirection_To_HelpFilesListing_Page() throws InterruptedException {
 		flag = helppagefunctional.navigate_Help_HelpFilesListingPage();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@AfterTest
 	public void browser_Close() {
 		webDB.tearDown();
 	}
-	
-	@AfterSuite
-	public void SendMail() throws Exception {
-		Mailer mailer = new Mailer();
-		mailer.execute("RMS Automation Report");
-	}
+
+//	@AfterSuite
+//	public void SendMail() throws Exception {
+//		Mailer mailer = new Mailer();
+//		mailer.execute("RMS Automation Report");
+//	}
 
 }
