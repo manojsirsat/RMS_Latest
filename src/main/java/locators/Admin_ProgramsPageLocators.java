@@ -2,7 +2,8 @@ package locators;
 
 import org.openqa.selenium.By;
 
-public class Admin_ProgramsPageLocators {
+public class Admin_ProgramsPageLocators 
+{
 
 	/** XPATH */
 	public static final String ADMIN_PROGRAMPAGE_HEADING = "//div[text()='Programs']";

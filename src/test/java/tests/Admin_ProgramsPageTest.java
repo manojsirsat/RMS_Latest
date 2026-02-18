@@ -60,7 +60,7 @@ public class Admin_ProgramsPageTest {
 
 	@Test(description = "Verify Name Descending Sorting functionality of Admin Programs listing page")
 	public void verifyName_DescendingSorting_Functionality() throws InterruptedException {
-		flag = programpagefunctional.Name_DecendingSorting();
+		flag = programpagefunctional.name_DecendingSorting();
 		Assert.assertTrue(flag);
 	}
 

@@ -378,6 +378,7 @@ public class CommonFunctions {
 				verifyPaginatedStringDescending(columndata1, CommonFunctionsLocators.nextBtn);
 			}
 		}
+		
 	}
 
 	/**

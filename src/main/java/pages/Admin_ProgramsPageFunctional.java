@@ -51,7 +51,7 @@ public class Admin_ProgramsPageFunctional {
 	 * @return flag This method is used to verify the descending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Name_DecendingSorting() throws InterruptedException {
+	public boolean name_DecendingSorting() throws InterruptedException {
 		commonfunction.validatePaginatedStringDecendingSorting(Admin_ProgramsPageLocators.STRING_NAME_COLHEADER,
 				ElementType.Xpath, Admin_ProgramsPageLocators.BY_NAME_COLHEADER,
 				Admin_ProgramsPageLocators.STRING_NAME_COLDATA, ElementType.Xpath,
