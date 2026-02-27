@@ -1,6 +1,11 @@
 package pages;
 
+import org.openqa.selenium.By;
+
+import com.github.javafaker.Faker;
+
 import commonfunctions.CommonFunctions;
+import locators.Admin_SKUManagementsPageLocators;
 import locators.Admin_SKUManagementsPageLocators;
 import locators.CommonFunctionsLocators;
 import utils.ReportLoger;
@@ -13,7 +18,8 @@ public class Admin_SKUManagementsPageFunctional {
 	static CommonFunctions commonfunction = new CommonFunctions();
 	WebDriverBase webDB = new WebDriverBase();
 	static ReportLoger log = new ReportLoger();
-
+	Faker faker = new Faker();
+	
 	/**
 	 * @author
 	 * @return flag This method is used to navigate to Admin SKU Managements page
@@ -418,6 +424,233 @@ public class Admin_SKUManagementsPageFunctional {
 				Admin_SKUManagementsPageLocators.BY_LASTUPDATEDBY_COLHEADER,
 				Admin_SKUManagementsPageLocators.STRING_LASTUPDATEDBY_COLDATA, ElementType.Xpath,
 				Admin_SKUManagementsPageLocators.BY_LASTUPDATEDBY_COLDATA);
+		return flag;
+	}
+	
+	/**
+	 * @author
+	 * @return flag This method is used to click on create new sku button
+	 * @throws InterruptedException
+	 */
+	public boolean click_CreateNewSKUBtn() throws InterruptedException {
+		webDB.navigateToRefresh();
+		Thread.sleep(2000);
+		flag = webDB.isElementDisplayed(Admin_SKUManagementsPageLocators.CREATE_NEW_SKU_BTN, ElementType.Xpath);
+		if (flag) {
+			webDB.clickAnElement(Admin_SKUManagementsPageLocators.CREATE_NEW_SKU_BTN, ElementType.Xpath);
+			Thread.sleep(1500);
+			flag = webDB.waitForElement(Admin_SKUManagementsPageLocators.NAME_INPUTFIELD, ElementType.Xpath);
+			if (flag) {
+				log.logging("info", "Navigated to Create New Program Page");
+			}
+		}
+		return flag;
+	}
+
+	/**
+	 * @author
+	 * @return flag This method is used to fill the SKU details
+	 * @throws InterruptedException
+	 */
+	public boolean fill_SKU_Details() throws InterruptedException {
+		String firstname = faker.name().firstName();
+		String lastname = faker.name().lastName();
+		String name = faker.name().fullName();
+		String description = faker.lorem().paragraph();
+		Double length1 = faker.number().randomDouble(2, 0, 9);
+		String length = Double.toString(length1);
+		Double width1 = faker.number().randomDouble(2, 0, 9);
+		String width = Double.toString(width1);
+		Double height1 = faker.number().randomDouble(2, 0, 9);
+		String height = Double.toString(height1);
+		Double weight1 = faker.number().randomDouble(2, 0, 9);
+		String weight = Double.toString(weight1);
+		int palletqty1 = faker.number().numberBetween(1, 30);
+		String palletqty = String.valueOf(palletqty1);
+		
+		flag = webDB.sendTextToAnElement(Admin_SKUManagementsPageLocators.SKU_INPUTFIELD, firstname + " sku test",
+				ElementType.Xpath);
+		if (flag) {
+			Thread.sleep(750);
+			log.logging("info", "Entered SKU as: " + firstname + " sku test");
+			flag = webDB.sendTextToAnElement(Admin_SKUManagementsPageLocators.NAME_INPUTFIELD, firstname + " sku test",
+					ElementType.Xpath);
+			if (flag) {
+				Thread.sleep(750);
+				log.logging("info", "Entered name as: " + firstname + " sku test");
+
+				flag = webDB.sendTextToAnElement(Admin_SKUManagementsPageLocators.DESCRIPTION_INPUTFIELD,
+						"This is a testing SKU", ElementType.Xpath);
+				if (flag) {
+					Thread.sleep(750);
+					log.logging("info", "Entered description as: " + "This is a testing SKU");
+					flag = webDB.clearTextField(Admin_SKUManagementsPageLocators.LENGTH_INPUTFIELD, ElementType.Xpath);
+					if (flag) {
+						Thread.sleep(750);
+						webDB.sendTextToAnElement(Admin_SKUManagementsPageLocators.LENGTH_INPUTFIELD, length,
+								ElementType.Xpath);
+						if (flag) {
+							Thread.sleep(750);
+							log.logging("info", "Entered length as: " + length);
+							flag = webDB.clearTextField(Admin_SKUManagementsPageLocators.WIDTH_INPUTFIELD,
+									ElementType.Xpath);
+							if (flag) {
+								Thread.sleep(750);
+								webDB.sendTextToAnElement(Admin_SKUManagementsPageLocators.WIDTH_INPUTFIELD, width,
+										ElementType.Xpath);
+								if (flag) {
+									Thread.sleep(750);
+									log.logging("info", "Entered width as: " + width);
+									flag = webDB.clearTextField(Admin_SKUManagementsPageLocators.HEIGHT_INPUTFIELD,
+											ElementType.Xpath);
+									if (flag) {
+										Thread.sleep(750);
+										webDB.sendTextToAnElement(Admin_SKUManagementsPageLocators.HEIGHT_INPUTFIELD,
+												height, ElementType.Xpath);
+										if (flag) {
+											Thread.sleep(750);
+											log.logging("info", "Entered height as: " + height);
+											flag = webDB.clearTextField(
+													Admin_SKUManagementsPageLocators.WEIGHT_INPUTFIELD,
+													ElementType.Xpath);
+											if (flag) {
+												Thread.sleep(750);
+												webDB.sendTextToAnElement(
+														Admin_SKUManagementsPageLocators.WEIGHT_INPUTFIELD, weight,
+														ElementType.Xpath);
+												if (flag) {
+													Thread.sleep(750);
+													log.logging("info", "Entered weight as: " + weight);
+
+													webDB.clickAnElement(
+															Admin_SKUManagementsPageLocators.NATIONAL_MOTOR_FREIGHT_CLASSIFICATION_DRPDWN,
+															ElementType.Xpath);
+													Thread.sleep(750);
+													int drpdownoptions = webDB.getDriver().findElements(By.xpath(
+															Admin_SKUManagementsPageLocators.NATIONAL_MOTOR_FREIGHT_CLASSIFICATION_DRPDWN_OPTIONS))
+															.size();
+													int oneoption = faker.number().numberBetween(1, drpdownoptions);
+													flag = webDB.clickAnElement(
+															Admin_SKUManagementsPageLocators.NATIONAL_MOTOR_FREIGHT_CLASSIFICATION_DRPDWN_OPTIONS
+																	+ "[" + oneoption + "]",
+															ElementType.Xpath);
+													if (flag) {
+														Thread.sleep(750);
+														String selectednationalmotorfreight = webDB
+																.getAttributeFromElement(
+																		Admin_SKUManagementsPageLocators.NATIONAL_MOTOR_FREIGHT_CLASSIFICATION_DRPDWN_OPTIONS_SELECTED,
+																		ElementType.Xpath, "value");
+														log.logging("info",
+																"Selected National motor freight classification is: "
+																		+ selectednationalmotorfreight);
+														flag = webDB.clearTextField(
+																Admin_SKUManagementsPageLocators.PALLETQTY_INPUTFIELD,
+																ElementType.Xpath);
+														if (flag) {
+															Thread.sleep(750);
+															webDB.sendTextToAnElement(
+																	Admin_SKUManagementsPageLocators.PALLETQTY_INPUTFIELD,
+																	height, ElementType.Xpath);
+															if (flag) {
+																Thread.sleep(750);
+																log.logging("info",
+																		"Entered pallet qty as: " + palletqty);
+
+																webDB.clickAnElement(
+																		Admin_SKUManagementsPageLocators.ACCOUNT_DRPDWN,
+																		ElementType.Xpath);
+																Thread.sleep(750);
+																int drpdownoptions1 = webDB.getDriver().findElements(By
+																		.xpath(Admin_SKUManagementsPageLocators.ACCOUNT_DRPDWN_OPTIONS))
+																		.size();
+																int oneoption1 = faker.number().numberBetween(1,
+																		drpdownoptions1);
+																flag = webDB.clickAnElement(
+																		Admin_SKUManagementsPageLocators.ACCOUNT_DRPDWN_OPTIONS
+																				+ "[" + oneoption1 + "]",
+																		ElementType.Xpath);
+																if (flag) {
+																	Thread.sleep(750);
+																	String selectedaccount = webDB
+																			.getAttributeFromElement(
+																					Admin_SKUManagementsPageLocators.ACCOUNT_DRPDWN_OPTIONS_SELECTED,
+																					ElementType.Xpath, "value");
+																	log.logging("info",
+																			"Selected account is: " + selectedaccount);
+																	webDB.clickAnElement(
+																			Admin_SKUManagementsPageLocators.TYPE_DRPDWN,
+																			ElementType.Xpath);
+																	Thread.sleep(750);
+																	int drpdownoptions2 = webDB.getDriver()
+																			.findElements(By.xpath(
+																					Admin_SKUManagementsPageLocators.TYPE_DRPDWN_OPTIONS))
+																			.size();
+																	int oneoption2 = faker.number().numberBetween(1,
+																			drpdownoptions2);
+																	flag = webDB.clickAnElement(
+																			Admin_SKUManagementsPageLocators.TYPE_DRPDWN_OPTIONS
+																					+ "[" + oneoption2 + "]",
+																			ElementType.Xpath);
+																	if (flag) {
+																		Thread.sleep(750);
+																		String selectedtype = webDB
+																				.getAttributeFromElement(
+																						Admin_SKUManagementsPageLocators.TYPE_DRPDWN_OPTIONS_SELECTED,
+																						ElementType.Xpath, "value");
+																		log.logging("info",
+																				"Selected type as: " + selectedtype);
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		return flag;
+	}
+
+	/**
+	 * @author
+	 * @return flag This method is used to click on save button after filling form
+	 *         details
+	 * @throws InterruptedException
+	 */
+	public boolean click_CreateBtn() throws InterruptedException {
+		flag = webDB.waitForClickElement(Admin_SKUManagementsPageLocators.SAVE_BTN, ElementType.Xpath);
+		if (flag) {
+			webDB.clickAnElement(Admin_SKUManagementsPageLocators.SAVE_BTN, ElementType.Xpath);
+			Thread.sleep(1500);
+			flag = webDB.waitForElement(Admin_SKUManagementsPageLocators.EDITSKU_HEADING, ElementType.Xpath);
+			if (flag) {
+				log.logging("info", "New SKU is created successfully");
+			}
+		}
+		return flag;
+	}
+	
+	/**
+	 * @author
+	 * @return flag This method is used to verify create new SKU functionality
+	 * @throws InterruptedException
+	 */
+	public boolean create_NewSKU() throws InterruptedException {
+		flag = click_CreateNewSKUBtn();
+		if (flag) {
+			flag = fill_SKU_Details();
+			if (flag) {
+				flag = click_CreateBtn();
+			}
+		}
 		return flag;
 	}
 

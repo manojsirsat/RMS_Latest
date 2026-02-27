@@ -154,6 +154,12 @@ public class Admin_PlansPageTest {
 		Assert.assertTrue(flag);
 	}
 
+	@Test(description = "Verify create new Plan functionality from Plans listing page")
+	public void verifyCreateNewPlan_Functionality() throws InterruptedException {
+		flag = planpagefunctional.create_NewPlan();
+		Assert.assertTrue(flag);
+	}
+	
 	@AfterTest
 	public void browser_Close() {
 		webDB.tearDown();

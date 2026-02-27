@@ -1,6 +1,12 @@
 package pages;
 
+import org.openqa.selenium.By;
+
+import com.github.javafaker.Faker;
+
 import commonfunctions.CommonFunctions;
+import locators.Admin_PlansPageLocators;
+import locators.Admin_PlansPageLocators;
 import locators.Admin_PlansPageLocators;
 import locators.CommonFunctionsLocators;
 import utils.ReportLoger;
@@ -13,7 +19,8 @@ public class Admin_PlansPageFunctional {
 	static CommonFunctions commonfunction = new CommonFunctions();
 	WebDriverBase webDB = new WebDriverBase();
 	static ReportLoger log = new ReportLoger();
-
+	Faker faker = new Faker();
+	
 	/**
 	 * @author
 	 * @return flag This method is used to navigate to Admin Plans page
@@ -245,5 +252,129 @@ public class Admin_PlansPageFunctional {
 				Admin_PlansPageLocators.BY_DISABLED_COLDATA);
 		return flag;
 	}
+	
+	/**
+	 * @author
+	 * @return flag This method is used to click on create new plan button
+	 * @throws InterruptedException
+	 */
+	public boolean click_CreateNewPlanBtn() throws InterruptedException {
+		webDB.navigateToRefresh();
+		Thread.sleep(2000);
+		flag = webDB.isElementDisplayed(Admin_PlansPageLocators.CREATE_NEW_PLAN_BTN, ElementType.Xpath);
+		if (flag) {
+			webDB.clickAnElement(Admin_PlansPageLocators.CREATE_NEW_PLAN_BTN, ElementType.Xpath);
+			Thread.sleep(1500);
+			flag = webDB.waitForElement(Admin_PlansPageLocators.PLANNAME_INPUTFIELD, ElementType.Xpath);
+			if (flag) {
+				log.logging("info", "Navigated to Create New Plan Page");
+			}
+		}
+		return flag;
+	}
+	
+	/**
+	 * @author
+	 * @return flag This method is used to fill the plan details
+	 * @throws InterruptedException
+	 */
+	public boolean fill_Plan_Details() throws InterruptedException {
+		String firstname = faker.name().firstName();
+		String lastname = faker.name().lastName();
+		String name = faker.name().fullName();
+		String description = faker.lorem().paragraph();
+		flag = webDB.sendTextToAnElement(Admin_PlansPageLocators.PLANNAME_INPUTFIELD, firstname + " plan test",
+				ElementType.Xpath);
+		if (flag) {
+			Thread.sleep(750);
+			log.logging("info", "Entered SKU as: " + firstname + " plan test");
+			webDB.clickAnElement(Admin_PlansPageLocators.PROGRAM_DRPDWN, ElementType.Xpath);
+			Thread.sleep(750);
+			int drpdownoptions2 = webDB.getDriver()
+					.findElements(By.xpath(Admin_PlansPageLocators.PROGRAM_DRPDWN_OPTIONS)).size();
+			int oneoption2 = faker.number().numberBetween(1, drpdownoptions2);
+			flag = webDB.clickAnElement(
+					Admin_PlansPageLocators.PROGRAM_DRPDWN_OPTIONS + "[" + oneoption2 + "]",
+					ElementType.Xpath);
+			if (flag) {
+				Thread.sleep(750);
+				String selectedprogram = webDB.getAttributeFromElement(
+						Admin_PlansPageLocators.PROGRAM_DRPDWN_OPTIONS_SELECTED, ElementType.Xpath,
+						"value");
+				log.logging("info", "Selected Program as: " + selectedprogram);
+			
+					webDB.clickAnElement(Admin_PlansPageLocators.PLANTYPE_DRPDWN, ElementType.Xpath);
+						Thread.sleep(750);
+						int drpdownoptions3 = webDB.getDriver()
+								.findElements(By.xpath(Admin_PlansPageLocators.PLANTYPE_DRPDWN_OPTIONS)).size();
+						int oneoption3 = faker.number().numberBetween(1, drpdownoptions3);
+						flag = webDB.clickAnElement(
+								Admin_PlansPageLocators.PLANTYPE_DRPDWN_OPTIONS + "[" + oneoption3 + "]",
+								ElementType.Xpath);
+						if (flag) {
+							Thread.sleep(750);
+							String selectedtype = webDB.getAttributeFromElement(
+									Admin_PlansPageLocators.PLANTYPE_DRPDWN_OPTIONS_SELECTED, ElementType.Xpath,
+									"value");
+							log.logging("info", "Selected type as: " + selectedtype);
+							webDB.clickAnElement(Admin_PlansPageLocators.MANAGINGACCOUNT_DRPDWN, ElementType.Xpath);
+							Thread.sleep(750);
+							int drpdownoptions1 = webDB.getDriver()
+									.findElements(By.xpath(Admin_PlansPageLocators.MANAGINGACCOUNT_DRPDWN_OPTIONS)).size();
+							int oneoption1 = faker.number().numberBetween(1, drpdownoptions1);
+							flag = webDB.clickAnElement(
+									Admin_PlansPageLocators.MANAGINGACCOUNT_DRPDWN_OPTIONS + "[" + oneoption1 + "]",
+									ElementType.Xpath);
+							if (flag) {
+								Thread.sleep(750);
+								String selectedaccount = webDB.getAttributeFromElement(
+										Admin_PlansPageLocators.MANAGINGACCOUNT_DRPDWN_OPTIONS_SELECTED, ElementType.Xpath,
+										"value");
+								log.logging("info", "Selected managing account is: " + selectedaccount);
+							}
+						}
+					}
+				}
+		
+
+		return flag;
+	}
+
+
+	/**
+	 * @author
+	 * @return flag This method is used to click on save button after filling form
+	 *         details
+	 * @throws InterruptedException
+	 */
+	public boolean click_CreateBtn() throws InterruptedException {
+		flag = webDB.waitForClickElement(Admin_PlansPageLocators.SAVE_BTN, ElementType.Xpath);
+		if (flag) {
+			webDB.clickAnElement(Admin_PlansPageLocators.SAVE_BTN, ElementType.Xpath);
+			Thread.sleep(1500);
+			flag = webDB.waitForElement(Admin_PlansPageLocators.EDITPLAN_HEADING, ElementType.Xpath);
+			if (flag) {
+				log.logging("info", "New Plan is created successfully");
+			}
+		}
+		return flag;
+	}
+	
+	/**
+	 * @author
+	 * @return flag This method is used to verify create new Plan functionality
+	 * @throws InterruptedException
+	 */
+	public boolean create_NewPlan() throws InterruptedException {
+		flag = click_CreateNewPlanBtn();
+		if (flag) {
+//			flag = fill_Plan_Details();
+			if (flag) {
+				flag = click_CreateBtn();
+			}
+		}
+		return flag;
+	}
+
 
 }

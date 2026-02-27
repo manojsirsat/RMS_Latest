@@ -1105,7 +1105,7 @@ public class Accounts_LocationsPageFunctional {
 		if (flag) {
 			webDB.clickAnElement(Accounts_LocationsPageLocators.CREATE_BTN, ElementType.Xpath);
 			Thread.sleep(1500);
-			flag = webDB.waitForElement(Accounts_LocationsPageLocators.NAME_INPUTFIELD,
+			flag = webDB.waitForElement(Accounts_LocationsPageLocators.EDIT_LOCATIONPAGE,
 					ElementType.Xpath);
 			if (flag) {
 				log.logging("info", "New location is created successfully");

@@ -80,4 +80,44 @@ public class Admin_PlansPageLocators {
 	/** XPATH */
 	public static final String STRING_DISABLED_COLHEADER = "//th[contains(.,'Disabled')]";
 
+	// Create new Plan
+	/** XPATH */
+	public static final String CREATE_NEW_PLAN_BTN = "//button[@id='create-plan-button']";
+	/** XPATH */
+	public static final String PLANNAME_INPUTFIELD = "//input[@id='plan_name']";
+	/** XPATH */
+	public static final String PROGRAM_DRPDWN = "//div[@id='program-dropdown']";
+	/** XPATH */
+	public static final String PROGRAM_DRPDWN_OPTIONS = "(//ul[@id='program-dropdown_list']//li)";
+	/** XPATH */
+	public static final String PROGRAM_DRPDWN_OPTIONS_SELECTED = "//div[@id='program-dropdown']//input";
+	/** XPATH */
+	public static final String PLANTYPE_DRPDWN = "//div[@id='plan-type-dropdown']";
+	/** XPATH */
+	public static final String PLANTYPE_DRPDWN_OPTIONS = "(//ul[@id='plan-type-dropdown_list']//li)";
+	/** XPATH */
+	public static final String PLANTYPE_DRPDWN_OPTIONS_SELECTED = "//div[@id='plan-type-dropdown']//input";
+	/** XPATH */
+	public static final String MANAGINGACCOUNT_DRPDWN = "//div[@id='account-dropdown']";
+	/** XPATH */
+	public static final String MANAGINGACCOUNT_DRPDWN_OPTIONS = "(//ul[@id='account-dropdown_list']//li)";
+	/** XPATH */
+	public static final String MANAGINGACCOUNT_DRPDWN_OPTIONS_SELECTED = "//div[@id='account-dropdown']//input";
+	/** XPATH */
+	public static final String ACTIVE_STARTDATE_INPUTFIELD = "//span[@id='active_start']//input";
+	/** XPATH */
+	public static final String ACTIVE_STARTDATE_TODAY = "//td[@class='p-datepicker-today']";
+	/** XPATH */
+	public static final String ACTIVE_ENDDATE_INPUTFIELD = "//span[@id='active_end']//input";
+	/** XPATH */
+	public static final String ACTIVE_ENDDATE = "(//td[@class='p-datepicker-today']//following-sibling::td)[1]";
+	/** XPATH */
+	public static final String DISABLE_CHECKBOX = "//div[@id='disabled_status']//input";
+	/** XPATH */
+	public static final String NOTES_INPUTFIELD = "//textarea[@id='notes']";
+	/** XPATH */
+	public static final String SAVE_BTN = "//button[@id='submit-plan-button']";
+	/** XPATH */
+	public static final String EDITPLAN_HEADING = "//h2[contains(text(), 'Plan ID')]";
+	
 }

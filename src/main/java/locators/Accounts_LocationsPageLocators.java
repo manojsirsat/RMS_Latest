@@ -297,6 +297,6 @@ public class Accounts_LocationsPageLocators {
 	/** XPATH */
 	public static final String CREATE_BTN = "//button[@class='p-button p-component p-button-success' and @aria-label='Create']";
 	/** XPATH */
-	public static final String INVENTORYLINK_LOCATIONSUMMARYPAGE = "//a[@id='account-inventory-location-summary']";
+	public static final String EDIT_LOCATIONPAGE = "//a[text()='Edit']";
 
 }

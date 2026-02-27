@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 public class Admin_SKUManagementsPageLocators {
 
 	/** XPATH */
-	public static final String ADMIN_SKUMANAGEMENTPAGE_HEADING = "//div[text()='RECOVERYVALUEOVERRIDE']";
+	public static final String ADMIN_SKUMANAGEMENTPAGE_HEADING = "//div[text()='SKUs']";
 
 	// Sorting
 	/** By */
@@ -134,4 +134,46 @@ public class Admin_SKUManagementsPageLocators {
 	/** XPATH */
 	public static final String STRING_LASTUPDATEDBY_COLHEADER = "//th[contains(.,'Last Updated By')]";
 
+	//Create new SKU
+	/** XPATH */
+	public static final String CREATE_NEW_SKU_BTN = "//button[@id='create-account-button']";
+	/** XPATH */
+	public static final String SKU_INPUTFIELD = "//input[@id='sku']";
+	/** XPATH */
+	public static final String NAME_INPUTFIELD = "//input[@id='name']";
+	/** XPATH */
+	public static final String DESCRIPTION_INPUTFIELD = "//input[@id='description']";
+	/** XPATH */
+	public static final String LENGTH_INPUTFIELD = "//span[@id='length']//input";
+	/** XPATH */
+	public static final String WIDTH_INPUTFIELD = "//span[@id='width']//input";
+	/** XPATH */
+	public static final String HEIGHT_INPUTFIELD = "//span[@id='height']//input";
+	/** XPATH */
+	public static final String WEIGHT_INPUTFIELD = "//span[@id='weight']//input";
+	/** XPATH */
+	public static final String NATIONAL_MOTOR_FREIGHT_CLASSIFICATION_DRPDWN = "//div[@id='nmfc-autocomplete']";
+	/** XPATH */
+	public static final String NATIONAL_MOTOR_FREIGHT_CLASSIFICATION_DRPDWN_OPTIONS = "(//ul[@id='nmfc-autocomplete_list']//li)";
+	/** XPATH */
+	public static final String NATIONAL_MOTOR_FREIGHT_CLASSIFICATION_DRPDWN_OPTIONS_SELECTED = "//div[@id='nmfc-autocomplete']//input";
+	/** XPATH */
+	public static final String PALLETQTY_INPUTFIELD = "//span[@id='pallet-quantity']//input";
+	/** XPATH */
+	public static final String ACCOUNT_DRPDWN = "//div[@id='account-autocomplete']";
+	/** XPATH */
+	public static final String ACCOUNT_DRPDWN_OPTIONS = "(//ul[@id='account-autocomplete_list']//li)";
+	/** XPATH */
+	public static final String ACCOUNT_DRPDWN_OPTIONS_SELECTED = "//div[@id='account-autocomplete']//input";
+	/** XPATH */
+	public static final String TYPE_DRPDWN = "//div[@id='type']//button";
+	/** XPATH */
+	public static final String TYPE_DRPDWN_OPTIONS = "(//ul[@id='type_list']//li)";
+	/** XPATH */
+	public static final String TYPE_DRPDWN_OPTIONS_SELECTED = "//div[@id='type']//input";
+	/** XPATH */
+	public static final String SAVE_BTN = "//button[@class='p-button p-component p-button-success' and @aria-label='Create SKU']";
+	/** XPATH */
+	public static final String EDITSKU_HEADING = "//h2[text()='Edit SKU']";
+		
 }

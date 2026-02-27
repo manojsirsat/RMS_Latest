@@ -225,6 +225,12 @@ public class Admin_SKUManagementsPageTest {
 		flag = skumanagementpagefunctional.LastUpdatedBy_AscendingSorting();
 		Assert.assertTrue(flag);
 	}
+	
+	@Test(description = "Verify create new SKU functionality from SKU listing page")
+	public void verifyCreateNewSku_Functionality() throws InterruptedException {
+		flag = skumanagementpagefunctional.create_NewSKU();
+		Assert.assertTrue(flag);
+	}
 
 	@AfterTest
 	public void browser_Close() {
