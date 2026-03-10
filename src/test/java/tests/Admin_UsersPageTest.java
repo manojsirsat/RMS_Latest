@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -12,7 +11,6 @@ import org.testng.annotations.Test;
 import commonfunctions.CommonFunctions;
 import pages.Admin_UsersPageFunctional;
 import pages.loginPage;
-import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 
@@ -115,6 +113,12 @@ public class Admin_UsersPageTest {
 	@Test(description = "Verify Active ascending Sorting functionality of Admin Users listing page")
 	public void verifyActive_AscendingSorting_Functionality() throws InterruptedException {
 		flag = userpagefunctional.Active_AscendingSorting();
+		Assert.assertTrue(flag);
+	}
+	
+	@Test(description = "Verify create new User functionality from users listing page")
+	public void verifyCreateNewUser_Functionality() throws InterruptedException {
+		flag = userpagefunctional.create_NewUser();
 		Assert.assertTrue(flag);
 	}
 

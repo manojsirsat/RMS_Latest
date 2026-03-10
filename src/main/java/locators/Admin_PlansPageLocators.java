@@ -112,7 +112,7 @@ public class Admin_PlansPageLocators {
 	/** XPATH */
 	public static final String ACTIVE_ENDDATE = "(//td[@class='p-datepicker-today']//following-sibling::td)[1]";
 	/** XPATH */
-	public static final String DISABLE_CHECKBOX = "//div[@id='disabled_status']//input";
+	public static final String DISABLE_CHECKBOX = "//div[@id='disabled_status']";
 	/** XPATH */
 	public static final String NOTES_INPUTFIELD = "//textarea[@id='notes']";
 	/** XPATH */

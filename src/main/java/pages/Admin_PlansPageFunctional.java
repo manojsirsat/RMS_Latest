@@ -6,8 +6,6 @@ import com.github.javafaker.Faker;
 
 import commonfunctions.CommonFunctions;
 import locators.Admin_PlansPageLocators;
-import locators.Admin_PlansPageLocators;
-import locators.Admin_PlansPageLocators;
 import locators.CommonFunctionsLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
@@ -275,14 +273,11 @@ public class Admin_PlansPageFunctional {
 	
 	/**
 	 * @author
-	 * @return flag This method is used to fill the plan details
+	 * @return flag This method is used to fill the plan general information details
 	 * @throws InterruptedException
 	 */
-	public boolean fill_Plan_Details() throws InterruptedException {
+	public boolean fill_PlanGeneralInfo_Details() throws InterruptedException {
 		String firstname = faker.name().firstName();
-		String lastname = faker.name().lastName();
-		String name = faker.name().fullName();
-		String description = faker.lorem().paragraph();
 		flag = webDB.sendTextToAnElement(Admin_PlansPageLocators.PLANNAME_INPUTFIELD, firstname + " plan test",
 				ElementType.Xpath);
 		if (flag) {
@@ -339,6 +334,57 @@ public class Admin_PlansPageFunctional {
 
 		return flag;
 	}
+	
+	/**
+	 * @author
+	 * @return flag This method is used to fill the plan details
+	 *         details
+	 * @throws InterruptedException
+	 */
+	public boolean fill_PlanDetails() throws InterruptedException {
+		flag = webDB.waitForClickElement(Admin_PlansPageLocators.ACTIVE_STARTDATE_INPUTFIELD, ElementType.Xpath);
+		if (flag) {
+			webDB.clickAnElement(Admin_PlansPageLocators.ACTIVE_STARTDATE_INPUTFIELD, ElementType.Xpath);
+			Thread.sleep(1500);
+			flag = webDB.waitForElement(Admin_PlansPageLocators.ACTIVE_STARTDATE_TODAY, ElementType.Xpath);
+			if (flag) {
+				webDB.clickAnElement(Admin_PlansPageLocators.ACTIVE_STARTDATE_TODAY, ElementType.Xpath);
+				log.logging("info", "Selected plan active start date");
+				Thread.sleep(1000);
+				webDB.pressEscapeKey();
+				flag = webDB.waitForClickElement(Admin_PlansPageLocators.ACTIVE_ENDDATE_INPUTFIELD, ElementType.Xpath);
+				if (flag) {
+					webDB.clickAnElement(Admin_PlansPageLocators.ACTIVE_ENDDATE_INPUTFIELD, ElementType.Xpath);
+					Thread.sleep(1500);
+					flag = webDB.waitForElement(Admin_PlansPageLocators.ACTIVE_ENDDATE, ElementType.Xpath);
+					if (flag) {
+						webDB.clickAnElement(Admin_PlansPageLocators.ACTIVE_ENDDATE, ElementType.Xpath);
+						log.logging("info", "Selected plan active end date");
+						Thread.sleep(1000);
+						webDB.pressEscapeKey();
+						Thread.sleep(1000);
+						flag = webDB.waitForElement(Admin_PlansPageLocators.DISABLE_CHECKBOX, ElementType.Xpath);
+						if(flag)
+						{
+							flag = webDB.clickAnElement(Admin_PlansPageLocators.DISABLE_CHECKBOX, ElementType.Xpath);
+							if(flag)
+							{
+								log.logging("info", "Selected the Disabled checkbox");
+								Thread.sleep(1000);
+								flag = webDB.sendTextToAnElement(Admin_PlansPageLocators.NOTES_INPUTFIELD, "Testing plan created for testing purpose please ignore",ElementType.Xpath);
+								if(flag)
+								{
+									log.logging("info", "Filled the note as - Testing plan created for testing purpose please ignore");
+									Thread.sleep(1000);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		return flag;
+	}
 
 
 	/**
@@ -368,9 +414,12 @@ public class Admin_PlansPageFunctional {
 	public boolean create_NewPlan() throws InterruptedException {
 		flag = click_CreateNewPlanBtn();
 		if (flag) {
-//			flag = fill_Plan_Details();
+			flag = fill_PlanGeneralInfo_Details();
 			if (flag) {
-				flag = click_CreateBtn();
+				flag = fill_PlanDetails();
+				if (flag) {
+					flag = click_CreateBtn();
+				}
 			}
 		}
 		return flag;
