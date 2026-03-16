@@ -53,4 +53,23 @@ public class Admin_ZonesPageLocators {
 	/** XPATH */
 	public static final String STRING_LOCATIONSCOUNT_COLHEADER = "//th[contains(.,'Locations Count')]";
 
+	
+	// Create new User
+	/** XPATH */
+	public static final String CREATE_NEW_ZONE_BTN = "//button[@aria-label='Create New Zone']";
+	/** XPATH */
+	public static final String CODE_INPUTFIELD = "//input[@id='code']";
+	/** XPATH */
+	public static final String DESCRIPTION_INPUTFIELD = "//input[@id='description']";
+	/** XPATH */
+	public static final String LOCATION_DRPDWN = "//div[@id='location-dropdown']";
+	/** XPATH */
+	public static final String LOCATION_DRPDWN_OPTIONS = "(//ul[@id='location-dropdown_list']//li)";
+	/** XPATH */
+	public static final String LOCATION_DRPDWN_OPTIONS_SELECTED = "//div[@id='location-dropdown']//input";
+	/** XPATH */
+	public static final String SAVE_BTN = "//button[@id='submit-create-zone-button']";
+	/** XPATH */
+	public static final String EDITZONE_HEADING = "//h2[text()='Edit Zone']";
+	
 }

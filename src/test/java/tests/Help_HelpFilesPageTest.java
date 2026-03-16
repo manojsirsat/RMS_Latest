@@ -51,6 +51,12 @@ public class Help_HelpFilesPageTest {
 		flag = helppagefunctional.navigate_Help_HelpFilesListingPage();
 		Assert.assertTrue(flag);
 	}
+	
+	@Test(description = "Verify the download document functionality")
+	public void Verify_DownloadDocumentBtnFunctionality() throws InterruptedException {
+		flag = helppagefunctional.click_DownloadDocumentBtn();
+		Assert.assertTrue(flag);
+	}
 
 	@AfterTest
 	public void browser_Close() {

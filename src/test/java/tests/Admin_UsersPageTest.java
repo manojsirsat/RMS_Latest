@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -11,6 +12,7 @@ import org.testng.annotations.Test;
 import commonfunctions.CommonFunctions;
 import pages.Admin_UsersPageFunctional;
 import pages.loginPage;
+import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 

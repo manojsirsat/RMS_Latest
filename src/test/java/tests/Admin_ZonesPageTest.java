@@ -118,6 +118,12 @@ public class Admin_ZonesPageTest {
 		Assert.assertTrue(flag);
 	}
 
+	@Test(description = "Verify create new Zone functionality from Zones listing page")
+	public void verifyCreateNewZone_Functionality() throws InterruptedException {
+		flag = zonepagefunctional.create_NewZone();
+		Assert.assertTrue(flag);
+	}
+	
 	@AfterTest
 	public void browser_Close() {
 		webDB.tearDown();
