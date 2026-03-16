@@ -1165,7 +1165,7 @@
 								<include name="verifyLocations_AscendingSorting_Functionality"></include>
 								<include name="verifySKUS_DescendingSorting_Functionality"></include>
 								<include name="verifySKUS_AscendingSorting_Functionality"></include>
-								<include name="verifyCreateNewProgram_Functionality"></include>
+								<include name="VerifyCreateNewProgram_Functionality"></include>
 							</methods>
 						</class>
 					</classes>
@@ -1206,7 +1206,7 @@
 								<include name="verifyConfirmable_AscendingSorting_Functionality"></include>
 								<include name="verifyLastUpdatedBy_DescendingSorting_Functionality"></include>
 								<include name="verifyLastUpdatedBy_AscendingSorting_Functionality"></include>
-								<include name="verifyCreateNewSku_Functionality"></include>
+								<include name="VerifyCreateNewSku_Functionality"></include>
 							</methods>
 						</class>
 					</classes>
@@ -1233,6 +1233,7 @@
 								<include name="verifyBasePlan_AscendingSorting_Functionality"></include>
 								<include name="verifyDisabled_DescendingSorting_Functionality"></include>
 								<include name="verifyDisabled_AscendingSorting_Functionality"></include>
+								<include name="VerifyCreateNewPlan_Functionality"></include>
 							</methods>
 						</class>
 					</classes>
@@ -1255,6 +1256,7 @@
 								<include name="verifyAccountName_AscendingSorting_Functionality"></include>
 								<include name="verifyActive_DescendingSorting_Functionality"></include>
 								<include name="verifyActive_AscendingSorting_Functionality"></include>
+								<include name="VerifyCreateNewUser_Functionality"></include>
 							</methods>
 						</class>
 					</classes>
@@ -1320,6 +1322,7 @@
 								<include name="verifyProviderLocName_AscendingSorting_Functionality"></include>
 								<include name="verifyLocationsCount_DescendingSorting_Functionality"></include>
 								<include name="verifyLocationsCount_AscendingSorting_Functionality"></include>
+								<include name="VerifyCreateNewZone_Functionality"></include>
 							</methods>
 						</class>
 					</classes>
@@ -1373,16 +1376,17 @@
 <!-- 					</classes> -->
 <!-- 				</test> -->
 				
-<!-- 				<test name="Help_HelpFilesPageTest"> -->
-<!-- 					<classes> -->
-<!-- 						<class name="tests.Help_HelpFilesPageTest"> -->
-<!-- 							<methods> -->
-<!-- 							<include name="verify_Valid_Login"></include> -->
-<!-- 							<include name="redirection_To_HelpFiles_Page"></include> -->
-<!-- 							</methods> -->
-<!-- 						</class> -->
-<!-- 					</classes> -->
-<!-- 				</test> -->
+				<test name="Help_HelpFilesPageTest">
+					<classes>
+						<class name="tests.Help_HelpFilesPageTest">
+							<methods>
+							<include name="Verify_Valid_Login"></include>
+							<include name="Redirection_To_HelpFilesListing_Page"></include>
+							<include name="Verify_DownloadDocumentBtnFunctionality"></include>
+							</methods>
+						</class>
+					</classes>
+				</test>
 			
 			
 </suite> <!-- Suite -->

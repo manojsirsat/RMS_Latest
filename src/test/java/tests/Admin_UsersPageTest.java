@@ -119,7 +119,7 @@ public class Admin_UsersPageTest {
 	}
 	
 	@Test(description = "Verify create new User functionality from users listing page")
-	public void verifyCreateNewUser_Functionality() throws InterruptedException {
+	public void VerifyCreateNewUser_Functionality() throws InterruptedException {
 		flag = userpagefunctional.create_NewUser();
 		Assert.assertTrue(flag);
 	}

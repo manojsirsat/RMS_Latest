@@ -41,13 +41,13 @@ public class Help_HelpFilesPageTest {
 	}
 
 	@Test(description = "Verify valid login")
-	public void verify_Valid_Login() throws InterruptedException {
+	public void Verify_Valid_Login() throws InterruptedException {
 		flag = loginpage.validLogin();
 		Assert.assertTrue(flag);
 	}
 
 	@Test(description = "Redirect to Helps Help files listing page")
-	public void redirection_To_HelpFilesListing_Page() throws InterruptedException {
+	public void Redirection_To_HelpFilesListing_Page() throws InterruptedException {
 		flag = helppagefunctional.navigate_Help_HelpFilesListingPage();
 		Assert.assertTrue(flag);
 	}

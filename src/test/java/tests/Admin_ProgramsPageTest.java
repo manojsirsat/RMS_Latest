@@ -119,7 +119,7 @@ public class Admin_ProgramsPageTest {
 	}
 	
 	@Test(description = "Verify create new Program functionality from Programs listing page")
-	public void verifyCreateNewProgram_Functionality() throws InterruptedException {
+	public void VerifyCreateNewProgram_Functionality() throws InterruptedException {
 		flag = programpagefunctional.create_NewProgram();
 		Assert.assertTrue(flag);
 	}

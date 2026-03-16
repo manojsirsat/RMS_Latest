@@ -227,7 +227,7 @@ public class Admin_SKUManagementsPageTest {
 	}
 	
 	@Test(description = "Verify create new SKU functionality from SKU listing page")
-	public void verifyCreateNewSku_Functionality() throws InterruptedException {
+	public void VerifyCreateNewSku_Functionality() throws InterruptedException {
 		flag = skumanagementpagefunctional.create_NewSKU();
 		Assert.assertTrue(flag);
 	}
