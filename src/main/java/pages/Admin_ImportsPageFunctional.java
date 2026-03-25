@@ -36,7 +36,7 @@ public class Admin_ImportsPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 

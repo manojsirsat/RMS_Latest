@@ -49,7 +49,7 @@ public class BOLPageFunctional {
 	public boolean click_CreateNewBOL_Button() throws InterruptedException {
 		webDB.clickAnElement(BOLPageLocators.CREATE_NEWBOL_BUTTON, ElementType.Id);
 		Thread.sleep(4000);
-		flag = webDB.isElementDisplayed(BOLPageLocators.CREATE_NEWBOLPAGE_HEADING, ElementType.Xpath);
+		flag = webDB.waitForElement(BOLPageLocators.CREATE_NEWBOLPAGE_HEADING, ElementType.Xpath);
 		log.logging("info", "Redirected to the create new BOL page");
 		return flag;
 	}
@@ -60,15 +60,13 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean set_BOLPage_CarrierDetails() throws InterruptedException {
-//		flag = click_CreateNewBOL_Button();
-//		if(flag)
-//		{
-		flag = webDB.isElementDisplayed(BOLPageLocators.FROM_LOC_DROPDOWN, ElementType.Xpath);
+
+		flag = webDB.waitForElement(BOLPageLocators.FROM_LOC_DROPDOWN, ElementType.Xpath);
 		if (flag) {
 			// Select from location
 			webDB.clickAnElement(BOLPageLocators.FROM_LOC_DROPDOWN, ElementType.Xpath);
 			Thread.sleep(1000);
-			flag = webDB.isElementDisplayed(BOLPageLocators.FROM_LOC_DRP_OPTION, ElementType.Xpath);
+			flag = webDB.waitForElement(BOLPageLocators.FROM_LOC_DRP_OPTION, ElementType.Xpath);
 			if (flag) {
 				int totaloptions = webDB.getDriver().findElements(By.xpath(BOLPageLocators.FROM_LOC_DRP_OPTIONS_LIST))
 						.size();
@@ -82,7 +80,7 @@ public class BOLPageFunctional {
 				// Select to location
 				webDB.clickAnElement(BOLPageLocators.TO_LOC_DROPDOWN, ElementType.Xpath);
 				Thread.sleep(1000);
-				flag = webDB.isElementDisplayed(BOLPageLocators.TO_LOC_DRP_OPTION, ElementType.Xpath);
+				flag = webDB.waitForElement(BOLPageLocators.TO_LOC_DRP_OPTION, ElementType.Xpath);
 				if (flag) {
 					int toloc_totaloptions = webDB.getDriver()
 							.findElements(By.xpath(BOLPageLocators.TO_LOC_DRP_OPTIONS_LIST)).size();
@@ -108,7 +106,7 @@ public class BOLPageFunctional {
 					// Select Ship Method
 					webDB.clickAnElement(BOLPageLocators.SHIPMETHOD_DROPDOWN, ElementType.Xpath);
 					Thread.sleep(1000);
-					flag = webDB.isElementDisplayed(BOLPageLocators.SHIPMETHOD_DRP_OPTION, ElementType.Xpath);
+					flag = webDB.waitForElement(BOLPageLocators.SHIPMETHOD_DRP_OPTION, ElementType.Xpath);
 					if (flag) {
 						webDB.clickAnElement(BOLPageLocators.SHIPMETHOD_DRP_OPTIONS_LIST, ElementType.Xpath);
 						log.logging("info", "Selected Ship method");
@@ -116,7 +114,7 @@ public class BOLPageFunctional {
 						// Select Shipper
 						webDB.clickAnElement(BOLPageLocators.SHIPPER_DROPDOWN, ElementType.Xpath);
 						Thread.sleep(1000);
-						flag = webDB.isElementDisplayed(BOLPageLocators.SHIPPER_DRP_OPTION, ElementType.Xpath);
+						flag = webDB.waitForElement(BOLPageLocators.SHIPPER_DRP_OPTION, ElementType.Xpath);
 						if (flag) {
 							int shipper_totaloptions = webDB.getDriver()
 									.findElements(By.xpath(BOLPageLocators.SHIPPER_DRP_OPTIONS_LIST)).size();
@@ -127,12 +125,12 @@ public class BOLPageFunctional {
 									.click();
 							Thread.sleep(2000);
 							log.logging("info", "Selected Shipper");
-							flag = webDB.isElementDisplayed(BOLPageLocators.SUBMIT_BOL_BUTTON, ElementType.Id);
+							flag = webDB.waitForElement(BOLPageLocators.SUBMIT_BOL_BUTTON, ElementType.Id);
 							if (flag) {
 								webDB.clickAnElement(BOLPageLocators.SUBMIT_BOL_BUTTON, ElementType.Id);
 								Thread.sleep(1000);
 
-								flag = webDB.isElementDisplayed(BOLPageLocators.BOL_SUCCESS_MSG, ElementType.Xpath);
+								flag = webDB.waitForElement(BOLPageLocators.BOL_SUCCESS_MSG, ElementType.Xpath);
 								Thread.sleep(4000);
 								log.logging("info", "BOL submitted and success message is displayed");
 								BOL_Number = getBOLNumberFromBOLDetailsPage();
@@ -145,7 +143,6 @@ public class BOLPageFunctional {
 				}
 			}
 		}
-//	}
 
 		return flag;
 	}
@@ -158,21 +155,21 @@ public class BOLPageFunctional {
 	public boolean set_AddOrderToBOL() throws InterruptedException {
 		webDB.scrollToAnElement(BOLPageLocators.ADD_ORDER_BUTTON_BOLPAGE, ElementType.Xpath);
 		Thread.sleep(750);
-		flag = webDB.isElementDisplayed(BOLPageLocators.ADD_ORDER_BUTTON_BOLPAGE, ElementType.Xpath);
+		flag = webDB.waitForElement(BOLPageLocators.ADD_ORDER_BUTTON_BOLPAGE, ElementType.Xpath);
 		if (flag) {
 			webDB.clickAnElement(BOLPageLocators.ADD_ORDER_BUTTON_BOLPAGE, ElementType.Xpath);
 			Thread.sleep(5000);
 			log.logging("info", "Clicked on add order to BOL button");
-			flag = webDB.isElementDisplayed(BOLPageLocators.CREATE_NEWORDER_BUTTON, ElementType.Xpath);
+			flag = webDB.waitForElement(BOLPageLocators.CREATE_NEWORDER_BUTTON, ElementType.Xpath);
 			if (flag) {
 				webDB.clickAnElement(BOLPageLocators.CREATE_NEWORDER_BUTTON, ElementType.Xpath);
 				Thread.sleep(5000);
-				flag = webDB.isElementDisplayed(BOLPageLocators.ORDERTYPE_DROPDOWN, ElementType.Id);
+				flag = webDB.waitForElement(BOLPageLocators.ORDERTYPE_DROPDOWN, ElementType.Id);
 				if (flag) {
 					// Select order type
 					webDB.clickAnElement(BOLPageLocators.ORDERTYPE_DROPDOWN, ElementType.Id);
 					Thread.sleep(2000);
-					flag = webDB.isElementDisplayed(BOLPageLocators.ORDERTYPE_DRP_OPTION, ElementType.Id);
+					flag = webDB.waitForElement(BOLPageLocators.ORDERTYPE_DRP_OPTION, ElementType.Id);
 					if (flag) {
 						int totaloptions = webDB.getDriver()
 								.findElements(By.xpath(BOLPageLocators.ORDERTYPE_DRP_OPTIONS_LIST)).size();
@@ -183,11 +180,11 @@ public class BOLPageFunctional {
 								.click();
 						Thread.sleep(3000);
 						log.logging("info", "Selected order type");
-						flag = webDB.isElementDisplayed(BOLPageLocators.PROGRAM_DROPDOWN, ElementType.Id);
+						flag = webDB.waitForElement(BOLPageLocators.PROGRAM_DROPDOWN, ElementType.Id);
 						if (flag) {
 							webDB.clickAnElement(BOLPageLocators.PROGRAM_DROPDOWN, ElementType.Id);
 							Thread.sleep(3000);
-							flag = webDB.isElementDisplayed(BOLPageLocators.PROGRAM_DRP_OPTION, ElementType.Id);
+							flag = webDB.waitForElement(BOLPageLocators.PROGRAM_DRP_OPTION, ElementType.Id);
 							if (flag) {
 								int program_totaloptions = webDB.getDriver()
 										.findElements(By.xpath(BOLPageLocators.PROGRAM_DRP_OPTIONS_LIST)).size();
@@ -197,13 +194,13 @@ public class BOLPageFunctional {
 										.click();
 								Thread.sleep(3000);
 								log.logging("info", "Selected Program");
-								flag = webDB.isElementDisplayed(BOLPageLocators.QUANTITY_REQUESTED_INPUTFIELD,
+								flag = webDB.waitForElement(BOLPageLocators.QUANTITY_REQUESTED_INPUTFIELD,
 										ElementType.Xpath);
 								if (flag) {
 									webDB.sendTextToAnElement(BOLPageLocators.QUANTITY_REQUESTED_INPUTFIELD, "20",
 											ElementType.Xpath);
 									log.logging("info", "Entered the requested quantity in the input field");
-									flag = webDB.isElementDisplayed(BOLPageLocators.SUBMIT_ORDER_BTN,
+									flag = webDB.waitForElement(BOLPageLocators.SUBMIT_ORDER_BTN,
 											ElementType.Xpath);
 									if (flag) {
 										webDB.clickAnElement(BOLPageLocators.SUBMIT_ORDER_BTN, ElementType.Xpath);
@@ -212,7 +209,7 @@ public class BOLPageFunctional {
 										webDB.scrollToAnElement(BOLPageLocators.ADD_ORDER_BUTTON_BOLPAGE,
 												ElementType.Xpath);
 										Thread.sleep(750);
-										flag = webDB.isElementDisplayed(BOLPageLocators.REMOVE_ORDERFROMBOL_BTN,
+										flag = webDB.waitForElement(BOLPageLocators.REMOVE_ORDERFROMBOL_BTN,
 												ElementType.Xpath);
 									}
 								}
@@ -234,10 +231,6 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean set_BOLStatus() throws InterruptedException {
-//		BOL_Number= getBOLNumberFromBOLDetailsPage();
-//		log.logging("info", "The BOL Number on BOL Details page is: "+BOL_Number);
-//		Thread.sleep(3000);
-
 		commonfunction.clickOnBOLSPage();
 		BOL_Number_Listingpage = getBOLNumberFromBOL_ListingPage();
 		log.logging("info", "The BOL Number on listing page is: " + BOL_Number_Listingpage);
@@ -266,7 +259,7 @@ public class BOLPageFunctional {
 		String[] statusList = { "assigned", "Driver dispatched", "At shipper", "In transit", "Pending receipt",
 				"Receiving in progress" };
 		for (String statusToSelect : statusList) {
-			flag = webDB.isElementDisplayed(BOLPageLocators.BOL_STATUSCHANGE_DRP, ElementType.Xpath);
+			flag = webDB.waitForElement(BOLPageLocators.BOL_STATUSCHANGE_DRP, ElementType.Xpath);
 			if (flag) {
 				webDB.clickAnElement(BOLPageLocators.BOL_STATUSCHANGE_DRP, ElementType.Xpath);
 				Thread.sleep(4000);
@@ -279,7 +272,7 @@ public class BOLPageFunctional {
 						webDB.clickAnElement(BOLPageLocators.BOL_STATUSCHANGE_DRP_OPTIONS + "[" + i + "]",
 								ElementType.Xpath);
 						Thread.sleep(4000);
-						flag = webDB.isElementDisplayed(BOLPageLocators.BOL_STATUSCHANGE_CONFIRMATIONPOPUP_YES_BTN,
+						flag = webDB.waitForElement(BOLPageLocators.BOL_STATUSCHANGE_CONFIRMATIONPOPUP_YES_BTN,
 								ElementType.Xpath);
 						if (flag) {
 							log.logging("info", "Selected " + statusToSelect + " option from dropdown");
@@ -287,7 +280,7 @@ public class BOLPageFunctional {
 									ElementType.Xpath);
 							Thread.sleep(4000);
 
-							flag = webDB.isElementDisplayed(BOLPageLocators.BOL_STATUSCHANGE_CONFIRMATION_MSG,
+							flag = webDB.waitForElement(BOLPageLocators.BOL_STATUSCHANGE_CONFIRMATION_MSG,
 									ElementType.Xpath);
 							if (flag) {
 								log.logging("info", "The status of BOL is changed to " + statusToSelect);
@@ -317,12 +310,8 @@ public class BOLPageFunctional {
 		if (flag) {
 			webDB.scrollToAnElement(BOLPageLocators.MARKBOLCOMPLETE_BTN_BOLCOMPLETEPAGE, ElementType.Xpath);
 			Thread.sleep(1500);
-//			webDB.scrollBottom();
-//			Thread.sleep(750);
 			webDB.clickAnElement(BOLPageLocators.WIP_INPUTFIELD_BOLCOMPLETEPAGE, ElementType.Xpath);
 			Thread.sleep(1500);
-//			flag = webDB.javaScriptSendTextToAnElement(BOLPageLocators.WIP_INPUTFIELD_BOLCOMPLETEPAGE, "5", ElementType.Xpath);
-//			flag = webDB.sendTextToAnElement(BOLPageLocators.WIP_INPUTFIELD_BOLCOMPLETEPAGE, "5", ElementType.Xpath);
 			webDB.pressUpArrowKey();
 			Thread.sleep(750);
 			webDB.pressUpArrowKey();
@@ -408,15 +397,15 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean click_Add_Order_To_BOL_And_CreateBOL_BTN() throws InterruptedException {
-		flag = webDB.isElementDisplayed(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE, ElementType.Xpath);
+		flag = webDB.waitForElement(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE, ElementType.Xpath);
 		if (flag) {
 			webDB.clickAnElement(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE, ElementType.Xpath);
 			Thread.sleep(1500);
-			flag = webDB.isElementDisplayed(BOLPageLocators.CREATE_NEWBOL_BUTTON, ElementType.Id);
+			flag = webDB.waitForElement(BOLPageLocators.CREATE_NEWBOL_BUTTON, ElementType.Id);
 			if (flag) {
 				webDB.clickAnElement(BOLPageLocators.CREATE_NEWBOL_BUTTON, ElementType.Id);
 				Thread.sleep(4000);
-				flag = webDB.isElementDisplayed(BOLPageLocators.CREATE_NEWBOLPAGE_HEADING_ORDERDETAILSPAGE,
+				flag = webDB.waitForElement(BOLPageLocators.CREATE_NEWBOLPAGE_HEADING_ORDERDETAILSPAGE,
 						ElementType.Xpath);
 				log.logging("info", "Redirected to the create new BOL page");
 			}
@@ -430,12 +419,12 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean set_BOLPage_CarrierDetails_CreatingOrderFirst() throws InterruptedException {
-		flag = webDB.isElementDisplayed(BOLPageLocators.SHIPMETHOD_DROPDOWN, ElementType.Xpath);
+		flag = webDB.waitForElement(BOLPageLocators.SHIPMETHOD_DROPDOWN, ElementType.Xpath);
 		if (flag) {
 			// Select Ship Method
 			webDB.clickAnElement(BOLPageLocators.SHIPMETHOD_DROPDOWN, ElementType.Xpath);
 			Thread.sleep(2000);
-			flag = webDB.isElementDisplayed(BOLPageLocators.SHIPMETHOD_DRP_OPTION, ElementType.Xpath);
+			flag = webDB.waitForElement(BOLPageLocators.SHIPMETHOD_DRP_OPTION, ElementType.Xpath);
 			if (flag) {
 				webDB.clickAnElement(BOLPageLocators.SHIPMETHOD_DRP_OPTIONS_LIST, ElementType.Xpath);
 				log.logging("info", "Selected Ship method");
@@ -443,7 +432,7 @@ public class BOLPageFunctional {
 				// Select Shipper
 				webDB.clickAnElement(BOLPageLocators.SHIPPER_DROPDOWN, ElementType.Xpath);
 				Thread.sleep(3000);
-				flag = webDB.isElementDisplayed(BOLPageLocators.SHIPPER_DRP_OPTION, ElementType.Xpath);
+				flag = webDB.waitForElement(BOLPageLocators.SHIPPER_DRP_OPTION, ElementType.Xpath);
 				if (flag) {
 					int shipper_totaloptions = webDB.getDriver()
 							.findElements(By.xpath(BOLPageLocators.SHIPPER_DRP_OPTIONS_LIST)).size();
@@ -454,12 +443,12 @@ public class BOLPageFunctional {
 							.click();
 					Thread.sleep(2000);
 					log.logging("info", "Selected Shipper");
-					flag = webDB.isElementDisplayed(BOLPageLocators.SUBMIT_BOL_BUTTON, ElementType.Id);
+					flag = webDB.waitForElement(BOLPageLocators.SUBMIT_BOL_BUTTON, ElementType.Id);
 					if (flag) {
 						webDB.clickAnElement(BOLPageLocators.SUBMIT_BOL_BUTTON, ElementType.Id);
 						Thread.sleep(1000);
 
-						flag = webDB.isElementDisplayed(BOLPageLocators.BOL_SUCCESS_MSG, ElementType.Xpath);
+						flag = webDB.waitForElement(BOLPageLocators.BOL_SUCCESS_MSG, ElementType.Xpath);
 						Thread.sleep(4000);
 						log.logging("info", "BOL submitted and success message is displayed");
 						BOL_Number = getBOLNumberFromOrderDetailsPage();
@@ -481,11 +470,11 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean click_Add_Order_To_BOL_BTN_OrderDetailsPage() throws InterruptedException {
-		flag = webDB.isElementDisplayed(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE, ElementType.Xpath);
+		flag = webDB.waitForElement(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE, ElementType.Xpath);
 		if (flag) {
 			webDB.clickAnElement(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE, ElementType.Xpath);
 			Thread.sleep(2000);
-			flag = webDB.isElementDisplayed(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_BOLCREATEPAGE, ElementType.Xpath);
+			flag = webDB.waitForElement(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_BOLCREATEPAGE, ElementType.Xpath);
 			if (flag) {
 				webDB.clickAnElement(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_BOLCREATEPAGE, ElementType.Xpath);
 				Thread.sleep(4000);
@@ -526,7 +515,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 
@@ -536,7 +525,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOL_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_BOL_COLHEADER, ElementType.Xpath,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_BOL_COLHEADER, ElementType.Xpath,
 				BOLPageLocators.BY_BOL_COLHEADER, BOLPageLocators.STRING_BOL_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_BOL_COLDATA);
 		return flag;
@@ -548,7 +537,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOL_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_BOL_COLHEADER, ElementType.Xpath,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_BOL_COLHEADER, ElementType.Xpath,
 				BOLPageLocators.BY_BOL_COLHEADER, BOLPageLocators.STRING_BOL_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_BOL_COLDATA);
 		return flag;
@@ -560,7 +549,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Type_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_TYPE_COLHEADER, ElementType.Xpath,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_TYPE_COLHEADER, ElementType.Xpath,
 				BOLPageLocators.BY_TYPE_COLHEADER, BOLPageLocators.STRING_TYPE_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_TYPE_COLDATA);
 		return flag;
@@ -572,7 +561,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Type_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_TYPE_COLHEADER, ElementType.Xpath,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_TYPE_COLHEADER, ElementType.Xpath,
 				BOLPageLocators.BY_TYPE_COLHEADER, BOLPageLocators.STRING_TYPE_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_TYPE_COLDATA);
 		return flag;
@@ -584,7 +573,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean CurrentStatus_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_CURRENTSTATUS_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_CURRENTSTATUS_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_CURRENTSTATUS_COLHEADER,
 				BOLPageLocators.STRING_CURRENTSTATUS_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_CURRENTSTATUS_COLDATA);
@@ -597,7 +586,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean CurrentStatus_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_CURRENTSTATUS_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_CURRENTSTATUS_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_CURRENTSTATUS_COLHEADER,
 				BOLPageLocators.STRING_CURRENTSTATUS_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_CURRENTSTATUS_COLDATA);
@@ -610,7 +599,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean DueDate_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_DUEDATE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_DUEDATE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_DUEDATE_COLHEADER, BOLPageLocators.STRING_DUEDATE_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_DUEDATE_COLDATA);
 		return flag;
@@ -622,7 +611,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean DueDate_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_DUEDATE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_DUEDATE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_DUEDATE_COLHEADER, BOLPageLocators.STRING_DUEDATE_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_DUEDATE_COLDATA);
 		return flag;
@@ -634,7 +623,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShipMethod_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPMETHOD_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPMETHOD_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPMETHOD_COLHEADER, BOLPageLocators.STRING_SHIPMETHOD_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPMETHOD_COLDATA);
 		return flag;
@@ -646,7 +635,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShipMethod_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPMETHOD_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPMETHOD_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPMETHOD_COLHEADER, BOLPageLocators.STRING_SHIPMETHOD_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPMETHOD_COLDATA);
 		return flag;
@@ -658,7 +647,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShippedByLocCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPPEDBYLOCCODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPPEDBYLOCCODE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYLOCCODE_COLHEADER,
 				BOLPageLocators.STRING_SHIPPEDBYLOCCODE_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_SHIPPEDBYLOCCODE_COLDATA);
@@ -671,7 +660,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShippedByLocCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPPEDBYLOCCODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPPEDBYLOCCODE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYLOCCODE_COLHEADER,
 				BOLPageLocators.STRING_SHIPPEDBYLOCCODE_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_SHIPPEDBYLOCCODE_COLDATA);
@@ -684,7 +673,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShippedByLocName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPPEDBYLOCNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPPEDBYLOCNAME_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYLOCNAME_COLHEADER,
 				BOLPageLocators.STRING_SHIPPEDBYLOCNAME_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_SHIPPEDBYLOCNAME_COLDATA);
@@ -697,7 +686,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShippedByLocName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPPEDBYLOCNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPPEDBYLOCNAME_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYLOCNAME_COLHEADER,
 				BOLPageLocators.STRING_SHIPPEDBYLOCNAME_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_SHIPPEDBYLOCNAME_COLDATA);
@@ -710,7 +699,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean DefaultZone_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_DEFAULTZONE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_DEFAULTZONE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_DEFAULTZONE_COLHEADER, BOLPageLocators.STRING_DEFAULTZONE_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_DEFAULTZONE_COLDATA);
 		return flag;
@@ -722,7 +711,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean DefaultZone_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_DEFAULTZONE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_DEFAULTZONE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_DEFAULTZONE_COLHEADER, BOLPageLocators.STRING_DEFAULTZONE_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_DEFAULTZONE_COLDATA);
 		return flag;
@@ -734,7 +723,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_FROMLOCCODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_FROMLOCCODE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCCODE_COLHEADER, BOLPageLocators.STRING_FROMLOCCODE_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCCODE_COLDATA);
 		return flag;
@@ -746,7 +735,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_FROMLOCCODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_FROMLOCCODE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCCODE_COLHEADER, BOLPageLocators.STRING_FROMLOCCODE_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCCODE_COLDATA);
 		return flag;
@@ -758,7 +747,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_FROMLOCNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_FROMLOCNAME_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCNAME_COLHEADER, BOLPageLocators.STRING_FROMLOCNAME_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCNAME_COLDATA);
 		return flag;
@@ -770,7 +759,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_FROMLOCNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_FROMLOCNAME_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCNAME_COLHEADER, BOLPageLocators.STRING_FROMLOCNAME_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCNAME_COLDATA);
 		return flag;
@@ -782,7 +771,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocCity_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_FROMLOCCITY_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_FROMLOCCITY_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCCITY_COLHEADER, BOLPageLocators.STRING_FROMLOCCITY_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCCITY_COLDATA);
 		return flag;
@@ -794,7 +783,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocCity_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_FROMLOCCITY_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_FROMLOCCITY_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCCITY_COLHEADER, BOLPageLocators.STRING_FROMLOCCITY_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCCITY_COLDATA);
 		return flag;
@@ -806,7 +795,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocState_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_FROMLOCSTATE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_FROMLOCSTATE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCSTATE_COLHEADER,
 				BOLPageLocators.STRING_FROMLOCSTATE_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_FROMLOCSTATE_COLDATA);
@@ -819,7 +808,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocState_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_FROMLOCSTATE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_FROMLOCSTATE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_FROMLOCSTATE_COLHEADER,
 				BOLPageLocators.STRING_FROMLOCSTATE_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_FROMLOCSTATE_COLDATA);
@@ -832,7 +821,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_TOLOCCODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_TOLOCCODE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_TOLOCCODE_COLHEADER, BOLPageLocators.STRING_TOLOCCODE_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_TOLOCCODE_COLDATA);
 		return flag;
@@ -844,7 +833,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_TOLOCCODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_TOLOCCODE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_TOLOCCODE_COLHEADER, BOLPageLocators.STRING_TOLOCCODE_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_TOLOCCODE_COLDATA);
 		return flag;
@@ -856,7 +845,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_TOLOCNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_TOLOCNAME_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_TOLOCNAME_COLHEADER, BOLPageLocators.STRING_TOLOCNAME_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_TOLOCNAME_COLDATA);
 		return flag;
@@ -868,7 +857,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_TOLOCNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_TOLOCNAME_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_TOLOCNAME_COLHEADER, BOLPageLocators.STRING_TOLOCNAME_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_TOLOCNAME_COLDATA);
 		return flag;
@@ -880,7 +869,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean AssignDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_ASSIGNDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_ASSIGNDATE_COLHEADER,
 				BOLPageLocators.BY_ASSIGNDATE_COLDATA);
 		return flag;
 	}
@@ -891,7 +880,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean AssignDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_ASSIGNDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_ASSIGNDATE_COLHEADER,
 				BOLPageLocators.BY_ASSIGNDATE_COLDATA);
 		return flag;
 	}
@@ -902,7 +891,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean CommitDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_COMMITNDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_COMMITNDATE_COLHEADER,
 				BOLPageLocators.BY_COMMITNDATE_COLDATA);
 		return flag;
 	}
@@ -913,7 +902,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean CommitDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_COMMITNDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_COMMITNDATE_COLHEADER,
 				BOLPageLocators.BY_COMMITNDATE_COLDATA);
 		return flag;
 	}
@@ -924,7 +913,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ModCommitDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_MODCOMMITNDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_MODCOMMITNDATE_COLHEADER,
 				BOLPageLocators.BY_MODCOMMITNDATE_COLDATA);
 		return flag;
 	}
@@ -935,7 +924,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ModCommitDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_MODCOMMITNDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_MODCOMMITNDATE_COLHEADER,
 				BOLPageLocators.BY_MODCOMMITNDATE_COLDATA);
 		return flag;
 	}
@@ -946,7 +935,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ScheduleShipDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_SCHEDULEDSHIPDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_SCHEDULEDSHIPDATE_COLHEADER,
 				BOLPageLocators.BY_SCHEDULEDSHIPDATE_COLDATA);
 		return flag;
 	}
@@ -957,7 +946,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ScheduleShipDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_SCHEDULEDSHIPDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_SCHEDULEDSHIPDATE_COLHEADER,
 				BOLPageLocators.BY_SCHEDULEDSHIPDATE_COLDATA);
 		return flag;
 	}
@@ -968,7 +957,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean PickupDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_PICKUPDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_PICKUPDATE_COLHEADER,
 				BOLPageLocators.BY_PICKUPDATE_COLDATA);
 		return flag;
 	}
@@ -979,7 +968,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean PickupDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_PICKUPDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_PICKUPDATE_COLHEADER,
 				BOLPageLocators.BY_PICKUPDATE_COLDATA);
 		return flag;
 	}
@@ -990,7 +979,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean EstimatedDeliveryDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_ESTIMATEDDELIVERYDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_ESTIMATEDDELIVERYDATE_COLHEADER,
 				BOLPageLocators.BY_ESTIMATEDDELIVERYDATE_COLDATA);
 		return flag;
 	}
@@ -1001,7 +990,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean EstimatedDeliveryDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_ESTIMATEDDELIVERYDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_ESTIMATEDDELIVERYDATE_COLHEADER,
 				BOLPageLocators.BY_ESTIMATEDDELIVERYDATE_COLDATA);
 		return flag;
 	}
@@ -1012,7 +1001,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean DeliveredDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_DELIVEREDDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_DELIVEREDDATE_COLHEADER,
 				BOLPageLocators.BY_DELIVEREDDATE_COLDATA);
 		return flag;
 	}
@@ -1023,7 +1012,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean DeliveredDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_DELIVEREDDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_DELIVEREDDATE_COLHEADER,
 				BOLPageLocators.BY_DELIVEREDDATE_COLDATA);
 		return flag;
 	}
@@ -1034,7 +1023,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean CompleteDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_COMPLETEDDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(BOLPageLocators.BY_COMPLETEDDATE_COLHEADER,
 				BOLPageLocators.BY_COMPLETEDDATE_COLDATA);
 		return flag;
 	}
@@ -1045,7 +1034,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean CompleteDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_COMPLETEDDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(BOLPageLocators.BY_COMPLETEDDATE_COLHEADER,
 				BOLPageLocators.BY_COMPLETEDDATE_COLDATA);
 		return flag;
 	}
@@ -1056,7 +1045,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Quote_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_QUOTE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_QUOTE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_QUOTE_COLHEADER, BOLPageLocators.STRING_QUOTE_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_QUOTE_COLDATA);
 		return flag;
@@ -1068,7 +1057,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Quote_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_QUOTE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_QUOTE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_QUOTE_COLHEADER, BOLPageLocators.STRING_QUOTE_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_QUOTE_COLDATA);
 		return flag;
@@ -1080,7 +1069,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Tender_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_TENDER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_TENDER_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_TENDER_COLHEADER, BOLPageLocators.STRING_TENDER_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_TENDER_COLDATA);
 		return flag;
@@ -1092,7 +1081,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Tender_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_TENDER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_TENDER_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_TENDER_COLHEADER, BOLPageLocators.STRING_TENDER_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_TENDER_COLDATA);
 		return flag;
@@ -1104,7 +1093,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Shipment_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPMENT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPMENT_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPMENT_COLHEADER, BOLPageLocators.STRING_SHIPMENT_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPMENT_COLDATA);
 		return flag;
@@ -1116,7 +1105,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Shipment_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPMENT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPMENT_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPMENT_COLHEADER, BOLPageLocators.STRING_SHIPMENT_COLDATA,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPMENT_COLDATA);
 		return flag;
@@ -1128,7 +1117,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean AutoAssignEligible_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_AUTOASSIGNELIGIBLE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_AUTOASSIGNELIGIBLE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_AUTOASSIGNELIGIBLE_COLHEADER,
 				BOLPageLocators.STRING_AUTOASSIGNELIGIBLE_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_AUTOASSIGNELIGIBLE_COLDATA);
@@ -1141,7 +1130,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean AutoAssignEligible_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_AUTOASSIGNELIGIBLE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_AUTOASSIGNELIGIBLE_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_AUTOASSIGNELIGIBLE_COLHEADER,
 				BOLPageLocators.STRING_AUTOASSIGNELIGIBLE_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_AUTOASSIGNELIGIBLE_COLDATA);
@@ -1154,7 +1143,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShippedByAccount_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPPEDBYACCOUNT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BOLPageLocators.STRING_SHIPPEDBYACCOUNT_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYACCOUNT_COLHEADER,
 				BOLPageLocators.STRING_SHIPPEDBYACCOUNT_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_SHIPPEDBYACCOUNT_COLDATA);
@@ -1167,7 +1156,7 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShippedByAccount_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPPEDBYACCOUNT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BOLPageLocators.STRING_SHIPPEDBYACCOUNT_COLHEADER,
 				ElementType.Xpath, BOLPageLocators.BY_SHIPPEDBYACCOUNT_COLHEADER,
 				BOLPageLocators.STRING_SHIPPEDBYACCOUNT_COLDATA, ElementType.Xpath,
 				BOLPageLocators.BY_SHIPPEDBYACCOUNT_COLDATA);

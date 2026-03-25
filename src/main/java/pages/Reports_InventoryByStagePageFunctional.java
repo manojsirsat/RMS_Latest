@@ -38,7 +38,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 
@@ -48,7 +48,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Zone_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_ZONE_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_ZONE_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_ZONE_COLDATA, ElementType.Xpath,
@@ -62,7 +62,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Zone_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_ZONE_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_ZONE_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_ZONE_COLDATA, ElementType.Xpath,
@@ -76,7 +76,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Region_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_REGION_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_REGION_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_REGION_COLDATA, ElementType.Xpath,
@@ -90,7 +90,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Region_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_REGION_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_REGION_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_REGION_COLDATA, ElementType.Xpath,
@@ -104,7 +104,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocationCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_LOCATIONCODE_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_LOCATIONCODE_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_LOCATIONCODE_COLDATA, ElementType.Xpath,
@@ -118,7 +118,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocationCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_LOCATIONCODE_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_LOCATIONCODE_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_LOCATIONCODE_COLDATA, ElementType.Xpath,
@@ -132,7 +132,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocationName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_LOCATIONNAME_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_LOCATIONNAME_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_LOCATIONNAME_COLDATA, ElementType.Xpath,
@@ -146,7 +146,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocationName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_LOCATIONNAME_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_LOCATIONNAME_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_LOCATIONNAME_COLDATA, ElementType.Xpath,
@@ -160,7 +160,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean DamagedAccountCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_DAMAGEDACCOUNTCODE_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_DAMAGEDACCOUNTCODE_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_DAMAGEDACCOUNTCODE_COLDATA, ElementType.Xpath,
@@ -174,7 +174,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean DamagedAccountCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_DAMAGEDACCOUNTCODE_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_DAMAGEDACCOUNTCODE_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_DAMAGEDACCOUNTCODE_COLDATA, ElementType.Xpath,
@@ -188,7 +188,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean AccountName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_ACCOUNTNAME_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_ACCOUNTNAME_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_ACCOUNTNAME_COLDATA, ElementType.Xpath,
@@ -202,7 +202,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean AccountName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_ACCOUNTNAME_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_ACCOUNTNAME_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_ACCOUNTNAME_COLDATA, ElementType.Xpath,
@@ -216,7 +216,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean SKU_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_SKU_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_SKU_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_SKU_COLDATA, ElementType.Xpath,
@@ -230,7 +230,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean SKU_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_SKU_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_SKU_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_SKU_COLDATA, ElementType.Xpath,
@@ -244,7 +244,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean SKUName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_SKUNAME_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_SKUNAME_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_SKUNAME_COLDATA, ElementType.Xpath,
@@ -258,7 +258,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean SKUName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_SKUNAME_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_SKUNAME_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_SKUNAME_COLDATA, ElementType.Xpath,
@@ -272,7 +272,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean MonitorRecovery_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_MONITORRECOVERY_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_MONITORRECOVERY_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_MONITORRECOVERY_COLDATA, ElementType.Xpath,
@@ -286,7 +286,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean MonitorRecovery_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_MONITORRECOVERY_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_MONITORRECOVERY_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_MONITORRECOVERY_COLDATA, ElementType.Xpath,
@@ -300,7 +300,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean MonitorReplenish_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_MONITORREPLENISH_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_MONITORREPLENISH_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_MONITORREPLENISH_COLDATA, ElementType.Xpath,
@@ -314,7 +314,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean MonitorReplenish_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_MONITORREPLENISH_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_MONITORREPLENISH_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_MONITORREPLENISH_COLDATA, ElementType.Xpath,
@@ -328,7 +328,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocationType_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_LOCATIONTYPE_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_LOCATIONTYPE_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_LOCATIONTYPE_COLDATA, ElementType.Xpath,
@@ -342,7 +342,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocationType_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_LOCATIONTYPE_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_LOCATIONTYPE_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_LOCATIONTYPE_COLDATA, ElementType.Xpath,
@@ -356,7 +356,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean InTransit_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_INTRANSIT_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_INTRANSIT_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_INTRANSIT_COLDATA, ElementType.Xpath,
@@ -370,7 +370,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean InTransit_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_INTRANSIT_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_INTRANSIT_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_INTRANSIT_COLDATA, ElementType.Xpath,
@@ -384,7 +384,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean PendingReceipt_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_PENDINGRECEIPT_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_PENDINGRECEIPT_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_PENDINGRECEIPT_COLDATA, ElementType.Xpath,
@@ -398,7 +398,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean PendingReceipt_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_PENDINGRECEIPT_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_PENDINGRECEIPT_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_PENDINGRECEIPT_COLDATA, ElementType.Xpath,
@@ -412,7 +412,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean WIP_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_WIP_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_WIP_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_WIP_COLDATA, ElementType.Xpath,
@@ -426,7 +426,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean WIP_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_WIP_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_WIP_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_WIP_COLDATA, ElementType.Xpath,
@@ -440,7 +440,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Damaged_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_DAMAGED_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_DAMAGED_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_DAMAGED_COLDATA, ElementType.Xpath,
@@ -454,7 +454,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Damaged_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_DAMAGED_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_DAMAGED_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_DAMAGED_COLDATA, ElementType.Xpath,
@@ -468,7 +468,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Scrap_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_SCRAP_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_SCRAP_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_SCRAP_COLDATA, ElementType.Xpath,
@@ -482,7 +482,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Scrap_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_SCRAP_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_SCRAP_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_SCRAP_COLDATA, ElementType.Xpath,
@@ -496,7 +496,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean A99_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InventoryByStagePageLocators.STRING_99_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InventoryByStagePageLocators.STRING_99_COLHEADER,
 				ElementType.Xpath, Reports_InventoryByStagePageLocators.BY_99_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_99_COLDATA, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_99_COLDATA);
@@ -509,7 +509,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean A99_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InventoryByStagePageLocators.STRING_99_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InventoryByStagePageLocators.STRING_99_COLHEADER,
 				ElementType.Xpath, Reports_InventoryByStagePageLocators.BY_99_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_99_COLDATA, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_99_COLDATA);
@@ -522,7 +522,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean WriteOff_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_WRITEOFF_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_WRITEOFF_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_WRITEOFF_COLDATA, ElementType.Xpath,
@@ -536,7 +536,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean WriteOff_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_WRITEOFF_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_WRITEOFF_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_WRITEOFF_COLDATA, ElementType.Xpath,
@@ -550,7 +550,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FG_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InventoryByStagePageLocators.STRING_FG_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InventoryByStagePageLocators.STRING_FG_COLHEADER,
 				ElementType.Xpath, Reports_InventoryByStagePageLocators.BY_FG_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_FG_COLDATA, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_FG_COLDATA);
@@ -563,7 +563,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FG_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InventoryByStagePageLocators.STRING_FG_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InventoryByStagePageLocators.STRING_FG_COLHEADER,
 				ElementType.Xpath, Reports_InventoryByStagePageLocators.BY_FG_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_FG_COLDATA, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_FG_COLDATA);
@@ -576,7 +576,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean DefaultZoneProviderCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_DEFAULTZONEPROVIDERCODE_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_DEFAULTZONEPROVIDERCODE_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_DEFAULTZONEPROVIDERCODE_COLDATA, ElementType.Xpath,
@@ -590,7 +590,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean DefaultZoneProviderCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_DEFAULTZONEPROVIDERCODE_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_DEFAULTZONEPROVIDERCODE_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_DEFAULTZONEPROVIDERCODE_COLDATA, ElementType.Xpath,
@@ -604,7 +604,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean DefaultZoneProviderName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_DEFAULTZONEPROVIDERNAME_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_DEFAULTZONEPROVIDERNAME_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_DEFAULTZONEPROVIDERNAME_COLDATA, ElementType.Xpath,
@@ -618,7 +618,7 @@ public class Reports_InventoryByStagePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean DefaultZoneProviderName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InventoryByStagePageLocators.STRING_DEFAULTZONEPROVIDERNAME_COLHEADER, ElementType.Xpath,
 				Reports_InventoryByStagePageLocators.BY_DEFAULTZONEPROVIDERNAME_COLHEADER,
 				Reports_InventoryByStagePageLocators.STRING_DEFAULTZONEPROVIDERNAME_COLDATA, ElementType.Xpath,

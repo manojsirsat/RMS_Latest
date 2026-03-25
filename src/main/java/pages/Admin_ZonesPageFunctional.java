@@ -41,7 +41,7 @@ public class Admin_ZonesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 
@@ -51,7 +51,7 @@ public class Admin_ZonesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Zone_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_ZONE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_ZONE_COLHEADER,
 				ElementType.Xpath, Admin_ZonesPageLocators.BY_ZONE_COLHEADER,
 				Admin_ZonesPageLocators.STRING_ZONE_COLDATA, ElementType.Xpath,
 				Admin_ZonesPageLocators.BY_ZONE_COLDATA);
@@ -64,7 +64,7 @@ public class Admin_ZonesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Zone_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_ZONE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_ZONE_COLHEADER,
 				ElementType.Xpath, Admin_ZonesPageLocators.BY_ZONE_COLHEADER,
 				Admin_ZonesPageLocators.STRING_ZONE_COLDATA, ElementType.Xpath,
 				Admin_ZonesPageLocators.BY_ZONE_COLDATA);
@@ -77,7 +77,7 @@ public class Admin_ZonesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Description_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_DESCRIPTION_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_DESCRIPTION_COLHEADER,
 				ElementType.Xpath, Admin_ZonesPageLocators.BY_DESCRIPTION_COLHEADER,
 				Admin_ZonesPageLocators.STRING_DESCRIPTION_COLDATA, ElementType.Xpath,
 				Admin_ZonesPageLocators.BY_DESCRIPTION_COLDATA);
@@ -90,7 +90,7 @@ public class Admin_ZonesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Description_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_DESCRIPTION_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_DESCRIPTION_COLHEADER,
 				ElementType.Xpath, Admin_ZonesPageLocators.BY_DESCRIPTION_COLHEADER,
 				Admin_ZonesPageLocators.STRING_DESCRIPTION_COLDATA, ElementType.Xpath,
 				Admin_ZonesPageLocators.BY_DESCRIPTION_COLDATA);
@@ -103,7 +103,7 @@ public class Admin_ZonesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ProviderLocCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_PROVIDERLOCCODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_PROVIDERLOCCODE_COLHEADER,
 				ElementType.Xpath, Admin_ZonesPageLocators.BY_PROVIDERLOCCODE_COLHEADER,
 				Admin_ZonesPageLocators.STRING_PROVIDERLOCCODE_COLDATA, ElementType.Xpath,
 				Admin_ZonesPageLocators.BY_PROVIDERLOCCODE_COLDATA);
@@ -116,7 +116,7 @@ public class Admin_ZonesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ProviderLocCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_PROVIDERLOCCODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_PROVIDERLOCCODE_COLHEADER,
 				ElementType.Xpath, Admin_ZonesPageLocators.BY_PROVIDERLOCCODE_COLHEADER,
 				Admin_ZonesPageLocators.STRING_PROVIDERLOCCODE_COLDATA, ElementType.Xpath,
 				Admin_ZonesPageLocators.BY_PROVIDERLOCCODE_COLDATA);
@@ -129,7 +129,7 @@ public class Admin_ZonesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ProviderLocName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_PROVIDERLOCNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_PROVIDERLOCNAME_COLHEADER,
 				ElementType.Xpath, Admin_ZonesPageLocators.BY_PROVIDERLOCNAME_COLHEADER,
 				Admin_ZonesPageLocators.STRING_PROVIDERLOCNAME_COLDATA, ElementType.Xpath,
 				Admin_ZonesPageLocators.BY_PROVIDERLOCNAME_COLDATA);
@@ -142,7 +142,7 @@ public class Admin_ZonesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ProviderLocName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_PROVIDERLOCNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_PROVIDERLOCNAME_COLHEADER,
 				ElementType.Xpath, Admin_ZonesPageLocators.BY_PROVIDERLOCNAME_COLHEADER,
 				Admin_ZonesPageLocators.STRING_PROVIDERLOCNAME_COLDATA, ElementType.Xpath,
 				Admin_ZonesPageLocators.BY_PROVIDERLOCNAME_COLDATA);
@@ -155,7 +155,7 @@ public class Admin_ZonesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocationsCount_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_LOCATIONSCOUNT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_ZonesPageLocators.STRING_LOCATIONSCOUNT_COLHEADER,
 				ElementType.Xpath, Admin_ZonesPageLocators.BY_LOCATIONSCOUNT_COLHEADER,
 				Admin_ZonesPageLocators.STRING_LOCATIONSCOUNT_COLDATA, ElementType.Xpath,
 				Admin_ZonesPageLocators.BY_LOCATIONSCOUNT_COLDATA);
@@ -168,7 +168,7 @@ public class Admin_ZonesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocationsCount_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_LOCATIONSCOUNT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_ZonesPageLocators.STRING_LOCATIONSCOUNT_COLHEADER,
 				ElementType.Xpath, Admin_ZonesPageLocators.BY_LOCATIONSCOUNT_COLHEADER,
 				Admin_ZonesPageLocators.STRING_LOCATIONSCOUNT_COLDATA, ElementType.Xpath,
 				Admin_ZonesPageLocators.BY_LOCATIONSCOUNT_COLDATA);
@@ -183,7 +183,7 @@ public class Admin_ZonesPageFunctional {
 	public boolean click_CreateNewZoneBtn() throws InterruptedException {
 		webDB.navigateToRefresh();
 		Thread.sleep(3000);
-		flag = webDB.isElementDisplayed(Admin_ZonesPageLocators.CREATE_NEW_ZONE_BTN, ElementType.Xpath);
+		flag = webDB.waitForElement(Admin_ZonesPageLocators.CREATE_NEW_ZONE_BTN, ElementType.Xpath);
 		if (flag) {
 			webDB.clickAnElement(Admin_ZonesPageLocators.CREATE_NEW_ZONE_BTN, ElementType.Xpath);
 			Thread.sleep(1500);

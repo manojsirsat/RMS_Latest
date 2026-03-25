@@ -461,7 +461,7 @@
  							<include name="LocName_AscendingSorting"></include>
  							<include name="LocType_DecendingSorting"></include>
  							<include name="LocType_AscendingSorting"></include>
- 							<include name="AcctCode_DecendingSorting"></include>
+ 							<include name="acctCode_DescendingSorting"></include>
  							<include name="AcctCode_AscendingSorting"></include>
  							<include name="Monitor_Recoveries_DecendingSorting"></include>
  							<include name="Monitor_Recoveries_AscendingSorting"></include>

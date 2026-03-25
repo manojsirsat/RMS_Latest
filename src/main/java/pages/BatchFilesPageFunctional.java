@@ -57,7 +57,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 
@@ -67,7 +67,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BatchFileID_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_BATCHFILEID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_BATCHFILEID_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_BATCHFILEID_COLHEADER,
 				BatchFilesPageLocators.STRING_BATCHFILEID_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_BATCHFILEID_COLDATA);
@@ -80,7 +80,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BatchFileID_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_BATCHFILEID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_BATCHFILEID_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_BATCHFILEID_COLHEADER,
 				BatchFilesPageLocators.STRING_BATCHFILEID_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_BATCHFILEID_COLDATA);
@@ -93,7 +93,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FileName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_FILENAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_FILENAME_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_FILENAME_COLHEADER,
 				BatchFilesPageLocators.STRING_FILENAME_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_FILENAME_COLDATA);
@@ -106,7 +106,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FileName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_FILENAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_FILENAME_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_FILENAME_COLHEADER,
 				BatchFilesPageLocators.STRING_FILENAME_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_FILENAME_COLDATA);
@@ -119,7 +119,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FileStatus_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_FILESTATUS_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_FILESTATUS_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_FILESTATUS_COLHEADER,
 				BatchFilesPageLocators.STRING_FILESTATUS_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_FILESTATUS_COLDATA);
@@ -132,7 +132,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FileStatus_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_FILESTATUS_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_FILESTATUS_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_FILESTATUS_COLHEADER,
 				BatchFilesPageLocators.STRING_FILESTATUS_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_FILESTATUS_COLDATA);
@@ -145,7 +145,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ActionType_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_ACTIONTYPE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_ACTIONTYPE_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_ACTIONTYPE_COLHEADER,
 				BatchFilesPageLocators.STRING_ACTIONTYPE_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_ACTIONTYPE_COLDATA);
@@ -158,7 +158,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ActionType_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_ACTIONTYPE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_ACTIONTYPE_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_ACTIONTYPE_COLHEADER,
 				BatchFilesPageLocators.STRING_ACTIONTYPE_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_ACTIONTYPE_COLDATA);
@@ -171,7 +171,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BatchFileLines_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_BATCHFILELINES_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_BATCHFILELINES_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_BATCHFILELINES_COLHEADER,
 				BatchFilesPageLocators.STRING_BATCHFILELINES_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_BATCHFILELINES_COLDATA);
@@ -184,7 +184,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BatchFileLines_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_BATCHFILELINES_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_BATCHFILELINES_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_BATCHFILELINES_COLHEADER,
 				BatchFilesPageLocators.STRING_BATCHFILELINES_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_BATCHFILELINES_COLDATA);
@@ -197,7 +197,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean RecordsLoaded_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_RECORDSLOADED_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_RECORDSLOADED_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_RECORDSLOADED_COLHEADER,
 				BatchFilesPageLocators.STRING_RECORDSLOADED_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_RECORDSLOADED_COLDATA);
@@ -210,7 +210,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean RecordsLoaded_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_RECORDSLOADED_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_RECORDSLOADED_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_RECORDSLOADED_COLHEADER,
 				BatchFilesPageLocators.STRING_RECORDSLOADED_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_RECORDSLOADED_COLDATA);
@@ -223,7 +223,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean RecordsProcessed_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_RECORDSPROCESSED_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_RECORDSPROCESSED_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_RECORDSPROCESSED_COLHEADER,
 				BatchFilesPageLocators.STRING_RECORDSPROCESSED_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_RECORDSPROCESSED_COLDATA);
@@ -236,7 +236,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean RecordsProcessed_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_RECORDSPROCESSED_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_RECORDSPROCESSED_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_RECORDSPROCESSED_COLHEADER,
 				BatchFilesPageLocators.STRING_RECORDSPROCESSED_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_RECORDSPROCESSED_COLDATA);
@@ -249,7 +249,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean TotalQuantity_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_TOTALQUANTITY_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_TOTALQUANTITY_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_TOTALQUANTITY_COLHEADER,
 				BatchFilesPageLocators.STRING_TOTALQUANTITY_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_TOTALQUANTITY_COLDATA);
@@ -262,7 +262,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean TotalQuantity_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_TOTALQUANTITY_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_TOTALQUANTITY_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_TOTALQUANTITY_COLHEADER,
 				BatchFilesPageLocators.STRING_TOTALQUANTITY_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_TOTALQUANTITY_COLDATA);
@@ -275,7 +275,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocCount_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_LOCCOUNT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_LOCCOUNT_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_LOCCOUNT_COLHEADER,
 				BatchFilesPageLocators.STRING_LOCCOUNT_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_LOCCOUNT_COLDATA);
@@ -288,7 +288,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocCount_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_LOCCOUNT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_LOCCOUNT_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_LOCCOUNT_COLHEADER,
 				BatchFilesPageLocators.STRING_LOCCOUNT_COLDATA, ElementType.Xpath,
 				BatchFilesPageLocators.BY_LOCCOUNT_COLDATA);
@@ -301,7 +301,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Uploaded_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(BatchFilesPageLocators.BY_UPLOADED_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(BatchFilesPageLocators.BY_UPLOADED_COLHEADER,
 				BatchFilesPageLocators.BY_UPLOADED_COLDATA);
 		return flag;
 	}
@@ -312,7 +312,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Uploaded_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(BatchFilesPageLocators.BY_UPLOADED_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(BatchFilesPageLocators.BY_UPLOADED_COLHEADER,
 				BatchFilesPageLocators.BY_UPLOADED_COLDATA);
 		return flag;
 	}
@@ -323,7 +323,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Updated_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(BatchFilesPageLocators.BY_UPDATED_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(BatchFilesPageLocators.BY_UPDATED_COLHEADER,
 				BatchFilesPageLocators.BY_UPDATED_COLDATA);
 		return flag;
 	}
@@ -334,7 +334,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Updated_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(BatchFilesPageLocators.BY_UPDATED_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(BatchFilesPageLocators.BY_UPDATED_COLHEADER,
 				BatchFilesPageLocators.BY_UPDATED_COLDATA);
 		return flag;
 	}
@@ -345,7 +345,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean User_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_USER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(BatchFilesPageLocators.STRING_USER_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_USER_COLHEADER, BatchFilesPageLocators.STRING_USER_COLDATA,
 				ElementType.Xpath, BatchFilesPageLocators.BY_USER_COLDATA);
 		return flag;
@@ -357,7 +357,7 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean User_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_USER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(BatchFilesPageLocators.STRING_USER_COLHEADER,
 				ElementType.Xpath, BatchFilesPageLocators.BY_USER_COLHEADER, BatchFilesPageLocators.STRING_USER_COLDATA,
 				ElementType.Xpath, BatchFilesPageLocators.BY_USER_COLDATA);
 		return flag;
@@ -392,7 +392,6 @@ public class BatchFilesPageFunctional {
 				Thread.sleep(1000);
 				int totaloptions = webDB.getDriver()
 						.findElements(By.xpath("//ul[@id='batch-action-type-autocomplete_list']//li")).size();
-//				log.logging("info", "Total options are "+totaloptions);
 				if (totaloptions >= 0) {
 					int oneoption = faker.number().numberBetween(1, totaloptions);
 					webDB.clickAnElement("//ul[@id='batch-action-type-autocomplete_list']//li" + "[" + oneoption + "]",
@@ -488,13 +487,13 @@ public class BatchFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean click_ProcessThisBatchBtn() throws InterruptedException {
-		flag = webDB.isElementDisplayed(BatchFilesPageLocators.PROCESSTHISBATCH_BTN, ElementType.Xpath);
+		flag = webDB.waitForElement(BatchFilesPageLocators.PROCESSTHISBATCH_BTN, ElementType.Xpath);
 		if (flag) {
 			flag = webDB.clickAnElement(BatchFilesPageLocators.PROCESSTHISBATCH_BTN, ElementType.Xpath);
 			Thread.sleep(1500);
 			if (flag) {
 				log.logging("info", "Clicked on process this batch button and batch file is processed");
-				flag = webDB.isElementDisplayed(BatchFilesPageLocators.SUCCESSMESSAGE, ElementType.Xpath);
+				flag = webDB.waitForElement(BatchFilesPageLocators.SUCCESSMESSAGE, ElementType.Xpath);
 				if (flag) {
 					log.logging("info", "Batch file is processed successfully");
 				} else {
@@ -553,7 +552,7 @@ public class BatchFilesPageFunctional {
 				Thread.sleep(1000);
 				if (flag) {
 					log.logging("info", "Clicked on upload button after uploading the file");
-					flag = webDB.isElementDisplayed(BatchFilesPageLocators.ERRORMESSAGE, ElementType.Xpath);
+					flag = webDB.waitForElement(BatchFilesPageLocators.ERRORMESSAGE, ElementType.Xpath);
 					String errordetails = webDB.getTextFromElement(BatchFilesPageLocators.DETAILED_ERRORMESSAGE,
 							ElementType.Xpath);
 					if (flag) {
@@ -577,7 +576,7 @@ public class BatchFilesPageFunctional {
 				Thread.sleep(1500);
 				if (flag) {
 					log.logging("info", "Clicked on upload button after uploading the file");
-					flag = webDB.isElementDisplayed(BatchFilesPageLocators.ERRORMESSAGE, ElementType.Xpath);
+					flag = webDB.waitForElement(BatchFilesPageLocators.ERRORMESSAGE, ElementType.Xpath);
 					String errordetails = webDB.getTextFromElement(BatchFilesPageLocators.DETAILED_ERRORMESSAGE,
 							ElementType.Xpath);
 					if (flag) {
@@ -600,7 +599,7 @@ public class BatchFilesPageFunctional {
 				Thread.sleep(1500);
 				if (flag) {
 					log.logging("info", "Clicked on upload button after uploading the file");
-					flag = webDB.isElementDisplayed(BatchFilesPageLocators.ERRORMESSAGE, ElementType.Xpath);
+					flag = webDB.waitForElement(BatchFilesPageLocators.ERRORMESSAGE, ElementType.Xpath);
 					String errordetails = webDB.getTextFromElement(BatchFilesPageLocators.DETAILED_ERRORMESSAGE,
 							ElementType.Xpath);
 					if (flag) {

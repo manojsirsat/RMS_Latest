@@ -42,7 +42,7 @@ public class Admin_ProgramsPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 
@@ -52,7 +52,7 @@ public class Admin_ProgramsPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean name_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_ProgramsPageLocators.STRING_NAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_ProgramsPageLocators.STRING_NAME_COLHEADER,
 				ElementType.Xpath, Admin_ProgramsPageLocators.BY_NAME_COLHEADER,
 				Admin_ProgramsPageLocators.STRING_NAME_COLDATA, ElementType.Xpath,
 				Admin_ProgramsPageLocators.BY_NAME_COLDATA);
@@ -65,7 +65,7 @@ public class Admin_ProgramsPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Name_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_ProgramsPageLocators.STRING_NAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_ProgramsPageLocators.STRING_NAME_COLHEADER,
 				ElementType.Xpath, Admin_ProgramsPageLocators.BY_NAME_COLHEADER,
 				Admin_ProgramsPageLocators.STRING_NAME_COLDATA, ElementType.Xpath,
 				Admin_ProgramsPageLocators.BY_NAME_COLDATA);
@@ -78,7 +78,7 @@ public class Admin_ProgramsPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Code_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_ProgramsPageLocators.STRING_CODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_ProgramsPageLocators.STRING_CODE_COLHEADER,
 				ElementType.Xpath, Admin_ProgramsPageLocators.BY_CODE_COLHEADER,
 				Admin_ProgramsPageLocators.STRING_CODE_COLDATA, ElementType.Xpath,
 				Admin_ProgramsPageLocators.BY_CODE_COLDATA);
@@ -91,7 +91,7 @@ public class Admin_ProgramsPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Code_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_ProgramsPageLocators.STRING_CODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_ProgramsPageLocators.STRING_CODE_COLHEADER,
 				ElementType.Xpath, Admin_ProgramsPageLocators.BY_CODE_COLHEADER,
 				Admin_ProgramsPageLocators.STRING_CODE_COLDATA, ElementType.Xpath,
 				Admin_ProgramsPageLocators.BY_CODE_COLDATA);
@@ -104,7 +104,7 @@ public class Admin_ProgramsPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Account_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_ProgramsPageLocators.STRING_ACCOUNT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_ProgramsPageLocators.STRING_ACCOUNT_COLHEADER,
 				ElementType.Xpath, Admin_ProgramsPageLocators.BY_ACCOUNT_COLHEADER,
 				Admin_ProgramsPageLocators.STRING_ACCOUNT_COLDATA, ElementType.Xpath,
 				Admin_ProgramsPageLocators.BY_ACCOUNT_COLDATA);
@@ -117,7 +117,7 @@ public class Admin_ProgramsPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Account_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_ProgramsPageLocators.STRING_ACCOUNT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_ProgramsPageLocators.STRING_ACCOUNT_COLHEADER,
 				ElementType.Xpath, Admin_ProgramsPageLocators.BY_ACCOUNT_COLHEADER,
 				Admin_ProgramsPageLocators.STRING_ACCOUNT_COLDATA, ElementType.Xpath,
 				Admin_ProgramsPageLocators.BY_ACCOUNT_COLDATA);
@@ -130,7 +130,7 @@ public class Admin_ProgramsPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Locations_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_ProgramsPageLocators.STRING_LOCATIONS_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_ProgramsPageLocators.STRING_LOCATIONS_COLHEADER,
 				ElementType.Xpath, Admin_ProgramsPageLocators.BY_LOCATIONS_COLHEADER,
 				Admin_ProgramsPageLocators.STRING_LOCATIONS_COLDATA, ElementType.Xpath,
 				Admin_ProgramsPageLocators.BY_LOCATIONS_COLDATA);
@@ -143,7 +143,7 @@ public class Admin_ProgramsPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Locations_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_ProgramsPageLocators.STRING_LOCATIONS_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_ProgramsPageLocators.STRING_LOCATIONS_COLHEADER,
 				ElementType.Xpath, Admin_ProgramsPageLocators.BY_LOCATIONS_COLHEADER,
 				Admin_ProgramsPageLocators.STRING_LOCATIONS_COLDATA, ElementType.Xpath,
 				Admin_ProgramsPageLocators.BY_LOCATIONS_COLDATA);
@@ -156,7 +156,7 @@ public class Admin_ProgramsPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean SKUS_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_ProgramsPageLocators.STRING_SKUS_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_ProgramsPageLocators.STRING_SKUS_COLHEADER,
 				ElementType.Xpath, Admin_ProgramsPageLocators.BY_SKUS_COLHEADER,
 				Admin_ProgramsPageLocators.STRING_SKUS_COLDATA, ElementType.Xpath,
 				Admin_ProgramsPageLocators.BY_SKUS_COLDATA);
@@ -169,7 +169,7 @@ public class Admin_ProgramsPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean SKUS_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_ProgramsPageLocators.STRING_SKUS_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_ProgramsPageLocators.STRING_SKUS_COLHEADER,
 				ElementType.Xpath, Admin_ProgramsPageLocators.BY_SKUS_COLHEADER,
 				Admin_ProgramsPageLocators.STRING_SKUS_COLDATA, ElementType.Xpath,
 				Admin_ProgramsPageLocators.BY_SKUS_COLDATA);
@@ -184,7 +184,7 @@ public class Admin_ProgramsPageFunctional {
 	public boolean click_CreateNewProgramBtn() throws InterruptedException {
 		webDB.navigateToRefresh();
 		Thread.sleep(1500);
-		flag = webDB.isElementDisplayed(Admin_ProgramsPageLocators.CREATE_NEW_PROGRAM_BTN, ElementType.Xpath);
+		flag = webDB.waitForElement(Admin_ProgramsPageLocators.CREATE_NEW_PROGRAM_BTN, ElementType.Xpath);
 		if (flag) {
 			webDB.clickAnElement(Admin_ProgramsPageLocators.CREATE_NEW_PROGRAM_BTN, ElementType.Xpath);
 			Thread.sleep(1500);

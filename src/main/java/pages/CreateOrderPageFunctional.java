@@ -47,12 +47,12 @@ public class CreateOrderPageFunctional {
 	 */
 	public boolean set_General_Info_Details() throws InterruptedException {
 
-		flag = webDB.isElementDisplayed(CreateOrderPageLocators.CREATEORDER_PAGE_HEADING, ElementType.Xpath);
+		flag = webDB.waitForElement(CreateOrderPageLocators.CREATEORDER_PAGE_HEADING, ElementType.Xpath);
 		if (flag) {
 			// Select Account from the dropdown
 			webDB.clickAnElement(CreateOrderPageLocators.ACCOUNT_DROPDOWN, ElementType.Id);
 			Thread.sleep(1000);
-			flag = webDB.isElementDisplayed(CreateOrderPageLocators.ACCOUNT_DRP_OPTION, ElementType.Id);
+			flag = webDB.waitForElement(CreateOrderPageLocators.ACCOUNT_DRP_OPTION, ElementType.Id);
 			if (flag) {
 				int totaloptions = webDB.getDriver()
 						.findElements(By.xpath(CreateOrderPageLocators.ACCOUNT_DRP_OPTIONS_LIST)).size();
@@ -67,7 +67,7 @@ public class CreateOrderPageFunctional {
 				// Select program from the dropdown
 				webDB.clickAnElement(CreateOrderPageLocators.PROGRAM_DROPDOWN, ElementType.Id);
 				Thread.sleep(1000);
-				flag = webDB.isElementDisplayed(CreateOrderPageLocators.PROGRAM_DRP_OPTION, ElementType.Id);
+				flag = webDB.waitForElement(CreateOrderPageLocators.PROGRAM_DRP_OPTION, ElementType.Id);
 				if (flag) {
 					int totalprograms = webDB.getDriver()
 							.findElements(By.xpath(CreateOrderPageLocators.PROGRAM_DRP_OPTIONS_LIST)).size();
@@ -78,7 +78,7 @@ public class CreateOrderPageFunctional {
 							.click();
 					log.logging("info", "Selected Program");
 					Thread.sleep(4000);
-					flag = webDB.isElementDisplayed(CreateOrderPageLocators.ORDERTYPE_DROPDOWN, ElementType.Id);
+					flag = webDB.waitForElement(CreateOrderPageLocators.ORDERTYPE_DROPDOWN, ElementType.Id);
 
 				}
 			}
@@ -96,7 +96,7 @@ public class CreateOrderPageFunctional {
 		// Select Order Type from the dropdown
 		webDB.clickAnElement(CreateOrderPageLocators.ORDERTYPE_DROPDOWN, ElementType.Id);
 		Thread.sleep(1000);
-		flag = webDB.isElementDisplayed(CreateOrderPageLocators.ORDERTYPE_DRP_OPTION, ElementType.Id);
+		flag = webDB.waitForElement(CreateOrderPageLocators.ORDERTYPE_DRP_OPTION, ElementType.Id);
 		if (flag) {
 			int totalordertypeoptions = webDB.getDriver()
 					.findElements(By.xpath(CreateOrderPageLocators.ORDERTYPE_DRP_OPTIONS_LIST)).size();
@@ -108,7 +108,7 @@ public class CreateOrderPageFunctional {
 			log.logging("info", "Selected order type");
 			Thread.sleep(3000);
 			// Select From Loc
-			flag = webDB.isElementDisplayed(CreateOrderPageLocators.FROM_LOC_DROPDOWN, ElementType.Id);
+			flag = webDB.waitForElement(CreateOrderPageLocators.FROM_LOC_DROPDOWN, ElementType.Id);
 			if (flag) {
 				webDB.clickAnElement(CreateOrderPageLocators.FROM_LOC_DROPDOWN, ElementType.Id);
 				Thread.sleep(1000);
@@ -122,7 +122,7 @@ public class CreateOrderPageFunctional {
 				log.logging("info", "Selected from loc");
 				Thread.sleep(2000);
 				// Select To Loc
-				flag = webDB.isElementDisplayed(CreateOrderPageLocators.TO_LOC_DROPDOWN, ElementType.Id);
+				flag = webDB.waitForElement(CreateOrderPageLocators.TO_LOC_DROPDOWN, ElementType.Id);
 				if (flag) {
 					webDB.clickAnElement(CreateOrderPageLocators.TO_LOC_DROPDOWN, ElementType.Id);
 					Thread.sleep(1000);
@@ -148,7 +148,7 @@ public class CreateOrderPageFunctional {
 						flag = true;
 					}
 					// Select Pickup window Start date
-					flag = webDB.isElementDisplayed(CreateOrderPageLocators.PICKUP_WINDOW_STARTDATE_CALENDER,
+					flag = webDB.waitForElement(CreateOrderPageLocators.PICKUP_WINDOW_STARTDATE_CALENDER,
 							ElementType.Id);
 					if (flag) {
 						webDB.clickAnElement(CreateOrderPageLocators.PICKUP_WINDOW_STARTDATE_CALENDER, ElementType.Id);
@@ -159,7 +159,7 @@ public class CreateOrderPageFunctional {
 						log.logging("info", "Selected Pickup window Start date");
 						Thread.sleep(1000);
 						// Select Pickup window End date
-						flag = webDB.isElementDisplayed(CreateOrderPageLocators.PICKUP_WINDOW_ENDDATE_CALENDER,
+						flag = webDB.waitForElement(CreateOrderPageLocators.PICKUP_WINDOW_ENDDATE_CALENDER,
 								ElementType.Id);
 						if (flag) {
 							webDB.clickAnElement(CreateOrderPageLocators.PICKUP_WINDOW_ENDDATE_CALENDER,
@@ -171,7 +171,7 @@ public class CreateOrderPageFunctional {
 							log.logging("info", "Selected Pickup window End date");
 							Thread.sleep(1000);
 							// Select Delivery window Start date
-							flag = webDB.isElementDisplayed(CreateOrderPageLocators.DELIVERY_WINDOW_STARTDATE_CALENDER,
+							flag = webDB.waitForElement(CreateOrderPageLocators.DELIVERY_WINDOW_STARTDATE_CALENDER,
 									ElementType.Id);
 							if (flag) {
 								webDB.clickAnElement(CreateOrderPageLocators.DELIVERY_WINDOW_STARTDATE_CALENDER,
@@ -188,7 +188,7 @@ public class CreateOrderPageFunctional {
 								log.logging("info", "Selected Delivery window Start date");
 								Thread.sleep(1000);
 								// Select Delivery window End date
-								flag = webDB.isElementDisplayed(
+								flag = webDB.waitForElement(
 										CreateOrderPageLocators.DELIVERY_WINDOW_ENDDATE_CALENDER, ElementType.Id);
 								if (flag) {
 //									webDB.clickAnElement(CreateOrderPageLocators.DELIVERY_WINDOW_ENDDATE_CALENDER, ElementType.Id);
@@ -227,7 +227,7 @@ public class CreateOrderPageFunctional {
 		// Select Order Type from the dropdown
 		webDB.clickAnElement(CreateOrderPageLocators.ORDERTYPE_DROPDOWN, ElementType.Id);
 		Thread.sleep(1000);
-		flag = webDB.isElementDisplayed(CreateOrderPageLocators.ORDERTYPE_DRP_OPTION, ElementType.Id);
+		flag = webDB.waitForElement(CreateOrderPageLocators.ORDERTYPE_DRP_OPTION, ElementType.Id);
 		if (flag) {
 			int totalordertypeoptions = webDB.getDriver()
 					.findElements(By.xpath(CreateOrderPageLocators.ORDERTYPE_DRP_OPTIONS_LIST)).size();
@@ -239,7 +239,7 @@ public class CreateOrderPageFunctional {
 			log.logging("info", "Selected order type");
 			Thread.sleep(3000);
 			// Select From Loc
-			flag = webDB.isElementDisplayed(CreateOrderPageLocators.FROM_LOC_DROPDOWN, ElementType.Id);
+			flag = webDB.waitForElement(CreateOrderPageLocators.FROM_LOC_DROPDOWN, ElementType.Id);
 			if (flag) {
 				webDB.clickAnElement(CreateOrderPageLocators.FROM_LOC_DROPDOWN, ElementType.Id);
 				Thread.sleep(1000);
@@ -253,7 +253,7 @@ public class CreateOrderPageFunctional {
 				log.logging("info", "Selected from loc");
 				Thread.sleep(2000);
 				// Select To Loc
-				flag = webDB.isElementDisplayed(CreateOrderPageLocators.TO_LOC_DROPDOWN, ElementType.Id);
+				flag = webDB.waitForElement(CreateOrderPageLocators.TO_LOC_DROPDOWN, ElementType.Id);
 				if (flag) {
 					webDB.clickAnElement(CreateOrderPageLocators.TO_LOC_DROPDOWN, ElementType.Id);
 					Thread.sleep(1000);
@@ -279,7 +279,7 @@ public class CreateOrderPageFunctional {
 						flag = true;
 					}
 					// Select Pickup window Start date
-					flag = webDB.isElementDisplayed(CreateOrderPageLocators.PICKUP_WINDOW_STARTDATE_CALENDER,
+					flag = webDB.waitForElement(CreateOrderPageLocators.PICKUP_WINDOW_STARTDATE_CALENDER,
 							ElementType.Id);
 					if (flag) {
 						webDB.clickAnElement(CreateOrderPageLocators.PICKUP_WINDOW_STARTDATE_CALENDER, ElementType.Id);
@@ -290,7 +290,7 @@ public class CreateOrderPageFunctional {
 						log.logging("info", "Selected Pickup window Start date");
 						Thread.sleep(1000);
 						// Select Pickup window End date
-						flag = webDB.isElementDisplayed(CreateOrderPageLocators.PICKUP_WINDOW_ENDDATE_CALENDER,
+						flag = webDB.waitForElement(CreateOrderPageLocators.PICKUP_WINDOW_ENDDATE_CALENDER,
 								ElementType.Id);
 						if (flag) {
 							webDB.clickAnElement(CreateOrderPageLocators.PICKUP_WINDOW_ENDDATE_CALENDER,
@@ -302,7 +302,7 @@ public class CreateOrderPageFunctional {
 							log.logging("info", "Selected Pickup window End date");
 							Thread.sleep(1000);
 							// Select Delivery window Start date
-							flag = webDB.isElementDisplayed(CreateOrderPageLocators.DELIVERY_WINDOW_STARTDATE_CALENDER,
+							flag = webDB.waitForElement(CreateOrderPageLocators.DELIVERY_WINDOW_STARTDATE_CALENDER,
 									ElementType.Id);
 							if (flag) {
 								webDB.clickAnElement(CreateOrderPageLocators.DELIVERY_WINDOW_STARTDATE_CALENDER,
@@ -319,7 +319,7 @@ public class CreateOrderPageFunctional {
 								log.logging("info", "Selected Delivery window Start date");
 								Thread.sleep(1000);
 								// Select Delivery window End date
-								flag = webDB.isElementDisplayed(
+								flag = webDB.waitForElement(
 										CreateOrderPageLocators.DELIVERY_WINDOW_ENDDATE_CALENDER, ElementType.Id);
 								if (flag) {
 									webDB.clickAnElement(CreateOrderPageLocators.DELIVERY_WINDOW_ENDDATE_CALENDER,
@@ -378,7 +378,7 @@ public class CreateOrderPageFunctional {
 			Thread.sleep(12000);
 //			String ordernumberfromorderdetailspage = webDB.getTextFromElement(BOL_Number, null);
 //			log.logging("info", "The order number is "+ordernumberfromorderdetailspage);
-			webDB.isElementDisplayed(CreateOrderPageLocators.ADD_ORDER_TO_BOL_BUTTON, ElementType.Xpath);
+			webDB.waitForElement(CreateOrderPageLocators.ADD_ORDER_TO_BOL_BUTTON, ElementType.Xpath);
 			if (flag) {
 				log.logging("info", "Order is created successfully");
 			}

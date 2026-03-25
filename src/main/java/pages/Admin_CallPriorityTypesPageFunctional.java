@@ -38,7 +38,7 @@ public class Admin_CallPriorityTypesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 
@@ -48,7 +48,7 @@ public class Admin_CallPriorityTypesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Type_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Admin_CallPriorityTypesPageLocators.STRING_TYPE_COLHEADER, ElementType.Xpath,
 				Admin_CallPriorityTypesPageLocators.BY_TYPE_COLHEADER,
 				Admin_CallPriorityTypesPageLocators.STRING_TYPE_COLDATA, ElementType.Xpath,
@@ -62,7 +62,7 @@ public class Admin_CallPriorityTypesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Type_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Admin_CallPriorityTypesPageLocators.STRING_TYPE_COLHEADER, ElementType.Xpath,
 				Admin_CallPriorityTypesPageLocators.BY_TYPE_COLHEADER,
 				Admin_CallPriorityTypesPageLocators.STRING_TYPE_COLDATA, ElementType.Xpath,
@@ -76,7 +76,7 @@ public class Admin_CallPriorityTypesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Active_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Admin_CallPriorityTypesPageLocators.STRING_ACTIVE_COLHEADER, ElementType.Xpath,
 				Admin_CallPriorityTypesPageLocators.BY_ACTIVE_COLHEADER,
 				Admin_CallPriorityTypesPageLocators.STRING_ACTIVE_COLDATA, ElementType.Xpath,
@@ -90,7 +90,7 @@ public class Admin_CallPriorityTypesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Active_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Admin_CallPriorityTypesPageLocators.STRING_ACTIVE_COLHEADER, ElementType.Xpath,
 				Admin_CallPriorityTypesPageLocators.BY_ACTIVE_COLHEADER,
 				Admin_CallPriorityTypesPageLocators.STRING_ACTIVE_COLDATA, ElementType.Xpath,

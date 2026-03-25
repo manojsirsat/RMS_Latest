@@ -41,7 +41,7 @@ public class Accounts_AccountsPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 
@@ -50,8 +50,8 @@ public class Accounts_AccountsPageFunctional {
 	 * @return flag This method is used to verify the descending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean AcctCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_ACCTCODE_COLHEADER,
+	public boolean acctCode_DescendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_ACCTCODE_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_ACCTCODE_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_ACCTCODE_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_ACCTCODE_COLDATA);
@@ -63,8 +63,8 @@ public class Accounts_AccountsPageFunctional {
 	 * @return flag This method is used to verify the ascending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean AcctCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_ACCTCODE_COLHEADER,
+	public boolean acctCode_AscendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_ACCTCODE_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_ACCTCODE_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_ACCTCODE_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_ACCTCODE_COLDATA);
@@ -76,8 +76,8 @@ public class Accounts_AccountsPageFunctional {
 	 * @return flag This method is used to verify the descending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Name_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_NAME_COLHEADER,
+	public boolean name_DescendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_NAME_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_NAME_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_NAME_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_NAME_COLDATA);
@@ -85,12 +85,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the ascending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Name_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_NAME_COLHEADER,
+	public boolean name_AscendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_NAME_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_NAME_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_NAME_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_NAME_COLDATA);
@@ -98,12 +98,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the ascending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Short_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_SHORT_COLHEADER,
+	public boolean short_AscendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_SHORT_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_SHORT_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_SHORT_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_SHORT_COLDATA);
@@ -111,12 +111,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the descending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Short_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_SHORT_COLHEADER,
+	public boolean short_DescendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_SHORT_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_SHORT_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_SHORT_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_SHORT_COLDATA);
@@ -124,12 +124,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the ascending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean City_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_CITY_COLHEADER,
+	public boolean city_AscendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_CITY_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_CITY_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_CITY_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_CITY_COLDATA);
@@ -137,12 +137,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the descending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean City_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_CITY_COLHEADER,
+	public boolean city_DescendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_CITY_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_CITY_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_CITY_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_CITY_COLDATA);
@@ -150,12 +150,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the ascending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Admin_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_ADMIN_COLHEADER,
+	public boolean admin_AscendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_ADMIN_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_ADMIN_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_ADMIN_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_ADMIN_COLDATA);
@@ -163,12 +163,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the descending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Admin_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_ADMIN_COLHEADER,
+	public boolean admin_DescendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_ADMIN_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_ADMIN_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_ADMIN_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_ADMIN_COLDATA);
@@ -176,12 +176,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the ascending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Customer_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_CUSTOMER_COLHEADER,
+	public boolean customer_AscendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_CUSTOMER_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_CUSTOMER_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_CUSTOMER_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_CUSTOMER_COLDATA);
@@ -189,12 +189,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the descending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Customer_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_CUSTOMER_COLHEADER,
+	public boolean customer_DescendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_CUSTOMER_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_CUSTOMER_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_CUSTOMER_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_CUSTOMER_COLDATA);
@@ -202,12 +202,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the ascending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Provider_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_PROVIDER_COLHEADER,
+	public boolean provider_AscendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_PROVIDER_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_PROVIDER_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_PROVIDER_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_PROVIDER_COLDATA);
@@ -215,12 +215,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the descending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Provider_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_PROVIDER_COLHEADER,
+	public boolean provider_DescendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_PROVIDER_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_PROVIDER_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_PROVIDER_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_PROVIDER_COLDATA);
@@ -228,12 +228,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the ascending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Carrier_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_CARRIER_COLHEADER,
+	public boolean carrier_AscendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_CARRIER_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_CARRIER_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_CARRIER_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_CARRIER_COLDATA);
@@ -241,12 +241,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the descending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Carrier_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_CARRIER_COLHEADER,
+	public boolean carrier_DescendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_CARRIER_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_CARRIER_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_CARRIER_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_CARRIER_COLDATA);
@@ -254,12 +254,12 @@ public class Accounts_AccountsPageFunctional {
 	}
 
 	/**
-	 * @author
+	 * @author Sonam
 	 * @return flag This method is used to verify the ascending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Network_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_NETWORK_COLHEADER,
+	public boolean network_AscendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_NETWORK_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_NETWORK_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_NETWORK_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_NETWORK_COLDATA);
@@ -271,8 +271,8 @@ public class Accounts_AccountsPageFunctional {
 	 * @return flag This method is used to verify the descending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Network_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_NETWORK_COLHEADER,
+	public boolean network_DescendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_NETWORK_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_NETWORK_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_NETWORK_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_NETWORK_COLDATA);
@@ -284,8 +284,8 @@ public class Accounts_AccountsPageFunctional {
 	 * @return flag This method is used to verify the ascending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Active_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_ACTIVE_COLHEADER,
+	public boolean active_AscendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Accounts_AccountsPageLocators.STRING_ACTIVE_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_ACTIVE_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_ACTIVE_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_ACTIVE_COLDATA);
@@ -297,8 +297,8 @@ public class Accounts_AccountsPageFunctional {
 	 * @return flag This method is used to verify the descending order functionality
 	 * @throws InterruptedException
 	 */
-	public boolean Active_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_ACTIVE_COLHEADER,
+	public boolean active_DescendingSorting() throws InterruptedException {
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Accounts_AccountsPageLocators.STRING_ACTIVE_COLHEADER,
 				ElementType.Xpath, Accounts_AccountsPageLocators.BY_ACTIVE_COLHEADER,
 				Accounts_AccountsPageLocators.STRING_ACTIVE_COLDATA, ElementType.Xpath,
 				Accounts_AccountsPageLocators.BY_ACTIVE_COLDATA);
@@ -330,7 +330,7 @@ public class Accounts_AccountsPageFunctional {
 	public boolean click_CreateNewAccountBtn() throws InterruptedException {
 		webDB.navigateToRefresh();
 		Thread.sleep(1500);
-		flag = webDB.isElementDisplayed(Accounts_AccountsPageLocators.CREATE_NEW_ACCOUNT_BTN, ElementType.Xpath);
+		flag = webDB.waitForElement(Accounts_AccountsPageLocators.CREATE_NEW_ACCOUNT_BTN, ElementType.Xpath);
 		if (flag) {
 			webDB.clickAnElement(Accounts_AccountsPageLocators.CREATE_NEW_ACCOUNT_BTN, ElementType.Xpath);
 			Thread.sleep(1500);

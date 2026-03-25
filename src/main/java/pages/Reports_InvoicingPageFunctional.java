@@ -36,7 +36,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 
@@ -46,7 +46,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLID_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_BOLID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_BOLID_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_BOLID_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_BOLID_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_BOLID_COLDATA);
@@ -59,7 +59,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLID_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_BOLID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_BOLID_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_BOLID_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_BOLID_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_BOLID_COLDATA);
@@ -72,7 +72,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderID_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_ORDERID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_ORDERID_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_ORDERID_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDERID_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDERID_COLDATA);
@@ -85,7 +85,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderID_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_ORDERID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_ORDERID_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_ORDERID_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDERID_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDERID_COLDATA);
@@ -98,7 +98,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderType_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_ORDERTYPE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_ORDERTYPE_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_ORDERTYPE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDERTYPE_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDERTYPE_COLDATA);
@@ -111,7 +111,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderType_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_ORDERTYPE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_ORDERTYPE_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_ORDERTYPE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDERTYPE_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDERTYPE_COLDATA);
@@ -124,7 +124,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ProgramOwner_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_PROGRAMOWNER_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_PROGRAMOWNER_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_PROGRAMOWNER_COLDATA, ElementType.Xpath,
@@ -138,7 +138,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ProgramOwner_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_PROGRAMOWNER_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_PROGRAMOWNER_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_PROGRAMOWNER_COLDATA, ElementType.Xpath,
@@ -152,7 +152,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Program_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_PROGRAM_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_PROGRAM_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_PROGRAM_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_PROGRAM_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_PROGRAM_COLDATA);
@@ -165,7 +165,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Program_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_PROGRAM_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_PROGRAM_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_PROGRAM_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_PROGRAM_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_PROGRAM_COLDATA);
@@ -178,7 +178,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_ORDERDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_ORDERDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_ORDERDATE_COLDATA);
 		return flag;
 	}
@@ -189,7 +189,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_ORDERDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_ORDERDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_ORDERDATE_COLDATA);
 		return flag;
 	}
@@ -200,7 +200,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLAssignDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_BOLASSIGNEDDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_BOLASSIGNEDDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_BOLASSIGNEDDATE_COLDATA);
 		return flag;
 	}
@@ -211,7 +211,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLAssignDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_BOLASSIGNEDDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_BOLASSIGNEDDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_BOLASSIGNEDDATE_COLDATA);
 		return flag;
 	}
@@ -222,13 +222,13 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLDueDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_BOLDUEDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_BOLDUEDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_BOLDUEDATE_COLDATA);
 		return flag;
 	}
 
 	public boolean BOLDueDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_BOLDUEDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_BOLDUEDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_BOLDUEDATE_COLDATA);
 		return flag;
 	}
@@ -239,7 +239,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLCommitDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_BOLCOMMITDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_BOLCOMMITDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_BOLCOMMITDATE_COLDATA);
 		return flag;
 	}
@@ -250,7 +250,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLCommitDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_BOLCOMMITDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_BOLCOMMITDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_BOLCOMMITDATE_COLDATA);
 		return flag;
 	}
@@ -261,7 +261,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLModifiedCommitDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_BOLMODIFIEDCOMMITDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_BOLMODIFIEDCOMMITDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_BOLMODIFIEDCOMMITDATE_COLDATA);
 		return flag;
 	}
@@ -272,7 +272,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLModifiedCommitDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_BOLMODIFIEDCOMMITDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_BOLMODIFIEDCOMMITDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_BOLMODIFIEDCOMMITDATE_COLDATA);
 		return flag;
 	}
@@ -283,7 +283,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLPickupWeek_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_BOLPICKUPWEEK_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_BOLPICKUPWEEK_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_BOLPICKUPWEEK_COLDATA, ElementType.Xpath,
@@ -297,7 +297,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLPickupWeek_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_BOLPICKUPWEEK_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_BOLPICKUPWEEK_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_BOLPICKUPWEEK_COLDATA, ElementType.Xpath,
@@ -311,7 +311,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLPickUpDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_BOLPICKUPDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_BOLPICKUPDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_BOLPICKUPDATE_COLDATA);
 		return flag;
 	}
@@ -322,7 +322,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLPickUpDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_BOLPICKUPDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_BOLPICKUPDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_BOLPICKUPDATE_COLDATA);
 		return flag;
 	}
@@ -333,7 +333,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLCompletedDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_BOLCOMPLETEDDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(Reports_InvoicingPageLocators.BY_BOLCOMPLETEDDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_BOLCOMPLETEDDATE_COLDATA);
 		return flag;
 	}
@@ -344,7 +344,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLCompletedDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_BOLCOMPLETEDDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(Reports_InvoicingPageLocators.BY_BOLCOMPLETEDDATE_COLHEADER,
 				Reports_InvoicingPageLocators.BY_BOLCOMPLETEDDATE_COLDATA);
 		return flag;
 	}
@@ -355,7 +355,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Customer_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_CUSTOMER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_CUSTOMER_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_CUSTOMER_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_CUSTOMER_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_CUSTOMER_COLDATA);
@@ -368,7 +368,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Customer_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_CUSTOMER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_CUSTOMER_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_CUSTOMER_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_CUSTOMER_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_CUSTOMER_COLDATA);
@@ -381,7 +381,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean CustomerCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_CUSTOMERCODE_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_CUSTOMERCODE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_CUSTOMERCODE_COLDATA, ElementType.Xpath,
@@ -395,7 +395,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean CustomerCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_CUSTOMERCODE_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_CUSTOMERCODE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_CUSTOMERCODE_COLDATA, ElementType.Xpath,
@@ -409,7 +409,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemSKU_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_ITEMSKU_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_ITEMSKU_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_ITEMSKU_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMSKU_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMSKU_COLDATA);
@@ -422,7 +422,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemSKU_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_ITEMSKU_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_ITEMSKU_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_ITEMSKU_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMSKU_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMSKU_COLDATA);
@@ -435,7 +435,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_ITEMNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_ITEMNAME_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_ITEMNAME_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMNAME_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMNAME_COLDATA);
@@ -448,7 +448,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_ITEMNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_ITEMNAME_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_ITEMNAME_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMNAME_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMNAME_COLDATA);
@@ -461,7 +461,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemType_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_ITEMTYPE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_ITEMTYPE_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_ITEMTYPE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMTYPE_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMTYPE_COLDATA);
@@ -474,7 +474,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemType_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_ITEMTYPE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_ITEMTYPE_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_ITEMTYPE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMTYPE_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMTYPE_COLDATA);
@@ -487,7 +487,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemOwner_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_ITEMOWNER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_ITEMOWNER_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_ITEMOWNER_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMOWNER_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMOWNER_COLDATA);
@@ -500,7 +500,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemOwner_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_ITEMOWNER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_ITEMOWNER_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_ITEMOWNER_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMOWNER_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMOWNER_COLDATA);
@@ -513,7 +513,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemOwnerCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_ITEMOWNERCODE_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMOWNERCODE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMOWNERCODE_COLDATA, ElementType.Xpath,
@@ -527,7 +527,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemOwnerCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_ITEMOWNERCODE_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMOWNERCODE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMOWNERCODE_COLDATA, ElementType.Xpath,
@@ -541,7 +541,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemQuantity_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_ITEMQUANTITY_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMQUANTITY_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMQUANTITY_COLDATA, ElementType.Xpath,
@@ -555,7 +555,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemQuantity_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_ITEMQUANTITY_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMQUANTITY_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMQUANTITY_COLDATA, ElementType.Xpath,
@@ -569,7 +569,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderMinApplied_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_ORDERMINAPPLIED_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDERMINAPPLIED_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDERMINAPPLIED_COLDATA, ElementType.Xpath,
@@ -583,7 +583,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderMinApplied_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_ORDERMINAPPLIED_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDERMINAPPLIED_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDERMINAPPLIED_COLDATA, ElementType.Xpath,
@@ -597,7 +597,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean PlanMinQty_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_PLANMINQTY_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_PLANMINQTY_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_PLANMINQTY_COLDATA, ElementType.Xpath,
@@ -611,7 +611,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean PlanMinQty_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_PLANMINQTY_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_PLANMINQTY_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_PLANMINQTY_COLDATA, ElementType.Xpath,
@@ -625,7 +625,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemPriceEach_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_ITEMPRICEEACH_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMPRICEEACH_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMPRICEEACH_COLDATA, ElementType.Xpath,
@@ -639,7 +639,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemPriceEach_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_ITEMPRICEEACH_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMPRICEEACH_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMPRICEEACH_COLDATA, ElementType.Xpath,
@@ -653,7 +653,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemPriceTotal_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_ITEMPRICETOTAL_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMPRICETOTAL_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMPRICETOTAL_COLDATA, ElementType.Xpath,
@@ -667,7 +667,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ItemPriceTotal_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_ITEMPRICETOTAL_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ITEMPRICETOTAL_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ITEMPRICETOTAL_COLDATA, ElementType.Xpath,
@@ -681,7 +681,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderSubtotal_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_ORDERSUBTOTAL_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDERSUBTOTAL_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDERSUBTOTAL_COLDATA, ElementType.Xpath,
@@ -695,7 +695,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderSubtotal_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_ORDERSUBTOTAL_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDERSUBTOTAL_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDERSUBTOTAL_COLDATA, ElementType.Xpath,
@@ -709,7 +709,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderFuelCost_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_ORDERFUELCOST_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDERFUELCOST_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDERFUELCOST_COLDATA, ElementType.Xpath,
@@ -723,7 +723,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderFuelCost_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_ORDERFUELCOST_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDERFUELCOST_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDERFUELCOST_COLDATA, ElementType.Xpath,
@@ -737,7 +737,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderOtherCost_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_ORDEROTHERCOST_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDEROTHERCOST_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDEROTHERCOST_COLDATA, ElementType.Xpath,
@@ -751,7 +751,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderOtherCost_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_ORDEROTHERCOST_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDEROTHERCOST_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDEROTHERCOST_COLDATA, ElementType.Xpath,
@@ -765,7 +765,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderOtherNotes_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_ORDEROTHERNOTES_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDEROTHERNOTES_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDEROTHERNOTES_COLDATA, ElementType.Xpath,
@@ -779,7 +779,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderOtherNotes_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_ORDEROTHERNOTES_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDEROTHERNOTES_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDEROTHERNOTES_COLDATA, ElementType.Xpath,
@@ -793,7 +793,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderTotal_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_ORDERTOTAL_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDERTOTAL_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDERTOTAL_COLDATA, ElementType.Xpath,
@@ -807,7 +807,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderTotal_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_ORDERTOTAL_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_ORDERTOTAL_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_ORDERTOTAL_COLDATA, ElementType.Xpath,
@@ -821,7 +821,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShipperLocCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_SHIPPERLOCCODE_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_SHIPPERLOCCODE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_SHIPPERLOCCODE_COLDATA, ElementType.Xpath,
@@ -835,7 +835,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShipperLocCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_SHIPPERLOCCODE_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_SHIPPERLOCCODE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_SHIPPERLOCCODE_COLDATA, ElementType.Xpath,
@@ -849,7 +849,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShipperLocName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_SHIPPERLOCNAME_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_SHIPPERLOCNAME_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_SHIPPERLOCNAME_COLDATA, ElementType.Xpath,
@@ -863,7 +863,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShipperLocName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_SHIPPERLOCNAME_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_SHIPPERLOCNAME_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_SHIPPERLOCNAME_COLDATA, ElementType.Xpath,
@@ -877,7 +877,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_FROMLOCCODE_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_FROMLOCCODE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_FROMLOCCODE_COLDATA, ElementType.Xpath,
@@ -891,7 +891,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_FROMLOCCODE_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_FROMLOCCODE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_FROMLOCCODE_COLDATA, ElementType.Xpath,
@@ -905,7 +905,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_FROMLOCNAME_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_FROMLOCNAME_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_FROMLOCNAME_COLDATA, ElementType.Xpath,
@@ -919,7 +919,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_FROMLOCNAME_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_FROMLOCNAME_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_FROMLOCNAME_COLDATA, ElementType.Xpath,
@@ -933,7 +933,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocAddress_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_FROMLOCADDRESS_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_FROMLOCADDRESS_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_FROMLOCADDRESS_COLDATA, ElementType.Xpath,
@@ -947,7 +947,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocAddress_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_FROMLOCADDRESS_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_FROMLOCADDRESS_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_FROMLOCADDRESS_COLDATA, ElementType.Xpath,
@@ -961,7 +961,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocCity_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_FROMLOCCITY_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_FROMLOCCITY_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_FROMLOCCITY_COLDATA, ElementType.Xpath,
@@ -975,7 +975,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocCity_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_FROMLOCCITY_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_FROMLOCCITY_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_FROMLOCCITY_COLDATA, ElementType.Xpath,
@@ -989,7 +989,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocState_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_FROMLOCSTATE_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_FROMLOCSTATE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_FROMLOCSTATE_COLDATA, ElementType.Xpath,
@@ -1003,7 +1003,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocState_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_FROMLOCSTATE_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_FROMLOCSTATE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_FROMLOCSTATE_COLDATA, ElementType.Xpath,
@@ -1017,7 +1017,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocZip_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_FROMLOCZIP_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_FROMLOCZIP_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_FROMLOCZIP_COLDATA, ElementType.Xpath,
@@ -1031,7 +1031,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocZip_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_FROMLOCZIP_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_FROMLOCZIP_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_FROMLOCZIP_COLDATA, ElementType.Xpath,
@@ -1045,7 +1045,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocState_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_TOLOCSTATE_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_TOLOCSTATE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_TOLOCSTATE_COLDATA, ElementType.Xpath,
@@ -1059,7 +1059,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocState_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_TOLOCSTATE_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_TOLOCSTATE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_TOLOCSTATE_COLDATA, ElementType.Xpath,
@@ -1073,7 +1073,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocZip_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCZIP_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCZIP_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_TOLOCZIP_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_TOLOCZIP_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_TOLOCZIP_COLDATA);
@@ -1086,7 +1086,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocZip_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCZIP_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCZIP_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_TOLOCZIP_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_TOLOCZIP_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_TOLOCZIP_COLDATA);
@@ -1099,7 +1099,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocAddress_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Reports_InvoicingPageLocators.STRING_TOLOCADDRESS_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_TOLOCADDRESS_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_TOLOCADDRESS_COLDATA, ElementType.Xpath,
@@ -1113,7 +1113,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocAddress_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Reports_InvoicingPageLocators.STRING_TOLOCADDRESS_COLHEADER, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_TOLOCADDRESS_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_TOLOCADDRESS_COLDATA, ElementType.Xpath,
@@ -1127,7 +1127,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocCity_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCCITY_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCCITY_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_TOLOCCITY_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_TOLOCCITY_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_TOLOCCITY_COLDATA);
@@ -1140,7 +1140,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocCity_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCCITY_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCCITY_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_TOLOCCITY_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_TOLOCCITY_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_TOLOCCITY_COLDATA);
@@ -1153,7 +1153,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCCODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCCODE_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_TOLOCCODE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_TOLOCCODE_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_TOLOCCODE_COLDATA);
@@ -1166,7 +1166,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCCODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCCODE_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_TOLOCCODE_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_TOLOCCODE_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_TOLOCCODE_COLDATA);
@@ -1179,7 +1179,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCNAME_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_TOLOCNAME_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_TOLOCNAME_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_TOLOCNAME_COLDATA);
@@ -1192,7 +1192,7 @@ public class Reports_InvoicingPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_InvoicingPageLocators.STRING_TOLOCNAME_COLHEADER,
 				ElementType.Xpath, Reports_InvoicingPageLocators.BY_TOLOCNAME_COLHEADER,
 				Reports_InvoicingPageLocators.STRING_TOLOCNAME_COLDATA, ElementType.Xpath,
 				Reports_InvoicingPageLocators.BY_TOLOCNAME_COLDATA);

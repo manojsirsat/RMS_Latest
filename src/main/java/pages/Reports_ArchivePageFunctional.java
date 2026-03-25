@@ -36,7 +36,7 @@ public class Reports_ArchivePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 
@@ -46,7 +46,7 @@ public class Reports_ArchivePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Report_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_ArchivePageLocators.STRING_REPORT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_ArchivePageLocators.STRING_REPORT_COLHEADER,
 				ElementType.Xpath, Reports_ArchivePageLocators.BY_REPORT_COLHEADER,
 				Reports_ArchivePageLocators.STRING_REPORT_COLDATA, ElementType.Xpath,
 				Reports_ArchivePageLocators.BY_REPORT_COLDATA);
@@ -59,7 +59,7 @@ public class Reports_ArchivePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Report_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_ArchivePageLocators.STRING_REPORT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_ArchivePageLocators.STRING_REPORT_COLHEADER,
 				ElementType.Xpath, Reports_ArchivePageLocators.BY_REPORT_COLHEADER,
 				Reports_ArchivePageLocators.STRING_REPORT_COLDATA, ElementType.Xpath,
 				Reports_ArchivePageLocators.BY_REPORT_COLDATA);
@@ -72,7 +72,7 @@ public class Reports_ArchivePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Name_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_ArchivePageLocators.STRING_NAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_ArchivePageLocators.STRING_NAME_COLHEADER,
 				ElementType.Xpath, Reports_ArchivePageLocators.BY_NAME_COLHEADER,
 				Reports_ArchivePageLocators.STRING_NAME_COLDATA, ElementType.Xpath,
 				Reports_ArchivePageLocators.BY_NAME_COLDATA);
@@ -85,7 +85,7 @@ public class Reports_ArchivePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Name_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_ArchivePageLocators.STRING_NAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_ArchivePageLocators.STRING_NAME_COLHEADER,
 				ElementType.Xpath, Reports_ArchivePageLocators.BY_NAME_COLHEADER,
 				Reports_ArchivePageLocators.STRING_NAME_COLDATA, ElementType.Xpath,
 				Reports_ArchivePageLocators.BY_NAME_COLDATA);
@@ -98,7 +98,7 @@ public class Reports_ArchivePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Owner_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_ArchivePageLocators.STRING_OWNER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_ArchivePageLocators.STRING_OWNER_COLHEADER,
 				ElementType.Xpath, Reports_ArchivePageLocators.BY_OWNER_COLHEADER,
 				Reports_ArchivePageLocators.STRING_OWNER_COLDATA, ElementType.Xpath,
 				Reports_ArchivePageLocators.BY_OWNER_COLDATA);
@@ -111,7 +111,7 @@ public class Reports_ArchivePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Owner_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_ArchivePageLocators.STRING_OWNER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_ArchivePageLocators.STRING_OWNER_COLHEADER,
 				ElementType.Xpath, Reports_ArchivePageLocators.BY_OWNER_COLHEADER,
 				Reports_ArchivePageLocators.STRING_OWNER_COLDATA, ElementType.Xpath,
 				Reports_ArchivePageLocators.BY_OWNER_COLDATA);
@@ -124,7 +124,7 @@ public class Reports_ArchivePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean RequestedBy_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_ArchivePageLocators.STRING_REQUESTEDBY_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_ArchivePageLocators.STRING_REQUESTEDBY_COLHEADER,
 				ElementType.Xpath, Reports_ArchivePageLocators.BY_REQUESTEDBY_COLHEADER,
 				Reports_ArchivePageLocators.STRING_REQUESTEDBY_COLDATA, ElementType.Xpath,
 				Reports_ArchivePageLocators.BY_REQUESTEDBY_COLDATA);
@@ -137,7 +137,7 @@ public class Reports_ArchivePageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean RequestedBy_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_ArchivePageLocators.STRING_REQUESTEDBY_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_ArchivePageLocators.STRING_REQUESTEDBY_COLHEADER,
 				ElementType.Xpath, Reports_ArchivePageLocators.BY_REQUESTEDBY_COLHEADER,
 				Reports_ArchivePageLocators.STRING_REQUESTEDBY_COLDATA, ElementType.Xpath,
 				Reports_ArchivePageLocators.BY_REQUESTEDBY_COLDATA);

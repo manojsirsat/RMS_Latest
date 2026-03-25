@@ -36,7 +36,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 
@@ -46,7 +46,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean RecID_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_RECID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_RECID_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_RECID_COLHEADER,
 				Reports_LedgerPageLocators.STRING_RECID_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_RECID_COLDATA);
@@ -59,7 +59,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean RecID_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_RECID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_RECID_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_RECID_COLHEADER,
 				Reports_LedgerPageLocators.STRING_RECID_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_RECID_COLDATA);
@@ -72,7 +72,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean TxID_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_TXID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_TXID_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_TXID_COLHEADER,
 				Reports_LedgerPageLocators.STRING_TXID_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_TXID_COLDATA);
@@ -85,7 +85,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean TxID_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_TXID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_TXID_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_TXID_COLHEADER,
 				Reports_LedgerPageLocators.STRING_TXID_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_TXID_COLDATA);
@@ -98,7 +98,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean PairID_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_PAIRID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_PAIRID_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_PAIRID_COLHEADER,
 				Reports_LedgerPageLocators.STRING_PAIRID_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_PAIRID_COLDATA);
@@ -111,7 +111,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean PairID_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_PAIRID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_PAIRID_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_PAIRID_COLHEADER,
 				Reports_LedgerPageLocators.STRING_PAIRID_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_PAIRID_COLDATA);
@@ -124,7 +124,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean WOID_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_WOID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_WOID_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_WOID_COLHEADER,
 				Reports_LedgerPageLocators.STRING_WOID_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_WOID_COLDATA);
@@ -137,7 +137,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean WOID_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_WOID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_WOID_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_WOID_COLHEADER,
 				Reports_LedgerPageLocators.STRING_WOID_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_WOID_COLDATA);
@@ -150,7 +150,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOL_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_BOL_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_BOL_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_BOL_COLHEADER,
 				Reports_LedgerPageLocators.STRING_BOL_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_BOL_COLDATA);
@@ -163,7 +163,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOL_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_BOL_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_BOL_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_BOL_COLHEADER,
 				Reports_LedgerPageLocators.STRING_BOL_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_BOL_COLDATA);
@@ -176,7 +176,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean TxDate_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_TXDATE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_TXDATE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_TXDATE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_TXDATE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_TXDATE_COLDATA);
@@ -189,7 +189,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean TxDate_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_TXDATE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_TXDATE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_TXDATE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_TXDATE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_TXDATE_COLDATA);
@@ -202,7 +202,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_LOCNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_LOCNAME_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_LOCNAME_COLHEADER,
 				Reports_LedgerPageLocators.STRING_LOCNAME_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_LOCNAME_COLDATA);
@@ -215,7 +215,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_LOCNAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_LOCNAME_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_LOCNAME_COLHEADER,
 				Reports_LedgerPageLocators.STRING_LOCNAME_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_LOCNAME_COLDATA);
@@ -228,7 +228,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_LOCCODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_LOCCODE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_LOCCODE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_LOCCODE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_LOCCODE_COLDATA);
@@ -241,7 +241,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_LOCCODE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_LOCCODE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_LOCCODE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_LOCCODE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_LOCCODE_COLDATA);
@@ -254,7 +254,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean SKU_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_SKU_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_SKU_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_SKU_COLHEADER,
 				Reports_LedgerPageLocators.STRING_SKU_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_SKU_COLDATA);
@@ -267,7 +267,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean SKU_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_SKU_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_SKU_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_SKU_COLHEADER,
 				Reports_LedgerPageLocators.STRING_SKU_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_SKU_COLDATA);
@@ -280,7 +280,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean SKU1_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_SKU1_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_SKU1_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_SKU1_COLHEADER,
 				Reports_LedgerPageLocators.STRING_SKU1_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_SKU1_COLDATA);
@@ -293,7 +293,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean SKU1_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_SKU1_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_SKU1_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_SKU1_COLHEADER,
 				Reports_LedgerPageLocators.STRING_SKU1_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_SKU1_COLDATA);
@@ -306,7 +306,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Stage_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_STAGE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_STAGE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_STAGE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_STAGE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_STAGE_COLDATA);
@@ -319,7 +319,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Stage_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_STAGE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_STAGE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_STAGE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_STAGE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_STAGE_COLDATA);
@@ -332,7 +332,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean QTY_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_QTY_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_QTY_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_QTY_COLHEADER,
 				Reports_LedgerPageLocators.STRING_QTY_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_QTY_COLDATA);
@@ -345,7 +345,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean QTY_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_QTY_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_QTY_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_QTY_COLHEADER,
 				Reports_LedgerPageLocators.STRING_QTY_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_QTY_COLDATA);
@@ -358,7 +358,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean InvBefore_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_INVBEFORE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_INVBEFORE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_INVBEFORE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_INVBEFORE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_INVBEFORE_COLDATA);
@@ -371,7 +371,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean InvBefore_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_INVBEFORE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_INVBEFORE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_INVBEFORE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_INVBEFORE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_INVBEFORE_COLDATA);
@@ -384,7 +384,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean InvAfter_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_INVAFTER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_INVAFTER_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_INVAFTER_COLHEADER,
 				Reports_LedgerPageLocators.STRING_INVAFTER_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_INVAFTER_COLDATA);
@@ -397,7 +397,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean InvAfter_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_INVAFTER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_INVAFTER_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_INVAFTER_COLHEADER,
 				Reports_LedgerPageLocators.STRING_INVAFTER_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_INVAFTER_COLDATA);
@@ -410,7 +410,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean TxType_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_TXTYPE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_TXTYPE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_TXTYPE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_TXTYPE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_TXTYPE_COLDATA);
@@ -423,7 +423,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean TxType_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_TXTYPE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_TXTYPE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_TXTYPE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_TXTYPE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_TXTYPE_COLDATA);
@@ -436,7 +436,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean WOType_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_WOTYPE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_WOTYPE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_WOTYPE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_WOTYPE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_WOTYPE_COLDATA);
@@ -449,7 +449,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean WOType_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_WOTYPE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_WOTYPE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_WOTYPE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_WOTYPE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_WOTYPE_COLDATA);
@@ -462,7 +462,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Action_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_ACTION_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_ACTION_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_ACTION_COLHEADER,
 				Reports_LedgerPageLocators.STRING_ACTION_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_ACTION_COLDATA);
@@ -475,7 +475,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Action_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_ACTION_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_ACTION_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_ACTION_COLHEADER,
 				Reports_LedgerPageLocators.STRING_ACTION_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_ACTION_COLDATA);
@@ -488,7 +488,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocType_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_LOCTYPE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_LOCTYPE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_LOCTYPE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_LOCTYPE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_LOCTYPE_COLDATA);
@@ -501,7 +501,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LocType_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_LOCTYPE_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_LOCTYPE_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_LOCTYPE_COLHEADER,
 				Reports_LedgerPageLocators.STRING_LOCTYPE_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_LOCTYPE_COLDATA);
@@ -514,7 +514,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Account_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_ACCOUNT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_ACCOUNT_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_ACCOUNT_COLHEADER,
 				Reports_LedgerPageLocators.STRING_ACCOUNT_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_ACCOUNT_COLDATA);
@@ -527,7 +527,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Account_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_ACCOUNT_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_ACCOUNT_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_ACCOUNT_COLHEADER,
 				Reports_LedgerPageLocators.STRING_ACCOUNT_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_ACCOUNT_COLDATA);
@@ -540,7 +540,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean User_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_USER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Reports_LedgerPageLocators.STRING_USER_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_USER_COLHEADER,
 				Reports_LedgerPageLocators.STRING_USER_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_USER_COLDATA);
@@ -553,7 +553,7 @@ public class Reports_LedgerPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean User_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_USER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Reports_LedgerPageLocators.STRING_USER_COLHEADER,
 				ElementType.Xpath, Reports_LedgerPageLocators.BY_USER_COLHEADER,
 				Reports_LedgerPageLocators.STRING_USER_COLDATA, ElementType.Xpath,
 				Reports_LedgerPageLocators.BY_USER_COLDATA);

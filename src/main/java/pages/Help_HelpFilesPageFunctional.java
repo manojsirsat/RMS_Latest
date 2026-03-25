@@ -47,7 +47,7 @@ public class Help_HelpFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean click_DownloadDocumentBtn() throws InterruptedException {
-		flag = webDB.isElementDisplayed(Help_HelpFilesPageLocators.HELP_HELPFILESPAGE_HEADING, ElementType.Xpath);
+		flag = webDB.waitForElement(Help_HelpFilesPageLocators.HELP_HELPFILESPAGE_HEADING, ElementType.Xpath);
 		if (flag) {
 			int totalcount = webDB.getDriver()
 					.findElements(By.xpath(Help_HelpFilesPageLocators.HELP_HELPFILES_DOWNLOADLINK)).size();

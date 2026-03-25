@@ -36,7 +36,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 
@@ -46,7 +46,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Order_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(OrdersAndBOLS_OrdersPageLocators.STRING_ORDER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(OrdersAndBOLS_OrdersPageLocators.STRING_ORDER_COLHEADER,
 				ElementType.Xpath, OrdersAndBOLS_OrdersPageLocators.BY_ORDER_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_ORDER_COLDATA, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_ORDER_COLDATA);
@@ -59,7 +59,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Order_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(OrdersAndBOLS_OrdersPageLocators.STRING_ORDER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(OrdersAndBOLS_OrdersPageLocators.STRING_ORDER_COLHEADER,
 				ElementType.Xpath, OrdersAndBOLS_OrdersPageLocators.BY_ORDER_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_ORDER_COLDATA, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_ORDER_COLDATA);
@@ -72,7 +72,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(OrdersAndBOLS_OrdersPageLocators.BY_ORDERDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(OrdersAndBOLS_OrdersPageLocators.BY_ORDERDATE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.BY_ORDERDATE_COLDATA);
 		return flag;
 	}
@@ -83,7 +83,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(OrdersAndBOLS_OrdersPageLocators.BY_ORDERDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(OrdersAndBOLS_OrdersPageLocators.BY_ORDERDATE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.BY_ORDERDATE_COLDATA);
 		return flag;
 	}
@@ -94,7 +94,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean NeedByDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(OrdersAndBOLS_OrdersPageLocators.BY_NEEDBYDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(OrdersAndBOLS_OrdersPageLocators.BY_NEEDBYDATE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.BY_NEEDBYDATE_COLDATA);
 		return flag;
 	}
@@ -105,7 +105,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean NeedByDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(OrdersAndBOLS_OrdersPageLocators.BY_NEEDBYDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(OrdersAndBOLS_OrdersPageLocators.BY_NEEDBYDATE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.BY_NEEDBYDATE_COLDATA);
 		return flag;
 	}
@@ -116,7 +116,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLDueDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(OrdersAndBOLS_OrdersPageLocators.BY_BOLDUEDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(OrdersAndBOLS_OrdersPageLocators.BY_BOLDUEDATE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.BY_BOLDUEDATE_COLDATA);
 		return flag;
 	}
@@ -127,7 +127,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLDueDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(OrdersAndBOLS_OrdersPageLocators.BY_BOLDUEDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(OrdersAndBOLS_OrdersPageLocators.BY_BOLDUEDATE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.BY_BOLDUEDATE_COLDATA);
 		return flag;
 	}
@@ -138,7 +138,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderType_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_ORDERTYPE_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_ORDERTYPE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_ORDERTYPE_COLDATA, ElementType.Xpath,
@@ -152,7 +152,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderType_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_ORDERTYPE_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_ORDERTYPE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_ORDERTYPE_COLDATA, ElementType.Xpath,
@@ -166,7 +166,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean CustomerPO_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_CUSTOMERPO_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_CUSTOMERPO_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_CUSTOMERPO_COLDATA, ElementType.Xpath,
@@ -180,7 +180,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean CustomerPO_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_CUSTOMERPO_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_CUSTOMERPO_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_CUSTOMERPO_COLDATA, ElementType.Xpath,
@@ -194,7 +194,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean AccountCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_ACCOUNTCODE_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_ACCOUNTCODE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_ACCOUNTCODE_COLDATA, ElementType.Xpath,
@@ -208,7 +208,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean AccountCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_ACCOUNTCODE_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_ACCOUNTCODE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_ACCOUNTCODE_COLDATA, ElementType.Xpath,
@@ -222,7 +222,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean AccountName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_ACCOUNTNAME_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_ACCOUNTNAME_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_ACCOUNTNAME_COLDATA, ElementType.Xpath,
@@ -236,7 +236,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean AccountName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_ACCOUNTNAME_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_ACCOUNTNAME_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_ACCOUNTNAME_COLDATA, ElementType.Xpath,
@@ -250,7 +250,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_FROMLOCCODE_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_FROMLOCCODE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_FROMLOCCODE_COLDATA, ElementType.Xpath,
@@ -264,7 +264,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_FROMLOCCODE_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_FROMLOCCODE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_FROMLOCCODE_COLDATA, ElementType.Xpath,
@@ -278,7 +278,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_FROMLOCNAME_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_FROMLOCNAME_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_FROMLOCNAME_COLDATA, ElementType.Xpath,
@@ -292,7 +292,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean FromLocName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_FROMLOCNAME_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_FROMLOCNAME_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_FROMLOCNAME_COLDATA, ElementType.Xpath,
@@ -306,7 +306,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_TOLOCCODE_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_TOLOCCODE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_TOLOCCODE_COLDATA, ElementType.Xpath,
@@ -320,7 +320,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_TOLOCCODE_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_TOLOCCODE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_TOLOCCODE_COLDATA, ElementType.Xpath,
@@ -334,7 +334,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_TOLOCNAME_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_TOLOCNAME_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_TOLOCNAME_COLDATA, ElementType.Xpath,
@@ -348,7 +348,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ToLocName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_TOLOCNAME_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_TOLOCNAME_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_TOLOCNAME_COLDATA, ElementType.Xpath,
@@ -362,7 +362,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShipMethod_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_SHIPMETHOD_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_SHIPMETHOD_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_SHIPMETHOD_COLDATA, ElementType.Xpath,
@@ -376,7 +376,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShipMethod_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_SHIPMETHOD_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_SHIPMETHOD_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_SHIPMETHOD_COLDATA, ElementType.Xpath,
@@ -390,7 +390,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShipperCode_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_SHIPPERCODE_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_SHIPPERCODE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_SHIPPERCODE_COLDATA, ElementType.Xpath,
@@ -404,7 +404,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShipperCode_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_SHIPPERCODE_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_SHIPPERCODE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_SHIPPERCODE_COLDATA, ElementType.Xpath,
@@ -418,7 +418,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShipperName_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_SHIPPERNAME_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_SHIPPERNAME_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_SHIPPERNAME_COLDATA, ElementType.Xpath,
@@ -432,7 +432,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ShipperName_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_SHIPPERNAME_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_SHIPPERNAME_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_SHIPPERNAME_COLDATA, ElementType.Xpath,
@@ -446,7 +446,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOL_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(OrdersAndBOLS_OrdersPageLocators.STRING_BOL_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(OrdersAndBOLS_OrdersPageLocators.STRING_BOL_COLHEADER,
 				ElementType.Xpath, OrdersAndBOLS_OrdersPageLocators.BY_BOL_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_BOL_COLDATA, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_BOL_COLDATA);
@@ -459,7 +459,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOL_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(OrdersAndBOLS_OrdersPageLocators.STRING_BOL_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(OrdersAndBOLS_OrdersPageLocators.STRING_BOL_COLHEADER,
 				ElementType.Xpath, OrdersAndBOLS_OrdersPageLocators.BY_BOL_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_BOL_COLDATA, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_BOL_COLDATA);
@@ -472,7 +472,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderStatus_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_ORDERSTATUS_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_ORDERSTATUS_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_ORDERSTATUS_COLDATA, ElementType.Xpath,
@@ -486,7 +486,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean OrderStatus_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_ORDERSTATUS_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_ORDERSTATUS_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_ORDERSTATUS_COLDATA, ElementType.Xpath,
@@ -500,7 +500,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLStatus_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_BOLSTATUS_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_BOLSTATUS_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_BOLSTATUS_COLDATA, ElementType.Xpath,
@@ -514,7 +514,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BOLStatus_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_BOLSTATUS_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_BOLSTATUS_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_BOLSTATUS_COLDATA, ElementType.Xpath,
@@ -528,7 +528,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean CompletedDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLDATA);
 		return flag;
 	}
@@ -539,7 +539,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean CompletedDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.BY_COMPLETEDDATE_COLDATA);
 		return flag;
 	}
@@ -550,7 +550,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BatchFileID_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_BATCHFILEID_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_BATCHFILEID_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_BATCHFILEID_COLDATA, ElementType.Xpath,
@@ -564,7 +564,7 @@ public class OrdersAndBOLS_OrdersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean BatchFileID_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				OrdersAndBOLS_OrdersPageLocators.STRING_BATCHFILEID_COLHEADER, ElementType.Xpath,
 				OrdersAndBOLS_OrdersPageLocators.BY_BATCHFILEID_COLHEADER,
 				OrdersAndBOLS_OrdersPageLocators.STRING_BATCHFILEID_COLDATA, ElementType.Xpath,

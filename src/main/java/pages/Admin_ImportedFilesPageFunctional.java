@@ -38,7 +38,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 
@@ -48,7 +48,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ID_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_ImportedFilesPageLocators.STRING_ID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_ImportedFilesPageLocators.STRING_ID_COLHEADER,
 				ElementType.Xpath, Admin_ImportedFilesPageLocators.BY_ID_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_ID_COLDATA, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_ID_COLDATA);
@@ -61,7 +61,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ID_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_ImportedFilesPageLocators.STRING_ID_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_ImportedFilesPageLocators.STRING_ID_COLHEADER,
 				ElementType.Xpath, Admin_ImportedFilesPageLocators.BY_ID_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_ID_COLDATA, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_ID_COLDATA);
@@ -74,7 +74,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ImportType_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Admin_ImportedFilesPageLocators.STRING_IMPORTTYPE_COLHEADER, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_IMPORTTYPE_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_IMPORTTYPE_COLDATA, ElementType.Xpath,
@@ -88,7 +88,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean ImportType_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Admin_ImportedFilesPageLocators.STRING_IMPORTTYPE_COLHEADER, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_IMPORTTYPE_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_IMPORTTYPE_COLDATA, ElementType.Xpath,
@@ -102,7 +102,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean TotalLines_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Admin_ImportedFilesPageLocators.STRING_TOTALLINES_COLHEADER, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_TOTALLINES_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_TOTALLINES_COLDATA, ElementType.Xpath,
@@ -116,7 +116,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean TotalLines_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Admin_ImportedFilesPageLocators.STRING_TOTALLINES_COLHEADER, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_TOTALLINES_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_TOTALLINES_COLDATA, ElementType.Xpath,
@@ -130,7 +130,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Successful_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Admin_ImportedFilesPageLocators.STRING_SUCCESSFUL_COLHEADER, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_SUCCESSFUL_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_SUCCESSFUL_COLDATA, ElementType.Xpath,
@@ -144,7 +144,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Successful_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Admin_ImportedFilesPageLocators.STRING_SUCCESSFUL_COLHEADER, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_SUCCESSFUL_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_SUCCESSFUL_COLDATA, ElementType.Xpath,
@@ -158,7 +158,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Errors_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_ImportedFilesPageLocators.STRING_ERRORS_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_ImportedFilesPageLocators.STRING_ERRORS_COLHEADER,
 				ElementType.Xpath, Admin_ImportedFilesPageLocators.BY_ERRORS_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_ERRORS_COLDATA, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_ERRORS_COLDATA);
@@ -171,7 +171,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Errors_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_ImportedFilesPageLocators.STRING_ERRORS_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_ImportedFilesPageLocators.STRING_ERRORS_COLHEADER,
 				ElementType.Xpath, Admin_ImportedFilesPageLocators.BY_ERRORS_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_ERRORS_COLDATA, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_ERRORS_COLDATA);
@@ -184,7 +184,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean UnProcessed_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Admin_ImportedFilesPageLocators.STRING_UNPROCESSED_COLHEADER, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_UNPROCESSED_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_UNPROCESSED_COLDATA, ElementType.Xpath,
@@ -198,7 +198,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean UnProcessed_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Admin_ImportedFilesPageLocators.STRING_UNPROCESSED_COLHEADER, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_UNPROCESSED_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_UNPROCESSED_COLDATA, ElementType.Xpath,
@@ -212,7 +212,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean User_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_ImportedFilesPageLocators.STRING_USER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_ImportedFilesPageLocators.STRING_USER_COLHEADER,
 				ElementType.Xpath, Admin_ImportedFilesPageLocators.BY_USER_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_USER_COLDATA, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_USER_COLDATA);
@@ -225,7 +225,7 @@ public class Admin_ImportedFilesPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean User_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_ImportedFilesPageLocators.STRING_USER_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_ImportedFilesPageLocators.STRING_USER_COLHEADER,
 				ElementType.Xpath, Admin_ImportedFilesPageLocators.BY_USER_COLHEADER,
 				Admin_ImportedFilesPageLocators.STRING_USER_COLDATA, ElementType.Xpath,
 				Admin_ImportedFilesPageLocators.BY_USER_COLDATA);

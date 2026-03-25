@@ -36,7 +36,7 @@ public class Admin_WeekNumbersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean verifypagination() throws InterruptedException {
-		commonfunction.verifyPagination();
+		flag = commonfunction.verifyPagination();
 		return flag;
 	}
 
@@ -46,7 +46,7 @@ public class Admin_WeekNumbersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Name_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(Admin_WeekNumbersPageLocators.STRING_NAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringDecendingSorting(Admin_WeekNumbersPageLocators.STRING_NAME_COLHEADER,
 				ElementType.Xpath, Admin_WeekNumbersPageLocators.BY_NAME_COLHEADER,
 				Admin_WeekNumbersPageLocators.STRING_NAME_COLDATA, ElementType.Xpath,
 				Admin_WeekNumbersPageLocators.BY_NAME_COLDATA);
@@ -59,7 +59,7 @@ public class Admin_WeekNumbersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean Name_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(Admin_WeekNumbersPageLocators.STRING_NAME_COLHEADER,
+		flag = commonfunction.validatePaginatedStringAscendingSorting(Admin_WeekNumbersPageLocators.STRING_NAME_COLHEADER,
 				ElementType.Xpath, Admin_WeekNumbersPageLocators.BY_NAME_COLHEADER,
 				Admin_WeekNumbersPageLocators.STRING_NAME_COLDATA, ElementType.Xpath,
 				Admin_WeekNumbersPageLocators.BY_NAME_COLDATA);
@@ -72,7 +72,7 @@ public class Admin_WeekNumbersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean StartDate_DecendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingDescending(Admin_WeekNumbersPageLocators.BY_STARTDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingDescending(Admin_WeekNumbersPageLocators.BY_STARTDATE_COLHEADER,
 				Admin_WeekNumbersPageLocators.BY_STARTDATE_COLDATA);
 		return flag;
 	}
@@ -83,7 +83,7 @@ public class Admin_WeekNumbersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean StartDate_AscendingSorting() throws InterruptedException {
-		commonfunction.verifyDateSortingAscending(Admin_WeekNumbersPageLocators.BY_STARTDATE_COLHEADER,
+		flag = commonfunction.verifyDateSortingAscending(Admin_WeekNumbersPageLocators.BY_STARTDATE_COLHEADER,
 				Admin_WeekNumbersPageLocators.BY_STARTDATE_COLDATA);
 		return flag;
 	}
@@ -94,7 +94,7 @@ public class Admin_WeekNumbersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LastUpdatedBy_DecendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringDecendingSorting(
+		flag = commonfunction.validatePaginatedStringDecendingSorting(
 				Admin_WeekNumbersPageLocators.STRING_LASTUPDATEDBY_COLHEADER, ElementType.Xpath,
 				Admin_WeekNumbersPageLocators.BY_LASTUPDATEDBY_COLHEADER,
 				Admin_WeekNumbersPageLocators.STRING_LASTUPDATEDBY_COLDATA, ElementType.Xpath,
@@ -108,7 +108,7 @@ public class Admin_WeekNumbersPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean LastUpdatedBy_AscendingSorting() throws InterruptedException {
-		commonfunction.validatePaginatedStringAscendingSorting(
+		flag = commonfunction.validatePaginatedStringAscendingSorting(
 				Admin_WeekNumbersPageLocators.STRING_LASTUPDATEDBY_COLHEADER, ElementType.Xpath,
 				Admin_WeekNumbersPageLocators.BY_LASTUPDATEDBY_COLHEADER,
 				Admin_WeekNumbersPageLocators.STRING_LASTUPDATEDBY_COLDATA, ElementType.Xpath,

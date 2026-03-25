@@ -41,11 +41,11 @@ public class CommonFunctions {
 	 */
 	public boolean clickOnMainPage(String profilename, ElementType elementtype, String mainpage,
 			ElementType elementtype1, String internalpage, ElementType elementtype2) throws InterruptedException {
-		flag = webDB.isElementDisplayed(profilename, elementtype);
+		flag = webDB.waitForElement(profilename, elementtype);
 		if (flag) {
 			webDB.javaScriptClickAnElement(mainpage, elementtype1);
 			Thread.sleep(9000);
-			flag = webDB.isElementDisplayed(internalpage, elementtype2);
+			flag = webDB.waitForElement(internalpage, elementtype2);
 			log.logging("info", "Listing page is displayed");
 		}
 
@@ -60,11 +60,11 @@ public class CommonFunctions {
 	 */
 	public boolean clickOnInternalPage(String internalpagename, ElementType elementtype, String internalpageheading,
 			ElementType elementtype1) throws InterruptedException {
-		flag = webDB.isElementDisplayed(internalpagename, elementtype);
+		flag = webDB.waitForElement(internalpagename, elementtype);
 		if (flag) {
 			webDB.javaScriptClickAnElement(internalpagename, elementtype);
 			Thread.sleep(10000);
-			flag = webDB.isElementDisplayed(internalpageheading, elementtype1);
+			flag = webDB.waitForElement(internalpageheading, elementtype1);
 		}
 
 		return flag;
@@ -76,11 +76,11 @@ public class CommonFunctions {
 	 * @throws InterruptedException
 	 */
 	public boolean clickOnBOLSPage() throws InterruptedException {
-		flag = webDB.isElementDisplayed(CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
+		flag = webDB.waitForElement(CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
 		if (flag) {
 			webDB.javaScriptClickAnElement(CommonFunctionsLocators.BOLS_PAGE, ElementType.Xpath);
 			Thread.sleep(9000);
-			flag = webDB.isElementDisplayed(BOLPageLocators.BOLPAGE_HEADING, ElementType.Xpath);
+			flag = webDB.waitForElement(BOLPageLocators.BOLPAGE_HEADING, ElementType.Xpath);
 			log.logging("info", "BOL listing page is displayed");
 		}
 
@@ -348,7 +348,7 @@ public class CommonFunctions {
 	 *         sorting
 	 * @throws InterruptedException
 	 */
-	public void validatePaginatedStringDecendingSorting(String ColumnHeader, ElementType elementtypecolumnheader,
+	public boolean validatePaginatedStringDecendingSorting(String ColumnHeader, ElementType elementtypecolumnheader,
 			By ColumnHeader1, String columndata, ElementType elementtypecolumndata, By columndata1)
 			throws InterruptedException {
 		webDB.navigateToRefresh();
@@ -375,9 +375,10 @@ public class CommonFunctions {
 				webDB.getDriver().findElement(ColumnHeader1).click();
 
 				Thread.sleep(8000); // allow table to reload
-				verifyPaginatedStringDescending(columndata1, CommonFunctionsLocators.nextBtn);
+				flag = verifyPaginatedStringDescending(columndata1, CommonFunctionsLocators.nextBtn);
 			}
 		}
+		return flag;
 		
 	}
 
@@ -387,7 +388,7 @@ public class CommonFunctions {
 	 *         sorting
 	 * @throws InterruptedException
 	 */
-	public void validatePaginatedStringAscendingSorting(String ColumnHeader, ElementType elementtypecolumnheader,
+	public boolean validatePaginatedStringAscendingSorting(String ColumnHeader, ElementType elementtypecolumnheader,
 			By ColumnHeader1, String columndata, ElementType elementtypecolumndata, By columndata1)
 			throws InterruptedException {
 		// Get back to Page 1
@@ -407,7 +408,8 @@ public class CommonFunctions {
 
 		webDB.waitForClickElement(columndata, elementtypecolumndata);
 
-		verifyPaginatedStringAscending(columndata1, CommonFunctionsLocators.nextBtn);
+		flag = verifyPaginatedStringAscending(columndata1, CommonFunctionsLocators.nextBtn);
+		return flag;
 	}
 
 //	===================================================== Date Sorting ===================================================
@@ -499,7 +501,7 @@ public class CommonFunctions {
 	 *         order sorting
 	 * @throws InterruptedException
 	 */
-	public void verifyDateSortingDescending(By dateHeader, By dateColumn) throws InterruptedException {
+	public boolean verifyDateSortingDescending(By dateHeader, By dateColumn) throws InterruptedException {
 		webDB.navigateToRefresh();
 		Thread.sleep(4000);
 		flag = webDB.waitForElement(CommonFunctionsLocators.SHOWINGRESULTBOTTOM, ElementType.Xpath);
@@ -522,7 +524,10 @@ public class CommonFunctions {
 
 				Assert.assertTrue(result, "Date column is NOT sorted in DESCENDING order");
 			}
+		
+		
 		}
+		return flag;
 	}
 
 	// Ascending Date Sort
@@ -533,7 +538,7 @@ public class CommonFunctions {
 	 *         order sorting
 	 * @throws InterruptedException
 	 */
-	public void verifyDateSortingAscending(By dateHeader, By dateColumn) throws InterruptedException {
+	public boolean verifyDateSortingAscending(By dateHeader, By dateColumn) throws InterruptedException {
 
 		webDB.clickAnElementWithoutException("//button[@aria-label='First Page']", ElementType.Xpath);
 		Thread.sleep(8000);
@@ -544,6 +549,7 @@ public class CommonFunctions {
 		boolean result = verifyPaginatedDateAscending(dateColumn, CommonFunctionsLocators.nextBtn);
 
 		Assert.assertTrue(result, "Date column is NOT sorted in ASCENDING order");
+		return flag;
 	}
 
 	/**

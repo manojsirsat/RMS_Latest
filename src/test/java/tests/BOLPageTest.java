@@ -102,15 +102,11 @@ public class BOLPageTest {
 
 	@Test(description = "Verify BOL Decending Sorting functionality from BOL listing page")
 	public void verifyBOL_DecendingSorting_Functionality() throws InterruptedException {
-//		flag = loginpage.validLogin();
-//		if(flag)
-//		{
 		flag = webDB.navigateToUrl("https://qa.rms.reusability.com/bills-of-lading");
 		Thread.sleep(4000);
 		if (flag) {
 			flag = bolpagefunctional.BOL_DecendingSorting();
 		}
-//		}
 		Assert.assertTrue(flag);
 	}
 
