@@ -2,8 +2,10 @@ package tests;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -12,6 +14,7 @@ import commonfunctions.CommonFunctions;
 import pages.BOLPageFunctional;
 import pages.CreateOrderPageFunctional;
 import pages.loginPage;
+import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 
@@ -38,12 +41,13 @@ public class MultipleOrderTest {
 		// This line used to navigate the url in browser
 		webDB.enterURL(SiteUrl);
 		Thread.sleep(2000);
+		webDB.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(180));
 
 	}
 
 	@Test(description = "Verify create new order functionality from create order page")
 	public void verifyCreate_Order_Flow() throws InterruptedException {
-		flag = loginpage.validLogin();
+		flag = loginpage.validLogin(webDB.getDataFromProperties("username"), webDB.getDataFromProperties("password"));
 		if (flag) {
 			flag = createorderpage.complete_CreateOrderFlow();
 		}
@@ -94,7 +98,7 @@ public class MultipleOrderTest {
 //	@AfterSuite
 //	public void SendMail() throws Exception {
 //		Mailer mailer = new Mailer();
-//		mailer.execute("RMS Automation Report");
+//		mailer.execute("RMS");
 //	}
 
 }

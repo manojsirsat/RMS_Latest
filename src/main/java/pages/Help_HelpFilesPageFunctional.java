@@ -20,24 +20,43 @@ public class Help_HelpFilesPageFunctional {
 	WebDriverBase webDB = new WebDriverBase();
 	static ReportLoger log = new ReportLoger();
 	Faker faker = new Faker();
-
+	
 	/**
 	 * @author
 	 * @return flag This method is used to navigate to Help Files page
 	 * @throws InterruptedException
 	 */
 	public boolean navigate_Help_HelpFilesListingPage() throws InterruptedException {
-		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath,
-				CommonFunctionsLocators.HELP_PAGE_LEFTNAV, ElementType.Xpath,
-				CommonFunctionsLocators.HELP_HELPFILESPAGE_LEFTNAV, ElementType.Xpath);
+//		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath,
+//				CommonFunctionsLocators.HELP_PAGE_LEFTNAV, ElementType.Xpath,
+//				CommonFunctionsLocators.HELP_HELPFILESPAGE_LEFTNAV, ElementType.Xpath);
+//		if (flag) {
+//			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.HELP_HELPFILESPAGE_LEFTNAV,
+//					ElementType.Xpath, Help_HelpFilesPageLocators.HELP_HELPFILESPAGE_HEADING, ElementType.Xpath);
+//			if (flag) {
+//				log.logging("info", "Help files listing page is displayed");
+//			}
+//		}
+
+		flag = webDB.waitForElement(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath);
 		if (flag) {
-			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.HELP_HELPFILESPAGE_LEFTNAV,
-					ElementType.Xpath, Help_HelpFilesPageLocators.HELP_HELPFILESPAGE_HEADING, ElementType.Xpath);
-			if (flag) {
-				log.logging("info", "Help files listing page is displayed");
+			flag = webDB.clickAnElement(CommonFunctionsLocators.HELP_PAGE_LEFTNAV, ElementType.Xpath);
+//			Thread.sleep(9000);
+//			flag = webDB.waitForElement(CommonFunctionsLocators.HELP_HELPFILESPAGE_LEFTNAV, ElementType.Xpath);
+			if(flag)
+			{
+				String SiteUrl = webDB.getDataFromProperties("url");
+				webDB.navigateToUrl(SiteUrl+"/help-files");
+				Thread.sleep(1500);
+//			flag = webDB.waitForElement(CommonFunctionsLocators.HELP_HELPFILESPAGE_LEFTNAV, ElementType.Xpath);
+//			if (flag) {
+//				webDB.clickAnElement(CommonFunctionsLocators.HELP_HELPFILESPAGE_LEFTNAV, ElementType.Xpath);
+//				Thread.sleep(10000);
+				flag = webDB.waitForElement(Help_HelpFilesPageLocators.HELP_HELPFILESPAGE_HEADING, ElementType.Xpath);
+//			}
 			}
 		}
-
+		
 		return flag;
 	}
 

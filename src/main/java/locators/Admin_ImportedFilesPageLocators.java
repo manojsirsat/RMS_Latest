@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 public class Admin_ImportedFilesPageLocators {
 
 	/** XPATH */
-	public static final String ADMIN_IMPORTEDFILESPAGE_HEADING = "//div[text()='Plans']";
+	public static final String ADMIN_IMPORTEDFILESPAGE_HEADING = "//div[text()='Imported Files']";
 
 	// Sorting
 	/** By */

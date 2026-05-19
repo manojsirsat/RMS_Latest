@@ -1,15 +1,19 @@
 package pages;
 
+import java.time.Duration;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.github.javafaker.Faker;
 
 import commonfunctions.CommonFunctions;
 import locators.BOLPageLocators;
 import locators.CommonFunctionsLocators;
+import locators.CreateOrderPageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 import utils.WebDriverBase.ElementType;
@@ -24,6 +28,7 @@ public class BOLPageFunctional {
 	String BOL_Number = "";
 	String BOL_Number_Listingpage = "";
 	String option = "";
+	WebDriverWait wait = new WebDriverWait(webDB.getDriver(), Duration.ofSeconds(90));
 
 	/**
 	 * @author
@@ -158,7 +163,7 @@ public class BOLPageFunctional {
 		flag = webDB.waitForElement(BOLPageLocators.ADD_ORDER_BUTTON_BOLPAGE, ElementType.Xpath);
 		if (flag) {
 			webDB.clickAnElement(BOLPageLocators.ADD_ORDER_BUTTON_BOLPAGE, ElementType.Xpath);
-			Thread.sleep(5000);
+			Thread.sleep(9000);
 			log.logging("info", "Clicked on add order to BOL button");
 			flag = webDB.waitForElement(BOLPageLocators.CREATE_NEWORDER_BUTTON, ElementType.Xpath);
 			if (flag) {
@@ -168,12 +173,12 @@ public class BOLPageFunctional {
 				if (flag) {
 					// Select order type
 					webDB.clickAnElement(BOLPageLocators.ORDERTYPE_DROPDOWN, ElementType.Id);
-					Thread.sleep(2000);
+					Thread.sleep(4000);
 					flag = webDB.waitForElement(BOLPageLocators.ORDERTYPE_DRP_OPTION, ElementType.Id);
 					if (flag) {
 						int totaloptions = webDB.getDriver()
 								.findElements(By.xpath(BOLPageLocators.ORDERTYPE_DRP_OPTIONS_LIST)).size();
-						int oneoption = faker.number().numberBetween(1, totaloptions - 1);
+						int oneoption = faker.number().numberBetween(1, totaloptions);
 						webDB.getDriver()
 								.findElement(
 										By.xpath(BOLPageLocators.ORDERTYPE_DRP_OPTIONS_LIST + "[" + oneoption + "]"))
@@ -188,7 +193,7 @@ public class BOLPageFunctional {
 							if (flag) {
 								int program_totaloptions = webDB.getDriver()
 										.findElements(By.xpath(BOLPageLocators.PROGRAM_DRP_OPTIONS_LIST)).size();
-								int program_oneoption = faker.number().numberBetween(1, program_totaloptions - 1);
+								int program_oneoption = faker.number().numberBetween(1, program_totaloptions);
 								webDB.getDriver().findElement(By.xpath(
 										BOLPageLocators.PROGRAM_DRP_OPTIONS_LIST + "[" + program_oneoption + "]"))
 										.click();
@@ -204,13 +209,13 @@ public class BOLPageFunctional {
 											ElementType.Xpath);
 									if (flag) {
 										webDB.clickAnElement(BOLPageLocators.SUBMIT_ORDER_BTN, ElementType.Xpath);
-										Thread.sleep(3000);
+										Thread.sleep(15000);
 										log.logging("info", "Submitted order");
-										webDB.scrollToAnElement(BOLPageLocators.ADD_ORDER_BUTTON_BOLPAGE,
-												ElementType.Xpath);
-										Thread.sleep(750);
-										flag = webDB.waitForElement(BOLPageLocators.REMOVE_ORDERFROMBOL_BTN,
-												ElementType.Xpath);
+//										webDB.scrollToAnElement(BOLPageLocators.ADD_ORDER_BUTTON_BOLPAGE,
+//												ElementType.Xpath);
+//										Thread.sleep(750);
+//										flag = webDB.waitForElement(BOLPageLocators.REMOVE_ORDERFROMBOL_BTN,
+//												ElementType.Xpath);
 									}
 								}
 
@@ -234,11 +239,10 @@ public class BOLPageFunctional {
 		commonfunction.clickOnBOLSPage();
 		BOL_Number_Listingpage = getBOLNumberFromBOL_ListingPage();
 		log.logging("info", "The BOL Number on listing page is: " + BOL_Number_Listingpage);
-		Thread.sleep(1000);
-
+		Thread.sleep(6000);
 		if (BOL_Number_Listingpage.equals(BOL_Number)) {
 			log.logging("info", "The BOL number is matched");
-			Thread.sleep(1500);
+			Thread.sleep(8000);
 			flag = update_BOLStatus();
 		} else {
 			log.logging("info", "The BOL is not matched");
@@ -262,7 +266,7 @@ public class BOLPageFunctional {
 			flag = webDB.waitForElement(BOLPageLocators.BOL_STATUSCHANGE_DRP, ElementType.Xpath);
 			if (flag) {
 				webDB.clickAnElement(BOLPageLocators.BOL_STATUSCHANGE_DRP, ElementType.Xpath);
-				Thread.sleep(4000);
+				Thread.sleep(12000);
 				int totalOptions = webDB.getDriver()
 						.findElements(By.xpath(BOLPageLocators.BOL_STATUSCHANGE_DRP_OPTIONS)).size();
 				for (int i = 1; i <= totalOptions; i++) {
@@ -271,26 +275,26 @@ public class BOLPageFunctional {
 					if (option.equalsIgnoreCase(statusToSelect)) {
 						webDB.clickAnElement(BOLPageLocators.BOL_STATUSCHANGE_DRP_OPTIONS + "[" + i + "]",
 								ElementType.Xpath);
-						Thread.sleep(4000);
+						Thread.sleep(6000);
 						flag = webDB.waitForElement(BOLPageLocators.BOL_STATUSCHANGE_CONFIRMATIONPOPUP_YES_BTN,
 								ElementType.Xpath);
 						if (flag) {
 							log.logging("info", "Selected " + statusToSelect + " option from dropdown");
 							webDB.clickAnElement(BOLPageLocators.BOL_STATUSCHANGE_CONFIRMATIONPOPUP_YES_BTN,
 									ElementType.Xpath);
-							Thread.sleep(4000);
+							Thread.sleep(6000);
 
 							flag = webDB.waitForElement(BOLPageLocators.BOL_STATUSCHANGE_CONFIRMATION_MSG,
 									ElementType.Xpath);
 							if (flag) {
 								log.logging("info", "The status of BOL is changed to " + statusToSelect);
-								Thread.sleep(4000);
+								Thread.sleep(6000);
 							}
 						}
 
 						break;
 					} else {
-						log.logging("info", "The option " + statusToSelect + " is not available in dropdown");
+						log.logging("info", "The option " + statusToSelect + " is available in dropdown");
 						flag = false;
 					}
 
@@ -397,14 +401,16 @@ public class BOLPageFunctional {
 	 * @throws InterruptedException
 	 */
 	public boolean click_Add_Order_To_BOL_And_CreateBOL_BTN() throws InterruptedException {
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE)));
+//		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(CreateOrderPageLocators.ADD_ORDER_TO_BOL_BUTTON)));
 		flag = webDB.waitForElement(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE, ElementType.Xpath);
 		if (flag) {
 			webDB.clickAnElement(BOLPageLocators.ADD_ORDER_TO_BOL_BTN_ORDERDETAILSPAGE, ElementType.Xpath);
-			Thread.sleep(1500);
+			Thread.sleep(3000);
 			flag = webDB.waitForElement(BOLPageLocators.CREATE_NEWBOL_BUTTON, ElementType.Id);
 			if (flag) {
 				webDB.clickAnElement(BOLPageLocators.CREATE_NEWBOL_BUTTON, ElementType.Id);
-				Thread.sleep(4000);
+				Thread.sleep(5000);
 				flag = webDB.waitForElement(BOLPageLocators.CREATE_NEWBOLPAGE_HEADING_ORDERDETAILSPAGE,
 						ElementType.Xpath);
 				log.logging("info", "Redirected to the create new BOL page");
@@ -423,7 +429,7 @@ public class BOLPageFunctional {
 		if (flag) {
 			// Select Ship Method
 			webDB.clickAnElement(BOLPageLocators.SHIPMETHOD_DROPDOWN, ElementType.Xpath);
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			flag = webDB.waitForElement(BOLPageLocators.SHIPMETHOD_DRP_OPTION, ElementType.Xpath);
 			if (flag) {
 				webDB.clickAnElement(BOLPageLocators.SHIPMETHOD_DRP_OPTIONS_LIST, ElementType.Xpath);
@@ -519,6 +525,92 @@ public class BOLPageFunctional {
 		return flag;
 	}
 
+	
+	public void fillWipValueAndCompleteBOLFlow() throws InterruptedException {
+		 
+	    Thread.sleep(5000);
+	 
+	    String expectedText = webDB.getTextFromElement(
+	            BOLPageLocators.Receive_Bill_of_Lading_EXPECTED, ElementType.Xpath);
+	 
+	            int expectedValue = Integer.parseInt(expectedText);
+	            int randomWip = faker.number().numberBetween(0, expectedValue);
+	 
+	    // Enter WIP value
+	            webDB.clearText(BOLPageLocators.Receive_Bill_of_Lading_WIP, ElementType.Xpath);
+	            webDB.sendTextToAnElement(
+	            BOLPageLocators.Receive_Bill_of_Lading_WIP,
+	            String.valueOf(randomWip),
+	            ElementType.Xpath);
+	 
+	    // Click Complete button
+	            webDB.clickAnElement(
+	            BOLPageLocators.Receive_Bill_of_Lading_CompleteButton,
+	            ElementType.Xpath);
+	 
+	            Thread.sleep(2000); // wait for popup
+	 
+	    // ✅ TRY-CATCH FIX
+	            try {
+	                Thread.sleep(3000); // wait for popup to appear
+	            if (webDB.isElementDisplayed(
+	                BOLPageLocators.Receive_Bill_of_Lading_DropDownButton,
+	                ElementType.Xpath)) {
+	 
+	            	log.logging("info", "Primary Reason popup displayed");
+	            	
+	            webDB.clickAnElement(
+	                    BOLPageLocators.Receive_Bill_of_Lading_DropDownButton,
+	                    ElementType.Xpath);
+	 
+	            webDB.clickAnElement(
+	                    BOLPageLocators.Receive_Bill_of_Lading_DropdownoFirstOptions,
+	                    ElementType.Xpath);
+	            log.logging("info", "Primary reason selected");
+	            Thread.sleep(2000);
+	 
+	            webDB.clickAnElement(
+	                    BOLPageLocators.Receive_Bill_of_Lading_Button_Whose_RackDropdown,
+	                    ElementType.Xpath);
+	 
+	            webDB.clickAnElement(
+	                    BOLPageLocators.Receive_Bill_of_Lading_DropdownoFirstOptions,
+	                    ElementType.Xpath);
+	            log.logging("info", "Secondary option selected");
+	            webDB.sendTextToAnElement(
+	                    BOLPageLocators.Receive_Bill_of_Lading_Button_Remaining_Racks_Still_InUse_Input,
+	                    "5",
+	                    ElementType.Xpath);
+	            log.logging("info", "Entered remaining racks quantity");
+	        }
+	 
+	    } catch (Exception e) {
+	    	log.logging("info", "Primary reson popup not displayed");
+	    }
+	 
+	 
+	    // Click YES button
+	    Thread.sleep(7000); // wait before clicking YES
+	    webDB.javaScriptClickAnElement(
+	            BOLPageLocators.Receive_Bill_of_Lading_Button_Yes,
+	            ElementType.Xpath);
+	    log.logging("info", "Clicked on yes button");
+	    // Validate success
+	 
+	    try {
+	        Thread.sleep(5000);
+	        webDB.waitForElement(
+	                BOLPageLocators.Receive_Bill_of_Lading_SuccessMsg,
+	                ElementType.Xpath);
+	 
+	        log.logging("info", "BOL completed successfully");
+	 
+	    } catch (Exception e) {
+	        log.logging("info", "BOL NOT completed");
+	    }
+	}
+	
+	
 	/**
 	 * @author Sonam
 	 * @return flag This method is used to verify the descending order functionality

@@ -1,6 +1,10 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.github.javafaker.Faker;
 
@@ -23,6 +27,7 @@ public class CreateOrderPageFunctional {
 	String option = "";
 	int onefromloc;
 	int onetoloc;
+	WebDriverWait wait = new WebDriverWait(webDB.getDriver(), Duration.ofSeconds(90));
 
 	/**
 	 * @author
@@ -128,7 +133,7 @@ public class CreateOrderPageFunctional {
 					Thread.sleep(1000);
 					int totaltolocoptions = webDB.getDriver()
 							.findElements(By.xpath(CreateOrderPageLocators.TO_LOC_DRP_OPTIONS_LIST)).size();
-					onetoloc = faker.number().numberBetween(1, totaltolocoptions - 1);
+					onetoloc = faker.number().numberBetween(1, totaltolocoptions);
 					if (onefromloc == onetoloc) {
 						int finalto_location = onetoloc + 1;
 
@@ -193,7 +198,7 @@ public class CreateOrderPageFunctional {
 								if (flag) {
 //									webDB.clickAnElement(CreateOrderPageLocators.DELIVERY_WINDOW_ENDDATE_CALENDER, ElementType.Id);
 //									Thread.sleep(1000);
-
+//
 //									webDB.clickAnElement(CreateOrderPageLocators.DELIVERY_WINDOW_ENDDATE, ElementType.Xpath);
 //									Thread.sleep(1000);
 //									webDB.clickAnElement(CreateOrderPageLocators.NEXTHOUR_INCREMENT_BTN, ElementType.Xpath);
@@ -202,7 +207,7 @@ public class CreateOrderPageFunctional {
 //									Thread.sleep(1000);
 //									webDB.clickAnElement(CreateOrderPageLocators.NEXTHOUR_INCREMENT_BTN, ElementType.Xpath);
 //									Thread.sleep(1000);
-
+//
 //									webDB.pressEscapeKey();
 //									log.logging("info", "Selected Delivery window End date");
 //									Thread.sleep(1000);
@@ -354,6 +359,7 @@ public class CreateOrderPageFunctional {
 	 */
 	public boolean set_Item_To_Transit() throws InterruptedException {
 		// Enter quantity in the input field
+		Thread.sleep(3000);
 		flag = webDB.scrollToAnElement(CreateOrderPageLocators.INPUT_QUANTITY, ElementType.Xpath);
 		if (flag) {
 			flag = webDB.sendTextToAnElement(CreateOrderPageLocators.INPUT_QUANTITY, "20", ElementType.Xpath);
@@ -376,6 +382,9 @@ public class CreateOrderPageFunctional {
 		if (flag) {
 			webDB.clickAnElement(CreateOrderPageLocators.CREATE_SUBMIT_ORDER_BUTTON, ElementType.Id);
 			Thread.sleep(12000);
+			
+//			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(CreateOrderPageLocators.ADD_ORDER_TO_BOL_BUTTON)));
+			
 //			String ordernumberfromorderdetailspage = webDB.getTextFromElement(BOL_Number, null);
 //			log.logging("info", "The order number is "+ordernumberfromorderdetailspage);
 			webDB.waitForElement(CreateOrderPageLocators.ADD_ORDER_TO_BOL_BUTTON, ElementType.Xpath);

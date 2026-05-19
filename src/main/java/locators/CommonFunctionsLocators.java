@@ -20,7 +20,7 @@ public class CommonFunctionsLocators {
 	/** XPATH */
 	public static final String PROFILENAME = "//span[@class='p-button-label']";
 	/** XPATH */
-	public static final String ORDERSANDBOLS_PAGE_LEFTNAV = "//a[@id='pv_id_2_2_header_action']//following-sibling::span[text()='Orders & BOLs']";
+	public static final String ORDERSANDBOLS_PAGE_LEFTNAV = "//a[@class='p-accordion-header-link p-accordion-header-action']//following-sibling::span[text()='Orders & BOLs']";
 	/** XPATH */
 	public static final String BOLS_PAGE = "//a[@href='/bills-of-lading']";
 	/** XPATH */

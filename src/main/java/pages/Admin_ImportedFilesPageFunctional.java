@@ -2,6 +2,7 @@ package pages;
 
 import commonfunctions.CommonFunctions;
 import locators.Admin_ImportedFilesPageLocators;
+import locators.Admin_UsersPageLocators;
 import locators.Admin_ImportedFilesPageLocators;
 import locators.CommonFunctionsLocators;
 import utils.ReportLoger;
@@ -15,20 +16,39 @@ public class Admin_ImportedFilesPageFunctional {
 	WebDriverBase webDB = new WebDriverBase();
 	static ReportLoger log = new ReportLoger();
 
+	
+//	public boolean navigate_Admin_ImportedFilesListingPage() throws InterruptedException {
+//		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath,
+//				CommonFunctionsLocators.ADMIN_PAGE_LEFTNAV, ElementType.Xpath,
+//				CommonFunctionsLocators.ADMIN_PROGRAMSPAGE_LEFTNAV, ElementType.Xpath);
+//		if (flag) {
+//			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.ADMIN_IMPORTEDFILESPAGE_LEFTNAV,
+//					ElementType.Xpath, Admin_ImportedFilesPageLocators.ADMIN_IMPORTEDFILESPAGE_HEADING,
+//					ElementType.Xpath);
+//		}
+//		return flag;
+//	}
+	
 	/**
 	 * @author
 	 * @return flag This method is used to navigate to Admin Imported Files page
 	 * @throws InterruptedException
 	 */
 	public boolean navigate_Admin_ImportedFilesListingPage() throws InterruptedException {
-		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath,
-				CommonFunctionsLocators.ADMIN_PAGE_LEFTNAV, ElementType.Xpath,
-				CommonFunctionsLocators.ADMIN_PROGRAMSPAGE_LEFTNAV, ElementType.Xpath);
+
+		flag = webDB.waitForElement(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath);
 		if (flag) {
-			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.ADMIN_IMPORTEDFILESPAGE_LEFTNAV,
-					ElementType.Xpath, Admin_ImportedFilesPageLocators.ADMIN_IMPORTEDFILESPAGE_HEADING,
-					ElementType.Xpath);
+			flag = webDB.clickAnElement(CommonFunctionsLocators.ADMIN_PAGE_LEFTNAV, ElementType.Xpath);
+			if(flag)
+			{
+				String SiteUrl = webDB.getDataFromProperties("url");
+				webDB.navigateToUrl(SiteUrl+"/admin/imports-list");
+				Thread.sleep(2000);
+				flag = webDB.waitForElement(Admin_ImportedFilesPageLocators.ADMIN_IMPORTEDFILESPAGE_HEADING, ElementType.Xpath);
+//			}
+			}
 		}
+		
 		return flag;
 	}
 

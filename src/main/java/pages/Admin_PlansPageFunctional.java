@@ -7,6 +7,7 @@ import com.github.javafaker.Faker;
 import commonfunctions.CommonFunctions;
 import locators.Admin_PlansPageLocators;
 import locators.CommonFunctionsLocators;
+import locators.Help_HelpFilesPageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 import utils.WebDriverBase.ElementType;
@@ -24,14 +25,41 @@ public class Admin_PlansPageFunctional {
 	 * @return flag This method is used to navigate to Admin Plans page
 	 * @throws InterruptedException
 	 */
+//	public boolean navigate_Admin_PlansListingPage() throws InterruptedException {
+//		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath,
+//				CommonFunctionsLocators.ADMIN_PAGE_LEFTNAV, ElementType.Xpath,
+//				CommonFunctionsLocators.ADMIN_PROGRAMSPAGE_LEFTNAV, ElementType.Xpath);
+//		if (flag) {
+//			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.ADMIN_PLANSPAGE_LEFTNAV,
+//					ElementType.Xpath, Admin_PlansPageLocators.ADMIN_PLANSPAGE_HEADING, ElementType.Xpath);
+//		}
+//		return flag;
+//	}
+	
+	/**
+	 * @author
+	 * @return flag This method is used to navigate to Admin Plans page
+	 * @throws InterruptedException
+	 */
 	public boolean navigate_Admin_PlansListingPage() throws InterruptedException {
-		flag = commonfunction.clickOnMainPage(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath,
-				CommonFunctionsLocators.ADMIN_PAGE_LEFTNAV, ElementType.Xpath,
-				CommonFunctionsLocators.ADMIN_PROGRAMSPAGE_LEFTNAV, ElementType.Xpath);
+
+		flag = webDB.waitForElement(CommonFunctionsLocators.PROFILENAME, ElementType.Xpath);
 		if (flag) {
-			flag = commonfunction.clickOnInternalPage(CommonFunctionsLocators.ADMIN_PLANSPAGE_LEFTNAV,
-					ElementType.Xpath, Admin_PlansPageLocators.ADMIN_PLANSPAGE_HEADING, ElementType.Xpath);
+			flag = webDB.clickAnElement(CommonFunctionsLocators.ADMIN_PAGE_LEFTNAV, ElementType.Xpath);
+			if(flag)
+			{
+				String SiteUrl = webDB.getDataFromProperties("url");
+				webDB.navigateToUrl(SiteUrl+"/plans");
+				Thread.sleep(1500);
+//			flag = webDB.waitForElement(CommonFunctionsLocators.HELP_HELPFILESPAGE_LEFTNAV, ElementType.Xpath);
+//			if (flag) {
+//				webDB.clickAnElement(CommonFunctionsLocators.HELP_HELPFILESPAGE_LEFTNAV, ElementType.Xpath);
+//				Thread.sleep(10000);
+				flag = webDB.waitForElement(Admin_PlansPageLocators.ADMIN_PLANSPAGE_HEADING, ElementType.Xpath);
+//			}
+			}
 		}
+		
 		return flag;
 	}
 
@@ -281,10 +309,10 @@ public class Admin_PlansPageFunctional {
 		flag = webDB.sendTextToAnElement(Admin_PlansPageLocators.PLANNAME_INPUTFIELD, firstname + " plan test",
 				ElementType.Xpath);
 		if (flag) {
-			Thread.sleep(750);
+			Thread.sleep(1000);
 			log.logging("info", "Entered SKU as: " + firstname + " plan test");
 			webDB.clickAnElement(Admin_PlansPageLocators.PROGRAM_DRPDWN, ElementType.Xpath);
-			Thread.sleep(750);
+			Thread.sleep(1000);
 			int drpdownoptions2 = webDB.getDriver()
 					.findElements(By.xpath(Admin_PlansPageLocators.PROGRAM_DRPDWN_OPTIONS)).size();
 			int oneoption2 = faker.number().numberBetween(1, drpdownoptions2);
@@ -292,14 +320,14 @@ public class Admin_PlansPageFunctional {
 					Admin_PlansPageLocators.PROGRAM_DRPDWN_OPTIONS + "[" + oneoption2 + "]",
 					ElementType.Xpath);
 			if (flag) {
-				Thread.sleep(750);
+				Thread.sleep(1000);
 				String selectedprogram = webDB.getAttributeFromElement(
 						Admin_PlansPageLocators.PROGRAM_DRPDWN_OPTIONS_SELECTED, ElementType.Xpath,
 						"value");
 				log.logging("info", "Selected Program as: " + selectedprogram);
 			
 					webDB.clickAnElement(Admin_PlansPageLocators.PLANTYPE_DRPDWN, ElementType.Xpath);
-						Thread.sleep(750);
+						Thread.sleep(1000);
 						int drpdownoptions3 = webDB.getDriver()
 								.findElements(By.xpath(Admin_PlansPageLocators.PLANTYPE_DRPDWN_OPTIONS)).size();
 						int oneoption3 = faker.number().numberBetween(1, drpdownoptions3);
@@ -307,13 +335,13 @@ public class Admin_PlansPageFunctional {
 								Admin_PlansPageLocators.PLANTYPE_DRPDWN_OPTIONS + "[" + oneoption3 + "]",
 								ElementType.Xpath);
 						if (flag) {
-							Thread.sleep(750);
+							Thread.sleep(1000);
 							String selectedtype = webDB.getAttributeFromElement(
 									Admin_PlansPageLocators.PLANTYPE_DRPDWN_OPTIONS_SELECTED, ElementType.Xpath,
 									"value");
 							log.logging("info", "Selected type as: " + selectedtype);
 							webDB.clickAnElement(Admin_PlansPageLocators.MANAGINGACCOUNT_DRPDWN, ElementType.Xpath);
-							Thread.sleep(750);
+							Thread.sleep(1000);
 							int drpdownoptions1 = webDB.getDriver()
 									.findElements(By.xpath(Admin_PlansPageLocators.MANAGINGACCOUNT_DRPDWN_OPTIONS)).size();
 							int oneoption1 = faker.number().numberBetween(1, drpdownoptions1);
@@ -321,7 +349,7 @@ public class Admin_PlansPageFunctional {
 									Admin_PlansPageLocators.MANAGINGACCOUNT_DRPDWN_OPTIONS + "[" + oneoption1 + "]",
 									ElementType.Xpath);
 							if (flag) {
-								Thread.sleep(750);
+								Thread.sleep(1000);
 								String selectedaccount = webDB.getAttributeFromElement(
 										Admin_PlansPageLocators.MANAGINGACCOUNT_DRPDWN_OPTIONS_SELECTED, ElementType.Xpath,
 										"value");
@@ -345,25 +373,26 @@ public class Admin_PlansPageFunctional {
 		flag = webDB.waitForClickElement(Admin_PlansPageLocators.ACTIVE_STARTDATE_INPUTFIELD, ElementType.Xpath);
 		if (flag) {
 			webDB.clickAnElement(Admin_PlansPageLocators.ACTIVE_STARTDATE_INPUTFIELD, ElementType.Xpath);
-			Thread.sleep(1500);
-			flag = webDB.waitForElement(Admin_PlansPageLocators.ACTIVE_STARTDATE_TODAY, ElementType.Xpath);
+			Thread.sleep(3000);
+			flag = webDB.waitForClickElement(Admin_PlansPageLocators.ACTIVE_STARTDATE_TODAY, ElementType.Xpath);
 			if (flag) {
 				webDB.clickAnElement(Admin_PlansPageLocators.ACTIVE_STARTDATE_TODAY, ElementType.Xpath);
 				log.logging("info", "Selected plan active start date");
 				Thread.sleep(1000);
 				webDB.pressEscapeKey();
+				Thread.sleep(1000);
 				flag = webDB.waitForClickElement(Admin_PlansPageLocators.ACTIVE_ENDDATE_INPUTFIELD, ElementType.Xpath);
 				if (flag) {
-					webDB.clickAnElement(Admin_PlansPageLocators.ACTIVE_ENDDATE_INPUTFIELD, ElementType.Xpath);
+					webDB.javaScriptClickAnElement(Admin_PlansPageLocators.ACTIVE_ENDDATE_INPUTFIELD, ElementType.Xpath);
 					Thread.sleep(1500);
-					flag = webDB.waitForElement(Admin_PlansPageLocators.ACTIVE_ENDDATE, ElementType.Xpath);
+//					flag = webDB.waitForClickElement(Admin_PlansPageLocators.ACTIVE_ENDDATE, ElementType.Xpath);
 					if (flag) {
-						webDB.clickAnElement(Admin_PlansPageLocators.ACTIVE_ENDDATE, ElementType.Xpath);
+						webDB.javaScriptClickAnElement(Admin_PlansPageLocators.ACTIVE_ENDDATE, ElementType.Xpath);
 						log.logging("info", "Selected plan active end date");
 						Thread.sleep(1000);
 						webDB.pressEscapeKey();
 						Thread.sleep(1000);
-						flag = webDB.waitForElement(Admin_PlansPageLocators.DISABLE_CHECKBOX, ElementType.Xpath);
+						flag = webDB.waitForClickElement(Admin_PlansPageLocators.DISABLE_CHECKBOX, ElementType.Xpath);
 						if(flag)
 						{
 							flag = webDB.clickAnElement(Admin_PlansPageLocators.DISABLE_CHECKBOX, ElementType.Xpath);

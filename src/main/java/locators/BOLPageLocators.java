@@ -383,4 +383,22 @@ public class BOLPageLocators {
 	/** XPATH */
 	public static final String VIEW_RESULT_BUTTON = "//*[@id='view_result_button']";
 
+	
+	
+	//Receive Bill of Lading
+    public static final String Receive_Bill_of_Lading_EXPECTED = "(//div[@class='p-card-content']//div[contains(@class,'grid')]/div[contains(@class,'col-span')])[11]//span";
+    public static final String Receive_Bill_of_Lading_WIP = "(//div[@class='p-card-content']//div[contains(@class,'grid')]/div[contains(@class,'col-span')])[14]//input";
+    public static final String Receive_Bill_of_Lading_DAMAGED = "(//div[@class='p-card-content']//div[contains(@class,'grid')]/div[contains(@class,'col-span')])[15]//input";
+    public static final String Receive_Bill_of_Lading_FG = "(//div[@class='p-card-content']//div[contains(@class,'grid')]/div[contains(@class,'col-span')])[16]//input";
+    public static final String Receive_Bill_of_Lading_CompleteButton = "//button[@aria-label='Mark Bill of Lading Complete']";
+    public static final String Receive_Bill_of_Lading_DropDownButton = "//label[.='Primary Reason(Required)']//following-sibling::div//button";
+    public static final String Receive_Bill_of_Lading_DropdownoFirstOptions = "(//li[@role='option'])[1]";
+    public static final String Receive_Bill_of_Lading_Button_No = "//button[@aria-label='No']";
+    public static final String Receive_Bill_of_Lading_Button_CompetitorracksValueDropdown = "//li[contains(.,'Competitor Racks')]";
+    public static final String Receive_Bill_of_Lading_Button_Whose_RackDropdown = "//div[@class='p-multiselect-trigger']";
+    public static final String Receive_Bill_of_Lading_Button_Remaining_Racks_Still_InUse_Input = "//input[@placeholder='What quantity?']";
+    public static final String Receive_Bill_of_Lading_Button_Grower_Competitor_Racks_Dropdown = "//li[contains(.,'Grower / Competitor Racks')]";
+    public static final String Receive_Bill_of_Lading_Button_Yes = "//button[@aria-label='Yes']";
+    public static final String Receive_Bill_of_Lading_SuccessMsg = "//span[contains(.,'Success')]";
+    public static final String Receive_Bill_of_Lading_Button_BlueRackDropdownValue = null;
 }

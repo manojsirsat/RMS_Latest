@@ -3,6 +3,7 @@ package tests;
 import java.awt.AWTException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
@@ -39,11 +40,12 @@ public class BatchFilesPageTest {
 		// This line used to navigate the url in browser
 		webDB.enterURL(SiteUrl);
 		Thread.sleep(2000);
+		webDB.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(180));
 	}
 
 	@Test(description = "Verify valid login")
 	public void verify_Valid_Login() throws InterruptedException {
-		flag = loginpage.validLogin();
+		flag = loginpage.validLogin(webDB.getDataFromProperties("username"), webDB.getDataFromProperties("password"));
 		Assert.assertTrue(flag);
 	}
 
@@ -223,7 +225,7 @@ public class BatchFilesPageTest {
 //	@AfterSuite
 //	public void SendMail() throws Exception {
 //		Mailer mailer = new Mailer();
-//		mailer.execute("RMS Automation Report");
+//		mailer.execute("RMS");
 //	}
 
 }

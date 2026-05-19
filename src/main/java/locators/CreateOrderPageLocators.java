@@ -69,4 +69,6 @@ public class CreateOrderPageLocators {
 	/** XPATH */
 	public static final String ADD_ORDER_TO_BOL_BUTTON = "//span[text()='Add Order to BOL']";
 
+	
+	
 }

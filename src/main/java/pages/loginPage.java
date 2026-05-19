@@ -19,19 +19,17 @@ public class loginPage {
 	 * @return boolean flag
 	 * @throws InterruptedException
 	 */
-	public boolean validLogin() throws InterruptedException {
+	public boolean validLogin(String username, String password) throws InterruptedException {
 
 		flag = webDB.waitForElement(CommonFunctionsLocators.USERNAME_FIELD, ElementType.Xpath);
 		if (flag) {
 			log.logging("info", "Login page is displayed");
 			flag = webDB.waitForElement(CommonFunctionsLocators.USERNAME_FIELD, ElementType.Xpath);
 			if (flag) {
-				String Username = webDB.getDataFromProperties("username");
-				webDB.sendTextToAnElement(CommonFunctionsLocators.USERNAME_FIELD, Username, ElementType.Xpath);
+				webDB.sendTextToAnElement(CommonFunctionsLocators.USERNAME_FIELD, username, ElementType.Xpath);
 				flag = webDB.waitForElement(CommonFunctionsLocators.PASSWORD_FIELD, ElementType.Xpath);
 				if (flag) {
-					String Password = webDB.getDataFromProperties("password");
-					webDB.sendTextToAnElement(CommonFunctionsLocators.PASSWORD_FIELD, Password, ElementType.Xpath);
+					webDB.sendTextToAnElement(CommonFunctionsLocators.PASSWORD_FIELD, password, ElementType.Xpath);
 					Thread.sleep(2000);
 					flag = webDB.waitForElement(CommonFunctionsLocators.SIGNIN_BUTTON, ElementType.Xpath);
 					if (flag) {

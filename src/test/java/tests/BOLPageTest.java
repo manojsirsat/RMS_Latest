@@ -4,21 +4,28 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import commonfunctions.CommonFunctions;
 import pages.BOLPageFunctional;
 import pages.loginPage;
+import utils.Mailer;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 
 public class BOLPageTest {
 
 	// This line used to create object for driver base class
+	
 	WebDriverBase webDB = new WebDriverBase();
 	ReportLoger log = new ReportLoger();
 	boolean flag;
@@ -28,6 +35,7 @@ public class BOLPageTest {
 	static loginPage loginpage = new loginPage();
 	WebDriverWait wait = new WebDriverWait(webDB.getDriver(), Duration.ofSeconds(15));
 
+	
 	/**
 	 * This method used to open browser before test start
 	 */
@@ -39,12 +47,13 @@ public class BOLPageTest {
 		// This line used to navigate the url in browser
 		webDB.enterURL(SiteUrl);
 		Thread.sleep(2000);
+		webDB.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(180));
 
 	}
 
 	@Test(description = "Verify create new BOL functionality from BOL listing page")
 	public void verifyCreate_BOL_Flow() throws InterruptedException {
-		flag = loginpage.validLogin();
+		flag = loginpage.validLogin(webDB.getDataFromProperties("username"), webDB.getDataFromProperties("password"));
 		if (flag) {
 			flag = bolpagefunctional.navigate_BOLPage();
 			if (flag) {
@@ -75,21 +84,24 @@ public class BOLPageTest {
 		flag = bolpagefunctional.markBOLComplete();
 		Assert.assertTrue(flag);
 	}
+	
 
 	@Test(description = "Verify the pagination functionality")
 	public void verifyPagination() throws InterruptedException {
-		flag = commonFunction.clickOnBOLSPage();
+//		flag = loginpage.validLogin(webDB.getDataFromProperties("username"), webDB.getDataFromProperties("password"));
+//		if(flag) {
+		flag = commonFunction.navigateBOLSPage();
 		if (flag) {
 			flag = commonFunction.verifyPagination();
 			Assert.assertTrue(flag);
 		}
-
+//		}
 	}
 
 	@Test(description = "Verify the Sorting functionality")
 	public void verifySorting() throws InterruptedException {
 
-		flag = loginpage.validLogin();
+		flag = loginpage.validLogin(webDB.getDataFromProperties("username"), webDB.getDataFromProperties("password"));
 		if (flag) {
 			flag = webDB.navigateToUrl("https://qa.rms.reusability.com/recoveries-by-zone");
 			Thread.sleep(4000);
@@ -102,24 +114,33 @@ public class BOLPageTest {
 
 	@Test(description = "Verify BOL Decending Sorting functionality from BOL listing page")
 	public void verifyBOL_DecendingSorting_Functionality() throws InterruptedException {
-		flag = webDB.navigateToUrl("https://qa.rms.reusability.com/bills-of-lading");
-		Thread.sleep(4000);
-		if (flag) {
+//		flag = loginpage.validLogin(webDB.getDataFromProperties("username"), webDB.getDataFromProperties("password"));
+//		if(flag) {
+//		flag = commonFunction.navigateBOLSPage();
+//		if (flag) {
 			flag = bolpagefunctional.BOL_DecendingSorting();
-		}
 		Assert.assertTrue(flag);
+//		}
+//		}
 	}
 
 	@Test(description = "Verify BOL ascending Sorting functionality from BOL listing page")
 	public void verifyBOL_AscendingSorting_Functionality() throws InterruptedException {
+//		flag = loginpage.validLogin(webDB.getDataFromProperties("username"), webDB.getDataFromProperties("password"));
+//		if(flag) {
+//		flag = commonFunction.navigateBOLSPage();
+//		if (flag) {
 		flag = bolpagefunctional.BOL_AscendingSorting();
 		Assert.assertTrue(flag);
+//		}}
 	}
 
 	@Test(description = "Verify Type Decending Sorting functionality from BOL listing page")
 	public void verifyType_DecendingSorting_Functionality() throws InterruptedException {
+		
 		flag = bolpagefunctional.Type_DecendingSorting();
 		Assert.assertTrue(flag);
+		
 	}
 
 	@Test(description = "Verify Type ascending Sorting functionality from BOL listing page")
@@ -489,7 +510,7 @@ public class BOLPageTest {
 
 	@Test
 	public void verifyBOLFilter() throws InterruptedException {
-		loginpage.validLogin();
+		loginpage.validLogin(webDB.getDataFromProperties("username"), webDB.getDataFromProperties("password"));
 
 		bolpagefunctional.navigate_BOLPage();
 		flag = bolpagefunctional.verify_InputBOLFilter();
@@ -512,7 +533,7 @@ public class BOLPageTest {
 //	@AfterSuite
 //	public void SendMail() throws Exception {
 //		Mailer mailer = new Mailer();
-//		mailer.execute("RMS Automation Report");
+//		mailer.execute("RMS");
 //	}
 
 }
