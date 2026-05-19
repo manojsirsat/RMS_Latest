@@ -112,10 +112,43 @@ public class CommonFunctions {
 	 * @throws InterruptedException
 	 */
 	public static String getLastNumber(String input) {
-		// Split the string by spaces
-		String[] parts = input.split(" ");
-		// The last number is in the last part after "of"
-		return parts[parts.length - 1];
+
+	    try {
+
+	        // Null or empty check
+	        if (input == null || input.trim().isEmpty()) {
+
+	            return "0";
+	        }
+
+	        // Remove extra spaces
+	        input = input.trim();
+
+	        // Split by spaces
+	        String[] parts = input.split("\\s+");
+
+	        // Traverse from end and return first numeric value
+	        for (int i = parts.length - 1; i >= 0; i--) {
+
+	            // Remove non-numeric characters
+	            String value = parts[i].replaceAll("[^0-9]", "");
+
+	            // Return first valid number found
+	            if (!value.isEmpty()) {
+
+	                return value;
+	            }
+	        }
+
+	    } catch (Exception e) {
+
+	        System.out.println(
+	                "Exception in getLastNumber : "
+	                        + e.getMessage());
+	    }
+
+	    // Default fallback
+	    return "0";
 	}
 
 //	/**
@@ -404,9 +437,9 @@ public class CommonFunctions {
 	                flag = false;
 
 	            } else {
-
+	            	
 	                log.logging("info",
-	                        "No pagination as records are less than 20");
+	                        "No pagination available");
 
 	                flag = true;
 	            }
@@ -597,6 +630,8 @@ public class CommonFunctions {
 //		new WebDriverWait(webDB.getDriver(), Duration.ofSeconds(120))
 //		.until(ExpectedConditions.elementToBeClickable(By.xpath(CommonFunctionsLocators.SHOWINGRESULTBOTTOM)));
 
+		 wait.until(ExpectedConditions.visibilityOfElementLocated(
+	                By.xpath(CommonFunctionsLocators.SHOWINGRESULTBOTTOM)));
 		flag = webDB.waitForElement(CommonFunctionsLocators.SHOWINGRESULTBOTTOM, ElementType.Xpath);
 		if (flag) {
 			String totalTest = webDB.getTextFromElement(CommonFunctionsLocators.SHOWINGRESULTBOTTOM, ElementType.Xpath);
