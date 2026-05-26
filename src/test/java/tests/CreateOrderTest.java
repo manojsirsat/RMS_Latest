@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import commonfunctions.CommonFunctions;
 import pages.BOLPageFunctional;
 import pages.CreateOrderPageFunctional;
+import pages.ProviderBOLPageFunctional;
 import pages.loginPage;
 import utils.Mailer;
 import utils.ReportLoger;
@@ -29,7 +30,7 @@ public class CreateOrderTest {
 	static BOLPageFunctional bolpagefunctional = new BOLPageFunctional();
 	static loginPage loginpage = new loginPage();
 	static CreateOrderPageFunctional createorderpage = new CreateOrderPageFunctional();
-
+	
 	/**
 	 * This method used to open browser before test start
 	 */
@@ -64,6 +65,8 @@ public class CreateOrderTest {
     public void verifyComplete_Order_flow() throws InterruptedException {
         bolpagefunctional.fillWipValueAndCompleteBOLFlow();
         }
+	
+	
 
 	@AfterTest
 	public void browser_Close() {

@@ -27,10 +27,12 @@ public class ProviderBOLPageTest {
 	boolean flag;
 	// This line used to create object for commonFunction class
 	static CommonFunctions commonFunction = new CommonFunctions();
-	static ProviderBOLPageFunctional bolpagefunctional = new ProviderBOLPageFunctional();
+//	static ProviderBOLPageFunctional bolpagefunctional = new ProviderBOLPageFunctional();
 	static loginPage loginpage = new loginPage();
 	WebDriverWait wait = new WebDriverWait(webDB.getDriver(), Duration.ofSeconds(15));
-
+	static ProviderBOLPageFunctional providerBOLPageFunctional = new ProviderBOLPageFunctional();
+	static BOLPageFunctional bolpagefunctional = new BOLPageFunctional();
+	
 	/**
 	 * This method used to open browser before test start
 	 */
@@ -58,11 +60,32 @@ public class ProviderBOLPageTest {
 		Assert.assertTrue(flag);
 	}
 
-	@Test(description = "Verify update BOL status functionality")
-	public void VerifySet_BOL_Status() throws InterruptedException {
-		flag = bolpagefunctional.set_BOLStatus();
-		Assert.assertTrue(flag);
-	}
+	@Test(description = "Verify create new BOL functionality from provider BOL page")
+    public void verifyCreate_BOLFlow_Provider() throws InterruptedException {
+        flag = loginpage.validLogin(webDB.getDataFromProperties("providerusername"),
+                webDB.getDataFromProperties("providerpassword"));
+        if (flag) {
+            
+            flag = providerBOLPageFunctional.navigate_LocationsListingPage();
+            if(flag)
+            {
+            	flag = providerBOLPageFunctional.createBOLFlow();
+            	if(flag)
+            	{
+            		flag = providerBOLPageFunctional.navigate_BOLPage();
+            		if(flag)
+            		{
+            			flag = providerBOLPageFunctional.set_BOLStatusProvider();
+            			if(flag)
+            			{
+            				bolpagefunctional.fillWipValueAndCompleteBOLFlow();
+            			}
+            		}
+            	}
+            }
+        }
+        Assert.assertTrue(flag);
+    }
 
 	@Test(description = "Verify mark BOL to complete functionality")
 	public void VerifyMarkBOL_Complete() throws InterruptedException {

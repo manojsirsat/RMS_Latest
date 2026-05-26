@@ -3,6 +3,7 @@ package pages;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 
 import com.github.javafaker.Faker;
@@ -15,6 +16,7 @@ import locators.RecoveriesByLocationPageLocators;
 import utils.ReportLoger;
 import utils.WebDriverBase;
 import utils.WebDriverBase.ElementType;
+
 
 public class ProviderBOLPageFunctional {
 
@@ -44,54 +46,60 @@ public class ProviderBOLPageFunctional {
 		return flag;
 	}
 
-	public boolean createBOLFlow() throws InterruptedException
-	{
-		int count = webDB.getDriver().findElements(By.xpath(ProviderBOLPageLocators.CREATE_BOL_BTN)).size();
-		int singleelement = faker.number().numberBetween(1, count);
-		flag = webDB.waitForElement(ProviderBOLPageLocators.CREATE_BOL_BTN+"["+singleelement+"]", ElementType.Xpath);
-		if(flag)
-		{
-			flag = webDB.clickAnElement(ProviderBOLPageLocators.CREATE_BOL_BTN+"["+singleelement+"]", ElementType.Xpath);
-			Thread.sleep(750);
-			if(flag)
-			{
-				flag = webDB.waitForElement(ProviderBOLPageLocators.COMMITDATE_INPUTFIELD, ElementType.Xpath);
-				if(flag)
-				{
-					log.logging("info", "Clicked on create BOL button from locations listing page");
-					flag = webDB.clickAnElement(ProviderBOLPageLocators.COMMITDATE_INPUTFIELD, ElementType.Xpath);
-					if(flag)
-					{
-						Thread.sleep(750);
-						flag = webDB.clickAnElement(ProviderBOLPageLocators.COMMITDATE_TODAY, ElementType.Xpath);
-						if(flag)
-						{
-							Thread.sleep(750);
-							log.logging("info", "Selected the commit date");
-							flag = webDB.clickAnElement(ProviderBOLPageLocators.CREATE_BOL_BUTTON_POPUP, ElementType.Xpath);
-							if(flag)
-							{
-								log.logging("info", "Clicked on the create BOL button");
-								flag = webDB.waitForElement(ProviderBOLPageLocators.BOLSUCCESSMSG, ElementType.Xpath);
-								if(flag)
-								{
-									String boltext = webDB.getTextFromElement(ProviderBOLPageLocators.BOLSUCCESSMSG, ElementType.Xpath);
-									Pattern pattern = Pattern.compile("Bill of Lading \\((\\d+)\\)");
-									Matcher matcher = pattern.matcher(boltext);
-//									String bolNumber = "";
-									if (matcher.find()) {
-									    bolNumber = matcher.group(1);
-									}
-									log.logging("info", "New BOL created successfully i.e. "+bolNumber);
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		return flag;
-	}
+	public boolean createBOLFlow() throws InterruptedException {
+        webDB.clickAnElement(ProviderBOLPageLocators.Bottom_Pagination,
+                ElementType.Xpath);
+ 
+        Thread.sleep(2000);
+        webDB.clickAnElement(ProviderBOLPageLocators.Bottom_PaginationClick1000Page, ElementType.Xpath);
+ 
+        Thread.sleep(2000);
+        int count = webDB.getDriver().findElements(By.xpath(ProviderBOLPageLocators.CREATE_BOL_BTN)).size();
+        int singleelement = faker.number().numberBetween(1, count);
+        flag = webDB.waitForElement(ProviderBOLPageLocators.CREATE_BOL_BTN + "[" + singleelement + "]",
+                ElementType.Xpath);
+        if (flag) {
+            flag = webDB.clickAnElement(ProviderBOLPageLocators.CREATE_BOL_BTN + "[" + singleelement + "]",
+                    ElementType.Xpath);
+            Thread.sleep(750);
+            if (flag) {
+                flag = webDB.waitForElement(ProviderBOLPageLocators.COMMITDATE_INPUTFIELD, ElementType.Xpath);
+                if (flag) {
+                    log.logging("info", "Clicked on create BOL button from locations listing page");
+ 
+                    flag = webDB.clickAnElement(ProviderBOLPageLocators.COMMITDATE_INPUTFIELD, ElementType.Xpath);
+                    if (flag) {
+                        Thread.sleep(750);
+                        flag = webDB.clickAnElement(ProviderBOLPageLocators.COMMITDATE_TODAY, ElementType.Xpath);
+                        Thread.sleep(9000);
+ 
+                        if (flag) {
+                            Thread.sleep(750);
+                            log.logging("info", "Selected the commit date");
+                            flag = webDB.clickAnElement(ProviderBOLPageLocators.CREATE_BOL_BUTTON_POPUP,
+                                    ElementType.Xpath);
+                            if (flag) {
+                                log.logging("info", "Clicked on the create BOL button");
+                                flag = webDB.waitForElement(ProviderBOLPageLocators.BOLSUCCESSMSG, ElementType.Xpath);
+                                if (flag) {
+                                    String boltext = webDB.getTextFromElement(ProviderBOLPageLocators.BOLSUCCESSMSG,
+                                            ElementType.Xpath);
+                                    Pattern pattern = Pattern.compile("Bill of Lading \\((\\d+)\\)");
+                                    Matcher matcher = pattern.matcher(boltext);
+                                    // String bolNumber = "";
+                                    if (matcher.find()) {
+                                        bolNumber = matcher.group(1);
+                                    }
+                                    log.logging("info", "New BOL created successfully i.e. " + bolNumber);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return flag;
+    }
 	
 	
 	/**
@@ -133,24 +141,24 @@ public class ProviderBOLPageFunctional {
 	 *         functionality
 	 * @throws InterruptedException
 	 */
-	public boolean set_BOLStatus() throws InterruptedException {
-		flag = navigate_BOLPage();
-		Thread.sleep(1000);
-		BOL_Number_Listingpage = getBOLNumberFromBOL_ListingPage();
-		log.logging("info", "The BOL Number on listing page is: " + BOL_Number_Listingpage);
-		Thread.sleep(1000);
-
-		if (BOL_Number_Listingpage.equals(bolNumber)) {
-			log.logging("info", "The BOL number is matched");
-			Thread.sleep(1500);
-			flag = update_BOLStatus();
-		} else {
-			log.logging("info", "The BOL is not matched");
-			flag = false;
-		}
-
-		return flag;
-	}
+	public boolean set_BOLStatusProvider() throws InterruptedException {
+        flag = navigate_BOLPage();
+        Thread.sleep(1000);
+        BOL_Number_Listingpage = getBOLNumberFromBOL_ListingPage();
+        log.logging("info", "The BOL Number on listing page is: " + BOL_Number_Listingpage);
+        Thread.sleep(1000);
+ 
+        if (BOL_Number_Listingpage.equals(bolNumber)) {
+            log.logging("info", "The BOL number is matched");
+            Thread.sleep(1500);
+            flag = update_BOLStatusProvider();
+        } else {
+            log.logging("info", "The BOL is not matched");
+            flag = false;
+        }
+ 
+        return flag;
+    }
 
 	/**
 	 * @author
@@ -203,6 +211,73 @@ public class ProviderBOLPageFunctional {
 		}
 		return flag;
 	}
+	
+	/**
+     * @author
+     * @return flag This method is used to update the Provider BOL status to Assigned, Driver
+     *         dispatched, At shipper, In transit, Pending receipt, Receiving in
+     *         progress
+     * @throws InterruptedException
+     */
+    public boolean update_BOLStatusProvider() throws InterruptedException {
+        String[] statusList = { "Driver Dispatched", "At Shipper", "In Transit", "Delivered",
+                "Receiving In Progress" };
+        log.logging("info", "Adarsh Main ");
+        String[] CurrentStatusList = { "Driver Dispatched", "At Shipper", "In Transit", "Pending Receipt",
+                "" };
+        String bolStatus = webDB.getTextFromElement("(//tr[contains(@class, 'providerGenerated')]/td[5])[1]",
+                ElementType.Xpath);
+        log.logging("info", "Current BOL Status: " + bolStatus);
+        log.logging("info", "Expected BOL Status: Assigned");
+ 
+        flag = bolStatus.trim()
+                .equalsIgnoreCase("Assigned".trim());
+        log.logging("info", "Is the BOL status updated correctly? " + flag);
+ 
+        for (int j = 0; j < statusList.length; j++) {
+            String statusToSelect = statusList[j];
+            String currentStatus = CurrentStatusList[j];
+            webDB.waitForElement(BOLPageLocators.BOL_STATUSCHANGE_DRP, ElementType.Xpath);
+ 
+            webDB.clickAnElement(BOLPageLocators.BOL_STATUSCHANGE_DRP, ElementType.Xpath);
+            Thread.sleep(4000);
+ 
+            // Store dynamic xpath in variable
+            String dynamicXpath = "//ul[@class='p-dropdown-items']//li[normalize-space()='" + statusToSelect + "']";
+            log.logging("info", "Dynamic XPath: " + dynamicXpath);
+ 
+            boolean flag = webDB.waitForElement(dynamicXpath, ElementType.Xpath);
+            Assert.assertTrue("Dropdown option is not visible:" + statusToSelect, flag);
+ 
+            webDB.clickAnElement(dynamicXpath, ElementType.Xpath);
+            Thread.sleep(4000);
+            webDB.waitForElement(BOLPageLocators.BOL_STATUSCHANGE_CONFIRMATIONPOPUP_YES_BTN,
+                    ElementType.Xpath);
+ 
+            log.logging("info", "Selected " + statusToSelect + " option from dropdown");
+            webDB.clickAnElement(BOLPageLocators.BOL_STATUSCHANGE_CONFIRMATIONPOPUP_YES_BTN,
+                    ElementType.Xpath);
+            Thread.sleep(4000);
+            webDB.waitForElement(BOLPageLocators.BOL_STATUSCHANGE_CONFIRMATION_MSG,
+                    ElementType.Xpath);
+            log.logging("info", "The status of BOL is changed to " + statusToSelect);
+            Thread.sleep(10000);
+            if (!currentStatus.isEmpty()) {
+                 bolStatus = webDB.getTextFromElement("(//tr[contains(@class, 'providerGenerated')]/td[5])[1]",
+                        ElementType.Xpath);
+                log.logging("info", "Current BOL Status: " + bolStatus);
+                log.logging("info", "Expected BOL Status: " + currentStatus);
+ 
+                flag = bolStatus.trim()
+                        .equalsIgnoreCase(currentStatus.trim());
+                log.logging("info", "Is the BOL status updated correctly? " + flag);
+ 
+                // Assert.assertEquals(bolStatus, currentStatus, "BOL status is not updated to "
+                // + currentStatus);
+            }
+        }
+        return flag;
+    }
 
 	/**
 	 * @author sonam

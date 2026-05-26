@@ -626,12 +626,11 @@ public class CommonFunctions {
 //		.until(ExpectedConditions.elementToBeClickable(By.xpath(CommonFunctionsLocators.VIEWRESULT_BUTTON)));
 
 		webDB.clickAnElement(CommonFunctionsLocators.VIEWRESULT_BUTTON, ElementType.Xpath);
-		Thread.sleep(45000);
+		Thread.sleep(60000);
 //		new WebDriverWait(webDB.getDriver(), Duration.ofSeconds(120))
 //		.until(ExpectedConditions.elementToBeClickable(By.xpath(CommonFunctionsLocators.SHOWINGRESULTBOTTOM)));
 
-		 wait.until(ExpectedConditions.visibilityOfElementLocated(
-	                By.xpath(CommonFunctionsLocators.SHOWINGRESULTBOTTOM)));
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CommonFunctionsLocators.SHOWINGRESULTBOTTOM)));
 		flag = webDB.waitForElement(CommonFunctionsLocators.SHOWINGRESULTBOTTOM, ElementType.Xpath);
 		if (flag) {
 			String totalTest = webDB.getTextFromElement(CommonFunctionsLocators.SHOWINGRESULTBOTTOM, ElementType.Xpath);

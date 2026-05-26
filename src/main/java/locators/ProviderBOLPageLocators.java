@@ -16,5 +16,10 @@ public class ProviderBOLPageLocators {
 	public static final String BOLSUCCESSMSG = "//div[@class='p-toast-detail']";
 	/** XPATH */
 	public static final String CREATE_NEWBOLPAGE_HEADING = "//h2[text()='Create Bill of Lading']";
+	/** XPATH */
+	public static final String Bottom_Pagination = "//span[@aria-label='Rows per page']";
+	/** XPATH */
+	public static final String Bottom_PaginationClick1000Page = "//span[normalize-space()='1000']";
+	
 	
 }
